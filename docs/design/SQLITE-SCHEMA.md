@@ -51,6 +51,13 @@ It is not the final shape. It is the first shape that is:
 - `export_jobs`
 - `app_metadata`
 
+### Topology and remote execution
+
+- `vault_nodes`
+- `storage_locations`
+- `track_residencies`
+- `export_execution_plans`
+
 ## Key Decisions In This Draft
 
 - Canonical track identity is still `UUID + hash_sha256`, not vendor IDs.
@@ -58,6 +65,7 @@ It is not the final shape. It is the first shape that is:
 - Smart playlists are represented structurally so they can be compiled into target-specific views later.
 - Metadata provenance is a first-class table now, because the north star depends on tracking where important values came from.
 - Import/export jobs are in the schema from the beginning so operational history does not become an afterthought.
+- Storage topology is now modeled explicitly so the project can separate catalog location, media location, and export-execution location.
 
 ## Current Gaps
 

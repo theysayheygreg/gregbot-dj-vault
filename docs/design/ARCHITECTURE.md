@@ -32,6 +32,7 @@ The two tracks feed each other. Product decisions should be grounded in observed
 - Owns track identity, files, metadata, playlists, sets, and provenance.
 - Remains local-first and file-first.
 - Uses SQLite as primary state.
+- Separates catalog truth from media residency and export execution topology.
 
 ### 2. Metadata Engine
 
@@ -49,10 +50,17 @@ The two tracks feed each other. Product decisions should be grounded in observed
 
 - Compiles canonical state into target-specific projections.
 - Supports native formats first, visibility layers second.
+- Must be able to plan execution on a different node than the catalog primary when the destination USB or export target is remote.
 - Examples:
   - Rekordbox XML
   - Traktor-compatible playlist views
   - Playlist-of-playlists projections when native nesting is constrained
+
+### 4a. Topology / Transport Layer
+
+- Tracks where the database lives, where physical media resides, and where exports can be executed.
+- Models nodes, storage locations, track residency, and export execution plans.
+- Creates the foundation for remote export workflows over `tailscale`, `ssh`, or comparable authenticated transports.
 
 ### 5. Emulation Engine
 

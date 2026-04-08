@@ -139,6 +139,15 @@ npm run catalog:add-track-to-playlist -- <playlist-id> <track-id-or-title>
 npm run catalog:add-track-to-set -- <set-id> <track-id-or-title> builder blend
 ```
 
+To register where the catalog lives, where media lives, and where exports can run:
+
+```bash
+npm run catalog:register-node -- "Mac mini" catalog-primary local
+npm run catalog:register-node -- "MacBook Pro" media-host tailscale 100.x.y.z
+npm run catalog:register-storage -- <node-id> "Main Library" local-disk /Volumes/Music /Volumes/Music managed
+npm run catalog:plan-export-execution -- usb-device <node-id> <source-storage-id> <destination-storage-id> tailscale remote
+```
+
 To set up local QMD search collections for DJ Vault:
 
 ```bash
@@ -156,6 +165,7 @@ npm run catalog:qmd:embed
 
 - [Architecture](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/ARCHITECTURE.md)
 - [Data Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DATA-MODEL.md)
+- [Distributed Topology](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DISTRIBUTED-TOPOLOGY.md)
 - [QMD Integration](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/QMD-INTEGRATION.md)
 - [SQLite Schema](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/SQLITE-SCHEMA.md)
 - [Research Program](/Users/theysayheygreg/clawd/projects/dj-vault/docs/project/RESEARCH-PROGRAM.md)

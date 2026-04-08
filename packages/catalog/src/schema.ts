@@ -1,4 +1,4 @@
-export const catalogSchemaVersion = 1;
+export const catalogSchemaVersion = 2;
 
 export const catalogSchemaSql = `
 PRAGMA foreign_keys = ON;
@@ -226,6 +226,62 @@ CREATE TABLE IF NOT EXISTS export_jobs (
   note TEXT
 );
 
+CREATE TABLE IF NOT EXISTS vault_nodes (
+  id TEXT PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE,
+  role TEXT NOT NULL,
+  machine_label TEXT,
+  transport TEXT,
+  address TEXT,
+  is_online INTEGER NOT NULL DEFAULT 0,
+  last_seen_at TEXT,
+  notes TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS storage_locations (
+  id TEXT PRIMARY KEY,
+  node_id TEXT NOT NULL REFERENCES vault_nodes(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  kind TEXT NOT NULL,
+  mount_path TEXT,
+  path_prefix TEXT,
+  is_managed_library INTEGER NOT NULL DEFAULT 0,
+  is_available INTEGER NOT NULL DEFAULT 0,
+  last_verified_at TEXT,
+  notes TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE(node_id, name)
+);
+
+CREATE TABLE IF NOT EXISTS track_residencies (
+  track_id TEXT NOT NULL REFERENCES tracks(id) ON DELETE CASCADE,
+  storage_location_id TEXT NOT NULL REFERENCES storage_locations(id) ON DELETE CASCADE,
+  residency_kind TEXT NOT NULL,
+  relative_path TEXT NOT NULL,
+  status TEXT NOT NULL,
+  verified_at TEXT,
+  note TEXT,
+  PRIMARY KEY (track_id, storage_location_id, residency_kind)
+);
+
+CREATE TABLE IF NOT EXISTS export_execution_plans (
+  id TEXT PRIMARY KEY,
+  export_job_id TEXT REFERENCES export_jobs(id) ON DELETE SET NULL,
+  target_kind TEXT NOT NULL,
+  execution_node_id TEXT NOT NULL REFERENCES vault_nodes(id) ON DELETE CASCADE,
+  source_storage_location_id TEXT REFERENCES storage_locations(id) ON DELETE SET NULL,
+  destination_storage_location_id TEXT REFERENCES storage_locations(id) ON DELETE SET NULL,
+  requires_remote_access INTEGER NOT NULL DEFAULT 0,
+  transport TEXT,
+  status TEXT NOT NULL,
+  note TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE INDEX IF NOT EXISTS idx_tracks_hash_sha256 ON tracks(hash_sha256);
 CREATE INDEX IF NOT EXISTS idx_tracks_title ON tracks(title);
 CREATE INDEX IF NOT EXISTS idx_tracks_artist_role ON track_people(role, name);
@@ -233,4 +289,7 @@ CREATE INDEX IF NOT EXISTS idx_track_tags_kind_value ON track_tags(tag_kind, val
 CREATE INDEX IF NOT EXISTS idx_playlist_items_track_id ON playlist_items(track_id);
 CREATE INDEX IF NOT EXISTS idx_set_tracks_track_id ON set_tracks(track_id);
 CREATE INDEX IF NOT EXISTS idx_metadata_provenance_lookup ON metadata_provenance(entity_kind, entity_id, field_path);
+CREATE INDEX IF NOT EXISTS idx_storage_locations_node_id ON storage_locations(node_id);
+CREATE INDEX IF NOT EXISTS idx_track_residencies_storage_location_id ON track_residencies(storage_location_id);
+CREATE INDEX IF NOT EXISTS idx_export_execution_plans_node_id ON export_execution_plans(execution_node_id);
 `;

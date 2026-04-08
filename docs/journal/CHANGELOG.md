@@ -155,3 +155,21 @@ DJ Vault needs more than exact-match lookup. QMD gives the project a local seman
 ### Why
 
 The catalog needed to stop being ingest-only. Playlists and sets are core product objects, and real authoring commands are the cleanest first seam before wiring the desktop app to them.
+
+## 2026-04-08 — Distributed topology scaffolding
+
+### Added
+
+- topology types in `packages/core/src/domain.ts`
+- topology schema tables in `packages/catalog/src/schema.ts`
+- `packages/catalog/src/topology.ts`
+- CLI commands for node registration, storage registration, track residency, and export execution planning
+- `docs/design/DISTRIBUTED-TOPOLOGY.md`
+
+### Changed
+
+- architecture and schema docs now explicitly separate catalog truth, media residency, and export execution
+
+### Why
+
+DJ Vault needs to support the real-world case where the database, the full library, and the USB/export destination do not live on the same machine. This scaffolding is the foundation for remote export and transport-aware planning.

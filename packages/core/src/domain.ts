@@ -4,6 +4,59 @@ export type DesignPillar = {
   summary: string;
 };
 
+export type VaultNodeRole = 'catalog-primary' | 'media-host' | 'export-worker' | 'hybrid';
+
+export type StorageKind = 'local-disk' | 'external-drive' | 'network-share' | 'nas' | 'cloud-mirror';
+
+export type ExportTargetKind = 'usb-device' | 'filesystem-folder' | 'network-drop' | 'remote-worker';
+
+export type VaultNode = {
+  id: string;
+  name: string;
+  role: VaultNodeRole;
+  machineLabel?: string;
+  transport?: 'local' | 'tailscale' | 'ssh' | 'smb' | 'manual';
+  address?: string;
+  isOnline?: boolean;
+  lastSeenAt?: string;
+  notes?: string;
+};
+
+export type StorageLocation = {
+  id: string;
+  nodeId: string;
+  name: string;
+  kind: StorageKind;
+  mountPath?: string;
+  pathPrefix?: string;
+  isManagedLibrary?: boolean;
+  isAvailable?: boolean;
+  lastVerifiedAt?: string;
+  notes?: string;
+};
+
+export type TrackResidency = {
+  trackId: string;
+  storageLocationId: string;
+  residencyKind: 'canonical' | 'replica' | 'cache' | 'export-staging';
+  relativePath: string;
+  status: 'ready' | 'missing' | 'offline' | 'pending-sync';
+  verifiedAt?: string;
+};
+
+export type ExportExecutionPlan = {
+  id: string;
+  exportJobId?: string;
+  targetKind: ExportTargetKind;
+  executionNodeId: string;
+  sourceStorageLocationId?: string;
+  destinationStorageLocationId?: string;
+  requiresRemoteAccess: boolean;
+  transport?: 'local' | 'tailscale' | 'ssh' | 'sneakernet';
+  status: 'planned' | 'ready' | 'running' | 'completed' | 'failed';
+  note?: string;
+};
+
 export const designPillars: DesignPillar[] = [
   {
     id: 'single-source-of-truth',
@@ -34,5 +87,10 @@ export const designPillars: DesignPillar[] = [
     id: 'club-reality-matters',
     name: 'Club Reality Matters',
     summary: 'The system should model how gear, settings, and library choices behave in practice.',
+  },
+  {
+    id: 'topology-matters',
+    name: 'Topology Matters',
+    summary: 'Catalog state, media residency, and export execution can live on different machines and still need one coherent plan.',
   },
 ];
