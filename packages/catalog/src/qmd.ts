@@ -50,9 +50,80 @@ type TrackTagRow = {
   value: string;
 };
 
+type PlaylistRow = {
+  id: string;
+  name: string;
+  type: string;
+  parent_id: string | null;
+  description: string | null;
+  created_at: string;
+  updated_at: string;
+  sort_mode: string | null;
+};
+
+type PlaylistTagRow = {
+  playlist_id: string;
+  value: string;
+};
+
+type PlaylistItemRow = {
+  playlist_id: string;
+  position: number;
+  note: string | null;
+  transition_note: string | null;
+  track_id: string;
+  track_title: string | null;
+  track_artist: string | null;
+};
+
+type DjSetRow = {
+  id: string;
+  name: string;
+  event: string | null;
+  target_duration_min: number | null;
+  vibe: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+type SetTrackRow = {
+  dj_set_id: string;
+  track_order: number;
+  role: string | null;
+  transition_method: string | null;
+  transition_note: string | null;
+  energy_delta: number | null;
+  track_id: string;
+  track_title: string | null;
+  track_artist: string | null;
+};
+
+type ImportJobRow = {
+  id: string;
+  source_kind: string;
+  source_path: string | null;
+  status: string;
+  started_at: string;
+  completed_at: string | null;
+  note: string | null;
+};
+
+type ExportJobRow = {
+  id: string;
+  target_kind: string;
+  target_path: string | null;
+  status: string;
+  started_at: string;
+  completed_at: string | null;
+  note: string | null;
+};
+
 export type ExportCatalogToQmdResult = {
   exportRoot: string;
   trackDocCount: number;
+  playlistDocCount: number;
+  setDocCount: number;
+  jobDocCount: number;
   collectionNames: string[];
 };
 
@@ -75,6 +146,19 @@ function toSlug(value: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 80);
+}
+
+function parseJsonArray(value: string | null): string[] {
+  if (!value) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(value) as unknown;
+    return Array.isArray(parsed) ? parsed.map((entry) => String(entry)) : [String(parsed)];
+  } catch {
+    return [value];
+  }
 }
 
 function buildTrackMarkdown(track: TrackRow, people: TrackPersonRow[], tags: TrackTagRow[]): string {
@@ -144,6 +228,100 @@ function buildTrackMarkdown(track: TrackRow, people: TrackPersonRow[], tags: Tra
   return `${body.join('\n')}\n`;
 }
 
+function buildPlaylistMarkdown(
+  playlist: PlaylistRow,
+  tags: PlaylistTagRow[],
+  items: PlaylistItemRow[],
+  parentName: string | null,
+): string {
+  const body = [
+    `# ${playlist.name}`,
+    '',
+    '## Summary',
+    `- playlist_id: ${playlist.id}`,
+    `- type: ${playlist.type}`,
+    `- parent: ${parentName ?? 'root'}`,
+    `- sort_mode: ${playlist.sort_mode ?? 'manual'}`,
+    `- item_count: ${items.length}`,
+    '',
+    '## Tags',
+    ...(tags.length > 0 ? tags.map((tag) => `- ${tag.value}`) : ['- none']),
+    '',
+    '## Description',
+    normalizeLine(playlist.description) ?? 'none',
+    '',
+    '## Items',
+    ...(items.length > 0
+      ? items.map(
+          (item) =>
+            `- ${item.position}. ${item.track_title ?? item.track_id} | artists: ${item.track_artist ?? 'unknown'} | note: ${item.note ?? 'none'} | transition: ${item.transition_note ?? 'none'}`,
+        )
+      : ['- none']),
+    '',
+    '## Timeline',
+    `- created_at: ${playlist.created_at}`,
+    `- updated_at: ${playlist.updated_at}`,
+    '',
+  ];
+
+  return `${body.join('\n')}\n`;
+}
+
+function buildSetMarkdown(djSet: DjSetRow, tracks: SetTrackRow[]): string {
+  const body = [
+    `# ${djSet.name}`,
+    '',
+    '## Summary',
+    `- set_id: ${djSet.id}`,
+    `- event: ${djSet.event ?? 'none'}`,
+    `- target_duration_min: ${djSet.target_duration_min ?? 'unknown'}`,
+    `- vibe: ${djSet.vibe ?? 'none'}`,
+    `- track_count: ${tracks.length}`,
+    '',
+    '## Sequence',
+    ...(tracks.length > 0
+      ? tracks.map(
+          (track) =>
+            `- ${track.track_order}. ${track.track_title ?? track.track_id} | artists: ${track.track_artist ?? 'unknown'} | role: ${track.role ?? 'none'} | transition: ${track.transition_method ?? 'none'} | note: ${track.transition_note ?? 'none'} | energy_delta: ${track.energy_delta ?? 'none'}`,
+        )
+      : ['- none']),
+    '',
+    '## Timeline',
+    `- created_at: ${djSet.created_at}`,
+    `- updated_at: ${djSet.updated_at}`,
+    '',
+  ];
+
+  return `${body.join('\n')}\n`;
+}
+
+function buildJobMarkdown(kind: 'import' | 'export', job: ImportJobRow | ExportJobRow): string {
+  const targetLabel = kind === 'import' ? 'source' : 'target';
+  const body = [
+    `# ${kind === 'import' ? 'Import' : 'Export'} Job ${job.id}`,
+    '',
+    '## Summary',
+    `- job_id: ${job.id}`,
+    `- kind: ${kind}`,
+    `- ${targetLabel}_kind: ${kind === 'import' ? (job as ImportJobRow).source_kind : (job as ExportJobRow).target_kind}`,
+    `- status: ${job.status}`,
+    `- started_at: ${job.started_at}`,
+    `- completed_at: ${job.completed_at ?? 'running'}`,
+    `- ${targetLabel}_path: ${kind === 'import' ? (job as ImportJobRow).source_path ?? 'none' : (job as ExportJobRow).target_path ?? 'none'}`,
+    '',
+    '## Note',
+    normalizeLine(job.note) ?? 'none',
+    '',
+  ];
+
+  const structuredPaths = kind === 'import' ? parseJsonArray((job as ImportJobRow).source_path) : [];
+  if (structuredPaths.length > 1) {
+    body.push('## Expanded Paths', ...structuredPaths.map((entry) => `- ${entry}`), '');
+  }
+
+  return `${body.join('\n')}\n`;
+}
+
 async function runQmd(args: string[], cwd: string): Promise<string> {
   const command = path.resolve(cwd, 'node_modules/.bin/qmd');
   const { stdout, stderr } = await execFileAsync(command, args, {
@@ -177,6 +355,9 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
   const database = new DatabaseSync(databasePath, { readOnly: true });
   const absoluteExportRoot = path.resolve(exportRoot);
   const tracksDir = path.join(absoluteExportRoot, 'tracks');
+  const playlistsDir = path.join(absoluteExportRoot, 'playlists');
+  const setsDir = path.join(absoluteExportRoot, 'sets');
+  const jobsDir = path.join(absoluteExportRoot, 'jobs');
 
   try {
     const tracks = database.prepare(`
@@ -201,6 +382,78 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
       ORDER BY track_id, tag_kind, position
     `).all() as TrackTagRow[];
 
+    const playlists = database.prepare(`
+      SELECT id, name, type, parent_id, description, created_at, updated_at, sort_mode
+      FROM playlists
+      ORDER BY name COLLATE NOCASE, id
+    `).all() as PlaylistRow[];
+
+    const playlistTags = database.prepare(`
+      SELECT playlist_id, value
+      FROM playlist_tags
+      ORDER BY playlist_id, position
+    `).all() as PlaylistTagRow[];
+
+    const playlistItems = database.prepare(`
+      SELECT
+        playlist_items.playlist_id,
+        playlist_items.position,
+        playlist_items.note,
+        playlist_items.transition_note,
+        playlist_items.track_id,
+        tracks.title AS track_title,
+        (
+          SELECT name
+          FROM track_people
+          WHERE track_people.track_id = tracks.id AND track_people.role = 'artist'
+          ORDER BY position
+          LIMIT 1
+        ) AS track_artist
+      FROM playlist_items
+      LEFT JOIN tracks ON tracks.id = playlist_items.track_id
+      ORDER BY playlist_items.playlist_id, playlist_items.position
+    `).all() as PlaylistItemRow[];
+
+    const djSets = database.prepare(`
+      SELECT id, name, event, target_duration_min, vibe, created_at, updated_at
+      FROM dj_sets
+      ORDER BY name COLLATE NOCASE, id
+    `).all() as DjSetRow[];
+
+    const setTracks = database.prepare(`
+      SELECT
+        set_tracks.dj_set_id,
+        set_tracks.track_order,
+        set_tracks.role,
+        set_tracks.transition_method,
+        set_tracks.transition_note,
+        set_tracks.energy_delta,
+        set_tracks.track_id,
+        tracks.title AS track_title,
+        (
+          SELECT name
+          FROM track_people
+          WHERE track_people.track_id = tracks.id AND track_people.role = 'artist'
+          ORDER BY position
+          LIMIT 1
+        ) AS track_artist
+      FROM set_tracks
+      LEFT JOIN tracks ON tracks.id = set_tracks.track_id
+      ORDER BY set_tracks.dj_set_id, set_tracks.track_order
+    `).all() as SetTrackRow[];
+
+    const importJobs = database.prepare(`
+      SELECT id, source_kind, source_path, status, started_at, completed_at, note
+      FROM import_jobs
+      ORDER BY started_at DESC, id DESC
+    `).all() as ImportJobRow[];
+
+    const exportJobs = database.prepare(`
+      SELECT id, target_kind, target_path, status, started_at, completed_at, note
+      FROM export_jobs
+      ORDER BY started_at DESC, id DESC
+    `).all() as ExportJobRow[];
+
     const peopleByTrack = new Map<string, TrackPersonRow[]>();
     for (const person of people) {
       const bucket = peopleByTrack.get(person.track_id) ?? [];
@@ -215,8 +468,34 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
       tagsByTrack.set(tag.track_id, bucket);
     }
 
+    const playlistTagsByPlaylist = new Map<string, PlaylistTagRow[]>();
+    for (const tag of playlistTags) {
+      const bucket = playlistTagsByPlaylist.get(tag.playlist_id) ?? [];
+      bucket.push(tag);
+      playlistTagsByPlaylist.set(tag.playlist_id, bucket);
+    }
+
+    const playlistItemsByPlaylist = new Map<string, PlaylistItemRow[]>();
+    for (const item of playlistItems) {
+      const bucket = playlistItemsByPlaylist.get(item.playlist_id) ?? [];
+      bucket.push(item);
+      playlistItemsByPlaylist.set(item.playlist_id, bucket);
+    }
+
+    const setTracksBySet = new Map<string, SetTrackRow[]>();
+    for (const item of setTracks) {
+      const bucket = setTracksBySet.get(item.dj_set_id) ?? [];
+      bucket.push(item);
+      setTracksBySet.set(item.dj_set_id, bucket);
+    }
+
+    const playlistNames = new Map(playlists.map((playlist) => [playlist.id, playlist.name]));
+
     await rm(absoluteExportRoot, { recursive: true, force: true });
     await mkdir(tracksDir, { recursive: true });
+    await mkdir(playlistsDir, { recursive: true });
+    await mkdir(setsDir, { recursive: true });
+    await mkdir(jobsDir, { recursive: true });
 
     for (const track of tracks) {
       const fileName = `${toSlug(track.title || track.file_name || track.id) || track.id}-${track.id}.md`;
@@ -224,10 +503,38 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
       await writeFile(path.join(tracksDir, fileName), markdown, 'utf8');
     }
 
+    for (const playlist of playlists) {
+      const fileName = `${toSlug(playlist.name || playlist.id) || playlist.id}-${playlist.id}.md`;
+      const markdown = buildPlaylistMarkdown(
+        playlist,
+        playlistTagsByPlaylist.get(playlist.id) ?? [],
+        playlistItemsByPlaylist.get(playlist.id) ?? [],
+        playlist.parent_id ? playlistNames.get(playlist.parent_id) ?? playlist.parent_id : null,
+      );
+      await writeFile(path.join(playlistsDir, fileName), markdown, 'utf8');
+    }
+
+    for (const djSet of djSets) {
+      const fileName = `${toSlug(djSet.name || djSet.id) || djSet.id}-${djSet.id}.md`;
+      const markdown = buildSetMarkdown(djSet, setTracksBySet.get(djSet.id) ?? []);
+      await writeFile(path.join(setsDir, fileName), markdown, 'utf8');
+    }
+
+    for (const importJob of importJobs) {
+      await writeFile(path.join(jobsDir, `import-${importJob.id}.md`), buildJobMarkdown('import', importJob), 'utf8');
+    }
+
+    for (const exportJob of exportJobs) {
+      await writeFile(path.join(jobsDir, `export-${exportJob.id}.md`), buildJobMarkdown('export', exportJob), 'utf8');
+    }
+
     return {
       exportRoot: absoluteExportRoot,
       trackDocCount: tracks.length,
-      collectionNames: ['dj-vault-tracks', 'dj-vault-docs', 'dj-vault-research', 'dj-vault-manifests'],
+      playlistDocCount: playlists.length,
+      setDocCount: djSets.length,
+      jobDocCount: importJobs.length + exportJobs.length,
+      collectionNames: ['dj-vault-catalog', 'dj-vault-docs', 'dj-vault-research', 'dj-vault-manifests'],
     };
   } finally {
     database.close();
@@ -238,10 +545,34 @@ export async function setupQmdForDjVault(projectRoot: string, databasePath: stri
   const result = await exportCatalogToQmd(databasePath, exportRoot);
   const absoluteProjectRoot = path.resolve(projectRoot);
 
-  await ensureQmdCollection(absoluteProjectRoot, path.join(exportRoot, 'tracks'), 'dj-vault-tracks', '**/*.md', 'Generated DJ Vault track metadata documents for semantic and keyword library search.');
-  await ensureQmdCollection(absoluteProjectRoot, path.join(absoluteProjectRoot, 'docs'), 'dj-vault-docs', '**/*.md', 'DJ Vault architecture, roadmap, design, and project documentation.');
-  await ensureQmdCollection(absoluteProjectRoot, path.join(absoluteProjectRoot, 'research/analysis'), 'dj-vault-research', '**/*.md', 'DJ Vault reverse-engineering notes and vendor behavior analysis.');
-  await ensureQmdCollection(absoluteProjectRoot, path.join(absoluteProjectRoot, 'research/manifests'), 'dj-vault-manifests', '**/*.json', 'Machine-readable DJ Vault inventories, source maps, and generated vendor manifests.');
+  await ensureQmdCollection(
+    absoluteProjectRoot,
+    exportRoot,
+    'dj-vault-catalog',
+    '**/*.md',
+    'Generated DJ Vault catalog documents covering tracks, playlists, DJ sets, and import/export job history for local keyword and semantic search.',
+  );
+  await ensureQmdCollection(
+    absoluteProjectRoot,
+    path.join(absoluteProjectRoot, 'docs'),
+    'dj-vault-docs',
+    '**/*.md',
+    'DJ Vault architecture, roadmap, design, and project documentation.',
+  );
+  await ensureQmdCollection(
+    absoluteProjectRoot,
+    path.join(absoluteProjectRoot, 'research/analysis'),
+    'dj-vault-research',
+    '**/*.md',
+    'DJ Vault reverse-engineering notes and vendor behavior analysis.',
+  );
+  await ensureQmdCollection(
+    absoluteProjectRoot,
+    path.join(absoluteProjectRoot, 'research/manifests'),
+    'dj-vault-manifests',
+    '**/*.json',
+    'Machine-readable DJ Vault inventories, source maps, and generated vendor manifests.',
+  );
 
   return result;
 }

@@ -134,6 +134,7 @@ The earlier sequential mapping left the largest Engine payloads mislabeled as `u
 
 - `README.md` now documents QMD as a first-class DJ Vault search subsystem
 - root package scripts now expose QMD setup and sync commands
+- QMD catalog export now covers playlists, DJ sets, and import/export jobs in addition to tracks
 
 ### Why
 

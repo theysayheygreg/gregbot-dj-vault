@@ -2,7 +2,7 @@
 
 DJ Vault is a local-first DJ music operating system.
 
-It now includes a first-class `qmd` search lane for local keyword, vector, and hybrid search across generated track metadata documents, project docs, manifests, and research notes.
+It now includes a first-class `qmd` search lane for local keyword, vector, and hybrid search across generated catalog documents, project docs, manifests, and research notes.
 
 The project now has two jobs:
 

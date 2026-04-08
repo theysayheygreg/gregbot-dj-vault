@@ -52,9 +52,14 @@ Current commands:
 
 ## What Gets Indexed
 
-DJ Vault currently exports per-track markdown documents into `data/qmd/tracks/`.
+DJ Vault currently exports markdown search documents into `data/qmd/` for:
 
-Each generated track document includes:
+- tracks
+- playlists
+- DJ sets
+- import/export jobs
+
+Track documents include:
 
 - canonical path
 - title
@@ -69,7 +74,7 @@ Each generated track document includes:
 
 QMD collections are then set up for:
 
-- `dj-vault-tracks`
+- `dj-vault-catalog`
 - `dj-vault-docs`
 - `dj-vault-research`
 - `dj-vault-manifests`
@@ -77,24 +82,16 @@ QMD collections are then set up for:
 ## Operational Flow
 
 1. `npm run catalog:qmd:setup`
-   - exports track search documents
+   - exports catalog search documents
    - registers DJ Vault collections with QMD
 2. `npm run catalog:qmd:update`
-   - refreshes exported track documents
+   - refreshes exported catalog documents
    - runs `qmd update`
 3. `npm run catalog:qmd:embed`
    - builds vector embeddings for semantic search
 
 ## Near-Term Next Step
 
-The current integration is document-shaped.
+The current integration is still document-shaped, and that remains the right first move because it lets DJ Vault use QMD immediately without coupling the search layer directly to SQLite internals.
 
-That is the right first move because it lets DJ Vault use QMD immediately without coupling the search layer directly to SQLite internals.
-
-The next improvement should be to export playlist, set, and import/export job documents as well, so semantic search can connect:
-
-- tracks
-- playlists
-- sets
-- research notes
-- operational history
+The next improvement should be to add provenance-aware export documents and smarter collection-scoped search entrypoints from the desktop app.
