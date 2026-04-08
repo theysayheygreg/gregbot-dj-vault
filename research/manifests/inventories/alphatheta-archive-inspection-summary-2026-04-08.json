@@ -1,0 +1,81 @@
+{
+  "collectedAt": "2026-04-08T08:00:57.793Z",
+  "archiveCount": 5,
+  "totalBytes": 548749209,
+  "inspections": [
+    {
+      "productName": "XDJ-AZ",
+      "articleTitle": "XDJ-AZ Firmware",
+      "fileName": "XDJAZv124.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZv124.zip",
+      "sizeBytes": 175737008,
+      "sha256": "52521553df2a5b479842cc0b2e767eef1a1e2be2949c9c276df950ab3b8f669d",
+      "zipEntries": [
+        {
+          "path": "XDJAZv124.UPD",
+          "sizeBytes": 175736848
+        }
+      ]
+    },
+    {
+      "productName": "XDJ-AZ",
+      "articleTitle": "XDJ-AZ Audio Driver for Windows",
+      "fileName": "XDJAZ1000exe.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZ1000exe.zip",
+      "sizeBytes": 9434763,
+      "sha256": "6469f543482f5c328e669feeb2e82782342a35fbe195995de9355f6ddae40a4f",
+      "zipEntries": [
+        {
+          "path": "XDJ-AZ_1.000.exe",
+          "sizeBytes": 10274176
+        }
+      ]
+    },
+    {
+      "productName": "OMNIS-DUO",
+      "articleTitle": "OMNIS-DUO Firmware",
+      "fileName": "OMNISDUOv123.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUOv123.zip",
+      "sizeBytes": 177758389,
+      "sha256": "a63c0a4f8a214cdacc0915271b728cfdae3c2d5cc61cd1c103887153ed64014c",
+      "zipEntries": [
+        {
+          "path": "OMNISDUOv123.UPD",
+          "sizeBytes": 177758223
+        }
+      ]
+    },
+    {
+      "productName": "OMNIS-DUO",
+      "articleTitle": "OMNIS-DUO Audio Driver for Windows",
+      "fileName": "OMNISDUO1000exe.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUO1000exe.zip",
+      "sizeBytes": 9423747,
+      "sha256": "4a3e98f8b45604ccc00936ed3f56ef78fd9f8078d47ff738bbb148482c3b7c06",
+      "zipEntries": [
+        {
+          "path": "OMNIS-DUO_1.000.exe",
+          "sizeBytes": 10245704
+        },
+        {
+          "path": "Open Source Code Notice.pdf",
+          "sizeBytes": 18583
+        }
+      ]
+    },
+    {
+      "productName": "OPUS-QUAD",
+      "articleTitle": "OPUS-QUAD Firmware",
+      "fileName": "OPUSQUADv132.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/opus-quad/OPUSQUADv132.zip",
+      "sizeBytes": 176395302,
+      "sha256": "971b9682ec1b935f88ff7a56393decb2694e4440efc022b0438d0f6a597dedda",
+      "zipEntries": [
+        {
+          "path": "OPUSQUADv132.UPD",
+          "sizeBytes": 176345103
+        }
+      ]
+    }
+  ]
+}

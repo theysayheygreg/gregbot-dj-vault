@@ -1,0 +1,33 @@
+{
+  "collectedAt": "2026-04-07T23:59:50.557Z",
+  "categories": [
+    {
+      "id": 4416169767193,
+      "name": "DJ Players",
+      "productCount": 0,
+      "activeCount": 0,
+      "archivedCount": 0
+    },
+    {
+      "id": 4416175418393,
+      "name": "DJ Mixers",
+      "productCount": 0,
+      "activeCount": 0,
+      "archivedCount": 0
+    },
+    {
+      "id": 4416162414361,
+      "name": "All-In-One DJ Systems",
+      "productCount": 0,
+      "activeCount": 0,
+      "archivedCount": 0
+    },
+    {
+      "id": 4416175427481,
+      "name": "rekordbox",
+      "productCount": 0,
+      "activeCount": 0,
+      "archivedCount": 0
+    }
+  ]
+}

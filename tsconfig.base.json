@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "paths": {
+      "@dj-vault/core": [
+        "packages/core/src/index.ts"
+      ],
+      "@dj-vault/catalog": [
+        "packages/catalog/src/index.ts"
+      ],
+      "@dj-vault/corpus": [
+        "packages/corpus/src/index.ts"
+      ]
+    }
+  }
+}

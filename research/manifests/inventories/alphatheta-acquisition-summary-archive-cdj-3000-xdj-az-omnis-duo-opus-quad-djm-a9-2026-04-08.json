@@ -1,0 +1,68 @@
+{
+  "collectedAt": "2026-04-08T08:16:57.300Z",
+  "selectedCount": 18,
+  "acquiredCount": 5,
+  "totalBytes": 708852513,
+  "products": [
+    "CDJ-3000",
+    "XDJ-AZ",
+    "OMNIS-DUO",
+    "OPUS-QUAD",
+    "DJM-A9"
+  ],
+  "artifactKinds": [
+    "archive"
+  ],
+  "artifacts": [
+    {
+      "productName": "CDJ-3000",
+      "articleTitle": "CDJ-3000 Firmware",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/dj-players/CDJ-3000/CDJ3Kv322.zip",
+      "fileName": "CDJ3Kv322.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/cdj-3000/CDJ3Kv322.zip",
+      "sizeBytes": 162530127
+    },
+    {
+      "productName": "XDJ-AZ",
+      "articleTitle": "XDJ-AZ Firmware",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/XDJ-AZ/XDJAZv124.zip",
+      "fileName": "XDJAZv124.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZv124.zip",
+      "sizeBytes": 175737008
+    },
+    {
+      "productName": "OMNIS-DUO",
+      "articleTitle": "OMNIS-DUO Firmware",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/OMNIS-DUO/OMNISDUOv123.zip",
+      "fileName": "OMNISDUOv123.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUOv123.zip",
+      "sizeBytes": 177758389
+    },
+    {
+      "productName": "OPUS-QUAD",
+      "articleTitle": "OPUS-QUAD Firmware",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/OPUS-QUAD/OPUSQUADv132.zip",
+      "fileName": "OPUSQUADv132.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/opus-quad/OPUSQUADv132.zip",
+      "sizeBytes": 176395302
+    },
+    {
+      "productName": "DJM-A9",
+      "articleTitle": "DJM-A9 Firmware Update",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/dj-mixers/DJM-A9/DJM-A9_119.zip",
+      "fileName": "DJM-A9_119.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/djm-a9/DJM-A9_119.zip",
+      "sizeBytes": 16431687
+    }
+  ]
+}

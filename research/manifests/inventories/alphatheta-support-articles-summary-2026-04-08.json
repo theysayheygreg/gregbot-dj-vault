@@ -1,0 +1,28 @@
+{
+  "collectedAt": "2026-04-08T00:45:17.962Z",
+  "productCount": 54,
+  "sectionCount": 121,
+  "articleCount": 186,
+  "labels": [
+    {
+      "label": "Firmware Update",
+      "sectionCount": 49,
+      "articleCount": 62
+    },
+    {
+      "label": "Software Update",
+      "sectionCount": 16,
+      "articleCount": 17
+    },
+    {
+      "label": "Drivers",
+      "sectionCount": 48,
+      "articleCount": 91
+    },
+    {
+      "label": "PRO DJ LINK Bridge",
+      "sectionCount": 8,
+      "articleCount": 16
+    }
+  ]
+}

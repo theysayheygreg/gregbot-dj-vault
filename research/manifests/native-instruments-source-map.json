@@ -1,0 +1,30 @@
+{
+  "vendor": "native-instruments",
+  "snapshotDate": "2026-04-07",
+  "surfaces": [
+    {
+      "name": "NI downloads hub",
+      "url": "https://www.native-instruments.com/en/support/downloads/",
+      "kind": "downloads-index",
+      "notes": "Primary official downloads hub covering Native Access, legacy updates, drivers, and other files."
+    },
+    {
+      "name": "Traktor setup",
+      "url": "https://www.native-instruments.com/en/specials/traktor/setup-traktor/",
+      "kind": "product-setup",
+      "notes": "Explains modern Traktor installation path through Native Access and links to manuals and hardware updater surfaces."
+    },
+    {
+      "name": "Traktor X1 downloads example",
+      "url": "https://www.native-instruments.com/en/products/traktor/dj-controllers/traktor-x1/downloads/",
+      "kind": "hardware-downloads",
+      "notes": "Representative hardware downloads page exposing manuals and references to firmware/drivers."
+    },
+    {
+      "name": "Traktor software update article",
+      "url": "https://support.native-instruments.com/hc/en-us/articles/115002829885-How-to-Download-and-Install-a-TRAKTOR-Software-Update",
+      "kind": "support-article",
+      "notes": "Confirms newer Traktor updates are distributed via Native Access while older major-version updates remain on legacy surfaces."
+    }
+  ]
+}

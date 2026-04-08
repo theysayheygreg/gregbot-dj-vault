@@ -1,0 +1,20 @@
+{
+  "collectedAt": "2026-04-08T04:54:06.206Z",
+  "articleCount": 186,
+  "resolvedArticleCount": 186,
+  "downloadCount": 466,
+  "byArtifactKind": [
+    {
+      "artifactKind": "pdf",
+      "count": 296
+    },
+    {
+      "artifactKind": "archive",
+      "count": 168
+    },
+    {
+      "artifactKind": "disk-image",
+      "count": 2
+    }
+  ]
+}

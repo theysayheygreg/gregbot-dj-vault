@@ -1,0 +1,230 @@
+{
+  "vendor": "denon-engine",
+  "product": "engine-dj",
+  "collectedAt": "2026-04-08T08:51:15.449Z",
+  "pageUrl": "https://enginedj.com/downloads",
+  "desktopPackages": [
+    {
+      "url": "https://public.inmusiccdn.com/Engine/4.5.0/RELEASE/2429481e52ad0e88/Engine_DJ_4.5.0_3d19c38012_Setup.exe",
+      "platform": "windows",
+      "version": "4.5.0"
+    },
+    {
+      "url": "https://public.inmusiccdn.com/Engine/4.5.0/RELEASE/2429481e52ad0e88/Engine_DJ_4.5.0_3d19c38012_Setup.dmg",
+      "platform": "mac",
+      "version": "4.5.0"
+    },
+    {
+      "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Engine_DJ_4.3.4_7d5a3fd8bc_Setup.dmg",
+      "platform": "mac",
+      "version": "4.3.4"
+    },
+    {
+      "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Engine_DJ_4.3.4_7d5a3fd8bc_Setup.exe",
+      "platform": "windows",
+      "version": "4.3.4"
+    },
+    {
+      "url": "https://cdn.inmusicbrands.com/engine/m6dy5/Engine_DJ_2.0.2_68bea1c882_Setup.exe",
+      "platform": "windows",
+      "version": "2.0.2"
+    },
+    {
+      "url": "https://cdn.inmusicbrands.com/engine/m6dy5/Engine_DJ_2.0.2_68bea1c882_Setup.dmg",
+      "platform": "mac",
+      "version": "2.0.2"
+    },
+    {
+      "url": "https://cdn.inmusicbrands.com/engine/n8h2s/Engine_DJ_2.0.1_800f150448_Setup.exe",
+      "platform": "windows",
+      "version": "2.0.1"
+    },
+    {
+      "url": "https://cdn.inmusicbrands.com/engine/n8h2s/Engine_DJ_2.0.1_800f150448_Setup.dmg",
+      "platform": "mac",
+      "version": "2.0.1"
+    }
+  ],
+  "hardwarePackages": [
+    {
+      "title": "SYSTEM ONE",
+      "brand": "Rane",
+      "productType": "Standalone DJ Controller",
+      "version": "4.6.0",
+      "winUrl": "https://public.inmusiccdn.com/Engine/4.6.0/RELEASE/f1c1cc88b087b786/System%20One%204.6.0%20Updater.exe",
+      "macUrl": "https://public.inmusiccdn.com/Engine/4.6.0/RELEASE/f1c1cc88b087b786/System%20One%204.6.0%20Updater.app.zip",
+      "usbUrl": "https://public.inmusiccdn.com/Engine/4.6.0/RELEASE/f1c1cc88b087b786/SYSTEMONE-4.6.0-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/rane/systemone/SYSTEM%20ONE%20-%20User%20Guide%20-%20v4.6.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "PRIME GO+",
+      "brand": "Denon DJ",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%20GO%20Plus%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%20GO%20Plus%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/PRIMEGOPLUS-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/PRIME%204%2C%20PRIME%204%2B%2C%20PRIME%202%2C%20PRIME%20GO%2C%20PRIME%20GO%2B%2C%20SC%20LIVE%204%2C%20SC%20LIVE%202%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "PRIME 4+",
+      "brand": "Denon DJ",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%204%20Plus%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%204%20Plus%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/PRIME4PLUS-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/PRIME%204%2C%20PRIME%204%2B%2C%20PRIME%202%2C%20PRIME%20GO%2C%20PRIME%20GO%2B%2C%20SC%20LIVE%204%2C%20SC%20LIVE%202%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "MIXSTREAM PRO GO",
+      "brand": "Numark",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Mixstream%20Pro%20Go%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Mixstream%20Pro%20Go%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/MIXSTREAMPROGO-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/Mixstream%20Pro%2C%20Mixstream%20Pro%2B%2C%20Mixstream%20Pro%20Go%20-%20User%20Guide%20-%20v4.3.0%202.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "SC LIVE 4",
+      "brand": "Denon DJ",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC%20LIVE%204%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC%20LIVE%204%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SCLIVE4-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/PRIME%204%2C%20PRIME%204%2B%2C%20PRIME%202%2C%20PRIME%20GO%2C%20PRIME%20GO%2B%2C%20SC%20LIVE%204%2C%20SC%20LIVE%202%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "SC LIVE 2",
+      "brand": "Denon DJ",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC%20LIVE%202%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC%20LIVE%202%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SCLIVE2-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/PRIME%204%2C%20PRIME%204%2B%2C%20PRIME%202%2C%20PRIME%20GO%2C%20PRIME%20GO%2B%2C%20SC%20LIVE%204%2C%20SC%20LIVE%202%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "MIXSTREAM PRO+",
+      "brand": "Numark",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Mixstream%20Pro%20Plus%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Mixstream%20Pro%20Plus%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/MIXSTREAMPROPLUS-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/Mixstream%20Pro%2C%20Mixstream%20Pro%2B%2C%20Mixstream%20Pro%20Go%20-%20User%20Guide%20-%20v4.3.0%202.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "MIXSTREAM PRO",
+      "brand": "Numark",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Mixstream%20Pro%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Mixstream%20Pro%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/MIXSTREAMPRO-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/Mixstream%20Pro%2C%20Mixstream%20Pro%2B%2C%20Mixstream%20Pro%20Go%20-%20User%20Guide%20-%20v4.3.0%202.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "PRIME 4",
+      "brand": "Denon DJ",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%204%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%204%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/PRIME4-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/PRIME%204%2C%20PRIME%204%2B%2C%20PRIME%202%2C%20PRIME%20GO%2C%20PRIME%20GO%2B%2C%20SC%20LIVE%204%2C%20SC%20LIVE%202%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "PRIME GO",
+      "brand": "Denon DJ",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%20GO%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%20GO%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/PRIMEGO-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/PRIME%204%2C%20PRIME%204%2B%2C%20PRIME%202%2C%20PRIME%20GO%2C%20PRIME%20GO%2B%2C%20SC%20LIVE%204%2C%20SC%20LIVE%202%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "PRIME 2",
+      "brand": "Denon DJ",
+      "productType": "Standalone DJ Controller",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%202%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/Prime%202%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/PRIME2-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/PRIME%204%2C%20PRIME%204%2B%2C%20PRIME%202%2C%20PRIME%20GO%2C%20PRIME%20GO%2B%2C%20SC%20LIVE%204%2C%20SC%20LIVE%202%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "SC6000 PRIME",
+      "brand": "Denon DJ",
+      "productType": "DJ Player",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000%20Prime%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000%20Prime%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/SC6000%20PRIME%2C%20SC6000M%20PRIME%2C%20SC5000%20PRIME%2C%20SC5000M%20PRIME%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "SC6000M PRIME",
+      "brand": "Denon DJ",
+      "productType": "DJ Player",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000M%20Prime%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000M%20Prime%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000M-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/SC6000%20PRIME%2C%20SC6000M%20PRIME%2C%20SC5000%20PRIME%2C%20SC5000M%20PRIME%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "SC5000 PRIME",
+      "brand": "Denon DJ",
+      "productType": "DJ Player",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC5000%20Prime%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC5000%20Prime%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC5000-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/SC6000%20PRIME%2C%20SC6000M%20PRIME%2C%20SC5000%20PRIME%2C%20SC5000M%20PRIME%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    },
+    {
+      "title": "SC5000M PRIME",
+      "brand": "Denon DJ",
+      "productType": "DJ Player",
+      "version": "4.3.4",
+      "winUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC5000M%20Prime%204.3.4%20Updater.exe",
+      "macUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC5000M%20Prime%204.3.4%20Updater.app.zip",
+      "usbUrl": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC5000M-4.3.4-Update.img",
+      "userGuideUrl": "https://cdn.inmusicbrands.com/engine/43/SC6000%20PRIME%2C%20SC6000M%20PRIME%2C%20SC5000%20PRIME%2C%20SC5000M%20PRIME%20-%20User%20Guide%20-%20v4.3.0.pdf",
+      "updateGuideUrl": "https://enginedj.com/news/articles/how-to-update-engine-dj-os",
+      "otaOnly": false
+    }
+  ]
+}

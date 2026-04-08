@@ -1,0 +1,617 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "collectedAt": "2026-04-08T00:02:47.756Z",
+  "category": {
+    "id": 4416162414361,
+    "name": "All-In-One DJ Systems",
+    "url": "https://support.alphatheta.com/en-US/categories/4416162414361"
+  },
+  "products": [
+    {
+      "id": 37071730868249,
+      "name": "XDJ-AZ",
+      "status": "Active",
+      "categoryId": 4416162414361,
+      "createdAt": "2024-08-30",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/37071730868249",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/37071730868249?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/37071730868249?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/37071730868249?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/37071730868249?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/37071730868249?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 53214453590442,
+          "title": "XDJ-AZ Serato DJ Pro",
+          "releasedAt": "2024-12-10T08:00:11.000000Z"
+        },
+        {
+          "articleId": 40958022266009,
+          "title": "Can I use multiple USB storage devices authenticated with rekordbox CloudDirectPlay at the same time?",
+          "releasedAt": "2024-11-12T08:02:20.000000Z"
+        },
+        {
+          "articleId": 39610083786905,
+          "title": "When I touch the Rec button during recording, nothing happens and I can't stop recording. What should I do?",
+          "releasedAt": "2024-10-10T01:02:23.000000Z"
+        },
+        {
+          "articleId": 38555834673561,
+          "title": "XDJ-AZ MIDI-compatible software",
+          "releasedAt": "2024-12-09T10:49:21.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 26559096570521,
+      "name": "OMNIS-DUO",
+      "status": "Active",
+      "categoryId": 4416162414361,
+      "createdAt": "2023-12-18",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/26559096570521",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/26559096570521?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/26559096570521?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/26559096570521?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/26559096570521?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/26559096570521?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 44177811247001,
+          "title": "After updating the firmware, the [MY SETTINGS LOAD] button is no longer displayed on the [SOURCE] screen. Why not?",
+          "releasedAt": "2025-01-23T15:22:20.000000Z"
+        },
+        {
+          "articleId": 42705747013529,
+          "title": "How much free space do I need on my USB storage device or SD card to use rekordbox CloudDirectPlay and streaming services?",
+          "releasedAt": "2024-11-12T08:02:07.000000Z"
+        },
+        {
+          "articleId": 39611354479897,
+          "title": "When I'm using rekordbox CloudDirectPlay, it takes time to load tracks. Why?",
+          "releasedAt": "2024-11-12T08:02:11.000000Z"
+        },
+        {
+          "articleId": 39611272663705,
+          "title": "Can I use a USB storage device and an SD memory card authenticated with rekordbox CloudDirectPlay at the same time?",
+          "releasedAt": "2024-11-12T08:02:17.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 16077188898585,
+      "name": "OPUS-QUAD",
+      "status": "Active",
+      "categoryId": 4416162414361,
+      "createdAt": "2023-03-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/16077188898585",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/16077188898585?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/16077188898585?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/16077188898585?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/16077188898585?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/16077188898585?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 42705887242393,
+          "title": "When playing streaming service tracks, it takes time before the waveform, beat position, etc. are displayed. Why?",
+          "releasedAt": "2024-12-05T08:02:30.000000Z"
+        },
+        {
+          "articleId": 39613271424025,
+          "title": "I can't select tracks after logging in to my streaming service. Why not?",
+          "releasedAt": "2024-12-05T08:02:34.000000Z"
+        },
+        {
+          "articleId": 39613198293657,
+          "title": "I can't log in to streaming services. Why not?",
+          "releasedAt": "2024-12-05T08:02:37.000000Z"
+        },
+        {
+          "articleId": 39612958459417,
+          "title": "Are there any feature limitations when I play streaming service tracks?",
+          "releasedAt": "2024-12-05T08:02:42.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416587179673,
+      "name": "XDJ-RX3",
+      "status": "Active",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/4416587179673",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416587179673?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416587179673?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416587179673?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416587179673?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416587179673?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 30103760655897,
+          "title": "The message [Error: Failed to connect audio!!] is shown, or the virtual deck disappears immediately on the Serato DJ Pro screen.",
+          "releasedAt": "2024-03-19T16:12:09.000000Z"
+        },
+        {
+          "articleId": 30103466961945,
+          "title": "The Serato DJ Pro screen doesn't react to anything I do on the XDJ-RX3 when it's connected.",
+          "releasedAt": "2024-03-19T15:43:36.000000Z"
+        },
+        {
+          "articleId": 30103009114265,
+          "title": "XDJ-RX3 Firmware Update Guide",
+          "releasedAt": "2024-08-23T20:49:03.000000Z"
+        },
+        {
+          "articleId": 5097637194137,
+          "title": "XDJ-RX3 Firmware",
+          "releasedAt": "2024-08-22T06:53:33.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416572662809,
+      "name": "XDJ-XZ",
+      "status": "Active",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/4416572662809",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416572662809?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416572662809?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416572662809?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416572662809?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416572662809?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 40182116223257,
+          "title": "[XDJ-XZ] Firmware Update Guide",
+          "releasedAt": "2024-08-23T17:09:31.000000Z"
+        },
+        {
+          "articleId": 4413945902745,
+          "title": "I'd like to know more about the MASTER REC feature.",
+          "releasedAt": "2022-02-24T11:14:48.000000Z"
+        },
+        {
+          "articleId": 4408396582809,
+          "title": "Sound comes out of my headphones or speakers incorrectly [Serato]",
+          "releasedAt": "2022-02-24T11:14:49.000000Z"
+        },
+        {
+          "articleId": 4408396535193,
+          "title": " I can't hear the Sampler sound in rekordbox (Performance mode).",
+          "releasedAt": "2022-02-24T09:45:24.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416572577305,
+      "name": "XDJ-RR",
+      "status": "Active",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/4416572577305",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416572577305?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416572577305?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416572577305?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416572577305?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416572577305?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4413945933209,
+          "title": " What are LINE / PORTABLE / OFF of AUX? How should each of them be used?",
+          "releasedAt": "2022-02-24T11:02:59.000000Z"
+        },
+        {
+          "articleId": 4409114296473,
+          "title": "No sound is produced when using this unit in combination with rekordbox. ",
+          "releasedAt": "2022-02-24T11:03:00.000000Z"
+        },
+        {
+          "articleId": 4409119990681,
+          "title": "Windows users only 1. Audio is not output. or, 2. Cannot control rekordbox. ",
+          "releasedAt": "2022-02-24T11:03:01.000000Z"
+        },
+        {
+          "articleId": 4409114041113,
+          "title": "Sound played on the computer is not output from this unit.",
+          "releasedAt": "2022-02-24T11:03:01.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416579244057,
+      "name": "XDJ-RX2",
+      "status": "Archived",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/4416579244057",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416579244057?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416579244057?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416579244057?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416579244057?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416579244057?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4413930157721,
+          "title": "There is no response when the touch display is touched.",
+          "releasedAt": "2022-02-24T09:57:38.000000Z"
+        },
+        {
+          "articleId": 4411279818521,
+          "title": "Does the touch display support multi-touch?",
+          "releasedAt": "2022-02-24T09:57:39.000000Z"
+        },
+        {
+          "articleId": 4411297029273,
+          "title": "A different position on the touch display from the position I touch responds. I calibrated the touch display, but this did not fix the problem.",
+          "releasedAt": "2022-02-24T09:57:39.000000Z"
+        },
+        {
+          "articleId": 4411301078809,
+          "title": "When two places (buttons) on the touch display are touched, a location that was not touched sometimes responds.",
+          "releasedAt": "2022-02-24T09:57:40.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416586905241,
+      "name": "XDJ-AERO-W",
+      "status": "Archived",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416586905241",
+      "sectionLinks": [],
+      "highlights": []
+    },
+    {
+      "id": 4416586909593,
+      "name": "XDJ-AERO",
+      "status": "Archived",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/4416586909593",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=26"
+        },
+        {
+          "sectionId": 29,
+          "label": "MIDI Mapping Files",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=29"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23875440055449,
+          "title": "XDJ-AERO Virtual DJ Pro",
+          "releasedAt": "2023-10-10T09:35:12.000000Z"
+        },
+        {
+          "articleId": 23875381761433,
+          "title": "XDJ-AERO TRAKTOR",
+          "releasedAt": "2023-10-10T09:34:00.000000Z"
+        },
+        {
+          "articleId": 23875333591321,
+          "title": "XDJ-AERO Audio Driver for Mac",
+          "releasedAt": "2023-10-10T09:24:34.000000Z"
+        },
+        {
+          "articleId": 23875313466649,
+          "title": "XDJ-AERO rekordbox",
+          "releasedAt": "2024-10-03T12:14:56.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416579224729,
+      "name": "XDJ-R1",
+      "status": "Archived",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/4416579224729",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=26"
+        },
+        {
+          "sectionId": 29,
+          "label": "MIDI Mapping Files",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=29"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23879321653017,
+          "title": "XDJ-R1 TRAKTOR PRO 2 settings file Mac",
+          "releasedAt": "2023-10-10T10:36:16.000000Z"
+        },
+        {
+          "articleId": 23879200161561,
+          "title": "XDJ-R1 Audio Driver for Windows",
+          "releasedAt": "2023-10-10T10:26:27.000000Z"
+        },
+        {
+          "articleId": 23878614852121,
+          "title": "XDJ-R1 TRAKTOR",
+          "releasedAt": "2023-10-10T10:43:54.000000Z"
+        },
+        {
+          "articleId": 23878620147353,
+          "title": "XDJ-R1 Virtual DJ Pro",
+          "releasedAt": "2023-10-10T10:45:08.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416579218841,
+      "name": "XDJ-RX",
+      "status": "Archived",
+      "categoryId": 4416162414361,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-02-04",
+      "url": "https://support.alphatheta.com/en-US/products/4416579218841",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=26"
+        },
+        {
+          "sectionId": 29,
+          "label": "MIDI Mapping Files",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=29"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23881080000793,
+          "title": "XDJ-RX Audio Driver for macOS Sonoma",
+          "releasedAt": "2024-05-02T15:17:20.000000Z"
+        },
+        {
+          "articleId": 23880357836441,
+          "title": "XDJ-RX Audio Driver for Windows",
+          "releasedAt": "2024-04-19T08:11:40.000000Z"
+        },
+        {
+          "articleId": 23880332259865,
+          "title": "XDJ-RX Firmware",
+          "releasedAt": "2023-10-10T10:59:45.000000Z"
+        },
+        {
+          "articleId": 23880151048345,
+          "title": "XDJ-RX rekordbox",
+          "releasedAt": "2025-12-08T07:43:37.000000Z"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "collectedAt": "2026-04-08T08:57:00.548Z",
+  "version": "7.2.13",
+  "releaseDate": "2026-03-31",
+  "packageUrl": "https://cdn.rekordbox.com/files/20260326153631/Install_rekordbox_x64_7_2_13.zip",
+  "artifact": {
+    "label": "rekordbox 7.2.13",
+    "url": "https://cdn.rekordbox.com/files/20260326153631/Install_rekordbox_x64_7_2_13.zip",
+    "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/rekordbox/current/Install_rekordbox_x64_7_2_13.zip",
+    "sizeBytes": 649483097,
+    "sha256": "225ece5dd93cb58b909e6d75d1221e2dca9730a13eaad3ee2f932537276eb113",
+    "fileType": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+    "zipEntries": [
+      "Install_rekordbox_x64_7_2_13.exe"
+    ]
+  }
+}

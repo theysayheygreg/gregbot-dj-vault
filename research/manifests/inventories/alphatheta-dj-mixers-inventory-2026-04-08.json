@@ -1,0 +1,1839 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "collectedAt": "2026-04-08T00:02:47.756Z",
+  "category": {
+    "id": 4416175418393,
+    "name": "DJ Mixers",
+    "url": "https://support.alphatheta.com/en-US/categories/4416175418393"
+  },
+  "products": [
+    {
+      "id": 50766108259865,
+      "name": "DJM-V5",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2025-09-17",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/50766108259865",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/50766108259865?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/50766108259865?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/50766108259865?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/50766108259865?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/50766108259865?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 53214453590526,
+          "title": "DJM-V5 Serato DJ Pro",
+          "releasedAt": "2026-02-18T06:21:55.000000Z"
+        },
+        {
+          "articleId": 53214453590514,
+          "title": "DJM-V5 rekordbox",
+          "releasedAt": "2026-02-18T04:51:16.000000Z"
+        },
+        {
+          "articleId": 53214453590499,
+          "title": "DJM-V5 Audio Driver for Windows",
+          "releasedAt": "2026-02-18T03:24:07.000000Z"
+        },
+        {
+          "articleId": 53214453590496,
+          "title": "DJM-V5 Utility Software for Mac",
+          "releasedAt": "2026-02-18T03:03:49.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 15882401503257,
+      "name": "DJM-A9",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2023-02-23",
+      "updatedAt": "2026-02-03",
+      "url": "https://support.alphatheta.com/en-US/products/15882401503257",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=26"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=30"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 24672827170585,
+          "title": "DJM-A9 4-channel professional DJ mixer",
+          "releasedAt": "2024-08-24T01:53:46.000000Z"
+        },
+        {
+          "articleId": 16007686521753,
+          "title": "DJM-A9 MIDI-compatible software ",
+          "releasedAt": "2023-07-05T15:42:31.000000Z"
+        },
+        {
+          "articleId": 16006872025369,
+          "title": "DJM-A9 Audio Driver for Windows",
+          "releasedAt": "2023-02-28T08:59:16.000000Z"
+        },
+        {
+          "articleId": 16005225352089,
+          "title": "The [COLOR] knob isn't locked even if the [CENTER LOCK] switch is set to [ON]. Why not?",
+          "releasedAt": "2023-02-28T08:59:19.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 28788051666201,
+      "name": "euphonia",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2024-02-15",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/28788051666201",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/28788051666201?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/28788051666201?section=24"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/28788051666201?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/28788051666201?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 29536181377433,
+          "title": "euphonia Setting Utility for Mac",
+          "releasedAt": "2024-06-06T10:55:59.000000Z"
+        },
+        {
+          "articleId": 29344276660761,
+          "title": "euphonia MIDI-compatible software",
+          "releasedAt": "2024-03-14T06:00:06.000000Z"
+        },
+        {
+          "articleId": 29304541096729,
+          "title": "Can I replace controls?",
+          "releasedAt": "2025-02-06T10:45:48.000000Z"
+        },
+        {
+          "articleId": 29299407764761,
+          "title": "Which output terminals are balanced?",
+          "releasedAt": "2024-03-14T06:03:06.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 6874435245721,
+      "name": "DJM-S5",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-05-24",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/6874435245721",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/6874435245721?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/6874435245721?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/6874435245721?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/6874435245721?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/6874435245721?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 11394954934425,
+          "title": "What else do I need to use DVS with the DJM-S5?",
+          "releasedAt": "2022-06-09T14:10:11.000000Z"
+        },
+        {
+          "articleId": 7338667264537,
+          "title": "Can I change the functions of buttons and knobs to suit my preference?",
+          "releasedAt": "2022-06-13T10:04:20.000000Z"
+        },
+        {
+          "articleId": 7338677857049,
+          "title": "I want to use the unit with a DJ application other than Serato DJ Pro by assigning MIDI. Where can I find the Midi code sent from the unit when I use each button or knob?",
+          "releasedAt": "2024-07-04T08:35:59.000000Z"
+        },
+        {
+          "articleId": 7338675931417,
+          "title": "Can I use the unit without connecting it to a power outlet?",
+          "releasedAt": "2022-06-09T14:07:09.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416569696665,
+      "name": "DJM-S7",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/4416569696665",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416569696665?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416569696665?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416569696665?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416569696665?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416569696665?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 35152935572249,
+          "title": "Sound comes out of my headphones or speakers incorrectly. Why is this happening? [Rekordbox]",
+          "releasedAt": "2024-07-16T09:46:02.000000Z"
+        },
+        {
+          "articleId": 21584791816217,
+          "title": "Can I connect the unit to a PC/Mac that only has a USB Type-C port?",
+          "releasedAt": "2022-10-11T14:54:13.000000Z"
+        },
+        {
+          "articleId": 11394871877657,
+          "title": "Audio doesn't output from the master, even though the channel fader is set to the top. Why not?",
+          "releasedAt": "2022-02-24T10:43:25.000000Z"
+        },
+        {
+          "articleId": 4409809917593,
+          "title": "No sound is output when the unit and a device are connected via Bluetooth. Why not?",
+          "releasedAt": "2022-09-30T13:29:59.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416564891801,
+      "name": "DJM-V10-LF",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/4416564891801",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=26"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=30"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 32262519554713,
+          "title": "What are the functional differences between the DJM-V10-LF and the DJM-V10?",
+          "releasedAt": "2024-08-23T18:29:44.000000Z"
+        },
+        {
+          "articleId": 4406611978521,
+          "title": "Can I change the channel faders on the DJM-V10-LF to 45 mm ones, the same as those on the DJM-V10?",
+          "releasedAt": "2022-02-01T10:19:48.000000Z"
+        },
+        {
+          "articleId": 4406605249945,
+          "title": "Are the channel fader curves on the DJM-V10 and the DJM-V10-LF the same?",
+          "releasedAt": "2024-08-23T17:42:13.000000Z"
+        },
+        {
+          "articleId": 4406611970713,
+          "title": "Does the DJM-V10-LF have a crossfader?",
+          "releasedAt": "2022-02-01T10:19:54.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416568754457,
+      "name": "DJM-V10",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/4416568754457",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=26"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=30"
+        },
+        {
+          "sectionId": 31,
+          "label": "Product Tutorials",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=31"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 32262676588185,
+          "title": "How to use the compressor ",
+          "releasedAt": "2022-08-12T13:33:31.000000Z"
+        },
+        {
+          "articleId": 9442223168793,
+          "title": "How to use 4-band EQ ",
+          "releasedAt": "2022-08-12T13:32:54.000000Z"
+        },
+        {
+          "articleId": 9442234281497,
+          "title": "How to use the master isolator",
+          "releasedAt": "2022-08-12T13:32:19.000000Z"
+        },
+        {
+          "articleId": 9442182151577,
+          "title": "How to use Master Mix and channel returns",
+          "releasedAt": "2022-08-12T13:31:53.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416569473945,
+      "name": "DJM-S11",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-02-01",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/4416569473945",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416569473945?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416569473945?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416569473945?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416569473945?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416569473945?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 11009961640857,
+          "title": "[DJM-S11] Firmware Update Guide ",
+          "releasedAt": "2024-08-24T01:06:15.000000Z"
+        },
+        {
+          "articleId": 4414129180697,
+          "title": "Audio doesn't output from the master, even though the channel fader is set to the top. Why not?",
+          "releasedAt": "2022-02-24T10:48:19.000000Z"
+        },
+        {
+          "articleId": 4409704045209,
+          "title": "Sound comes out of my headphones or speakers incorrectly. Why is this happening?",
+          "releasedAt": "2024-07-19T11:19:40.000000Z"
+        },
+        {
+          "articleId": 4409711858073,
+          "title": "The volume suddenly drops sometimes. Why does this happen? DJM-S11",
+          "releasedAt": "2024-07-17T14:28:38.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416497869081,
+      "name": "DJM-S3",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416497869081",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416497869081?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416497869081?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416497869081?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416497869081?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416497869081?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 28302612486553,
+          "title": "Can I connect this unit to a USB hub?",
+          "releasedAt": "2022-10-12T13:00:21.000000Z"
+        },
+        {
+          "articleId": 11429910001945,
+          "title": "Can I connect the unit to a PC/Mac that only has a USB Type-C port?",
+          "releasedAt": "2022-10-12T12:50:59.000000Z"
+        },
+        {
+          "articleId": 11429739765145,
+          "title": "What is the Kensington security slot used for?",
+          "releasedAt": "2022-10-12T12:41:55.000000Z"
+        },
+        {
+          "articleId": 11429536509209,
+          "title": "[DJM-S3] Firmware Update Guide ",
+          "releasedAt": "2024-08-23T18:29:46.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490599449,
+      "name": "DJM-900NXS2",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490599449",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=24"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=26"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=30"
+        },
+        {
+          "sectionId": 38,
+          "label": "Firmware Updates",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=38"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 24797995774361,
+          "title": "[ DJM-900NXS2] Firmware Update Guide",
+          "releasedAt": "2024-08-23T17:09:31.000000Z"
+        },
+        {
+          "articleId": 4413938198937,
+          "title": "Firmware update failed. (ERROR E01)",
+          "releasedAt": "2022-02-24T11:40:03.000000Z"
+        },
+        {
+          "articleId": 4406085041049,
+          "title": "Can I use the DJM-900NXS's flight case with this unit?",
+          "releasedAt": "2022-02-24T11:40:05.000000Z"
+        },
+        {
+          "articleId": 4406078854425,
+          "title": "Does this unit support rack mounting?",
+          "releasedAt": "2022-02-24T11:40:05.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416497659929,
+      "name": "DJM-250MK2",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/4416497659929",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416497659929?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416497659929?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416497659929?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416497659929?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416497659929?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 28339680684825,
+          "title": "What is the Kensington security slot used for?",
+          "releasedAt": "2022-09-29T14:16:52.000000Z"
+        },
+        {
+          "articleId": 11008664845209,
+          "title": "[DJM-250MK2] Firmware Update Guide ",
+          "releasedAt": "2024-08-24T01:38:50.000000Z"
+        },
+        {
+          "articleId": 4414114538649,
+          "title": "No sound is produced or volume is low.",
+          "releasedAt": "2022-02-24T10:53:32.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416503148057,
+      "name": "DJM-450",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/4416503148057",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416503148057?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416503148057?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416503148057?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416503148057?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416503148057?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 24797601563289,
+          "title": "What mobile devices can I use with the unit?",
+          "releasedAt": "2022-09-29T11:40:31.000000Z"
+        },
+        {
+          "articleId": 11004876167321,
+          "title": "[DJM-450] Firmware Update Guide",
+          "releasedAt": "2024-08-24T01:23:54.000000Z"
+        },
+        {
+          "articleId": 4414108275097,
+          "title": "What are the distinctive features of this product?",
+          "releasedAt": "2022-02-24T10:54:56.000000Z"
+        },
+        {
+          "articleId": 4409448775065,
+          "title": "How is the sound quality of this unit?",
+          "releasedAt": "2022-02-24T10:54:56.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416503568025,
+      "name": "DJM-750MK2",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-22",
+      "url": "https://support.alphatheta.com/en-US/products/4416503568025",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416503568025?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416503568025?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416503568025?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416503568025?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416503568025?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 28332790814105,
+          "title": "DJM-750MK2 rekordbox",
+          "releasedAt": "2025-12-08T07:43:38.000000Z"
+        },
+        {
+          "articleId": 24797342924569,
+          "title": "[ DM-750MK2] Firmware Update Guide",
+          "releasedAt": "2024-08-23T17:09:30.000000Z"
+        },
+        {
+          "articleId": 4413930690329,
+          "title": "The effect sound of this DJM applied to the channel selected by the effect channel switch at [SEND/RETURN] is not outputted to RETURN AUX channel. Why?",
+          "releasedAt": "2022-02-24T10:00:22.000000Z"
+        },
+        {
+          "articleId": 4411086479897,
+          "title": "What are the features of this product?",
+          "releasedAt": "2022-02-24T11:09:44.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496912665,
+      "name": "DJM-S9",
+      "status": "Active",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2025-12-08",
+      "url": "https://support.alphatheta.com/en-US/products/4416496912665",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496912665?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416496912665?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496912665?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496912665?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496912665?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 11394689687321,
+          "title": "Can I connect the unit to a PC/Mac that only has a USB Type-C port?",
+          "releasedAt": "2022-10-11T14:32:23.000000Z"
+        },
+        {
+          "articleId": 11394529350425,
+          "title": "[DJM-S9] Firmware Update Guide ",
+          "releasedAt": "2024-08-23T19:42:50.000000Z"
+        },
+        {
+          "articleId": 4414137887257,
+          "title": " The performance pad does not work in slicer mode.",
+          "releasedAt": "2022-02-24T10:44:15.000000Z"
+        },
+        {
+          "articleId": 4409792439193,
+          "title": "Audio distortion, glitches, clicks, dropouts or noise",
+          "releasedAt": "2024-08-01T09:21:17.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 19760856407321,
+      "name": "DJM-TOUR1",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2023-06-19",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/19760856407321",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=26"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=30"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 21934589697945,
+          "title": "DJM-TOUR1 PRO DJ LINK Bridge for Windows",
+          "releasedAt": "2023-10-05T13:10:31.000000Z"
+        },
+        {
+          "articleId": 21934366369177,
+          "title": "DJM-TOUR1 PRO DJ LINK Bridge for Mac",
+          "releasedAt": "2023-10-05T13:11:49.000000Z"
+        },
+        {
+          "articleId": 21934016195481,
+          "title": "DJM-TOUR1 Firmware Update Guide",
+          "releasedAt": "2023-10-05T11:32:26.000000Z"
+        },
+        {
+          "articleId": 21933711509657,
+          "title": "DJM-TOUR1 Firmware",
+          "releasedAt": "2023-10-05T11:48:14.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416502508057,
+      "name": "DJM-750",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416502508057",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502508057?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416502508057?section=24"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416502508057?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502508057?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23743877681561,
+          "title": "DJM-750 Audio Driver for Windows",
+          "releasedAt": "2023-10-06T13:16:26.000000Z"
+        },
+        {
+          "articleId": 22675088300313,
+          "title": "DJM-750 Audio Driver for macOS Sonoma",
+          "releasedAt": "2024-05-10T15:07:59.000000Z"
+        },
+        {
+          "articleId": 22674816295193,
+          "title": "How to use the Pioneer DJ DJM-750 DJ Mixer (Instruction manual)",
+          "releasedAt": "2023-10-06T13:03:54.000000Z"
+        },
+        {
+          "articleId": 22674254104345,
+          "title": "I do not want to output the sound of the computer's program events (warning sounds, etc.). Is there a way to prevent this?",
+          "releasedAt": "2023-10-12T13:41:12.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490118809,
+      "name": "DJM-750-S",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490118809",
+      "sectionLinks": [],
+      "highlights": []
+    },
+    {
+      "id": 4416496743065,
+      "name": "DJM-900SRT",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496743065",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496743065?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416496743065?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496743065?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496743065?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496743065?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 19894653683609,
+          "title": "DJM-900SRT rekordbox",
+          "releasedAt": "2025-12-09T07:16:12.000000Z"
+        },
+        {
+          "articleId": 22496213936153,
+          "title": "DJM-900SRT Serato DJ Pro",
+          "releasedAt": "2023-10-06T09:00:33.000000Z"
+        },
+        {
+          "articleId": 22496121822361,
+          "title": "DJM-900SRT Driver for Windows",
+          "releasedAt": "2023-10-06T08:57:06.000000Z"
+        },
+        {
+          "articleId": 22492188785433,
+          "title": "DJM-900SRT Audio Driver for macOS Sonoma",
+          "releasedAt": "2024-05-10T14:43:21.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490369817,
+      "name": "DJM-2000NXS",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490369817",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490369817?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416490369817?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416490369817?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490369817?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490369817?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22072563033369,
+          "title": "DJM-2000NXS Firmware for Mac",
+          "releasedAt": "2023-10-09T09:40:36.000000Z"
+        },
+        {
+          "articleId": 22072416693913,
+          "title": "DJM-2000NXS Firmware for Windows",
+          "releasedAt": "2023-10-09T09:44:29.000000Z"
+        },
+        {
+          "articleId": 22072186038297,
+          "title": "DJM-2000NXS Audio Driver for Windows",
+          "releasedAt": "2023-10-09T09:53:06.000000Z"
+        },
+        {
+          "articleId": 21935679426713,
+          "title": "DJM-2000NXS Audio Driver for macOS Sonoma",
+          "releasedAt": "2024-05-10T14:14:31.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416502475673,
+      "name": "DJM-850",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416502475673",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502475673?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416502475673?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416502475673?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416502475673?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502475673?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23739061809945,
+          "title": "DJM-850 Serato DJ Pro",
+          "releasedAt": "2023-10-06T10:25:22.000000Z"
+        },
+        {
+          "articleId": 23739008120729,
+          "title": "DJM-850 rekordbox",
+          "releasedAt": "2025-12-09T07:10:43.000000Z"
+        },
+        {
+          "articleId": 23738945214105,
+          "title": "DJM-850 Audio Driver for Windows",
+          "releasedAt": "2023-10-06T10:39:31.000000Z"
+        },
+        {
+          "articleId": 22630703019673,
+          "title": "DJM-850 Audio Driver for macOS Ventura",
+          "releasedAt": "2024-05-10T15:17:16.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490090649,
+      "name": "DJM-850-S",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490090649",
+      "sectionLinks": [],
+      "highlights": []
+    },
+    {
+      "id": 4416490078105,
+      "name": "DJM-850-W",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490078105",
+      "sectionLinks": [],
+      "highlights": []
+    },
+    {
+      "id": 4416496757913,
+      "name": "DJM-900NXS",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496757913",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496757913?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416496757913?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496757913?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496757913?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496757913?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23737348601241,
+          "title": "DJM-900NXS Serato DJ Pro",
+          "releasedAt": "2023-10-06T09:57:44.000000Z"
+        },
+        {
+          "articleId": 23737332125593,
+          "title": "DJM-900NXS rekordbox",
+          "releasedAt": "2025-12-08T07:43:36.000000Z"
+        },
+        {
+          "articleId": 23737275492889,
+          "title": "DJM-900NXS Audio Driver for Windows",
+          "releasedAt": "2023-10-06T09:43:56.000000Z"
+        },
+        {
+          "articleId": 22719364257561,
+          "title": "DJM-900NXS Audio Driver for macOS Ventura",
+          "releasedAt": "2024-05-10T15:18:51.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496747673,
+      "name": "DJM-900NXS-M",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496747673",
+      "sectionLinks": [
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496747673?section=28"
+        }
+      ],
+      "highlights": []
+    },
+    {
+      "id": 4416502723353,
+      "name": "DJM-250",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416502723353",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502723353?section=23"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502723353?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22679604066201,
+          "title": "The sound of an external device or microphone is not output.",
+          "releasedAt": "2023-10-12T14:25:43.000000Z"
+        },
+        {
+          "articleId": 20061970689689,
+          "title": "No sound is produced, or the volume is low.",
+          "releasedAt": "2023-10-12T14:25:44.000000Z"
+        },
+        {
+          "articleId": 20061962638617,
+          "title": "The volume of devices connected to the [AUX 1] to [AUX 3] terminals is low.",
+          "releasedAt": "2023-10-12T14:25:46.000000Z"
+        },
+        {
+          "articleId": 20061931273113,
+          "title": "The sound is distorted when an analog player is connected to this unit’s [PHONO] terminals, or the channel level indicator does not change when the [TRIM] control is turned.",
+          "releasedAt": "2023-10-12T14:25:50.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 20025195633817,
+      "name": "DJM-350",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2023-06-26",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/20025195633817",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/20025195633817?section=23"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/20025195633817?section=25"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/20025195633817?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22678281123865,
+          "title": "DJM-350-W Firmware",
+          "releasedAt": "2023-10-09T08:27:26.000000Z"
+        },
+        {
+          "articleId": 22678141224601,
+          "title": "DJM-350-W Firmware Effects",
+          "releasedAt": "2023-10-09T08:37:31.000000Z"
+        },
+        {
+          "articleId": 22677885308953,
+          "title": "DJM-350 Firmware Effects",
+          "releasedAt": "2023-10-09T08:38:22.000000Z"
+        },
+        {
+          "articleId": 22677548276377,
+          "title": "How to use the Pioneer DJ DJM-350 DJ Mixer (Instruction manual)",
+          "releasedAt": "2023-10-09T08:15:45.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490374553,
+      "name": "DJM-2000",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490374553",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490374553?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416490374553?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416490374553?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490374553?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490374553?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22113334830617,
+          "title": "DJM-2000 Audio Driver for macOS El Capitan",
+          "releasedAt": "2023-10-09T10:48:23.000000Z"
+        },
+        {
+          "articleId": 22111559625753,
+          "title": "DJM-2000 Audio Driver for Windows 10",
+          "releasedAt": "2023-10-09T10:52:09.000000Z"
+        },
+        {
+          "articleId": 22111499250457,
+          "title": "DJM-2000 Firmware for Mac",
+          "releasedAt": "2025-09-08T16:49:53.000000Z"
+        },
+        {
+          "articleId": 22111311387033,
+          "title": "DJM-2000 Firmware for Windows",
+          "releasedAt": "2023-10-09T10:41:19.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496725273,
+      "name": "DJM-T1",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496725273",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=26"
+        },
+        {
+          "sectionId": 29,
+          "label": "MIDI Mapping Files",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=29"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23976027573017,
+          "title": "Some functions do not work properly when operating TRAKTOR 2 software with this unit.",
+          "releasedAt": "2023-10-12T14:47:48.000000Z"
+        },
+        {
+          "articleId": 23976013187993,
+          "title": "DJM-T1 TRAKTOR SCRATCH PRO2/DUO2",
+          "releasedAt": "2023-10-05T15:50:45.000000Z"
+        },
+        {
+          "articleId": 23706613395225,
+          "title": "DJM-T1 TRAKTOR PRO 2 Ver.2.5.0",
+          "releasedAt": "2023-10-05T15:48:59.000000Z"
+        },
+        {
+          "articleId": 23706591237529,
+          "title": "DJM-T1 About TRAKTOR SCRATCH2 Timecode MK2",
+          "releasedAt": "2023-10-05T15:46:18.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490173977,
+      "name": "DJM-5000",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490173977",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490173977?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416490173977?section=24"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490173977?section=26"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490173977?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23746265199257,
+          "title": "DJM-5000 Audio Driver for Windows",
+          "releasedAt": "2023-10-06T15:07:58.000000Z"
+        },
+        {
+          "articleId": 22722340631065,
+          "title": "DJM-5000 Audio Driver for macOS Yosemite",
+          "releasedAt": "2023-10-06T15:04:35.000000Z"
+        },
+        {
+          "articleId": 22722229963033,
+          "title": "DJM-5000 Audio Driver for macOS El Capitan or later",
+          "releasedAt": "2023-10-06T15:00:40.000000Z"
+        },
+        {
+          "articleId": 22722142637337,
+          "title": "How to use the Pioneer DJ DJM-5000 DJ Mixer (Instruction manual)",
+          "releasedAt": "2023-10-06T14:44:01.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490030233,
+      "name": "SVM-1000",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490030233",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490030233?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490030233?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22755601575705,
+          "title": "DJs and VJs: unlock your true AV potential.",
+          "releasedAt": "2023-10-12T09:45:44.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496835225,
+      "name": "DJM-700",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496835225",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496835225?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496835225?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531452225177,
+          "title": "Give the freshest, most explosive live performances.",
+          "releasedAt": "2023-10-12T13:46:22.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416502515609,
+      "name": "DJM-700-S",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416502515609",
+      "sectionLinks": [],
+      "highlights": []
+    },
+    {
+      "id": 4416502566553,
+      "name": "DJM-400",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416502566553",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502566553?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531271933465,
+          "title": "DJM-400",
+          "releasedAt": "2022-04-19T10:57:41.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490113433,
+      "name": "DJM-800",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490113433",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490113433?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490113433?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22754427631641,
+          "title": "Creative freedom, complete digital control.",
+          "releasedAt": "2023-10-12T13:12:40.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416497066521,
+      "name": "DJM-1000",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416497066521",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416497066521?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416497066521?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22754968958233,
+          "title": "Uncompromised performance and flexibility.",
+          "releasedAt": "2023-10-12T10:09:18.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496827289,
+      "name": "DJM-707",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496827289",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496827289?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531505194777,
+          "title": "DJM-707",
+          "releasedAt": "2022-04-14T11:11:36.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416490051097,
+      "name": "DJM-909",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416490051097",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416490051097?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531750691865,
+          "title": "DJM-909",
+          "releasedAt": "2022-04-14T11:06:28.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416502578457,
+      "name": "DJM-3000",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416502578457",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416502578457?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531206811673,
+          "title": "DJM-3000",
+          "releasedAt": "2022-02-28T09:54:18.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496883865,
+      "name": "DJM-300",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496883865",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496883865?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531194345241,
+          "title": "DJM-300",
+          "releasedAt": "2022-02-28T09:33:32.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416502577689,
+      "name": "DJM-300-S",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416502577689",
+      "sectionLinks": [],
+      "highlights": []
+    },
+    {
+      "id": 4416496849305,
+      "name": "DJM-600",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496849305",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496849305?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531369957401,
+          "title": "DJM-600",
+          "releasedAt": "2022-04-14T11:11:49.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 20102960913049,
+      "name": "DJM-4000",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2023-06-28",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/20102960913049",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/20102960913049?section=23"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/20102960913049?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22753481491737,
+          "title": "No signals are output from the MASTER outputs, or only from one channel.",
+          "releasedAt": "2023-10-12T16:16:33.000000Z"
+        },
+        {
+          "articleId": 20134951852569,
+          "title": "No sound is output from the computer, or sound cannot be input to the computer.",
+          "releasedAt": "2023-10-12T16:16:35.000000Z"
+        },
+        {
+          "articleId": 20134918300825,
+          "title": "Sometimes the talk over function gets activated and the master sound gets weaker even when not speaking into the mike.",
+          "releasedAt": "2023-10-12T16:11:23.000000Z"
+        },
+        {
+          "articleId": 20134775775001,
+          "title": "The output sound is distorted.",
+          "releasedAt": "2023-10-12T16:11:25.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496865177,
+      "name": "DJM-500",
+      "status": "Archived",
+      "categoryId": 4416175418393,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496865177",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496865177?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4531463347609,
+          "title": "How to use the Pioneer DJ DJM-500 DJ Mixer (Instruction manual)",
+          "releasedAt": "2025-01-14T16:15:34.000000Z"
+        }
+      ]
+    }
+  ]
+}

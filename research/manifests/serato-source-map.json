@@ -1,0 +1,24 @@
+{
+  "vendor": "serato",
+  "snapshotDate": "2026-04-07",
+  "surfaces": [
+    {
+      "name": "Serato DJ downloads",
+      "url": "https://serato.com/dj/downloads",
+      "kind": "software-download",
+      "notes": "Primary official download page exposing the current release plus inline release-note content."
+    },
+    {
+      "name": "Serato DJ Pro product page",
+      "url": "https://serato.com/dj/pro",
+      "kind": "product-page",
+      "notes": "Useful for capability and ecosystem framing."
+    },
+    {
+      "name": "Serato OS compatibility article",
+      "url": "https://support.serato.com/hc/en-us/articles/204865694-Serato-DJ-Pro-Lite-Operating-System-compatibility",
+      "kind": "support-article",
+      "notes": "Support surface that references version-specific release notes and compatibility constraints."
+    }
+  ]
+}

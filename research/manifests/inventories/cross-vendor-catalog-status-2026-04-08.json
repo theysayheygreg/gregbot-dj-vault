@@ -1,0 +1,357 @@
+{
+  "generatedAt": "2026-04-08T08:57:35.334Z",
+  "northStar": "Give DJs one canonical source of truth for library, metadata, playlists, and history, then show how that truth behaves across software and booth hardware.",
+  "vendors": {
+    "alphatheta": {
+      "hardwareCategories": [
+        {
+          "id": 4416169767193,
+          "name": "DJ Players",
+          "productCount": 31,
+          "activeCount": 4,
+          "archivedCount": 26
+        },
+        {
+          "id": 4416175418393,
+          "name": "DJ Mixers",
+          "productCount": 43,
+          "activeCount": 12,
+          "archivedCount": 31
+        },
+        {
+          "id": 4416162414361,
+          "name": "All-In-One DJ Systems",
+          "productCount": 11,
+          "activeCount": 6,
+          "archivedCount": 5
+        },
+        {
+          "id": 4416175427481,
+          "name": "rekordbox",
+          "productCount": 5,
+          "activeCount": 4,
+          "archivedCount": 0
+        }
+      ],
+      "downloads": {
+        "collectedAt": "2026-04-08T04:54:06.206Z",
+        "articleCount": 186,
+        "resolvedArticleCount": 186,
+        "downloadCount": 466,
+        "byArtifactKind": [
+          {
+            "artifactKind": "pdf",
+            "count": 296
+          },
+          {
+            "artifactKind": "archive",
+            "count": 168
+          },
+          {
+            "artifactKind": "disk-image",
+            "count": 2
+          }
+        ]
+      },
+      "localFirmwareArchives": [
+        {
+          "productName": "CDJ-3000",
+          "articleTitle": "CDJ-3000 Firmware",
+          "sectionLabel": "Firmware Update",
+          "artifactKind": "archive",
+          "href": "https://downloads.support.alphatheta.com/firmwares/dj-players/CDJ-3000/CDJ3Kv322.zip",
+          "fileName": "CDJ3Kv322.zip",
+          "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/cdj-3000/CDJ3Kv322.zip",
+          "sizeBytes": 162530127
+        },
+        {
+          "productName": "XDJ-AZ",
+          "articleTitle": "XDJ-AZ Firmware",
+          "sectionLabel": "Firmware Update",
+          "artifactKind": "archive",
+          "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/XDJ-AZ/XDJAZv124.zip",
+          "fileName": "XDJAZv124.zip",
+          "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZv124.zip",
+          "sizeBytes": 175737008
+        },
+        {
+          "productName": "OMNIS-DUO",
+          "articleTitle": "OMNIS-DUO Firmware",
+          "sectionLabel": "Firmware Update",
+          "artifactKind": "archive",
+          "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/OMNIS-DUO/OMNISDUOv123.zip",
+          "fileName": "OMNISDUOv123.zip",
+          "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUOv123.zip",
+          "sizeBytes": 177758389
+        },
+        {
+          "productName": "OPUS-QUAD",
+          "articleTitle": "OPUS-QUAD Firmware",
+          "sectionLabel": "Firmware Update",
+          "artifactKind": "archive",
+          "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/OPUS-QUAD/OPUSQUADv132.zip",
+          "fileName": "OPUSQUADv132.zip",
+          "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/opus-quad/OPUSQUADv132.zip",
+          "sizeBytes": 176395302
+        },
+        {
+          "productName": "DJM-A9",
+          "articleTitle": "DJM-A9 Firmware Update",
+          "sectionLabel": "Firmware Update",
+          "artifactKind": "archive",
+          "href": "https://downloads.support.alphatheta.com/firmwares/dj-mixers/DJM-A9/DJM-A9_119.zip",
+          "fileName": "DJM-A9_119.zip",
+          "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/djm-a9/DJM-A9_119.zip",
+          "sizeBytes": 16431687
+        }
+      ],
+      "unpackedFirmwarePayloads": [
+        {
+          "productName": "CDJ-3000",
+          "articleTitle": "CDJ-3000 Firmware",
+          "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/cdj-3000/CDJ3Kv322.zip",
+          "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/cdj-3000/cdj3kv322",
+          "entries": [
+            {
+              "relativePath": "CDJ3Kv322.UPD",
+              "sizeBytes": 162484239,
+              "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: 9424e626-da90-4eb0-a72f-a1a32e8326e0",
+              "interestingStrings": [
+                "r!x5VDJMUTxKvc",
+                "EUsBZUF6",
+                "^Cdjw<e@J",
+                ")Z3~EpxdJ,",
+                "T&ocdj*%~",
+                ";cDj+V`",
+                "^LuSB{m8",
+                ",$}Z)XDj",
+                "i\"u<ixDj",
+                "4m[O9USB",
+                "='\\usbQ1",
+                "RQ2uSbT[l",
+                "0_gb5Cdj&",
+                ".}^;MAC;o",
+                "uSbxUUIa",
+                "vxdj[38V",
+                ">zukZ<.mac",
+                ">jUSb8nZ",
+                "XDJ-RR3.22"
+              ]
+            }
+          ]
+        },
+        {
+          "productName": "XDJ-AZ",
+          "articleTitle": "XDJ-AZ Firmware",
+          "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZv124.zip",
+          "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/xdj-az/xdjazv124",
+          "entries": [
+            {
+              "relativePath": "XDJAZv124.UPD",
+              "sizeBytes": 175736848,
+              "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: 74f61bc6-cc59-46ec-9795-3152c4def044",
+              "interestingStrings": [
+                "cdjB\"M2Fi",
+                "WA;^-uSb",
+                "ErxdJV\fp",
+                ">djm8vH@8",
+                "DjmpONDB",
+                "GE7ACPDjmH",
+                "?6djM9fb",
+                "XDJ-XZN1.24"
+              ]
+            }
+          ]
+        },
+        {
+          "productName": "OMNIS-DUO",
+          "articleTitle": "OMNIS-DUO Firmware",
+          "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUOv123.zip",
+          "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/omnis-duo/omnisduov123",
+          "entries": [
+            {
+              "relativePath": "OMNISDUOv123.UPD",
+              "sizeBytes": 177758223,
+              "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: 9eda148f-46c3-4695-b8f9-89127e0e9dba",
+              "interestingStrings": [
+                "$g&\fNDjM",
+                "/Ep]usBp",
+                "\"fQdEdjM",
+                "!2wDMaCzS",
+                "{;}^dJm#",
+                "^#^)EDjM!",
+                "cdJz/N/N",
+                "L[gx.CDj",
+                "-x\fDJMS$",
+                "?_UsbhyV",
+                "(J_CdJVI",
+                "XDJ-RR1.23"
+              ]
+            }
+          ]
+        },
+        {
+          "productName": "OPUS-QUAD",
+          "articleTitle": "OPUS-QUAD Firmware",
+          "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/opus-quad/OPUSQUADv132.zip",
+          "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/opus-quad/opusquadv132",
+          "entries": [
+            {
+              "relativePath": "OPUSQUADv132.UPD",
+              "sizeBytes": 176345103,
+              "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: f8a3c92b-f0f0-498f-8f9f-1265c6af70ee",
+              "interestingStrings": [
+                ":Usb^t^@",
+                "AEXdJeOP",
+                "5cDJ\"I>>v",
+                "P[`~mAcE[",
+                "-z [ymAC",
+                "hTmaC]`#",
+                "(p[Macdtjd",
+                "dEMaC|f/",
+                "CdjP_K5Es",
+                "Uoer=)mAC",
+                "mACSDUl",
+                "XDJ-RR1.32"
+              ]
+            }
+          ]
+        },
+        {
+          "productName": "DJM-A9",
+          "articleTitle": "DJM-A9 Firmware Update",
+          "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/djm-a9/DJM-A9_119.zip",
+          "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/djm-a9/djm-a9-119",
+          "entries": [
+            {
+              "relativePath": "DJM-A9_119.upd",
+              "sizeBytes": 19252098,
+              "fileType": "data",
+              "interestingStrings": [
+                "[dJM@TWj",
+                "USBQSFiT",
+                "k;uSbPBZ"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "rekordbox": {
+      "releaseNotes": {
+        "collectedAt": "2026-04-08T00:46:43.633Z",
+        "pageCount": 3,
+        "entryCount": 30,
+        "latestVersion": "7.2.13",
+        "oldestVersion": "6.8.5"
+      },
+      "currentDownload": {
+        "vendor": "pioneer-alphatheta",
+        "product": "rekordbox",
+        "collectedAt": "2026-04-08T08:51:12.538Z",
+        "pageUrl": "https://rekordbox.com/en/download/",
+        "currentVersion": "7.2.13",
+        "currentReleaseDate": "2026-03-31",
+        "packageUrl": "https://cdn.rekordbox.com/files/20260326153631/Install_rekordbox_x64_7_2_13.zip"
+      },
+      "localAcquisition": {
+        "collectedAt": "2026-04-08T08:57:00.548Z",
+        "version": "7.2.13",
+        "releaseDate": "2026-03-31",
+        "packageUrl": "https://cdn.rekordbox.com/files/20260326153631/Install_rekordbox_x64_7_2_13.zip",
+        "artifact": {
+          "label": "rekordbox 7.2.13",
+          "url": "https://cdn.rekordbox.com/files/20260326153631/Install_rekordbox_x64_7_2_13.zip",
+          "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/rekordbox/current/Install_rekordbox_x64_7_2_13.zip",
+          "sizeBytes": 649483097,
+          "sha256": "225ece5dd93cb58b909e6d75d1221e2dca9730a13eaad3ee2f932537276eb113",
+          "fileType": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+          "zipEntries": [
+            "Install_rekordbox_x64_7_2_13.exe"
+          ]
+        }
+      }
+    },
+    "traktor": {
+      "whatsNew": {
+        "collectedAt": "2026-04-08T08:21:20.418Z",
+        "title": "What's new in Traktor Pro / Play 4.4.2",
+        "articleUpdatedAt": "2026-03-26T14:49:21Z",
+        "latestVersion": "4.4.2",
+        "versionCount": 7,
+        "hardwareMentionCount": 6
+      }
+    },
+    "serato": {
+      "softwareArchive": {
+        "collectedAt": "2026-04-08T08:21:19.258Z",
+        "entryCount": 115,
+        "latestVersion": "4.0.5",
+        "oldestVersion": "1.0.0"
+      }
+    },
+    "engineDj": {
+      "releaseNotes": {
+        "collectedAt": "2026-04-08T08:21:19.716Z",
+        "entryCount": 9,
+        "latestVersion": "4.3.4",
+        "oldestVersion": "3.2"
+      },
+      "currentDownloads": {
+        "collectedAt": "2026-04-08T08:51:15.449Z",
+        "desktopPackageCount": 8,
+        "currentDesktopVersion": "4.5.0",
+        "hardwarePackageCount": 15,
+        "denonHardwareCount": 11
+      },
+      "localAcquisition": {
+        "collectedAt": "2026-04-08T08:56:44.337Z",
+        "targets": [
+          "SC6000 PRIME",
+          "PRIME 4+",
+          "SC LIVE 4"
+        ],
+        "artifacts": [
+          {
+            "label": "Engine DJ Desktop 4.5.0 Windows",
+            "url": "https://public.inmusiccdn.com/Engine/4.5.0/RELEASE/2429481e52ad0e88/Engine_DJ_4.5.0_3d19c38012_Setup.exe",
+            "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/desktop/Engine_DJ_4.5.0_3d19c38012_Setup.exe",
+            "sizeBytes": 76955736,
+            "sha256": "f85aca0cc523be4655174c535160ddfd9f8ebd77619a917982415ac261d21f9a",
+            "fileType": "PE32 executable (GUI) Intel 80386, for MS Windows"
+          },
+          {
+            "label": "SC6000 PRIME 4.3.4 USB image",
+            "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000-4.3.4-Update.img",
+            "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc6000-prime/SC6000-4.3.4-Update.img",
+            "sizeBytes": 149032935,
+            "sha256": "dbc685ab86c311ad28dceea4461f22fa84d9950ee86d4a7c3f9083d4915bb628",
+            "fileType": "Device Tree Blob version 17, size=149032935, boot CPU=0, string block size=87, DT structure block size=149031896"
+          },
+          {
+            "label": "PRIME 4+ 4.3.4 USB image",
+            "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/PRIME4PLUS-4.3.4-Update.img",
+            "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/prime-4/PRIME4PLUS-4.3.4-Update.img",
+            "sizeBytes": 172048912,
+            "sha256": "2243d521db03e23f68defd1e818d340e3e70d6930b61970225591bf894f957a1",
+            "fileType": "data"
+          },
+          {
+            "label": "SC LIVE 4 4.3.4 USB image",
+            "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SCLIVE4-4.3.4-Update.img",
+            "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc-live-4/SCLIVE4-4.3.4-Update.img",
+            "sizeBytes": 172064912,
+            "sha256": "4b9ea3334b8774e7c383a881e3aacfef267715df25cf9a55e3b76cf3bbb3d809",
+            "fileType": "data"
+          }
+        ]
+      }
+    }
+  },
+  "gaps": [
+    "Native Instruments hardware/firmware package acquisition is not automated yet.",
+    "Serato hardware compatibility and accessory package collection is not automated yet.",
+    "Denon hardware firmware package acquisition is not automated yet.",
+    "rekordbox desktop package acquisition is not automated yet."
+  ]
+}

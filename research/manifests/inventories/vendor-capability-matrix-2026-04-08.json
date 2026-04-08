@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-04-08T10:16:01.755Z",
+  "rows": [
+    {
+      "vendor": "Pioneer DJ / AlphaTheta",
+      "evidenceSummary": "31 DJ Players, 43 DJ Mixers, 11 All-In-One DJ Systems, 5 rekordbox; 186 articles; 466 artifacts; 5 unpacked payload sets",
+      "publicReleaseHistory": true,
+      "currentPackageSurface": true,
+      "localPackageAcquired": false,
+      "localFirmwareAcquired": true,
+      "unpackedOrParsedFirmware": true,
+      "parsedInstallerMetadata": false,
+      "parsedContainerMetadata": true,
+      "emulationReadiness": "high"
+    },
+    {
+      "vendor": "rekordbox",
+      "evidenceSummary": "30 release-note entries; current package 7.2.13; local package present",
+      "publicReleaseHistory": true,
+      "currentPackageSurface": true,
+      "localPackageAcquired": true,
+      "localFirmwareAcquired": false,
+      "unpackedOrParsedFirmware": false,
+      "parsedInstallerMetadata": true,
+      "parsedContainerMetadata": false,
+      "emulationReadiness": "medium"
+    },
+    {
+      "vendor": "Native Instruments / Traktor",
+      "evidenceSummary": "7 visible versions; 6 hardware intersections in current official article",
+      "publicReleaseHistory": true,
+      "currentPackageSurface": false,
+      "localPackageAcquired": false,
+      "localFirmwareAcquired": false,
+      "unpackedOrParsedFirmware": false,
+      "parsedInstallerMetadata": false,
+      "parsedContainerMetadata": false,
+      "emulationReadiness": "low"
+    },
+    {
+      "vendor": "Serato",
+      "evidenceSummary": "115 archive entries from 4.0.5 back to 1.0.0",
+      "publicReleaseHistory": true,
+      "currentPackageSurface": true,
+      "localPackageAcquired": false,
+      "localFirmwareAcquired": false,
+      "unpackedOrParsedFirmware": false,
+      "parsedInstallerMetadata": false,
+      "parsedContainerMetadata": false,
+      "emulationReadiness": "low"
+    },
+    {
+      "vendor": "Denon DJ / Engine DJ",
+      "evidenceSummary": "9 release-note entries; 8 desktop packages; 15 hardware packages; 4 local artifacts",
+      "publicReleaseHistory": true,
+      "currentPackageSurface": true,
+      "localPackageAcquired": true,
+      "localFirmwareAcquired": true,
+      "unpackedOrParsedFirmware": true,
+      "parsedInstallerMetadata": true,
+      "parsedContainerMetadata": true,
+      "emulationReadiness": "medium"
+    }
+  ]
+}

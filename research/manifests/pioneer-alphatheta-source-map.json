@@ -1,0 +1,42 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "snapshotDate": "2026-04-07",
+  "surfaces": [
+    {
+      "name": "AlphaTheta support landing",
+      "url": "https://alphatheta.com/en/support/",
+      "kind": "support-index",
+      "notes": "Top-level public support index with firmware, manuals, and OS compatibility categories."
+    },
+    {
+      "name": "AlphaTheta help center",
+      "url": "https://support.alphatheta.com/",
+      "kind": "help-center",
+      "notes": "Primary product help center with firmware-by-product discovery."
+    },
+    {
+      "name": "Firmware example: OMNIS-DUO",
+      "url": "https://support.alphatheta.com/en-us/articles/26559347114649",
+      "kind": "firmware-detail",
+      "notes": "Confirms downloadable firmware package pages can include version, date, update notes, instructions, and open-source notices."
+    },
+    {
+      "name": "Direct downloads host",
+      "url": "https://downloads.support.alphatheta.com/",
+      "kind": "download-host",
+      "notes": "Observed as the host for firmware and manual artifacts linked from support pages."
+    },
+    {
+      "name": "rekordbox release notes",
+      "url": "https://rekordbox.com/en/support/releasenote/",
+      "kind": "software-release-notes",
+      "notes": "Official release-note history for rekordbox."
+    },
+    {
+      "name": "rekordbox downloads",
+      "url": "https://rekordbox.com/en/download/",
+      "kind": "software-download",
+      "notes": "Official rekordbox download entry point."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "vendor": "native-instruments",
+  "product": "traktor-pro",
+  "collectedAt": "2026-04-08T08:21:20.418Z",
+  "articleUrl": "https://support.native-instruments.com/hc/en-us/articles/360017233958-What-s-new-in-Traktor-Pro-Play-4-4-2",
+  "articleUpdatedAt": "2026-03-26T14:49:21Z",
+  "title": "What's new in Traktor Pro / Play 4.4.2",
+  "versions": [
+    {
+      "heading": "What's new in Traktor Pro 4.4.2",
+      "version": "4.4.2"
+    },
+    {
+      "heading": "What's new in Traktor Pro 4.4.1",
+      "version": "4.4.1"
+    },
+    {
+      "heading": "What's new in Traktor Pro 4.4.0",
+      "version": "4.4.0"
+    },
+    {
+      "heading": "What's new in Traktor Pro 4.3.0",
+      "version": "4.3.0"
+    },
+    {
+      "heading": "What's new in Traktor Pro 4.2.0",
+      "version": "4.2.0"
+    },
+    {
+      "heading": "What's new in Traktor Pro 4.1.1",
+      "version": "4.1.1"
+    },
+    {
+      "heading": "What's new in Traktor Pro 4.1",
+      "version": "4.1"
+    }
+  ],
+  "hardwareMentions": [
+    {
+      "hardware": "DJM-A9",
+      "matchedText": "Auto-config for Pioneer DJM-A9 Plug-and-play support has been added for the Pioneer DJM-A9"
+    },
+    {
+      "hardware": "DDJ-FLX4",
+      "matchedText": "DDJ-FLX2 and DDJ-FLX4 do not default to WASAPI Exclusive Mode The DDJ-FLX2 and DDJ-FLX4 now correctly default to WASAPI Exclusive Mode"
+    },
+    {
+      "hardware": "DDJ-FLX2",
+      "matchedText": "DDJ-FLX2 and DDJ-FLX4 do not default to WASAPI Exclusive Mode The DDJ-FLX2 and DDJ-FLX4 now correctly default to WASAPI Exclusive Mode"
+    },
+    {
+      "hardware": "S2 MK3",
+      "matchedText": "esolves caching problems observed for Beatport Previews on Windows, and enables S2 MK3 controller compatibility for Traktor Play"
+    },
+    {
+      "hardware": "Z1 MK2",
+      "matchedText": "0 is a feature update adding Z1 MK2 user mappability, support for two Z1 MK2 controllers and several improvements and bug fixes"
+    },
+    {
+      "hardware": "MX2",
+      "matchedText": "MX2 ASIO Driver Auto-Selection After installing the MX2 ASIO drivers are now always automatically selected on first launch"
+    }
+  ]
+}

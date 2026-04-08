@@ -1,0 +1,46 @@
+{
+  "vendor": "serato",
+  "snapshotDate": "2026-04-07",
+  "collectedAt": "2026-04-07T23:44:30.905Z",
+  "surfaces": [
+    {
+      "name": "Serato DJ downloads",
+      "url": "https://serato.com/dj/downloads",
+      "kind": "software-download",
+      "notes": "Primary official download page exposing the current release plus inline release-note content.",
+      "fetchedAt": "2026-04-07T23:44:40.028Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://serato.com/dj/pro/downloads",
+      "contentType": "text/html",
+      "title": "Serato DJ Pro – Download Professional DJ Software for Mac &amp; PC",
+      "error": null
+    },
+    {
+      "name": "Serato DJ Pro product page",
+      "url": "https://serato.com/dj/pro",
+      "kind": "product-page",
+      "notes": "Useful for capability and ecosystem framing.",
+      "fetchedAt": "2026-04-07T23:44:40.224Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://serato.com/dj/pro",
+      "contentType": "text/html",
+      "title": "Serato DJ Pro – Professional DJ Software",
+      "error": null
+    },
+    {
+      "name": "Serato OS compatibility article",
+      "url": "https://support.serato.com/hc/en-us/articles/204865694-Serato-DJ-Pro-Lite-Operating-System-compatibility",
+      "kind": "support-article",
+      "notes": "Support surface that references version-specific release notes and compatibility constraints.",
+      "fetchedAt": "2026-04-07T23:44:40.270Z",
+      "ok": false,
+      "status": 403,
+      "finalUrl": "https://support.serato.com/hc/en-us/articles/204865694-Serato-DJ-Pro-Lite-Operating-System-compatibility",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Just a moment...",
+      "error": null
+    }
+  ]
+}

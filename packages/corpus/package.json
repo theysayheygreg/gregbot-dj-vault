@@ -1,0 +1,42 @@
+{
+  "name": "@dj-vault/corpus",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "collect:sources": "node dist/cli/collect-source-inventory.js",
+    "enumerate:alphatheta": "node dist/cli/enumerate-alphatheta.js",
+    "collect:alphatheta-articles": "node dist/cli/collect-alphatheta-articles.js",
+    "collect:alphatheta-downloads": "node dist/cli/collect-alphatheta-downloads.js",
+    "collect:rekordbox-download": "node dist/cli/collect-rekordbox-download.js",
+    "collect:serato": "node dist/cli/collect-serato.js",
+    "collect:engine-dj": "node dist/cli/collect-engine-dj.js",
+    "collect:engine-dj-downloads": "node dist/cli/collect-engine-dj-downloads.js",
+    "collect:traktor": "node dist/cli/collect-traktor.js",
+    "acquire:rekordbox": "node dist/cli/acquire-rekordbox.js",
+    "acquire:engine-dj": "node dist/cli/acquire-engine-dj.js",
+    "acquire:alphatheta": "node dist/cli/acquire-alphatheta.js",
+    "carve:engine-az0x": "node dist/cli/carve-engine-az0x.js",
+    "inspect:local-acquisitions": "node dist/cli/inspect-local-acquisitions.js",
+    "acquire:alphatheta-firmware-archives": "node dist/cli/acquire-alphatheta-firmware-archives.js",
+    "acquire:alphatheta-archives": "node dist/cli/acquire-alphatheta-archives.js",
+    "inspect:alphatheta-archives": "node dist/cli/inspect-alphatheta-archives.js",
+    "unpack:alphatheta-archives": "node dist/cli/unpack-alphatheta-archives.js",
+    "collect:rekordbox": "node dist/cli/collect-rekordbox.js",
+    "generate:capability-matrix": "node dist/cli/generate-capability-matrix.js",
+    "generate:cross-vendor-catalog": "node dist/cli/generate-cross-vendor-catalog.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}

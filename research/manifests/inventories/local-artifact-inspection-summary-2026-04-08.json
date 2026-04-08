@@ -1,0 +1,1242 @@
+{
+  "collectedAt": "2026-04-08T10:36:24.749Z",
+  "rekordbox": {
+    "path": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/rekordbox/current/Install_rekordbox_x64_7_2_13.zip",
+    "fileType": "Zip archive data, at least v2.0 to extract, compression method=deflate",
+    "hdiutilImageInfo": null,
+    "fdisk": "Disk: /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/rekordbox/current/Install_rekordbox_x64_7_2_13.zip\tgeometry: 629/32/63 [1268521 sectors]\nSignature: 0x66BD\n         Starting       Ending\n #: id  cyl  hd sec -  cyl  hd sec [     start -       size]\n------------------------------------------------------------------------\n 1: A1  669 142  27 -  730   4  57 [2549957222 - 2411137068] <Unknown ID>\n 2: 33  223  89  56 -  102  95  16 [ 350442486 -  663030034] <Unknown ID>\n 3: 8F  511 151   9 -   19  84  31 [1435045270 - 2048594995] <Unknown ID>\n 4: 46  874 228  39 -  542  22   5 [2215872940 -  626252026] <Unknown ID>",
+    "peMetadata": {
+      "format": "coff-i386",
+      "architecture": "i386",
+      "timeDate": "Sat Jul  1 19:10:30 2023",
+      "subsystem": "Windows GUI",
+      "dllCharacteristics": [
+        "DYNAMIC_BASE",
+        "NX_COMPAT",
+        "NO_SEH",
+        "TERMINAL_SERVER_AWARE"
+      ],
+      "importedDlls": [
+        "ADVAPI32.dll",
+        "SHELL32.dll",
+        "ole32.dll",
+        "COMCTL32.dll",
+        "USER32.dll",
+        "GDI32.dll",
+        "KERNEL32.dll"
+      ]
+    },
+    "extractedExecutablePath": "/Users/theysayheygreg/clawd/projects/dj-vault/packages/corpus/tmp/local-inspection/Install_rekordbox_x64_7_2_13/Install_rekordbox_x64_7_2_13.exe",
+    "partitionMap": null,
+    "az0xWrapper": null,
+    "magicHits": [
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 123313208
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 203310136
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 233216056
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 278981688
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 295987256
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 353038392
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 448362552
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 458763320
+      },
+      {
+        "name": "ext_superblock_magic_candidate",
+        "offset": 480495672
+      }
+    ],
+    "interestingStrings": [
+      "Install_rekordbox_x64_7_2_13.exeUT",
+      "&RyxmL;l",
+      "#~GusbzV",
+      "8Z;TuSbK",
+      "3uSbb0a5  k",
+      "7\\:UsB}[",
+      "I#FXMLi7",
+      ",gAUsB[x",
+      ".\"quSb+v&f",
+      "uSBWseeGU",
+      "0}V;|nUSBT",
+      "r$v2\\UsB",
+      "f0-^xMl!",
+      "[USusbd`p]k",
+      "~-#P'&XmL",
+      "dXmLU@7HN'",
+      "xmlSO[h[",
+      "r~oXMl&7",
+      "[xmLlqs"
+    ]
+  },
+  "engineDj": [
+    {
+      "path": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/desktop/Engine_DJ_4.5.0_3d19c38012_Setup.exe",
+      "fileType": "PE32 executable (GUI) Intel 80386, for MS Windows",
+      "hdiutilImageInfo": null,
+      "fdisk": "Disk: /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/desktop/Engine_DJ_4.5.0_3d19c38012_Setup.exe\tgeometry: 596/4/63 [150304 sectors]\nSignature: 0x0\n         Starting       Ending\n #: id  cyl  hd sec -  cyl  hd sec [     start -       size]\n------------------------------------------------------------------------\n 1: 05  248   0  40 -    0   0  24 [4158652416 -    4194309] Extended DOS\n 2: 00    0   0   0 -    0   0   0 [         0 -          0] unused      \n 3: 00    0   0   0 -    0   0   0 [         0 -          0] unused      \n 4: 00    0   0   0 -    0   0   0 [         0 -          0] unused",
+      "peMetadata": {
+        "format": "coff-i386",
+        "architecture": "i386",
+        "timeDate": "Mon Oct  6 11:03:33 2014",
+        "subsystem": "Windows GUI",
+        "dllCharacteristics": [
+          "DYNAMIC_BASE",
+          "NX_COMPAT",
+          "TERMINAL_SERVER_AWARE"
+        ],
+        "importedDlls": [
+          "ADVAPI32.dll",
+          "USER32.dll",
+          "OLEAUT32.dll",
+          "GDI32.dll",
+          "SHELL32.dll",
+          "ole32.dll",
+          "KERNEL32.dll",
+          "Cabinet.dll",
+          "CRYPT32.dll",
+          "msi.dll",
+          "RPCRT4.dll",
+          "WININET.dll",
+          "WINTRUST.dll",
+          "VERSION.dll",
+          "SHLWAPI.dll"
+        ]
+      },
+      "extractedExecutablePath": null,
+      "partitionMap": null,
+      "az0xWrapper": null,
+      "magicHits": [
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 32948280
+        }
+      ],
+      "interestingStrings": [
+        "Failed to initialize engine state.",
+        "engine.cpp",
+        "Failed to initialize engine section.",
+        "Failed to create engine for UX.",
+        "Failed to copy the engine version.",
+        "Failed to get path to engine process.",
+        "Failed to open handle to engine process path: %ls",
+        "Engine active cannot be changed because it was already in that state.",
+        "Engine is active, cannot proceed.",
+        "Engine cannot start detect because it is busy with another action.",
+        "Failed to initialize MSP engine detection.",
+        "Engine cannot start plan because it is busy with another action.",
+        "Failed to cache engine to working directory.",
+        "Engine cannot start apply because it is busy with another action.",
+        "Engine cannot start LaunchApprovedExe because it is busy with another action.",
+        "Failed to serialize engine state.",
+        "Failed to save engine state in per-machine process.",
+        "Failed to save engine state.",
+        "Failed to combine working path with engine file name.",
+        "Failed to get directory from engine path: %ls",
+        "Failed to create working path to copy engine.",
+        "Failed to copy engine: '%ls' to working path: %ls",
+        "Failed to combine completed path with engine file name for layout.",
+        "Failed to combine completed path with engine file name.",
+        "Failed to get directory from engine working path: %ls",
+        "Failed to create engine file at path: %ls",
+        "Failed to seek to beginning of engine file: %ls",
+        "Failed to copy engine from: %ls to: %ls",
+        "Failed to write engine working path to message buffer.",
+        "Failed to read engine working path.",
+        "EngineForApplication.cpp",
+        "Engine is active, cannot change engine state.",
+        "Cannot marshal IBootstrapperEngine interface out of proc.",
+        "Failed to write the IBootstrapperEngine interface pointer to the marshaling stream.",
+        "Failed to read the IBootstrapperEngine interface pointer from the marshaling stream.",
+        "Failed to allocate new BootstrapperEngineForApplication object.",
+        "Failed to QI for IBootstrapperEngine from BootstrapperEngineForApplication object.",
+        "exeengine.cpp",
+        "msiengine.cpp",
+        "mspengine.cpp",
+        "msuengine.cpp",
+        "Failed to calculate working path for engine.",
+        "bitsengine.cpp",
+        "Invalid BITS engine URL: %ls",
+        "kernel32.dll",
+        "KERNEL32.dll",
+        ".?AUIBootstrapperEngine@@",
+        ".?AVCEngineForApplication@@",
+        "FIt(WT7l",
+        "N32AsefIt6"
+      ]
+    },
+    {
+      "path": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc6000-prime/SC6000-4.3.4-Update.img",
+      "fileType": "Device Tree Blob version 17, size=149032935, boot CPU=0, string block size=87, DT structure block size=149031896",
+      "hdiutilImageInfo": null,
+      "fdisk": "Disk: /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc6000-prime/SC6000-4.3.4-Update.img\tgeometry: 577/8/63 [291079 sectors]\nSignature: 0xEFDB\n         Starting       Ending\n #: id  cyl  hd sec -  cyl  hd sec [     start -       size]\n------------------------------------------------------------------------\n 1: 4E  644 149  10 -  851 155  47 [3551944475 - 3330155889] QNX 4.2 Sec \n 2: 50  859 146  20 -  368 178   5 [1551162626 -  951224286] DM          \n 3: 12  558 127  47 -  815 173  23 [ 870408051 - 1532920755] Compaq Diag.\n 4: 7C  270 137  59 -  719  80  33 [ 669786234 - 2985203840] <Unknown ID>",
+      "peMetadata": null,
+      "extractedExecutablePath": null,
+      "partitionMap": null,
+      "az0xWrapper": null,
+      "magicHits": [
+        {
+          "name": "dtb_or_fit",
+          "offset": 0
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 123380792
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 134931512
+        }
+      ],
+      "interestingStrings": [
+        "$Y5DTB0",
+        "JfItWdgy",
+        "d%fiTn!O"
+      ]
+    },
+    {
+      "path": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/prime-4/PRIME4PLUS-4.3.4-Update.img",
+      "fileType": "data",
+      "hdiutilImageInfo": null,
+      "fdisk": "Disk: /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/prime-4/PRIME4PLUS-4.3.4-Update.img\tgeometry: 666/8/63 [336033 sectors]\nSignature: 0x8000\n         Starting       Ending\n #: id  cyl  hd sec -  cyl  hd sec [     start -       size]\n------------------------------------------------------------------------\n 1: 23  899 128  16 -    0   0   0 [ 340262912 -          0] <Unknown ID>\n 2: 00    0   0   0 -    0   0   0 [         0 -          0] unused      \n 3: 6F  501 172  36 -  521 160  42 [3954530456 - 2520998675] <Unknown ID>\n 4: CC   85  10  14 -   53 236  41 [1095800774 -      87122] <Unknown ID>",
+      "peMetadata": null,
+      "extractedExecutablePath": null,
+      "partitionMap": {
+        "uuidDisk": "035816b0-a6ec-4ba5-a35c-80584dcd1ec7",
+        "partitions": [
+          {
+            "name": "spl1",
+            "start": "544K",
+            "size": "480K",
+            "type": "baafa14b-964b-53b5-8ffe-0223e56924a6",
+            "uuid": "93510ce4-8fcb-4097-a4e8-1a448f9808c3"
+          },
+          {
+            "name": "spl2",
+            "start": "1056K",
+            "size": "480K",
+            "type": "baafa14b-964b-53b5-8ffe-0223e56924a6",
+            "uuid": "c4f22545-094f-4c24-a101-9e4f855a1b1c"
+          },
+          {
+            "name": "info1",
+            "size": "512K",
+            "uuid": "f1075b8b-58fd-4bed-a1c7-1f4056c329c9"
+          },
+          {
+            "name": "info2",
+            "size": "512K",
+            "uuid": "0f201e04-7ab8-45eb-be53-909f27a1911f"
+          },
+          {
+            "name": "uboot1",
+            "size": "4M",
+            "type": "aaa01589-8cd3-5f10-8785-832ffbc41d64",
+            "uuid": "76eabfba-d089-4b2d-b2b3-ca122e6c96e3"
+          },
+          {
+            "name": "uboot2",
+            "size": "4M",
+            "type": "aaa01589-8cd3-5f10-8785-832ffbc41d64",
+            "uuid": "46fd7989-b263-4a8f-bd21-2d7a77604a6d"
+          },
+          {
+            "name": "splash",
+            "size": "4M",
+            "uuid": "16b44018-2c22-4f65-bc31-ab7bad5532c7"
+          },
+          {
+            "name": "updatesplash",
+            "size": "4M",
+            "uuid": "e6115775-41ba-4fee-8291-0b17abe357bd"
+          },
+          {
+            "name": "kernel",
+            "size": "16M",
+            "uuid": "2164aee4-87ce-4659-885f-dd4c25c44b0a"
+          },
+          {
+            "name": "rootfs",
+            "size": "1024M",
+            "type": "69dad710-2ce4-4e3c-b16c-21a1d49abed3",
+            "uuid": "24d1deac-3434-1a4e-98d1-68ee2945a5f1"
+          },
+          {
+            "name": "data",
+            "size": "-",
+            "type": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+            "uuid": "931ad49d-ad59-0849-833a-9bf00af5b60e"
+          }
+        ]
+      },
+      "az0xWrapper": {
+        "version": 1,
+        "headerSize": 56,
+        "stringTableOffset": 56,
+        "stringTableSize": 152,
+        "entryTableOffset": 184,
+        "entryTableEnd": 824,
+        "strings": [
+          "4.3.4",
+          "EngineOS upgrade image",
+          "JC11S",
+          "JP11S",
+          "JP20",
+          "JP21",
+          "splash",
+          "updatesplash",
+          "kernel",
+          "rootfs",
+          "denon-1",
+          "\u0007Pd\u0015\u001e",
+          "@d\u0015$",
+          "\u0011Pd\u0015*",
+          "\u0012Pd\u0015/",
+          "BOOT",
+          "@\u0004",
+          "Hr\b"
+        ],
+        "entries": [
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 1088,
+            "size": 586312,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 1,
+            "sha256Prefix": "182b080375e17643b0a31679e0fb049c80708f71bd1ff9fd687f5bd753748b70"
+          },
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 587400,
+            "size": 579288,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 2,
+            "sha256Prefix": "a93ae4eca2cd7644d2decd5790ba19eaa58c9499b5a87b985a75fbeebd51c7ec"
+          },
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 1166688,
+            "size": 580408,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 4,
+            "sha256Prefix": "d8d4f56909318d559ca508a26dc9340b79dbb325c4afe7dac4925ae3a1906422"
+          },
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 1747096,
+            "size": 580408,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 8,
+            "sha256Prefix": "96e45180d65dcff7cde986ffd043a440959398a38b25d8e66d13ad15d314572d"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2327504,
+            "size": 5192,
+            "nameHint": 52,
+            "resolvedName": "splash",
+            "mask": 1,
+            "sha256Prefix": "d6cbf6c7583fd8ac64f56fa0aa099858b5eb13634396c70a0e55ccec2935c697"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2332696,
+            "size": 5252,
+            "nameHint": 52,
+            "resolvedName": "splash",
+            "mask": 14,
+            "sha256Prefix": "368f280e4ff0fdaa3bb01d394a57a04b09ed0e5fabc1ab16ef51db89b712bc4f"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2337952,
+            "size": 5520,
+            "nameHint": 59,
+            "resolvedName": "updatesplash",
+            "mask": 1,
+            "sha256Prefix": "4d337d663edc2abce1bbe28f69bb440f4e5edd3273498d5d7b0c5289f7997036"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2343472,
+            "size": 5504,
+            "nameHint": 59,
+            "resolvedName": "updatesplash",
+            "mask": 14,
+            "sha256Prefix": "5f9b86eaa6e8794c67d5af66a66309563a53f7b85dcbe23ecbeacfbcabe3a976"
+          },
+          {
+            "tag": "PART",
+            "flags": 1,
+            "offset": 2348976,
+            "size": 5592900,
+            "nameHint": 72,
+            "resolvedName": "kernel",
+            "mask": 0,
+            "sha256Prefix": "e9900b27f02a69c19eec0f7b7c45a029f2c7b5738d709e9ebf33c3d97e922d91"
+          },
+          {
+            "tag": "PART",
+            "flags": 1,
+            "offset": 7941880,
+            "size": 164107032,
+            "nameHint": 79,
+            "resolvedName": "rootfs",
+            "mask": 0,
+            "sha256Prefix": "720c9e33cb8cdb88cf261ef0266b9b744ab9fe7fdf83746bd767baca05a37cb1"
+          }
+        ]
+      },
+      "magicHits": [
+        {
+          "name": "denon_az0x_wrapper",
+          "offset": 0
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1088
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 32492
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 34816
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 54604
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 104836
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 113148
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 310116
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 314928
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 515872
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 567328
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 587400
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 618748
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 621072
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 640860
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 691092
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 699460
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 896420
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 901232
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1102176
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 1148696
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1166688
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 1198036
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1200360
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1220148
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1270380
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1278748
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1475700
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1480512
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1681456
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 1728824
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1747096
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 1778444
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1780768
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1800556
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1850788
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1859156
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 2056108
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 2060920
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 2261864
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 2309232
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 71804984
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 105076792
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 148950072
+        }
+      ],
+      "interestingStrings": [
+        "EngineOS upgrade image",
+        "updatesplash",
+        "/images/u-boot",
+        "/images/u-boot/hash-1",
+        "\\denon-1",
+        "U-Boot TPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:03:42)",
+        "fit_find_config_node",
+        "load_simple_fit",
+        "spl_load_simple_fit",
+        "u-boot,spl-boot-order",
+        "Could not get FIT buffer of %lu bytes",
+        "linux,phandle",
+        "fit-images",
+        "Missing DTB",
+        "%s: Missing FDT description in DTB",
+        "u-boot,i2c-offset-len",
+        "u-boot,i2c-transaction-bytes",
+        "U-Boot SPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:03:42 +0100)",
+        "u-boot,spl-fifo-mode",
+        "u-boot,spl-boot-device",
+        "U-Boot phase",
+        "Flat Device Tree",
+        "Kernel Image",
+        "kernel_noload",
+        "Kernel Image (no loading done)",
+        "legacy Image with Flat Device Tree",
+        "&AZ01 DENON DJ SPL",
+        "key-stage2-denon-1",
+        "stage2-denon-1",
+        "DENON DJ PRIME 4 Plus bootloader",
+        "U-Boot for DENON DJ PRIME 4 Plus",
+        "sstage2-denon-1",
+        "boot_jump_linux",
+        "fit_image_load",
+        "boot_get_kernel",
+        "** Invalid partition type \"%.32s\" (expect \"U-Boot\")",
+        "boot update invalid: no u-boot image",
+        "boot update invalid: no u-boot data",
+        "## Flattened Device Tree blob at %08lx",
+        "ERROR: Did not find a cmdline Flattened Device Tree",
+        "## Flattened Device Tree from multi component Image at %08lX",
+        "start_kernel",
+        "Starting kernel ...%s",
+        "device tree - allocation error",
+        "Failed using fdt_high value for Device Tree",
+        "Using Device Tree in place at %p, end %p",
+        "Loading Device Tree to %p, end %p ...",
+        "u-boot,bootcount-device",
+        "%s %s: %s: Bootcount value doesn't fit in the reserved space",
+        "kernel-offset",
+        "Could not find a valid device tree",
+        "passing arguments 'arg ...'; when booting a Linux kernel,",
+        "When booting a Linux kernel which requires a flat device-tree",
+        "device-tree blob. To boot that kernel without an initrd image,",
+        "For the new multi component uImage format (FIT) addresses",
+        "fdt     - relocate flat device tree",
+        "silent_linux",
+        "ERROR %dE: can't get kernel image!",
+        "Could not find kernel entry point!",
+        "- boot Linux zImage stored in memory",
+        "Kernel image @ %#08lx [ %#08lx - %#08lx ]",
+        "linux,code",
+        "partitions=uuid_disk=035816b0-a6ec-4ba5-a35c-80584dcd1ec7;name=spl1,start=544K,size=480K,type=baafa14b-964b-53b5-8ffe-0223e56924a6,uuid=93510ce4-8fcb-4097-a4e8-1a448f9808c3;name=spl2,start=1056K,size=480K,type=baafa14b-964b-53b5-8ffe-0223e56924a6,uuid=c4f22545-094f-4c24-a101-9e4f855a1b1c;name=info1,size=512K,uuid=f1075b8b-58fd-4bed-a1c7-1f4056c329c9;name=info2,size=512K,uuid=0f201e04-7ab8-45eb-be53-909f27a1911f;name=uboot1,size=4M,type=aaa01589-8cd3-5f10-8785-832ffbc41d64,uuid=76eabfba-d089-4b2d-b2b3-ca122e6c96e3;name=uboot2,size=4M,type=aaa01589-8cd3-5f10-8785-832ffbc41d64,uuid=46fd7989-b263-4a8f-bd21-2d7a77604a6d;name=splash,size=4M,uuid=16b44018-2c22-4f65-bc31-ab7bad5532c7;name=updatesplash,size=4M,uuid=e6115775-41ba-4fee-8291-0b17abe357bd;name=kernel,size=16M,uuid=2164aee4-87ce-4659-885f-dd4c25c44b0a;name=rootfs,size=1024M,type=69dad710-2ce4-4e3c-b16c-21a1d49abed3,uuid=24d1deac-3434-1a4e-98d1-68ee2945a5f1;name=data,size=-,type=0fc63daf-8483-4772-8e79-3d69d8477de4,uuid=931ad49d-ad59-0849-833a-9bf00af5b60e;",
+        "kernel_addr_r=0x02000000",
+        "az01_bootcmd=if test x${dorecovery} = x1; then run az01_recovercmd; fi; dev=0; part number mmc 0 kernel part; load mmc ${dev}:${part} 0x800800 kernel.fit; fdtfile=0x800800#conf-${board}#cmdline; if test x${is_az01b} = x1; then fdtfile=\"${fdtfile}#az01b\"; fi; bootm $fdtfile; reset_bootloader",
+        "prop (%d) doesn't fit in scratchpad!",
+        "## Copying '%s' subimage from FIT image at %08lx ...",
+        "Booting kernel at %s...",
+        "u-boot,version",
+        "WARNING: could not set u-boot,version %s.",
+        "fdt checksign [<addr>]              - check FIT signature",
+        "linux,initrd-start",
+        "WARNING: could not set linux,initrd-start %s.",
+        "linux,initrd-end",
+        "WARNING: could not set linux,initrd-end %s.",
+        "No valid device tree binary found at %p",
+        "## Checking hash(es) for FIT Image at %08lx ...",
+        "## Loading %s from FIT Image at %08lx ...",
+        "Bad FIT %s image format! (err=%d)",
+        "%sFIT description:",
+        "%s  Kernel:",
+        "Linux",
+        "U-Boot 2024.07-inmusic-20240830",
+        "FIT image found",
+        "Bad FIT image format!",
+        "Bad hash in FIT image!",
+        "Bad FIT image format",
+        "No FIT subimage unit name",
+        "Can't find '%s' FIT subimage",
+        "u-boot,bootconf",
+        "- extract <uname> subimage from FIT image at <addr> and copy to <dest>",
+        "DENON DJ",
+        "Execute flash bootloader",
+        "u-boot,efi-partition-entries-offset",
+        "u-boot,off-on-delay-us",
+        "- A FIT config name or subimage name may be specified with : or #",
+        "reset_bootloader",
+        "boot Linux zImage image from memory",
+        "flattened device tree utility commands",
+        "u-boot,bootcount-syscon",
+        "version-bootloader",
+        "reboot-bootloader",
+        "oem flash-bootloader",
+        "u-boot-env",
+        "u-boot-spl",
+        "U-Boot 2024.07-inmusic-20240830 (Sep 13 2024 - 16:03:42 +0100)",
+        "7Denon DJ PRIME 4 Plus",
+        "arm,primecell",
+        "u-boot-rockchip.bin",
+        "u-boot-tpl",
+        "u-boot-img",
+        "key-denon-1",
+        "mode-bootloader",
+        "linux,default-trigger",
+        "U-Boot TPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:04:02)",
+        "U-Boot SPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:04:02 +0100)",
+        "&AZ05 DENON DJ SPL",
+        "DENON DJ PRIME GO+ bootloader",
+        "U-Boot for DENON DJ PRIME GO+",
+        "U-Boot 2024.07-inmusic-20240830 (Sep 13 2024 - 16:04:02 +0100)"
+      ]
+    },
+    {
+      "path": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc-live-4/SCLIVE4-4.3.4-Update.img",
+      "fileType": "data",
+      "hdiutilImageInfo": null,
+      "fdisk": "Disk: /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc-live-4/SCLIVE4-4.3.4-Update.img\tgeometry: 666/8/63 [336064 sectors]\nSignature: 0x8000\n         Starting       Ending\n #: id  cyl  hd sec -  cyl  hd sec [     start -       size]\n------------------------------------------------------------------------\n 1: 23  899 128  16 -    0   0   0 [ 340262912 -          0] <Unknown ID>\n 2: 00    0   0   0 -    0   0   0 [         0 -          0] unused      \n 3: 6F  501 172  36 -  521 160  42 [3954530456 - 2520998675] <Unknown ID>\n 4: CC   85  10  14 -   53 236  41 [1095800774 -      87122] <Unknown ID>",
+      "peMetadata": null,
+      "extractedExecutablePath": null,
+      "partitionMap": {
+        "uuidDisk": "035816b0-a6ec-4ba5-a35c-80584dcd1ec7",
+        "partitions": [
+          {
+            "name": "spl1",
+            "start": "544K",
+            "size": "480K",
+            "type": "baafa14b-964b-53b5-8ffe-0223e56924a6",
+            "uuid": "93510ce4-8fcb-4097-a4e8-1a448f9808c3"
+          },
+          {
+            "name": "spl2",
+            "start": "1056K",
+            "size": "480K",
+            "type": "baafa14b-964b-53b5-8ffe-0223e56924a6",
+            "uuid": "c4f22545-094f-4c24-a101-9e4f855a1b1c"
+          },
+          {
+            "name": "info1",
+            "size": "512K",
+            "uuid": "f1075b8b-58fd-4bed-a1c7-1f4056c329c9"
+          },
+          {
+            "name": "info2",
+            "size": "512K",
+            "uuid": "0f201e04-7ab8-45eb-be53-909f27a1911f"
+          },
+          {
+            "name": "uboot1",
+            "size": "4M",
+            "type": "aaa01589-8cd3-5f10-8785-832ffbc41d64",
+            "uuid": "76eabfba-d089-4b2d-b2b3-ca122e6c96e3"
+          },
+          {
+            "name": "uboot2",
+            "size": "4M",
+            "type": "aaa01589-8cd3-5f10-8785-832ffbc41d64",
+            "uuid": "46fd7989-b263-4a8f-bd21-2d7a77604a6d"
+          },
+          {
+            "name": "splash",
+            "size": "4M",
+            "uuid": "16b44018-2c22-4f65-bc31-ab7bad5532c7"
+          },
+          {
+            "name": "updatesplash",
+            "size": "4M",
+            "uuid": "e6115775-41ba-4fee-8291-0b17abe357bd"
+          },
+          {
+            "name": "kernel",
+            "size": "16M",
+            "uuid": "2164aee4-87ce-4659-885f-dd4c25c44b0a"
+          },
+          {
+            "name": "rootfs",
+            "size": "1024M",
+            "type": "69dad710-2ce4-4e3c-b16c-21a1d49abed3",
+            "uuid": "24d1deac-3434-1a4e-98d1-68ee2945a5f1"
+          },
+          {
+            "name": "data",
+            "size": "-",
+            "type": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+            "uuid": "931ad49d-ad59-0849-833a-9bf00af5b60e"
+          }
+        ]
+      },
+      "az0xWrapper": {
+        "version": 1,
+        "headerSize": 56,
+        "stringTableOffset": 56,
+        "stringTableSize": 152,
+        "entryTableOffset": 184,
+        "entryTableEnd": 824,
+        "strings": [
+          "4.3.4",
+          "EngineOS upgrade image",
+          "JC11S",
+          "JP11S",
+          "JP20",
+          "JP21",
+          "splash",
+          "updatesplash",
+          "kernel",
+          "rootfs",
+          "denon-1",
+          "\u0007Pd\u0015\u001e",
+          "@d\u0015$",
+          "\u0011Pd\u0015*",
+          "\u0012Pd\u0015/",
+          "BOOT",
+          "@\u0004",
+          "Hr\b"
+        ],
+        "entries": [
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 1088,
+            "size": 586312,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 1,
+            "sha256Prefix": "182b080375e17643b0a31679e0fb049c80708f71bd1ff9fd687f5bd753748b70"
+          },
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 587400,
+            "size": 579288,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 2,
+            "sha256Prefix": "a93ae4eca2cd7644d2decd5790ba19eaa58c9499b5a87b985a75fbeebd51c7ec"
+          },
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 1166688,
+            "size": 580408,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 4,
+            "sha256Prefix": "d8d4f56909318d559ca508a26dc9340b79dbb325c4afe7dac4925ae3a1906422"
+          },
+          {
+            "tag": "BOOT",
+            "flags": 2147483648,
+            "offset": 1747096,
+            "size": 580408,
+            "nameHint": 0,
+            "resolvedName": null,
+            "mask": 8,
+            "sha256Prefix": "96e45180d65dcff7cde986ffd043a440959398a38b25d8e66d13ad15d314572d"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2327504,
+            "size": 5192,
+            "nameHint": 52,
+            "resolvedName": "splash",
+            "mask": 1,
+            "sha256Prefix": "d6cbf6c7583fd8ac64f56fa0aa099858b5eb13634396c70a0e55ccec2935c697"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2332696,
+            "size": 5252,
+            "nameHint": 52,
+            "resolvedName": "splash",
+            "mask": 14,
+            "sha256Prefix": "368f280e4ff0fdaa3bb01d394a57a04b09ed0e5fabc1ab16ef51db89b712bc4f"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2337952,
+            "size": 5520,
+            "nameHint": 59,
+            "resolvedName": "updatesplash",
+            "mask": 1,
+            "sha256Prefix": "4d337d663edc2abce1bbe28f69bb440f4e5edd3273498d5d7b0c5289f7997036"
+          },
+          {
+            "tag": "PART",
+            "flags": 2147483649,
+            "offset": 2343472,
+            "size": 5504,
+            "nameHint": 59,
+            "resolvedName": "updatesplash",
+            "mask": 14,
+            "sha256Prefix": "5f9b86eaa6e8794c67d5af66a66309563a53f7b85dcbe23ecbeacfbcabe3a976"
+          },
+          {
+            "tag": "PART",
+            "flags": 1,
+            "offset": 2348976,
+            "size": 5592804,
+            "nameHint": 72,
+            "resolvedName": "kernel",
+            "mask": 0,
+            "sha256Prefix": "4560befe79e479a63d13d8a38f82a1ade9efdfd84700b2ae29b71c4c8b4010d5"
+          },
+          {
+            "tag": "PART",
+            "flags": 1,
+            "offset": 7941784,
+            "size": 164123124,
+            "nameHint": 79,
+            "resolvedName": "rootfs",
+            "mask": 0,
+            "sha256Prefix": "fc709a4f8ffa7b2ebe9bf44a4189779ec1cdbd7bb3d3e9f6be2283cf5825c7ff"
+          }
+        ]
+      },
+      "magicHits": [
+        {
+          "name": "denon_az0x_wrapper",
+          "offset": 0
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1088
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 32492
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 34816
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 54604
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 104836
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 113148
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 310116
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 314928
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 515872
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 567328
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 587400
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 618748
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 621072
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 640860
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 691092
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 699460
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 896420
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 901232
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1102176
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 1148696
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1166688
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 1198036
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1200360
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1220148
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1270380
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1278748
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1475700
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1480512
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1681456
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 1728824
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1747096
+        },
+        {
+          "name": "u_boot_legacy_image",
+          "offset": 1778444
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1780768
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1800556
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1850788
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 1859156
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 2056108
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 2060920
+        },
+        {
+          "name": "dtb_or_fit",
+          "offset": 2261864
+        },
+        {
+          "name": "u_boot_rockchip",
+          "offset": 2309232
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 9792568
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 100628536
+        },
+        {
+          "name": "squashfs",
+          "offset": 108705305
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 110761016
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 114887736
+        },
+        {
+          "name": "ext_superblock_magic_candidate",
+          "offset": 130363448
+        }
+      ],
+      "interestingStrings": [
+        "EngineOS upgrade image",
+        "updatesplash",
+        "/images/u-boot",
+        "/images/u-boot/hash-1",
+        "\\denon-1",
+        "U-Boot TPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:03:42)",
+        "fit_find_config_node",
+        "load_simple_fit",
+        "spl_load_simple_fit",
+        "u-boot,spl-boot-order",
+        "Could not get FIT buffer of %lu bytes",
+        "linux,phandle",
+        "fit-images",
+        "Missing DTB",
+        "%s: Missing FDT description in DTB",
+        "u-boot,i2c-offset-len",
+        "u-boot,i2c-transaction-bytes",
+        "U-Boot SPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:03:42 +0100)",
+        "u-boot,spl-fifo-mode",
+        "u-boot,spl-boot-device",
+        "U-Boot phase",
+        "Flat Device Tree",
+        "Kernel Image",
+        "kernel_noload",
+        "Kernel Image (no loading done)",
+        "legacy Image with Flat Device Tree",
+        "&AZ01 DENON DJ SPL",
+        "key-stage2-denon-1",
+        "stage2-denon-1",
+        "DENON DJ PRIME 4 Plus bootloader",
+        "U-Boot for DENON DJ PRIME 4 Plus",
+        "sstage2-denon-1",
+        "boot_jump_linux",
+        "fit_image_load",
+        "boot_get_kernel",
+        "** Invalid partition type \"%.32s\" (expect \"U-Boot\")",
+        "boot update invalid: no u-boot image",
+        "boot update invalid: no u-boot data",
+        "## Flattened Device Tree blob at %08lx",
+        "ERROR: Did not find a cmdline Flattened Device Tree",
+        "## Flattened Device Tree from multi component Image at %08lX",
+        "start_kernel",
+        "Starting kernel ...%s",
+        "device tree - allocation error",
+        "Failed using fdt_high value for Device Tree",
+        "Using Device Tree in place at %p, end %p",
+        "Loading Device Tree to %p, end %p ...",
+        "u-boot,bootcount-device",
+        "%s %s: %s: Bootcount value doesn't fit in the reserved space",
+        "kernel-offset",
+        "Could not find a valid device tree",
+        "passing arguments 'arg ...'; when booting a Linux kernel,",
+        "When booting a Linux kernel which requires a flat device-tree",
+        "device-tree blob. To boot that kernel without an initrd image,",
+        "For the new multi component uImage format (FIT) addresses",
+        "fdt     - relocate flat device tree",
+        "silent_linux",
+        "ERROR %dE: can't get kernel image!",
+        "Could not find kernel entry point!",
+        "- boot Linux zImage stored in memory",
+        "Kernel image @ %#08lx [ %#08lx - %#08lx ]",
+        "linux,code",
+        "partitions=uuid_disk=035816b0-a6ec-4ba5-a35c-80584dcd1ec7;name=spl1,start=544K,size=480K,type=baafa14b-964b-53b5-8ffe-0223e56924a6,uuid=93510ce4-8fcb-4097-a4e8-1a448f9808c3;name=spl2,start=1056K,size=480K,type=baafa14b-964b-53b5-8ffe-0223e56924a6,uuid=c4f22545-094f-4c24-a101-9e4f855a1b1c;name=info1,size=512K,uuid=f1075b8b-58fd-4bed-a1c7-1f4056c329c9;name=info2,size=512K,uuid=0f201e04-7ab8-45eb-be53-909f27a1911f;name=uboot1,size=4M,type=aaa01589-8cd3-5f10-8785-832ffbc41d64,uuid=76eabfba-d089-4b2d-b2b3-ca122e6c96e3;name=uboot2,size=4M,type=aaa01589-8cd3-5f10-8785-832ffbc41d64,uuid=46fd7989-b263-4a8f-bd21-2d7a77604a6d;name=splash,size=4M,uuid=16b44018-2c22-4f65-bc31-ab7bad5532c7;name=updatesplash,size=4M,uuid=e6115775-41ba-4fee-8291-0b17abe357bd;name=kernel,size=16M,uuid=2164aee4-87ce-4659-885f-dd4c25c44b0a;name=rootfs,size=1024M,type=69dad710-2ce4-4e3c-b16c-21a1d49abed3,uuid=24d1deac-3434-1a4e-98d1-68ee2945a5f1;name=data,size=-,type=0fc63daf-8483-4772-8e79-3d69d8477de4,uuid=931ad49d-ad59-0849-833a-9bf00af5b60e;",
+        "kernel_addr_r=0x02000000",
+        "az01_bootcmd=if test x${dorecovery} = x1; then run az01_recovercmd; fi; dev=0; part number mmc 0 kernel part; load mmc ${dev}:${part} 0x800800 kernel.fit; fdtfile=0x800800#conf-${board}#cmdline; if test x${is_az01b} = x1; then fdtfile=\"${fdtfile}#az01b\"; fi; bootm $fdtfile; reset_bootloader",
+        "prop (%d) doesn't fit in scratchpad!",
+        "## Copying '%s' subimage from FIT image at %08lx ...",
+        "Booting kernel at %s...",
+        "u-boot,version",
+        "WARNING: could not set u-boot,version %s.",
+        "fdt checksign [<addr>]              - check FIT signature",
+        "linux,initrd-start",
+        "WARNING: could not set linux,initrd-start %s.",
+        "linux,initrd-end",
+        "WARNING: could not set linux,initrd-end %s.",
+        "No valid device tree binary found at %p",
+        "## Checking hash(es) for FIT Image at %08lx ...",
+        "## Loading %s from FIT Image at %08lx ...",
+        "Bad FIT %s image format! (err=%d)",
+        "%sFIT description:",
+        "%s  Kernel:",
+        "Linux",
+        "U-Boot 2024.07-inmusic-20240830",
+        "FIT image found",
+        "Bad FIT image format!",
+        "Bad hash in FIT image!",
+        "Bad FIT image format",
+        "No FIT subimage unit name",
+        "Can't find '%s' FIT subimage",
+        "u-boot,bootconf",
+        "- extract <uname> subimage from FIT image at <addr> and copy to <dest>",
+        "DENON DJ",
+        "Execute flash bootloader",
+        "u-boot,efi-partition-entries-offset",
+        "u-boot,off-on-delay-us",
+        "- A FIT config name or subimage name may be specified with : or #",
+        "reset_bootloader",
+        "boot Linux zImage image from memory",
+        "flattened device tree utility commands",
+        "u-boot,bootcount-syscon",
+        "version-bootloader",
+        "reboot-bootloader",
+        "oem flash-bootloader",
+        "u-boot-env",
+        "u-boot-spl",
+        "U-Boot 2024.07-inmusic-20240830 (Sep 13 2024 - 16:03:42 +0100)",
+        "7Denon DJ PRIME 4 Plus",
+        "arm,primecell",
+        "u-boot-rockchip.bin",
+        "u-boot-tpl",
+        "u-boot-img",
+        "key-denon-1",
+        "mode-bootloader",
+        "linux,default-trigger",
+        "U-Boot TPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:04:02)",
+        "U-Boot SPL 2024.07-inmusic-20240830 (Sep 13 2024 - 16:04:02 +0100)",
+        "&AZ05 DENON DJ SPL",
+        "DENON DJ PRIME GO+ bootloader",
+        "U-Boot for DENON DJ PRIME GO+",
+        "U-Boot 2024.07-inmusic-20240830 (Sep 13 2024 - 16:04:02 +0100)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "product": "rekordbox",
+  "collectedAt": "2026-04-08T00:46:43.633Z",
+  "pages": [
+    1,
+    2,
+    3
+  ],
+  "entries": [
+    {
+      "anchorId": "release-94108",
+      "version": "7.2.13",
+      "title": "ver. 7.2.13",
+      "releaseDate": null,
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-94108",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Fixed the issue with the USB export function that occurred in rekordbox ver. 7.2.12.</li>\n</ul>\n<p><strong>CHANGED</strong></p>\n<ul>\n<li> Support for Beatsource integration with Beatport.<br />\nNote: <a href=\"https://www.beatsource.com/\" target=\"_blank\" rel=\"noopener\">Beatsource will end its service</a> from now on. For Beatsource users, please <a href=\"https://rekordbox.com/en/support/faq/streaming-7/#faq-q700041\" target=\"_blank\" rel=\"noopener\">migrate to Beatport</a>.</li>\n</ul>\n<p>We understand the disruption this may have caused and sincerely apologize for the USB export issue in rekordbox ver. 7.2.12. This has now been resolved in ver. 7.2.13.</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Fixed the issue with the USB export function that occurred in rekordbox ver. 7.2.12. CHANGED Support for Beatsource integration with Beatport. Note: Beatsource will end its service from now on. For Beatsource users, please migrate to Beatport . We understand the disruption this may have caused and sincerely apologize for the USB export issue in rekordbox ver. 7.2.12. This has now been resolved in ver. 7.2.13."
+    },
+    {
+      "anchorId": "release-93904",
+      "version": "7.2.11",
+      "title": "ver. 7.2.11 [2026.3.3]",
+      "releaseDate": "2026-03-03",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-93904",
+      "bodyHtml": "<p><strong>CHANGED</strong></p>\n<ul>\n<li> Adapted to Spotify's specification changes.<br />\nNote: Simultaneous use on multiple devices is restricted.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Bug fixes and stability improvements.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "CHANGED Adapted to Spotify's specification changes. Note: Simultaneous use on multiple devices is restricted. FIXED Bug fixes and stability improvements."
+    },
+    {
+      "anchorId": "release-93198",
+      "version": "7.2.10",
+      "title": "ver. 7.2.10 [2026.2.3]",
+      "releaseDate": "2026-02-03",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-93198",
+      "bodyHtml": "<p><strong>CHANGED</strong></p>\n<ul>\n<li>Due to the change of SoundCloud audio file format, our supported audio file format has changed from MP3 (128 kbps) to AAC (160 kbps/96 kbps).<br />\nNOTE: If the grid or cue points become misaligned on SoundCloud tracks after updating to ver. 7.2.10, you'll need to reanalyze the tracks or reset the cue points. For details, please see <a href=\"https://rekordbox.com/en/support/faq/streaming-7/#faq-q700146\" target=\"_blank\" rel=\"noopener\">here</a>.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Apple Music tracks didn't appear in Related Tracks and Track Suggestions.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "CHANGED Due to the change of SoundCloud audio file format, our supported audio file format has changed from MP3 (128 kbps) to AAC (160 kbps/96 kbps). NOTE: If the grid or cue points become misaligned on SoundCloud tracks after updating to ver. 7.2.10, you'll need to reanalyze the tracks or reset the cue points. For details, please see here . FIXED Apple Music tracks didn't appear in Related Tracks and Track Suggestions. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-92904",
+      "version": "7.2.9",
+      "title": "ver. 7.2.9 [2026.1.20]",
+      "releaseDate": "2026-01-20",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-92904",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>DJM-V5 compatibility added.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>On Spotify’s track information screen, now is possible to edit certain fields (BPM, Key, DJ play Count, Rating, Comments)</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>On Windows 11, parts of Apple Music tracks would become silent.</li>\n<li>Shortcuts in the tree view might not work properly.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW DJM-V5 compatibility added. IMPROVED On Spotify’s track information screen, now is possible to edit certain fields (BPM, Key, DJ play Count, Rating, Comments) FIXED On Windows 11, parts of Apple Music tracks would become silent. Shortcuts in the tree view might not work properly. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-91524",
+      "version": "7.2.8",
+      "title": "ver. 7.2.8 [2025.12.3]",
+      "releaseDate": "2025-12-03",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-91524",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>Added [4 Stems(VOCAL, INST, BASS, DRUMS)] to STEMS function.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Now you can select either [3 Stems(VOCAL, INST, DRUMS)] or [4 Stems(VOCAL, INST, BASS, DRUMS)] in the [STEMS mode].</li>\n<li>Merging duplicated files(tracks) is now possible.</li>\n<li>Setting up Cloud Library Sync and rekordbox CloudDirectPlay is now easy with the Cloud Setup Wizard.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Enlarged waveforms might not display correctly when changing layout while Beat Sync is enabled.</li>\n<li>Apple Music tracks could not be played in rekordbox even if [Allow playback of tracks with the Explixcit mark] was turned on in Apple Music, when [Allow Explicit Music] was turned off in Mac System Preferences.</li>\n<li>On Windows, occasionally unable to play tracks when loading Spotify tracks with \"You have exceeded the track streaming limit\" caution displayed.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p><strong>CHANGED</strong></p>\n<ul>\n<li>Apple Music track loading method is now the same for all devices．<br />\nDue to this change, BeatGrids and Cue points may become misaligned. If you notice any misalignment, please re-analyze the tracks and reset the Cue points.<br />\nFor details, please see <a href=\"https://rekordbox.com/en/support/faq/streaming-7/#faq-q700146\" target=\"_blank\" rel=\"noopener\">here</a>.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW Added [4 Stems(VOCAL, INST, BASS, DRUMS)] to STEMS function. IMPROVED Now you can select either [3 Stems(VOCAL, INST, DRUMS)] or [4 Stems(VOCAL, INST, BASS, DRUMS)] in the [STEMS mode]. Merging duplicated files(tracks) is now possible. Setting up Cloud Library Sync and rekordbox CloudDirectPlay is now easy with the Cloud Setup Wizard. FIXED Enlarged waveforms might not display correctly when changing layout while Beat Sync is enabled. Apple Music tracks could not be played in rekordbox even if [Allow playback of tracks with the Explixcit mark] was turned on in Apple Music, when [Allow Explicit Music] was turned off in Mac System Preferences. On Windows, occasionally unable to play tracks when loading Spotify tracks with \"You have exceeded the track streaming limit\" caution displayed. Improved stability and fixes for other minor issues. CHANGED Apple Music track loading method is now the same for all devices． Due to this change, BeatGrids and Cue points may become misaligned. If you notice any misalignment, please re-analyze the tracks and reset the Cue points. For details, please see here ."
+    },
+    {
+      "anchorId": "release-90716",
+      "version": "7.2.7",
+      "title": "ver. 7.2.7 [2025.11.11]",
+      "releaseDate": "2025-11-11",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-90716",
+      "bodyHtml": "<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Direct export of tracks only available in the cloud to USB storage devices is now possible.</li>\n<li>Direct loading of tracks only available in the cloud onto the deck is now possible.</li>\n<li>Added DJsounds Show to Apple Music tree view.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Stems function may not work when selecting [Prioritize sound quality] in the Stems setting.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "IMPROVED Direct export of tracks only available in the cloud to USB storage devices is now possible. Direct loading of tracks only available in the cloud onto the deck is now possible. Added DJsounds Show to Apple Music tree view. FIXED Stems function may not work when selecting [Prioritize sound quality] in the Stems setting. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-90017",
+      "version": "7.2.6",
+      "title": "ver. 7.2.6 [2025.10.23]",
+      "releaseDate": "2025-10-23",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-90017",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Track analysis could be extremely long in case of enabling the High precision analysis.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Track analysis could be extremely long in case of enabling the High precision analysis."
+    },
+    {
+      "anchorId": "release-89607",
+      "version": "7.2.5",
+      "title": "ver. 7.2.5 [2025.10.21]",
+      "releaseDate": "2025-10-21",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-89607",
+      "bodyHtml": "<p><strong>CHANGED</strong></p>\n<ul>\n<li>Renamed Device Library Plus to OneLibrary.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>When browsing the [Devices], tracks might not be displayed in the tracklist area.</li>\n<li>Not all artist names were displayed for a streaming track with multiple artists.</li>\n<li>Occasionally saved TIDAL offline tracks could disappear.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "CHANGED Renamed Device Library Plus to OneLibrary. FIXED When browsing the [Devices], tracks might not be displayed in the tracklist area. Not all artist names were displayed for a streaming track with multiple artists. Occasionally saved TIDAL offline tracks could disappear. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-89341",
+      "version": "7.2.4",
+      "title": "ver. 7.2.4 [2025.10.7]",
+      "releaseDate": "2025-10-07",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-89341",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Playlists exported to Device Library Plus might not appear in the correct order.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Playlists exported to Device Library Plus might not appear in the correct order."
+    },
+    {
+      "anchorId": "release-88541",
+      "version": "7.2.3",
+      "title": "ver. 7.2.3 [2025.9.24]",
+      "releaseDate": "2025-09-24",
+      "page": 1,
+      "url": "https://rekordbox.com/en/support/releasenote/#release-88541",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>Support for Spotify.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>The design of [Info] tab of track information window in the Browse section has been improved.</li>\n<li>The design of HOT CUE buttons in EXPORT mode has been improved.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally, the track filter worked incorrectly.</li>\n<li>Unable to correctly display the Genre tree when using SoundCloud.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW Support for Spotify. IMPROVED The design of [Info] tab of track information window in the Browse section has been improved. The design of HOT CUE buttons in EXPORT mode has been improved. FIXED Occasionally, the track filter worked incorrectly. Unable to correctly display the Genre tree when using SoundCloud. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-87284",
+      "version": "7.2.2",
+      "title": "ver. 7.2.2 [2025.9.9]",
+      "releaseDate": "2025-09-09",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-87284",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>CDJ-3000X compatibility added.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally, not all playlists were displayed on the DJ equipment screen when using LINK EXPORT.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW CDJ-3000X compatibility added. FIXED Occasionally, not all playlists were displayed on the DJ equipment screen when using LINK EXPORT. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-86938",
+      "version": "7.2.0",
+      "title": "ver. 7.2.0 [2025.8.21]",
+      "releaseDate": "2025-08-21",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-86938",
+      "bodyHtml": "<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Enhanced Apple Music security.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>The playing Deck would momentarily stop when touching the JOG wheel of a Deck that was stopped at the end of a track when Apple Music tracks were played on multiple Decks.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p><strong>CHANGED</strong></p>\n<ul>\n<li>Changed the conditions for enabling STEMS and Groove Circuit when the DDJ-GRV6 is connected.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "IMPROVED Enhanced Apple Music security. FIXED The playing Deck would momentarily stop when touching the JOG wheel of a Deck that was stopped at the end of a track when Apple Music tracks were played on multiple Decks. Improved stability and fixes for other minor issues. CHANGED Changed the conditions for enabling STEMS and Groove Circuit when the DDJ-GRV6 is connected."
+    },
+    {
+      "anchorId": "release-86700",
+      "version": "7.1.5",
+      "title": "ver. 7.1.5 [2025.8.5]",
+      "releaseDate": "2025-08-05",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-86700",
+      "bodyHtml": "<p><strong>CHANGED</strong></p>\n<ul>\n<li>When using Apple Music, now you can play a maximum of 3 tracks at the same time.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Potential crash when deleting tracks exported to a USB storage device.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "CHANGED When using Apple Music, now you can play a maximum of 3 tracks at the same time. FIXED Potential crash when deleting tracks exported to a USB storage device. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-86127",
+      "version": "7.1.4",
+      "title": "ver. 7.1.4 [2025.7.24]",
+      "releaseDate": "2025-07-24",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-86127",
+      "bodyHtml": "<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Key Analysis accuracy has been improved.</li>\n<li>Updates on track information and deleted tracks in Device Library Plus or Device Library will now automatically be synchronized.</li>\n<li>Added an option to not import deleted drum loop audio for the Groove Circuit at startup.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Potential crash when closing the category filter or track information window.</li>\n<li>Occasionally, Track Analysis would finish incorrectly.</li>\n<li>Occasionally, rekordbox would not start if the login username was in Hangul characters.</li>\n<li>Occasionally, the [Installation information for Firmware Update Manager] would not appear.</li>\n<li>Unable to change the playlist name when creating a new playlist.</li>\n<li>Scrolling of the Playlists or Tree View was occasionally slow when playing TIDAL tracks in a loop.</li>\n<li>Occasionally, TIDAL tracks weren't displayed in the track list.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "IMPROVED Key Analysis accuracy has been improved. Updates on track information and deleted tracks in Device Library Plus or Device Library will now automatically be synchronized. Added an option to not import deleted drum loop audio for the Groove Circuit at startup. FIXED Potential crash when closing the category filter or track information window. Occasionally, Track Analysis would finish incorrectly. Occasionally, rekordbox would not start if the login username was in Hangul characters. Occasionally, the [Installation information for Firmware Update Manager] would not appear. Unable to change the playlist name when creating a new playlist. Scrolling of the Playlists or Tree View was occasionally slow when playing TIDAL tracks in a loop. Occasionally, TIDAL tracks weren't displayed in the track list. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-85672",
+      "version": "7.1.3",
+      "title": "ver. 7.1.3 [2025.6.10]",
+      "releaseDate": "2025-06-10",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-85672",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>Added a playlist search function.</li>\n<li>Added the ability to display the number of tracks in a playlist.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Media browser icon size is now linked to the font size.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Potential crash when performing high precision BeatGrid analysis.</li>\n<li>Occasionally on Mac, an error message “The path to the Dropbox folder is too long.\" appeared.</li>\n<li>Occasionally, the track list blinked.</li>\n<li>Unable to move playlists in Device Library Plus to another folder in the USB storage device.</li>\n<li>Potential crash when using TIDAL.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW Added a playlist search function. Added the ability to display the number of tracks in a playlist. IMPROVED Media browser icon size is now linked to the font size. FIXED Potential crash when performing high precision BeatGrid analysis. Occasionally on Mac, an error message “The path to the Dropbox folder is too long.\" appeared. Occasionally, the track list blinked. Unable to move playlists in Device Library Plus to another folder in the USB storage device. Potential crash when using TIDAL. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-85482",
+      "version": "7.1.2",
+      "title": "ver. 7.1.2 [2025.5.20]",
+      "releaseDate": "2025-05-20",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-85482",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>Added [All Tracks] at the top of the [Playlists] Tree View.<br />\nSelect [All Tracks] to see Collection.<br />\nIt’s possible to drag and drop tracks from [All Tracks] to a playlist in the Tree View.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally, recording couldn’t start in PERFORMANCE mode.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW Added [All Tracks] at the top of the [Playlists] Tree View. Select [All Tracks] to see Collection. It’s possible to drag and drop tracks from [All Tracks] to a playlist in the Tree View. FIXED Occasionally, recording couldn’t start in PERFORMANCE mode. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-84483",
+      "version": "7.1.1",
+      "title": "ver. 7.1.1 [2025.4.15]",
+      "releaseDate": "2025-04-15",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-84483",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally unable to log back in to Apple Music.</li>\n<li>Apple Music playlists with more than 1000 tracks would only display up to 1000 tracks.</li>\n<li>Occasionally selecting the root of a playlist or a folder would not display the contained tracks.</li>\n<li>Occasionally exporting playlists to a text file would not export them in the correct order.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Occasionally unable to log back in to Apple Music. Apple Music playlists with more than 1000 tracks would only display up to 1000 tracks. Occasionally selecting the root of a playlist or a folder would not display the contained tracks. Occasionally exporting playlists to a text file would not export them in the correct order. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-82697",
+      "version": "7.1.0",
+      "title": "ver. 7.1.0 [2025.3.25]",
+      "releaseDate": "2025-03-25",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-82697",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>Support for Apple Music.</li>\n<li>Added a playlist filter function to CloudDirectPlay.</li>\n<li>Added Cloud Export feature.<br />\nSee the <a href=\"/en/support/faq/clouddirect-7/#faq-q700025\" target=\"_blank\" rel=\"noopener\">FAQ</a> for details.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>On macOS, driver software for DMX interfaces (FTDI d2xx driver software) included.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Bug fixes and stability improvements.</li>\n</ul>\n<p><strong>CHANGED</strong></p>\n<ul>\n<li>Cloud Library Sync of up to 20 tracks is now available for free.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW Support for Apple Music. Added a playlist filter function to CloudDirectPlay. Added Cloud Export feature. See the FAQ for details. IMPROVED On macOS, driver software for DMX interfaces (FTDI d2xx driver software) included. FIXED Bug fixes and stability improvements. CHANGED Cloud Library Sync of up to 20 tracks is now available for free."
+    },
+    {
+      "anchorId": "release-81946",
+      "version": "7.0.9",
+      "title": "ver. 7.0.9 [2025.2.6]",
+      "releaseDate": "2025-02-06",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-81946",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally unable to log in to TIDAL on Windows 11.</li>\n<li>Potential crash when selecting TIDAL from the Media Browser while logged into TIDAL.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p><strong>CHANGED</strong></p>\n<ul>\n<li>When exporting to a USB storage device, if only Device Library format exists, it will be converted to Device Library Plus and exported.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Occasionally unable to log in to TIDAL on Windows 11. Potential crash when selecting TIDAL from the Media Browser while logged into TIDAL. Improved stability and fixes for other minor issues. CHANGED When exporting to a USB storage device, if only Device Library format exists, it will be converted to Device Library Plus and exported."
+    },
+    {
+      "anchorId": "release-81321",
+      "version": "7.0.8",
+      "title": "ver. 7.0.8 [2024.12.25]",
+      "releaseDate": "2024-12-25",
+      "page": 2,
+      "url": "https://rekordbox.com/en/support/releasenote/page/2/#release-81321",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Slow response when browsing in rekordbox ver. 7.0.6 and 7.0.7.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Slow response when browsing in rekordbox ver. 7.0.6 and 7.0.7."
+    },
+    {
+      "anchorId": "release-78769",
+      "version": "7.0.7",
+      "title": "ver. 7.0.7 [2024.12.17]",
+      "releaseDate": "2024-12-17",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-78769",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>Added the ability to edit Beatport/Beatsource/TIDAL playlists.</li>\n<li>Support for some third-party DMX interfaces for Lighting function.<br />\nFor macOS users: You'll need a separate driver software installation. See the <a href=\"/en/support/faq/lighting-7/#faq-q700021\" target=\"_blank\" rel=\"noopener\">FAQ</a> for details.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Added an option to [Use high precision BeatGrid analysis].</li>\n<li>Added a feature to automatically activate your computer with your subscription plan.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW Added the ability to edit Beatport/Beatsource/TIDAL playlists. Support for some third-party DMX interfaces for Lighting function. For macOS users: You'll need a separate driver software installation. See the FAQ for details. IMPROVED Added an option to [Use high precision BeatGrid analysis]. Added a feature to automatically activate your computer with your subscription plan. FIXED Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-77257",
+      "version": "7.0.6",
+      "title": "ver. 7.0.6 [2024.12.5]",
+      "releaseDate": "2024-12-05",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-77257",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>On the OPUS-QUAD/OMNIS-DUO, added the single sign-on function, which allows the use of TIDAL with a TIDAL account logged in via rekordbox.<br />\nNote: Update the firmware of your DJ equipment to the latest version.<br />\nOPUS-QUAD: version 1.22 or later<br />\nOMNIS-DUO: version 1.11 or later</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Lossless (FLAC) is now selectable when using Beatport and Beatsource.</li>\n<li>TIDAL tracks are now available in EXPORT mode.<br />\nNote: it’s not possible to load/play TIDAL tracks on a CDJ/XDJ or all-in-one player via USB EXPORT or LINK EXPORT.</li>\n<li>Added an option to import Histories from a USB/SD device into rekordbox without deleting them from the device.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW On the OPUS-QUAD/OMNIS-DUO, added the single sign-on function, which allows the use of TIDAL with a TIDAL account logged in via rekordbox. Note: Update the firmware of your DJ equipment to the latest version. OPUS-QUAD: version 1.22 or later OMNIS-DUO: version 1.11 or later IMPROVED Lossless (FLAC) is now selectable when using Beatport and Beatsource. TIDAL tracks are now available in EXPORT mode. Note: it’s not possible to load/play TIDAL tracks on a CDJ/XDJ or all-in-one player via USB EXPORT or LINK EXPORT. Added an option to import Histories from a USB/SD device into rekordbox without deleting them from the device. FIXED Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-76122",
+      "version": "7.0.5",
+      "title": "ver. 7.0.5 [2024.10.29]",
+      "releaseDate": "2024-10-29",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-76122",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>DDJ-FLX2 compatibility added.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally on macOS, titles, artists, etc. were displayed incorrectly.</li>\n<li>Occasionally, unable to show the jog dial display when connected to a DDJ-RZ.</li>\n<li>Potential crash when trying to select a Collection filter with the rotary selector on some DJ equipment.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW DDJ-FLX2 compatibility added. FIXED Occasionally on macOS, titles, artists, etc. were displayed incorrectly. Occasionally, unable to show the jog dial display when connected to a DDJ-RZ. Potential crash when trying to select a Collection filter with the rotary selector on some DJ equipment. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-74962",
+      "version": "7.0.4",
+      "title": "ver. 7.0.4 [2024.10.10]",
+      "releaseDate": "2024-10-10",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-74962",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>XDJ-AZ compatibility added.</li>\n<li>DDJ-GRV6 compatibility added.</li>\n<li>Added GROOVE CIRCUIT feature.</li>\n<li>Added the ability to play TIDAL offline tracks.</li>\n<li>Added the ability to view and delete duplicate tracks.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>When using STEMS, it is possible to prioritize sound quality or speed. (For more information, see the <a href=\"/en/support/faq/stems-7/#faq-q700020\" target=\"_blank\" rel=\"noopener\">FAQ</a>.)</li>\n<li>Added a setting that enables editing a track metadata by double-clicking on the track.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally, export could take a long time.</li>\n<li>Occasionally, selected tracks were unexpectedly centered.</li>\n<li>Potential crash when searching by KEY on the DJ equipment using LINK EXPORT.</li>\n<li>Potential crash when playing certain ALAC files.</li>\n<li>Potential crash when using SYNC MANAGER.</li>\n<li>Occasionally, GATE playback stopped unexpectedly when connected to a DDJ-REV7.</li>\n<li>Unable to set Mic Input mode when connected to a DDJ-800.</li>\n<li>Occasionally on a Windows PC, output channel names were displayed incorrectly when connecting a DJ equipment.</li>\n<li>Occasionally, when switching playlists with a DJ equipment connected, the first track would be unexpectedly selected.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p><strong>CHANGED</strong></p>\n<ul>\n<li>STEM waveform display on/off setting in enlarged waveform panel is now available in [Preferences].</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW XDJ-AZ compatibility added. DDJ-GRV6 compatibility added. Added GROOVE CIRCUIT feature. Added the ability to play TIDAL offline tracks. Added the ability to view and delete duplicate tracks. IMPROVED When using STEMS, it is possible to prioritize sound quality or speed. (For more information, see the FAQ .) Added a setting that enables editing a track metadata by double-clicking on the track. FIXED Occasionally, export could take a long time. Occasionally, selected tracks were unexpectedly centered. Potential crash when searching by KEY on the DJ equipment using LINK EXPORT. Potential crash when playing certain ALAC files. Potential crash when using SYNC MANAGER. Occasionally, GATE playback stopped unexpectedly when connected to a DDJ-REV7. Unable to set Mic Input mode when connected to a DDJ-800. Occasionally on a Windows PC, output channel names were displayed incorrectly when connecting a DJ equipment. Occasionally, when switching playlists with a DJ equipment connected, the first track would be unexpectedly selected. Improved stability and fixes for other minor issues. CHANGED STEM waveform display on/off setting in enlarged waveform panel is now available in [Preferences]."
+    },
+    {
+      "anchorId": "release-73873",
+      "version": "7.0.3",
+      "title": "ver. 7.0.3 [2024.8.27]",
+      "releaseDate": "2024-08-27",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-73873",
+      "bodyHtml": "<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Ability to search for tracks when selecting playlist folders.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Unable to change the order of tracks on the Automix screen.</li>\n<li>On macOS Sonoma, [When loading a track without video] in the Preferences was saved incorrectly.</li>\n<li>Unable to update the fixture information in LIGHTING mode when changing the Banks in the Macro Editor screen.</li>\n<li>Occasionally, displaying tracks in the playlist could take a long time when too many tracks are in the library.</li>\n<li>Unable to display track's BPM correctly when the tempo was changed on the [2 Players] layout in Export mode.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "IMPROVED Ability to search for tracks when selecting playlist folders. FIXED Unable to change the order of tracks on the Automix screen. On macOS Sonoma, [When loading a track without video] in the Preferences was saved incorrectly. Unable to update the fixture information in LIGHTING mode when changing the Banks in the Macro Editor screen. Occasionally, displaying tracks in the playlist could take a long time when too many tracks are in the library. Unable to display track's BPM correctly when the tempo was changed on the [2 Players] layout in Export mode. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-73281",
+      "version": "7.0.2",
+      "title": "ver. 7.0.2 [2024.6.25]",
+      "releaseDate": "2024-06-25",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-73281",
+      "bodyHtml": "<p>FIXED</p>\n<ul>\n<li>SoundCloud playlists only showed up to 100 tracks.</li>\n<li>Incorrect sample rate settings when using Bluetooth audio devices.</li>\n<li>The keyboard shortcut [Search in the collection] didn't work properly.</li>\n<li>Pressing SHIFT+ENTER in the comment of the track information screen didn't result in a line break.</li>\n<li>Some fixture channels didn't work properly in Lighting function.</li>\n<li>Occasionally, reordering of tracks in playlists didn't work properly.</li>\n<li>Preview playback stopped occasionally.</li>\n<li>Unable to display scenes on the LIGHTING mode's Macro Editor screen.</li>\n<li>Potential crash when sorting items in Column View.</li>\n<li>Potential crash when closing [Preferences].</li>\n<li>Occasionally, the settings for the [Vinyl Speed Adjust] in [Preferences] weren't reflected correctly.</li>\n<li>The TEMPO slider on the DDJ-REV7 didn't change the track tempo correctly.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED SoundCloud playlists only showed up to 100 tracks. Incorrect sample rate settings when using Bluetooth audio devices. The keyboard shortcut [Search in the collection] didn't work properly. Pressing SHIFT+ENTER in the comment of the track information screen didn't result in a line break. Some fixture channels didn't work properly in Lighting function. Occasionally, reordering of tracks in playlists didn't work properly. Preview playback stopped occasionally. Unable to display scenes on the LIGHTING mode's Macro Editor screen. Potential crash when sorting items in Column View. Potential crash when closing [Preferences]. Occasionally, the settings for the [Vinyl Speed Adjust] in [Preferences] weren't reflected correctly. The TEMPO slider on the DDJ-REV7 didn't change the track tempo correctly. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-72552",
+      "version": "7.0.1",
+      "title": "ver. 7.0.1 [2024.5.22]",
+      "releaseDate": "2024-05-22",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-72552",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally, export could take a long time.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Occasionally, export could take a long time. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-71457",
+      "version": "7.0.0",
+      "title": "ver. 7.0.0 [2024.5.14]",
+      "releaseDate": "2024-05-14",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-71457",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>New GUI design</li>\n<li>Added the following features for browsing:</li>\n</ul>\n<p style=\"padding-left: 80px;\">Media Browser<br />\nCollection Filter<br />\nNew browsing for streaming services<br />\nColumn View<br />\nHorizontal Sub Browser</p>\n<ul>\n<li>New Preferences design</li>\n<li>Added INFO window.</li>\n<li>Added Intelligent Cue Creation feature.</li>\n<li>Added DUAL PLAYER layout in EXPORT mode.</li>\n<li>Added Collaborative Playlist feature.</li>\n<li>Added Collection Radar feature.</li>\n<li>Added Streaming Radar feature.</li>\n<li>Added Owner registration feature.</li>\n<li>Renewed the 30-day free trial.</li>\n</ul>\n<p><strong>IMPROVED</strong></p>\n<ul>\n<li>Ability to display registered tracks when selecting a playlist folder.</li>\n<li>The subscription plan and computer activation status are now always displayed on the app screen.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW New GUI design Added the following features for browsing: Media Browser Collection Filter New browsing for streaming services Column View Horizontal Sub Browser New Preferences design Added INFO window. Added Intelligent Cue Creation feature. Added DUAL PLAYER layout in EXPORT mode. Added Collaborative Playlist feature. Added Collection Radar feature. Added Streaming Radar feature. Added Owner registration feature. Renewed the 30-day free trial. IMPROVED Ability to display registered tracks when selecting a playlist folder. The subscription plan and computer activation status are now always displayed on the app screen."
+    },
+    {
+      "anchorId": "release-85860",
+      "version": "6.8.6",
+      "title": "ver. 6.8.6 [2025.6.17]",
+      "releaseDate": "2025-06-17",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-85860",
+      "bodyHtml": "<p><strong>FIXED</strong></p>\n<ul>\n<li>Occasionally on Mac, an error message “The path to the Dropbox folder is too long.\" appeared.</li>\n<li>Unable to move playlists in Device Library Plus to another folder in the USB storage device.</li>\n<li>Improved stability and fixes for other minor issues.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "FIXED Occasionally on Mac, an error message “The path to the Dropbox folder is too long.\" appeared. Unable to move playlists in Device Library Plus to another folder in the USB storage device. Improved stability and fixes for other minor issues."
+    },
+    {
+      "anchorId": "release-70539",
+      "version": "6.8.5",
+      "title": "ver. 6.8.5 [2024.4.16]",
+      "releaseDate": "2024-04-16",
+      "page": 3,
+      "url": "https://rekordbox.com/en/support/releasenote/page/3/#release-70539",
+      "bodyHtml": "<p><strong>NEW</strong></p>\n<ul>\n<li>TRACK SEPARATION function can now be used with TIDAL tracks.</li>\n</ul>\n<p><strong>FIXED</strong></p>\n<ul>\n<li>Bug fixes and stability improvements.</li>\n</ul>\n<p>&nbsp;</p>",
+      "bodyText": "NEW TRACK SEPARATION function can now be used with TIDAL tracks. FIXED Bug fixes and stability improvements."
+    }
+  ]
+}

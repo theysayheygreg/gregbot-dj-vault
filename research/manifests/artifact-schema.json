@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DJ Vault Research Artifact",
+  "type": "object",
+  "required": [
+    "vendor",
+    "productFamily",
+    "artifactType",
+    "sourceUrl",
+    "discoveredAt"
+  ],
+  "properties": {
+    "vendor": { "type": "string" },
+    "productFamily": { "type": "string" },
+    "product": { "type": "string" },
+    "artifactType": { "type": "string" },
+    "version": { "type": "string" },
+    "platform": { "type": "string" },
+    "releasedAt": { "type": "string" },
+    "sourceUrl": { "type": "string" },
+    "releaseNotesUrl": { "type": "string" },
+    "downloadUrl": { "type": "string" },
+    "localPath": { "type": "string" },
+    "status": { "type": "string" },
+    "notes": { "type": "string" },
+    "discoveredAt": { "type": "string" }
+  }
+}

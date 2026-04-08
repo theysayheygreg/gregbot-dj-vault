@@ -1,0 +1,1466 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "collectedAt": "2026-04-08T00:02:47.756Z",
+  "category": {
+    "id": 4416169767193,
+    "name": "DJ Players",
+    "url": "https://support.alphatheta.com/en-US/categories/4416169767193"
+  },
+  "products": [
+    {
+      "id": 48245720355353,
+      "name": "CDJ-3000X",
+      "status": "Active",
+      "categoryId": 4416169767193,
+      "createdAt": "2025-06-24",
+      "updatedAt": "2025-12-10",
+      "url": "https://support.alphatheta.com/en-US/products/48245720355353",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 52592142723097,
+          "title": "CDJ-3000X MIDI-compatible software",
+          "releasedAt": "2025-09-09T07:47:55.000000Z"
+        },
+        {
+          "articleId": 50420842772377,
+          "title": "CDJ-3000X Serato DJ Pro",
+          "releasedAt": "2025-09-09T07:48:34.000000Z"
+        },
+        {
+          "articleId": 50401056579865,
+          "title": "CDJ-3000X rekordbox for Mac/Windows",
+          "releasedAt": "2025-12-08T07:41:35.000000Z"
+        },
+        {
+          "articleId": 50399162142361,
+          "title": "CDJ-3000X Firmware",
+          "releasedAt": "2025-10-21T07:00:08.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416175863961,
+      "name": "CDJ-3000",
+      "status": "Active",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-28",
+      "updatedAt": "2026-01-27",
+      "url": "https://support.alphatheta.com/en-US/products/4416175863961",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=28"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=30"
+        },
+        {
+          "sectionId": 31,
+          "label": "Product Tutorials",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=31"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 40738749245337,
+          "title": "When I connect my CDJ-3000 to the PRO DJ LINK network, I can't load Beatport tracks from the PRO DJ LINK network. Why not?",
+          "releasedAt": "2024-10-12T10:53:47.000000Z"
+        },
+        {
+          "articleId": 38400139761177,
+          "title": "When playing Beatport Streaming tracks, it takes time before the waveform, beat position, etc. are displayed. Why?",
+          "releasedAt": "2024-10-12T10:53:50.000000Z"
+        },
+        {
+          "articleId": 38400171109529,
+          "title": "When I'm using Beatport Streaming tracks, it takes time to load tracks. Why?",
+          "releasedAt": "2024-10-12T10:53:53.000000Z"
+        },
+        {
+          "articleId": 38400122316953,
+          "title": "I can't select tracks on my CDJ-3000 after logging in to Beatport Streaming. Why not?",
+          "releasedAt": "2024-10-12T10:53:56.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416488054425,
+      "name": "CDJ-2000NXS2",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416488054425",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=28"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=30"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 9594456676633,
+          "title": "When playing tracks with a computer or mobile device (smartphone or tablet) connected by Wi-Fi (wireless), the sound stops or the emergency loop mode is set.",
+          "releasedAt": "2023-02-07T10:20:54.000000Z"
+        },
+        {
+          "articleId": 9594380139161,
+          "title": "What are the required specifications of mobile devices for using rekordbox (CPU specifications, OS versions, etc.)?",
+          "releasedAt": "2023-02-08T11:34:40.000000Z"
+        },
+        {
+          "articleId": 9594259529497,
+          "title": "Is the DJ performance stopped if the Wi-Fi connection is lost in the middle of the performance?",
+          "releasedAt": "2022-08-17T14:33:15.000000Z"
+        },
+        {
+          "articleId": 9594153937433,
+          "title": "CDJ-2000NXS2 Firmware Update Guide",
+          "releasedAt": "2025-04-08T01:17:03.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416494703385,
+      "name": "XDJ-1000MK2",
+      "status": "Active",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2025-12-08",
+      "url": "https://support.alphatheta.com/en-US/products/4416494703385",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4413945754649,
+          "title": "What are the features of this product?",
+          "releasedAt": "2022-02-24T11:34:07.000000Z"
+        },
+        {
+          "articleId": 4406549450649,
+          "title": "How is this unit's sound quality?",
+          "releasedAt": "2022-02-24T11:34:08.000000Z"
+        },
+        {
+          "articleId": 4406549440665,
+          "title": "I can't change the player number with the UTILITY menu.",
+          "releasedAt": "2022-02-24T11:34:09.000000Z"
+        },
+        {
+          "articleId": 4406549428761,
+          "title": "How can XDJ-1000MK2 be linked?",
+          "releasedAt": "2022-02-24T11:34:09.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416488404249,
+      "name": "XDJ-700",
+      "status": "Active",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2025-12-08",
+      "url": "https://support.alphatheta.com/en-US/products/4416488404249",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4413945804441,
+          "title": "What are the features of this product?",
+          "releasedAt": "2022-02-01T10:03:11.000000Z"
+        },
+        {
+          "articleId": 4406611586457,
+          "title": "What can be done by connecting the XDJ-700 with a computer using a USB cable?",
+          "releasedAt": "2023-02-14T15:13:44.000000Z"
+        },
+        {
+          "articleId": 4406611582233,
+          "title": "What is the Pro DJ Link function? And what link functions are there?",
+          "releasedAt": "2022-02-24T09:38:10.000000Z"
+        },
+        {
+          "articleId": 4406611579801,
+          "title": "PRO DJ LINK does not work well.",
+          "releasedAt": "2022-02-24T11:32:33.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416495357209,
+      "name": "CDJ-900NXS",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416495357209",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 24796883034521,
+          "title": "CDJ-900NXS Firmware Update Guide",
+          "releasedAt": "2023-12-05T08:09:32.000000Z"
+        },
+        {
+          "articleId": 4413945599385,
+          "title": "What is the greatest feature of this product?",
+          "releasedAt": "2022-01-31T14:25:11.000000Z"
+        },
+        {
+          "articleId": 4406501459609,
+          "title": "How is this unit's sound quality?",
+          "releasedAt": "2022-01-31T14:25:13.000000Z"
+        },
+        {
+          "articleId": 4406501451545,
+          "title": "Are there any world-first or industry-first functions?",
+          "releasedAt": "2023-02-15T11:36:20.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 19333380404505,
+      "name": "CDJ-TOUR1",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2023-06-07",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/19333380404505",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=28"
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=30"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23696496146713,
+          "title": "CDJ-TOUR1 rekordbox",
+          "releasedAt": "2025-12-08T07:43:29.000000Z"
+        },
+        {
+          "articleId": 21631682551961,
+          "title": "CDJ-TOUR1 TRAKTOR",
+          "releasedAt": "2023-10-05T09:43:55.000000Z"
+        },
+        {
+          "articleId": 21631196388249,
+          "title": "CDJ-TOUR1 djay PRO",
+          "releasedAt": "2023-10-05T09:49:29.000000Z"
+        },
+        {
+          "articleId": 21629338171033,
+          "title": "CDJ-TOUR1 PRO DJ LINK Bridge for Mac",
+          "releasedAt": "2023-10-05T09:39:28.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416489399705,
+      "name": "XDJ-1000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416489399705",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23694887558041,
+          "title": "XDJ-1000 Serato DJ Pro",
+          "releasedAt": "2025-01-29T12:42:03.000000Z"
+        },
+        {
+          "articleId": 21815578111385,
+          "title": "XDJ-1000 TRAKTOR",
+          "releasedAt": "2023-10-05T08:54:03.000000Z"
+        },
+        {
+          "articleId": 21815516523033,
+          "title": "XDJ-1000 rekordbox",
+          "releasedAt": "2025-12-08T07:43:31.000000Z"
+        },
+        {
+          "articleId": 21815431732761,
+          "title": "XDJ-1000 Audio Driver for Windows",
+          "releasedAt": "2025-01-28T16:55:28.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4405832296601,
+      "name": "CDJ-2000NXS",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2021-09-01",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4405832296601",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=28"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23693829543449,
+          "title": "CDJ-2000NXS rekordbox",
+          "releasedAt": "2025-12-08T07:43:33.000000Z"
+        },
+        {
+          "articleId": 22069052792345,
+          "title": "CDJ-2000NXS TRAKTOR",
+          "releasedAt": "2023-10-05T08:47:12.000000Z"
+        },
+        {
+          "articleId": 22068816309657,
+          "title": "CDJ-2000NXS Serato Scratch Live",
+          "releasedAt": "2023-10-05T08:43:41.000000Z"
+        },
+        {
+          "articleId": 22068086899097,
+          "title": "CDJ-2000NXS Serato DJ Pro",
+          "releasedAt": "2023-10-05T08:45:40.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416501619609,
+      "name": "CDJ-2000NXS-M",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416501619609",
+      "sectionLinks": [],
+      "highlights": []
+    },
+    {
+      "id": 4416489164697,
+      "name": "CDJ-200",
+      "status": "Support ended",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-04-07",
+      "url": "https://support.alphatheta.com/en-US/products/4416489164697",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489164697?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4519865610137,
+          "title": "CDJ-200",
+          "releasedAt": "2022-04-14T10:58:55.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496076569,
+      "name": "CDJ-900",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496076569",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 21714000233497,
+          "title": "CDJ-900 Serato Scratch Live",
+          "releasedAt": "2023-10-04T15:11:15.000000Z"
+        },
+        {
+          "articleId": 21712007981081,
+          "title": "CDJ-900 Virtual DJ Pro",
+          "releasedAt": "2023-10-04T15:15:01.000000Z"
+        },
+        {
+          "articleId": 21711496898457,
+          "title": "CDJ-900 rekordbox",
+          "releasedAt": "2023-11-02T16:05:40.000000Z"
+        },
+        {
+          "articleId": 21710712479129,
+          "title": "CDJ-900 Audio Driver for Windows",
+          "releasedAt": "2025-09-09T07:03:24.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416489311769,
+      "name": "CDJ-850",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416489311769",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=28"
+        },
+        {
+          "sectionId": 29,
+          "label": "MIDI Mapping Files",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=29"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23666412687257,
+          "title": "CDJ-850 rekordbox",
+          "releasedAt": "2025-12-08T07:43:30.000000Z"
+        },
+        {
+          "articleId": 21812126628377,
+          "title": "CDJ-850 TRAKTOR",
+          "releasedAt": "2023-10-04T15:54:38.000000Z"
+        },
+        {
+          "articleId": 21811879872665,
+          "title": "CDJ-850 Audio Driver for Windows",
+          "releasedAt": "2025-09-09T07:03:28.000000Z"
+        },
+        {
+          "articleId": 21811744817433,
+          "title": "CDJ-850 CDJ/XDJ Aggregator Tool for Mac",
+          "releasedAt": "2025-09-09T07:03:26.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416495702169,
+      "name": "CDJ-350",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416495702169",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=28"
+        },
+        {
+          "sectionId": 29,
+          "label": "MIDI Mapping Files",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=29"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23664995763993,
+          "title": "CDJ-350 Serato Scratch Live",
+          "releasedAt": "2023-10-04T14:34:29.000000Z"
+        },
+        {
+          "articleId": 23664807934873,
+          "title": "CDJ-350 rekordbox",
+          "releasedAt": "2025-12-08T07:43:36.000000Z"
+        },
+        {
+          "articleId": 23664763348889,
+          "title": "CDJ-350 MIDI Map for TRAKTOR",
+          "releasedAt": "2023-10-04T14:17:46.000000Z"
+        },
+        {
+          "articleId": 23664716743961,
+          "title": "CDJ-350 CDJ/XDJ Aggregator Tool for Mac",
+          "releasedAt": "2025-09-09T07:01:49.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416489140505,
+      "name": "CDJ-1000MK3",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416489140505",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489140505?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489140505?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 21932529717401,
+          "title": "Performance Control",
+          "releasedAt": "2023-08-18T08:00:01.000000Z"
+        },
+        {
+          "articleId": 21931269920921,
+          "title": "Display",
+          "releasedAt": "2023-08-18T08:00:00.000000Z"
+        },
+        {
+          "articleId": 21931107385881,
+          "title": "Specifications",
+          "releasedAt": "2023-08-18T08:00:00.000000Z"
+        },
+        {
+          "articleId": 21931046394009,
+          "title": "Main Features",
+          "releasedAt": "2023-08-18T08:00:01.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416501538073,
+      "name": "CDJ-1000MK2",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416501538073",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501538073?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501538073?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4519866037913,
+          "title": "How to use the Pioneer DJ CDJ-1000MK2 Player (Instruction manual)",
+          "releasedAt": "2023-10-04T10:52:29.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416501603737,
+      "name": "CDJ-2000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416501603737",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23657250210329,
+          "title": "CDJ-2000 Third Party Software",
+          "releasedAt": "2023-10-04T09:35:28.000000Z"
+        },
+        {
+          "articleId": 23656266526745,
+          "title": "CDJ-2000 rekordbox",
+          "releasedAt": "2023-11-03T15:05:43.000000Z"
+        },
+        {
+          "articleId": 21713400935577,
+          "title": "CDJ-2000 Serato Scratch Live",
+          "releasedAt": "2023-10-04T10:41:21.000000Z"
+        },
+        {
+          "articleId": 21713215512345,
+          "title": "CDJ-2000 Serato DJ Pro",
+          "releasedAt": "2023-10-04T10:42:27.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416489259801,
+      "name": "CDJ-400",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416489259801",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=28"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23625780493081,
+          "title": "CDJ-400 Serato Scratch Live",
+          "releasedAt": "2023-10-03T15:42:05.000000Z"
+        },
+        {
+          "articleId": 23625737742489,
+          "title": "CDJ-400 Third Party Software",
+          "releasedAt": "2023-10-03T15:13:41.000000Z"
+        },
+        {
+          "articleId": 23624815078425,
+          "title": "CDJ-400 DJS",
+          "releasedAt": "2023-10-03T15:24:41.000000Z"
+        },
+        {
+          "articleId": 21852828527257,
+          "title": "CDJ-400 rekordbox",
+          "releasedAt": "2023-11-03T15:06:38.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416501725465,
+      "name": "CDJ-800MK2",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416501725465",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501725465?section=23"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416501725465?section=25"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501725465?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23623875699993,
+          "title": "How to use the Pioneer DJ CDJ-800MK2 DJ Player (Instruction manual)",
+          "releasedAt": "2025-01-07T16:28:14.000000Z"
+        },
+        {
+          "articleId": 4520171181337,
+          "title": "Give the ultimate sonic performance with your CDJ-800MK2",
+          "releasedAt": "2024-10-30T10:39:02.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496059033,
+      "name": "CDJ-800",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496059033",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496059033?section=23"
+        }
+      ],
+      "highlights": []
+    },
+    {
+      "id": 4416175993241,
+      "name": "CDJ-1000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-28",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416175993241",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416175993241?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416175993241?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4519658604185,
+          "title": "How to use the Pioneer DJ CDJ-1000 Player (Instruction manual)",
+          "releasedAt": "2023-10-03T13:28:34.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416495923353,
+      "name": "CDJ-100S",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416495923353",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416495923353?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416495923353?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23622969191321,
+          "title": "Sound creation and remix possibilities are only the beginning with your CDJ-100s",
+          "releasedAt": "2024-11-01T10:26:53.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416496033049,
+      "name": "CDJ-500S",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416496033049",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496033049?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416496033049?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4520117133721,
+          "title": "Pioneer CDJ-500S CD Turntable",
+          "releasedAt": "2024-11-01T10:53:26.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416489269913,
+      "name": "CDJ-500II",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416489269913",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489269913?section=23"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489269913?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4520153959193,
+          "title": "About the CDJ-500II",
+          "releasedAt": "2024-11-04T16:14:41.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416501788953,
+      "name": "DVJ-X1",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416501788953",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501788953?section=23"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/4416501788953?section=25"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501788953?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 22071324472089,
+          "title": "How to use the Pioneer DJ DVJ-X1 DJ Player (Instruction manual)",
+          "releasedAt": "2025-04-07T23:29:36.000000Z"
+        },
+        {
+          "articleId": 22071003958297,
+          "title": "Tempo, Master Video Output, Terminals",
+          "releasedAt": "2023-08-21T13:40:33.000000Z"
+        },
+        {
+          "articleId": 22069923318169,
+          "title": "Cue Functions",
+          "releasedAt": "2023-08-21T13:42:20.000000Z"
+        },
+        {
+          "articleId": 22069884760729,
+          "title": "Performance Control",
+          "releasedAt": "2023-08-21T13:42:20.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 36403827027481,
+      "name": "DVJ-1000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2024-08-15",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/36403827027481",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/36403827027481?section=23"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/36403827027481?section=25"
+        },
+        {
+          "sectionId": 66,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/36403827027481?section=66"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 36404599996953,
+          "title": "How to use the Pioneer DJ DVJ-1000 DJ Player (Instruction manual)",
+          "releasedAt": "2025-01-28T14:50:56.000000Z"
+        },
+        {
+          "articleId": 36404335979929,
+          "title": "Get the best of both CD and DVD worlds with DVJ-1000",
+          "releasedAt": "2024-11-04T16:51:16.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416501761177,
+      "name": "CMX-3000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416501761177",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416501761177?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4520178856729,
+          "title": "CMX-3000",
+          "releasedAt": "2022-04-14T11:03:01.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416489360537,
+      "name": "CMX-5000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416489360537",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489360537?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4520286115097,
+          "title": "How to use the Pioneer DJ CMX-5000 DJ Player (Instruction manual)",
+          "releasedAt": "2025-01-28T14:14:04.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 4416489367705,
+      "name": "DMP-555",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2022-01-31",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/4416489367705",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/4416489367705?section=23"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 4520287965209,
+          "title": "DMP-555",
+          "releasedAt": "2023-10-11T14:37:44.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 21018205942425,
+      "name": "MEP-7000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2023-07-24",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/21018205942425",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=25"
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=26"
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=28"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23841857538841,
+          "title": "MEP-7000 Audio Driver for macOS Yosemite",
+          "releasedAt": "2023-10-09T15:34:34.000000Z"
+        },
+        {
+          "articleId": 23841872318873,
+          "title": "MEP-7000 TRAKTOR",
+          "releasedAt": "2023-10-09T15:41:58.000000Z"
+        },
+        {
+          "articleId": 23841696059545,
+          "title": "MEP-7000 Serato",
+          "releasedAt": "2023-10-09T15:40:42.000000Z"
+        },
+        {
+          "articleId": 23841699058457,
+          "title": "MEP-7000 Virtual DJ Pro",
+          "releasedAt": "2023-10-09T15:44:14.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 21054527926809,
+      "name": "MEP-4000",
+      "status": "Archived",
+      "categoryId": 4416169767193,
+      "createdAt": "2023-07-25",
+      "updatedAt": "2026-01-28",
+      "url": "https://support.alphatheta.com/en-US/products/21054527926809",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/21054527926809?section=23"
+        },
+        {
+          "sectionId": 24,
+          "label": "Software Information",
+          "url": "https://support.alphatheta.com/en-US/products/21054527926809?section=24"
+        },
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "url": "https://support.alphatheta.com/en-US/products/21054527926809?section=25"
+        },
+        {
+          "sectionId": 65,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/21054527926809?section=65"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 23841168189977,
+          "title": "MEP-4000 Firmware",
+          "releasedAt": "2023-11-14T16:31:58.000000Z"
+        },
+        {
+          "articleId": 23841116556953,
+          "title": "How to use the Pioneer DJ MEP-4000 DJ Player (Instruction manual)",
+          "releasedAt": "2025-01-28T14:36:13.000000Z"
+        },
+        {
+          "articleId": 23841036665241,
+          "title": "When I change the tempo with the master tempo turned on, the sound seems distorted.",
+          "releasedAt": "2023-10-11T14:58:48.000000Z"
+        },
+        {
+          "articleId": 21055276328217,
+          "title": "Why is that when a song is paused at its beginning that sound is output when there should be silence?",
+          "releasedAt": "2023-10-11T14:58:51.000000Z"
+        }
+      ]
+    }
+  ]
+}

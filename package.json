@@ -1,0 +1,37 @@
+{
+  "name": "dj-vault",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace @dj-vault/core && npm run build --workspace @dj-vault/corpus && npm run build --workspace @dj-vault/catalog && npm run build --workspace @dj-vault/desktop",
+    "check": "npm run check --workspace @dj-vault/core && npm run check --workspace @dj-vault/corpus && npm run check --workspace @dj-vault/catalog && npm run check --workspace @dj-vault/desktop",
+    "corpus:collect-sources": "npm run collect:sources --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:enumerate-alphatheta": "npm run enumerate:alphatheta --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:collect-alphatheta-articles": "npm run collect:alphatheta-articles --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:collect-alphatheta-downloads": "npm run collect:alphatheta-downloads --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:collect-rekordbox-download": "npm run collect:rekordbox-download --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:collect-serato": "npm run collect:serato --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:collect-engine-dj": "npm run collect:engine-dj --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:collect-engine-dj-downloads": "npm run collect:engine-dj-downloads --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:collect-traktor": "npm run collect:traktor --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:acquire-alphatheta": "npm run acquire:alphatheta --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta",
+    "corpus:acquire-alphatheta-archives": "npm run acquire:alphatheta-archives --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives",
+    "corpus:inspect-alphatheta-archives": "npm run inspect:alphatheta-archives --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives",
+    "corpus:acquire-alphatheta-firmware-archives": "npm run acquire:alphatheta-firmware-archives --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives",
+    "corpus:unpack-alphatheta-archives": "npm run unpack:alphatheta-archives --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked",
+    "corpus:collect-rekordbox": "npm run collect:rekordbox --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:acquire-rekordbox": "npm run acquire:rekordbox --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus",
+    "corpus:acquire-engine-dj": "npm run acquire:engine-dj --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus",
+    "corpus:carve-engine-az0x": "npm run carve:engine-az0x --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests /Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj-carved",
+    "corpus:inspect-local-acquisitions": "npm run inspect:local-acquisitions --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:generate-capability-matrix": "npm run generate:capability-matrix --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "corpus:generate-cross-vendor-catalog": "npm run generate:cross-vendor-catalog --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
+    "catalog:init": "npm run init --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:ingest": "npm run ingest:files --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "dev": "npm run dev --workspace @dj-vault/desktop"
+  }
+}

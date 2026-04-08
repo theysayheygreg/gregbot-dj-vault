@@ -1,0 +1,24 @@
+{
+  "vendor": "denon-engine",
+  "snapshotDate": "2026-04-07",
+  "surfaces": [
+    {
+      "name": "Denon DJ downloads",
+      "url": "https://www.denondj.com/downloads.html",
+      "kind": "downloads-index",
+      "notes": "Official Denon DJ downloads page listing some direct firmware, driver, and documentation artifacts and linking Engine OS updates to Engine DJ."
+    },
+    {
+      "name": "Engine DJ updates and releases",
+      "url": "https://enginedj.com/kb/folders/69000636315/engine-dj-updates-and-releases",
+      "kind": "release-notes-index",
+      "notes": "Official release-note history for Engine OS and Engine DJ Desktop."
+    },
+    {
+      "name": "Engine DJ release notes example",
+      "url": "https://enginedj.com/kb/solutions/69000874617/engine-dj-4-3-4-release-notes",
+      "kind": "release-note-detail",
+      "notes": "Representative page for parsing detailed software and hardware changes."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "collectedAt": "2026-04-07T23:44:30.905Z",
+  "vendors": [
+    {
+      "vendor": "pioneer-alphatheta",
+      "total": 6,
+      "ok": 6,
+      "failed": 0
+    },
+    {
+      "vendor": "native-instruments",
+      "total": 4,
+      "ok": 0,
+      "failed": 4
+    },
+    {
+      "vendor": "serato",
+      "total": 3,
+      "ok": 2,
+      "failed": 1
+    },
+    {
+      "vendor": "denon-engine",
+      "total": 3,
+      "ok": 3,
+      "failed": 0
+    }
+  ]
+}

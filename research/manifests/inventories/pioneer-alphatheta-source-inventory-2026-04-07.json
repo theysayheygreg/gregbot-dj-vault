@@ -1,0 +1,85 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "snapshotDate": "2026-04-07",
+  "collectedAt": "2026-04-07T23:44:30.905Z",
+  "surfaces": [
+    {
+      "name": "AlphaTheta support landing",
+      "url": "https://alphatheta.com/en/support/",
+      "kind": "support-index",
+      "notes": "Top-level public support index with firmware, manuals, and OS compatibility categories.",
+      "fetchedAt": "2026-04-07T23:44:30.909Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://alphatheta.com/en/support/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Support - AlphaTheta",
+      "error": null
+    },
+    {
+      "name": "AlphaTheta help center",
+      "url": "https://support.alphatheta.com/",
+      "kind": "help-center",
+      "notes": "Primary product help center with firmware-by-product discovery.",
+      "fetchedAt": "2026-04-07T23:44:32.842Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://support.alphatheta.com/en-US",
+      "contentType": "text/html; charset=utf-8",
+      "title": "AlphaTheta Help Center",
+      "error": null
+    },
+    {
+      "name": "Firmware example: OMNIS-DUO",
+      "url": "https://support.alphatheta.com/en-us/articles/26559347114649",
+      "kind": "firmware-detail",
+      "notes": "Confirms downloadable firmware package pages can include version, date, update notes, instructions, and open-source notices.",
+      "fetchedAt": "2026-04-07T23:44:34.000Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://support.alphatheta.com/en-US/articles/26559347114649",
+      "contentType": "text/html; charset=utf-8",
+      "title": "OMNIS-DUO Firmware - AlphaTheta Help Center",
+      "error": null
+    },
+    {
+      "name": "Direct downloads host",
+      "url": "https://downloads.support.alphatheta.com/",
+      "kind": "download-host",
+      "notes": "Observed as the host for firmware and manual artifacts linked from support pages.",
+      "fetchedAt": "2026-04-07T23:44:34.667Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://downloads.support.alphatheta.com/",
+      "contentType": "text/html",
+      "title": null,
+      "error": null
+    },
+    {
+      "name": "rekordbox release notes",
+      "url": "https://rekordbox.com/en/support/releasenote/",
+      "kind": "software-release-notes",
+      "notes": "Official release-note history for rekordbox.",
+      "fetchedAt": "2026-04-07T23:44:34.936Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://rekordbox.com/en/support/releasenote/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Release Notes | rekordbox｜DJ software for professional DJs",
+      "error": null
+    },
+    {
+      "name": "rekordbox downloads",
+      "url": "https://rekordbox.com/en/download/",
+      "kind": "software-download",
+      "notes": "Official rekordbox download entry point.",
+      "fetchedAt": "2026-04-07T23:44:37.297Z",
+      "ok": true,
+      "status": 200,
+      "finalUrl": "https://rekordbox.com/en/download/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Download for free | rekordbox – DJ software",
+      "error": null
+    }
+  ]
+}

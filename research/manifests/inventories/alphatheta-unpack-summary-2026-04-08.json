@@ -1,0 +1,135 @@
+{
+  "collectedAt": "2026-04-08T08:17:05.088Z",
+  "archiveCount": 5,
+  "inspections": [
+    {
+      "productName": "CDJ-3000",
+      "articleTitle": "CDJ-3000 Firmware",
+      "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/cdj-3000/CDJ3Kv322.zip",
+      "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/cdj-3000/cdj3kv322",
+      "entries": [
+        {
+          "relativePath": "CDJ3Kv322.UPD",
+          "sizeBytes": 162484239,
+          "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: 9424e626-da90-4eb0-a72f-a1a32e8326e0",
+          "interestingStrings": [
+            "r!x5VDJMUTxKvc",
+            "EUsBZUF6",
+            "^Cdjw<e@J",
+            ")Z3~EpxdJ,",
+            "T&ocdj*%~",
+            ";cDj+V`",
+            "^LuSB{m8",
+            ",$}Z)XDj",
+            "i\"u<ixDj",
+            "4m[O9USB",
+            "='\\usbQ1",
+            "RQ2uSbT[l",
+            "0_gb5Cdj&",
+            ".}^;MAC;o",
+            "uSbxUUIa",
+            "vxdj[38V",
+            ">zukZ<.mac",
+            ">jUSb8nZ",
+            "XDJ-RR3.22"
+          ]
+        }
+      ]
+    },
+    {
+      "productName": "XDJ-AZ",
+      "articleTitle": "XDJ-AZ Firmware",
+      "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZv124.zip",
+      "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/xdj-az/xdjazv124",
+      "entries": [
+        {
+          "relativePath": "XDJAZv124.UPD",
+          "sizeBytes": 175736848,
+          "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: 74f61bc6-cc59-46ec-9795-3152c4def044",
+          "interestingStrings": [
+            "cdjB\"M2Fi",
+            "WA;^-uSb",
+            "ErxdJV\fp",
+            ">djm8vH@8",
+            "DjmpONDB",
+            "GE7ACPDjmH",
+            "?6djM9fb",
+            "XDJ-XZN1.24"
+          ]
+        }
+      ]
+    },
+    {
+      "productName": "OMNIS-DUO",
+      "articleTitle": "OMNIS-DUO Firmware",
+      "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUOv123.zip",
+      "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/omnis-duo/omnisduov123",
+      "entries": [
+        {
+          "relativePath": "OMNISDUOv123.UPD",
+          "sizeBytes": 177758223,
+          "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: 9eda148f-46c3-4695-b8f9-89127e0e9dba",
+          "interestingStrings": [
+            "$g&\fNDjM",
+            "/Ep]usBp",
+            "\"fQdEdjM",
+            "!2wDMaCzS",
+            "{;}^dJm#",
+            "^#^)EDjM!",
+            "cdJz/N/N",
+            "L[gx.CDj",
+            "-x\fDJMS$",
+            "?_UsbhyV",
+            "(J_CdJVI",
+            "XDJ-RR1.23"
+          ]
+        }
+      ]
+    },
+    {
+      "productName": "OPUS-QUAD",
+      "articleTitle": "OPUS-QUAD Firmware",
+      "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/opus-quad/OPUSQUADv132.zip",
+      "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/opus-quad/opusquadv132",
+      "entries": [
+        {
+          "relativePath": "OPUSQUADv132.UPD",
+          "sizeBytes": 176345103,
+          "fileType": "LUKS encrypted file, ver 1 [aes, xts-plain64, sha256] UUID: f8a3c92b-f0f0-498f-8f9f-1265c6af70ee",
+          "interestingStrings": [
+            ":Usb^t^@",
+            "AEXdJeOP",
+            "5cDJ\"I>>v",
+            "P[`~mAcE[",
+            "-z [ymAC",
+            "hTmaC]`#",
+            "(p[Macdtjd",
+            "dEMaC|f/",
+            "CdjP_K5Es",
+            "Uoer=)mAC",
+            "mACSDUl",
+            "XDJ-RR1.32"
+          ]
+        }
+      ]
+    },
+    {
+      "productName": "DJM-A9",
+      "articleTitle": "DJM-A9 Firmware Update",
+      "archivePath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/djm-a9/DJM-A9_119.zip",
+      "unpackDir": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-unpacked/djm-a9/djm-a9-119",
+      "entries": [
+        {
+          "relativePath": "DJM-A9_119.upd",
+          "sizeBytes": 19252098,
+          "fileType": "data",
+          "interestingStrings": [
+            "[dJM@TWj",
+            "USBQSFiT",
+            "k;uSbPBZ"
+          ]
+        }
+      ]
+    }
+  ]
+}

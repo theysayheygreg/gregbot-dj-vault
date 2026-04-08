@@ -1,0 +1,42 @@
+{
+  "collectedAt": "2026-04-08T08:56:44.337Z",
+  "targets": [
+    "SC6000 PRIME",
+    "PRIME 4+",
+    "SC LIVE 4"
+  ],
+  "artifacts": [
+    {
+      "label": "Engine DJ Desktop 4.5.0 Windows",
+      "url": "https://public.inmusiccdn.com/Engine/4.5.0/RELEASE/2429481e52ad0e88/Engine_DJ_4.5.0_3d19c38012_Setup.exe",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/desktop/Engine_DJ_4.5.0_3d19c38012_Setup.exe",
+      "sizeBytes": 76955736,
+      "sha256": "f85aca0cc523be4655174c535160ddfd9f8ebd77619a917982415ac261d21f9a",
+      "fileType": "PE32 executable (GUI) Intel 80386, for MS Windows"
+    },
+    {
+      "label": "SC6000 PRIME 4.3.4 USB image",
+      "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SC6000-4.3.4-Update.img",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc6000-prime/SC6000-4.3.4-Update.img",
+      "sizeBytes": 149032935,
+      "sha256": "dbc685ab86c311ad28dceea4461f22fa84d9950ee86d4a7c3f9083d4915bb628",
+      "fileType": "Device Tree Blob version 17, size=149032935, boot CPU=0, string block size=87, DT structure block size=149031896"
+    },
+    {
+      "label": "PRIME 4+ 4.3.4 USB image",
+      "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/PRIME4PLUS-4.3.4-Update.img",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/prime-4/PRIME4PLUS-4.3.4-Update.img",
+      "sizeBytes": 172048912,
+      "sha256": "2243d521db03e23f68defd1e818d340e3e70d6930b61970225591bf894f957a1",
+      "fileType": "data"
+    },
+    {
+      "label": "SC LIVE 4 4.3.4 USB image",
+      "url": "https://enginedj.inmusiccdn.com/Engine/4.3.4/Release/0868152660cbb47b/SCLIVE4-4.3.4-Update.img",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/engine-dj/sc-live-4/SCLIVE4-4.3.4-Update.img",
+      "sizeBytes": 172064912,
+      "sha256": "4b9ea3334b8774e7c383a881e3aacfef267715df25cf9a55e3b76cf3bbb3d809",
+      "fileType": "data"
+    }
+  ]
+}

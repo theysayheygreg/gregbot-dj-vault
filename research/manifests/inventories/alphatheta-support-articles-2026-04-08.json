@@ -1,0 +1,3491 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "collectedAt": "2026-04-08T00:45:17.962Z",
+  "sectionLabels": [
+    "Firmware Update",
+    "Software Update",
+    "Drivers",
+    "PRO DJ LINK Bridge"
+  ],
+  "products": [
+    {
+      "productId": 37071730868249,
+      "productName": "XDJ-AZ",
+      "productStatus": "Active",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/37071730868249",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/37071730868249?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 37072403941145,
+              "title": "XDJ-AZ Firmware",
+              "releasedAt": "2025-11-06T08:11:06.000000Z",
+              "createdAt": "2024-08-30T12:23:40.000000Z",
+              "updatedAt": "2026-03-17T14:07:03.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/37072403941145"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/37071730868249?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 37072621434905,
+              "title": "XDJ-AZ Audio Driver for Windows",
+              "releasedAt": "2024-10-10T07:13:06.000000Z",
+              "createdAt": "2024-08-30T12:31:18.000000Z",
+              "updatedAt": "2024-10-10T07:13:06.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/37072621434905"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 26559096570521,
+      "productName": "OMNIS-DUO",
+      "productStatus": "Active",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/26559096570521",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/26559096570521?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 26559347114649,
+              "title": "OMNIS-DUO Firmware",
+              "releasedAt": "2026-03-17T18:10:15.000000Z",
+              "createdAt": "2023-12-18T15:00:45.000000Z",
+              "updatedAt": "2026-03-17T18:10:15.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/26559347114649"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/26559096570521?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 26559544038809,
+              "title": "OMNIS-DUO Audio Driver for Windows",
+              "releasedAt": "2024-01-25T08:07:13.000000Z",
+              "createdAt": "2023-12-18T15:05:04.000000Z",
+              "updatedAt": "2024-01-25T08:07:13.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/26559544038809"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 16077188898585,
+      "productName": "OPUS-QUAD",
+      "productStatus": "Active",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/16077188898585",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/16077188898585?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 20876984319257,
+              "title": "OPUS-QUAD Firmware",
+              "releasedAt": "2025-11-25T00:54:45.000000Z",
+              "createdAt": "2023-07-20T08:53:16.000000Z",
+              "updatedAt": "2026-03-24T04:47:37.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/20876984319257"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/16077188898585?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 16114846522905,
+              "title": "OPUS-QUAD Audio Driver for Windows",
+              "releasedAt": "2023-08-07T08:45:54.000000Z",
+              "createdAt": "2023-03-02T14:49:45.000000Z",
+              "updatedAt": "2023-08-07T08:45:54.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/16114846522905"
+            },
+            {
+              "articleId": 16114871022105,
+              "title": "OPUS-QUAD USB Connection (Link Export) driver for Windows 10",
+              "releasedAt": "2024-05-27T11:28:54.000000Z",
+              "createdAt": "2023-03-02T14:52:00.000000Z",
+              "updatedAt": "2024-05-27T11:28:54.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/16114871022105"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416587179673,
+      "productName": "XDJ-RX3",
+      "productStatus": "Active",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/4416587179673",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416587179673?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4562999179673,
+              "title": "XDJ-RX3 Firmware",
+              "releasedAt": "2024-08-22T06:53:33.000000Z",
+              "createdAt": "2022-03-01T09:26:18.000000Z",
+              "updatedAt": "2024-08-22T06:53:33.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4562999179673"
+            },
+            {
+              "articleId": 5097637194137,
+              "title": "XDJ-RX3 Firmware Update Guide",
+              "releasedAt": "2024-08-23T20:49:03.000000Z",
+              "createdAt": "2022-03-23T14:31:40.000000Z",
+              "updatedAt": "2024-08-23T20:49:03.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/5097637194137"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416587179673?section=26",
+          "articleCount": 3,
+          "articles": [
+            {
+              "articleId": 4413819698201,
+              "title": "XDJ-RX3 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-01T15:53:28.000000Z",
+              "createdAt": "2022-01-04T10:10:30.000000Z",
+              "updatedAt": "2024-05-01T15:53:28.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413819698201"
+            },
+            {
+              "articleId": 4413797173401,
+              "title": "XDJ-RX3 Audio Driver for Windows",
+              "releasedAt": "2026-03-18T23:22:53.000000Z",
+              "createdAt": "2022-01-04T10:56:18.000000Z",
+              "updatedAt": "2026-03-18T23:22:53.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413797173401"
+            },
+            {
+              "articleId": 4413797237273,
+              "title": "XDJ-RX3 USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2022-03-08T08:23:09.000000Z",
+              "createdAt": "2022-01-04T11:01:42.000000Z",
+              "updatedAt": "2022-03-08T08:23:09.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413797237273"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416572662809,
+      "productName": "XDJ-XZ",
+      "productStatus": "Active",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/4416572662809",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416572662809?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416572662809?section=26",
+          "articleCount": 3,
+          "articles": [
+            {
+              "articleId": 4405088766233,
+              "title": "XDJ-XZ Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-01T15:48:17.000000Z",
+              "createdAt": "2021-08-16T15:09:16.000000Z",
+              "updatedAt": "2024-05-01T15:48:17.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405088766233"
+            },
+            {
+              "articleId": 4405095286553,
+              "title": "XDJ-XZ Audio Driver for Windows",
+              "releasedAt": "2022-10-17T09:19:31.000000Z",
+              "createdAt": "2021-08-16T15:11:33.000000Z",
+              "updatedAt": "2022-10-17T09:19:31.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405095286553"
+            },
+            {
+              "articleId": 4405088769689,
+              "title": "XDJ-XZ USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2022-03-08T08:21:02.000000Z",
+              "createdAt": "2021-08-16T15:09:49.000000Z",
+              "updatedAt": "2022-03-08T08:21:02.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405088769689"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416572577305,
+      "productName": "XDJ-RR",
+      "productStatus": "Active",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/4416572577305",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416572577305?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416572577305?section=26",
+          "articleCount": 3,
+          "articles": [
+            {
+              "articleId": 4405095416345,
+              "title": "XDJ-RR Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-10-03T08:53:39.000000Z",
+              "createdAt": "2021-08-16T15:37:03.000000Z",
+              "updatedAt": "2024-10-03T08:53:39.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405095416345"
+            },
+            {
+              "articleId": 4405095424281,
+              "title": "XDJ-RR Audio Driver for Windows",
+              "releasedAt": "2022-03-15T12:28:11.000000Z",
+              "createdAt": "2021-08-16T15:38:36.000000Z",
+              "updatedAt": "2022-03-15T12:28:11.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405095424281"
+            },
+            {
+              "articleId": 4405088903961,
+              "title": "XDJ-RR USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2022-03-08T08:27:06.000000Z",
+              "createdAt": "2021-08-16T15:37:36.000000Z",
+              "updatedAt": "2022-03-08T08:27:06.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405088903961"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416579244057,
+      "productName": "XDJ-RX2",
+      "productStatus": "Archived",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/4416579244057",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416579244057?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416579244057?section=26",
+          "articleCount": 3,
+          "articles": [
+            {
+              "articleId": 4405095323929,
+              "title": "XDJ-RX2 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-01T15:50:56.000000Z",
+              "createdAt": "2021-08-16T15:19:21.000000Z",
+              "updatedAt": "2024-05-01T15:50:56.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405095323929"
+            },
+            {
+              "articleId": 4405095333913,
+              "title": "XDJ-RX2 Audio Driver for Windows",
+              "releasedAt": "2022-03-09T11:21:57.000000Z",
+              "createdAt": "2021-08-16T15:20:52.000000Z",
+              "updatedAt": "2022-03-09T11:21:57.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405095333913"
+            },
+            {
+              "articleId": 4405088812825,
+              "title": "USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2022-03-08T08:25:18.000000Z",
+              "createdAt": "2021-08-16T15:19:55.000000Z",
+              "updatedAt": "2022-03-08T08:25:18.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405088812825"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416586909593,
+      "productName": "XDJ-AERO",
+      "productStatus": "Archived",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/4416586909593",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23874890685081,
+              "title": "XDJ-AERO Firmware",
+              "releasedAt": "2023-10-10T09:08:11.000000Z",
+              "createdAt": "2023-10-10T09:05:22.000000Z",
+              "updatedAt": "2023-10-10T09:08:11.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23874890685081"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416586909593?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 23875231404057,
+              "title": "XDJ-AERO Audio Driver for Windows",
+              "releasedAt": "2023-10-10T09:28:35.000000Z",
+              "createdAt": "2023-10-10T09:11:01.000000Z",
+              "updatedAt": "2023-10-10T09:28:35.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23875231404057"
+            },
+            {
+              "articleId": 23875313466649,
+              "title": "XDJ-AERO Audio Driver for Mac",
+              "releasedAt": "2023-10-10T09:24:34.000000Z",
+              "createdAt": "2023-10-10T09:12:18.000000Z",
+              "updatedAt": "2023-10-10T09:24:34.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23875313466649"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416579224729,
+      "productName": "XDJ-R1",
+      "productStatus": "Archived",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/4416579224729",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23878304301209,
+              "title": "XDJ-R1 Firmware",
+              "releasedAt": "2023-10-10T10:16:20.000000Z",
+              "createdAt": "2023-10-10T10:13:03.000000Z",
+              "updatedAt": "2023-10-10T10:16:20.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23878304301209"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416579224729?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23878614852121,
+              "title": "XDJ-R1 Audio Driver for Windows",
+              "releasedAt": "2023-10-10T10:26:27.000000Z",
+              "createdAt": "2023-10-10T10:20:30.000000Z",
+              "updatedAt": "2023-10-10T10:26:27.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23878614852121"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416579218841,
+      "productName": "XDJ-RX",
+      "productStatus": "Archived",
+      "categoryId": 4416162414361,
+      "categoryName": "All-In-One DJ Systems",
+      "url": "https://support.alphatheta.com/en-US/products/4416579218841",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23880151048345,
+              "title": "XDJ-RX Firmware",
+              "releasedAt": "2023-10-10T10:59:45.000000Z",
+              "createdAt": "2023-10-10T10:57:21.000000Z",
+              "updatedAt": "2023-10-10T10:59:45.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23880151048345"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416579218841?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 23880332259865,
+              "title": "XDJ-RX Audio Driver for Windows",
+              "releasedAt": "2024-04-19T08:11:40.000000Z",
+              "createdAt": "2023-10-10T11:01:16.000000Z",
+              "updatedAt": "2024-04-19T08:11:40.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23880332259865"
+            },
+            {
+              "articleId": 23880357836441,
+              "title": "XDJ-RX Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-02T15:17:20.000000Z",
+              "createdAt": "2023-10-10T11:01:39.000000Z",
+              "updatedAt": "2024-05-02T15:17:20.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23880357836441"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 50766108259865,
+      "productName": "DJM-V5",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/50766108259865",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/50766108259865?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 53214453590427,
+              "title": "DJM-V5 Firmware for Windows",
+              "releasedAt": "2026-01-28T23:11:04.000000Z",
+              "createdAt": "2026-01-28T22:30:46.000000Z",
+              "updatedAt": "2026-02-18T07:04:17.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/53214453590427"
+            },
+            {
+              "articleId": 53214453590428,
+              "title": "DJM-V5 Firmware for Mac",
+              "releasedAt": "2026-01-29T21:59:48.000000Z",
+              "createdAt": "2026-01-28T23:13:27.000000Z",
+              "updatedAt": "2026-01-29T22:03:40.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/53214453590428"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/50766108259865?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 53214453590493,
+              "title": "DJM-V5 Utility Software for Mac",
+              "releasedAt": "2026-02-18T03:03:49.000000Z",
+              "createdAt": "2026-02-18T02:53:13.000000Z",
+              "updatedAt": "2026-02-18T03:03:49.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/53214453590493"
+            },
+            {
+              "articleId": 53214453590496,
+              "title": "DJM-V5 Audio Driver for Windows",
+              "releasedAt": "2026-02-18T03:24:07.000000Z",
+              "createdAt": "2026-02-18T03:16:57.000000Z",
+              "updatedAt": "2026-02-18T03:24:07.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/53214453590496"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 15882401503257,
+      "productName": "DJM-A9",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/15882401503257",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 24672827170585,
+              "title": "DJM-A9 Firmware Update",
+              "releasedAt": "2025-12-09T07:00:01.000000Z",
+              "createdAt": "2023-10-31T12:29:51.000000Z",
+              "updatedAt": "2026-03-17T15:57:23.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/24672827170585"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 15917276038937,
+              "title": "DJM-A9 Utility Software for Mac",
+              "releasedAt": "2023-02-28T08:59:18.000000Z",
+              "createdAt": "2023-02-24T15:22:16.000000Z",
+              "updatedAt": "2023-02-28T08:59:18.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/15917276038937"
+            },
+            {
+              "articleId": 16005225352089,
+              "title": "DJM-A9 Audio Driver for Windows",
+              "releasedAt": "2023-02-28T08:59:16.000000Z",
+              "createdAt": "2023-02-27T14:31:29.000000Z",
+              "updatedAt": "2026-02-13T05:18:47.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/16005225352089"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/15882401503257?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 15913692620569,
+              "title": "DJM-A9 PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2024-06-17T14:16:59.000000Z",
+              "createdAt": "2023-02-24T12:34:43.000000Z",
+              "updatedAt": "2024-06-17T14:16:59.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/15913692620569"
+            },
+            {
+              "articleId": 15916392946073,
+              "title": "DJM-A9 PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2024-06-18T10:47:30.000000Z",
+              "createdAt": "2023-02-24T14:34:19.000000Z",
+              "updatedAt": "2024-06-18T10:47:30.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/15916392946073"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 28788051666201,
+      "productName": "euphonia",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/28788051666201",
+      "sections": [
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/28788051666201?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 28788581385625,
+              "title": "euphonia Audio Driver for Windows",
+              "releasedAt": "2024-03-14T06:00:05.000000Z",
+              "createdAt": "2024-02-15T06:10:20.000000Z",
+              "updatedAt": "2026-03-17T20:06:17.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/28788581385625"
+            },
+            {
+              "articleId": 29344276660761,
+              "title": "euphonia Setting Utility for Mac",
+              "releasedAt": "2024-06-06T10:55:59.000000Z",
+              "createdAt": "2024-02-29T14:49:24.000000Z",
+              "updatedAt": "2026-03-17T20:35:04.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/29344276660761"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 6874435245721,
+      "productName": "DJM-S5",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/6874435245721",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/6874435245721?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 6964234540569,
+              "title": "DJM-S5 Firmware",
+              "releasedAt": "2023-03-08T16:31:43.000000Z",
+              "createdAt": "2022-05-27T12:58:45.000000Z",
+              "updatedAt": "2023-03-08T16:31:43.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/6964234540569"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/6874435245721?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 6964661418777,
+              "title": "DJM-S5 Audio Driver for Windows",
+              "releasedAt": "2023-07-20T15:34:13.000000Z",
+              "createdAt": "2022-05-27T13:20:27.000000Z",
+              "updatedAt": "2023-07-20T15:34:13.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/6964661418777"
+            },
+            {
+              "articleId": 6964439625753,
+              "title": "DJM-S5 Setting Utility for Mac",
+              "releasedAt": "2023-11-28T08:00:47.000000Z",
+              "createdAt": "2022-05-27T13:09:04.000000Z",
+              "updatedAt": "2023-11-28T08:00:47.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/6964439625753"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416569696665,
+      "productName": "DJM-S7",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416569696665",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416569696665?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 35152935572249,
+              "title": "DJM-S7 Firmware",
+              "releasedAt": "2024-07-18T08:10:35.000000Z",
+              "createdAt": "2024-07-16T15:34:04.000000Z",
+              "updatedAt": "2024-07-18T08:10:35.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/35152935572249"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416569696665?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405086352537,
+              "title": "DJM-S7 Audio Driver for Windows",
+              "releasedAt": "2023-01-19T08:00:01.000000Z",
+              "createdAt": "2021-08-16T09:24:35.000000Z",
+              "updatedAt": "2023-01-19T08:00:01.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405086352537"
+            },
+            {
+              "articleId": 4405086357913,
+              "title": "DJM-S7 Setting Utility for Mac",
+              "releasedAt": "2023-11-28T08:00:49.000000Z",
+              "createdAt": "2021-08-16T09:25:09.000000Z",
+              "updatedAt": "2023-11-28T08:00:49.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405086357913"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416564891801,
+      "productName": "DJM-V10-LF",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416564891801",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404969125273,
+              "title": "DJM-V10-LF Firmware",
+              "releasedAt": "2025-05-14T07:00:58.000000Z",
+              "createdAt": "2021-08-13T11:46:48.000000Z",
+              "updatedAt": "2026-03-17T19:35:34.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404969125273"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405080327833,
+              "title": "DJM-V10-LF Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-09T20:41:34.000000Z",
+              "createdAt": "2021-08-16T06:43:15.000000Z",
+              "updatedAt": "2024-05-09T20:41:34.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405080327833"
+            },
+            {
+              "articleId": 4405080340633,
+              "title": "DJM-V10-LF Audio Driver for Windows",
+              "releasedAt": "2022-03-02T15:47:51.000000Z",
+              "createdAt": "2021-08-16T06:43:56.000000Z",
+              "updatedAt": "2022-03-02T15:47:51.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405080340633"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416564891801?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405080359193,
+              "title": "DJM-V10-LF PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2023-05-11T13:52:02.000000Z",
+              "createdAt": "2021-08-16T06:45:18.000000Z",
+              "updatedAt": "2023-05-11T13:52:02.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405080359193"
+            },
+            {
+              "articleId": 4405080384025,
+              "title": "DJM-V10-LF PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2023-05-11T13:45:50.000000Z",
+              "createdAt": "2021-08-16T06:46:07.000000Z",
+              "updatedAt": "2023-05-11T13:45:50.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405080384025"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416568754457,
+      "productName": "DJM-V10",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416568754457",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405080825241,
+              "title": "DJM-V10 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-09T20:58:33.000000Z",
+              "createdAt": "2021-08-16T07:12:32.000000Z",
+              "updatedAt": "2024-05-09T20:58:33.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405080825241"
+            },
+            {
+              "articleId": 4405080802329,
+              "title": "DJM-V10 Audio Driver for Windows",
+              "releasedAt": "2022-03-08T10:56:56.000000Z",
+              "createdAt": "2021-08-16T07:10:47.000000Z",
+              "updatedAt": "2022-03-08T10:56:56.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405080802329"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416568754457?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405080840217,
+              "title": "DJM-V10 PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2023-05-11T13:55:43.000000Z",
+              "createdAt": "2021-08-16T07:13:30.000000Z",
+              "updatedAt": "2023-05-11T13:55:43.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405080840217"
+            },
+            {
+              "articleId": 4405085076505,
+              "title": "DJM-V10 PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2023-05-11T13:54:13.000000Z",
+              "createdAt": "2021-08-16T07:14:24.000000Z",
+              "updatedAt": "2023-05-11T13:54:13.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405085076505"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416569473945,
+      "productName": "DJM-S11",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416569473945",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416569473945?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416569473945?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405086061593,
+              "title": "DJM-S11 Audio Driver for Windows",
+              "releasedAt": "2022-03-08T12:18:19.000000Z",
+              "createdAt": "2021-08-16T09:11:05.000000Z",
+              "updatedAt": "2022-03-08T12:18:19.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405086061593"
+            },
+            {
+              "articleId": 4405086081177,
+              "title": "DJM-S11 Setting Utility for Mac",
+              "releasedAt": "2024-03-28T07:00:00.000000Z",
+              "createdAt": "2021-08-16T09:11:40.000000Z",
+              "updatedAt": "2024-03-28T07:00:00.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405086081177"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416497869081,
+      "productName": "DJM-S3",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416497869081",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416497869081?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416497869081?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405086428825,
+              "title": "DJM-S3 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T15:23:02.000000Z",
+              "createdAt": "2021-08-16T09:29:52.000000Z",
+              "updatedAt": "2024-05-10T15:23:02.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405086428825"
+            },
+            {
+              "articleId": 4405086448921,
+              "title": "DJM-S3 Audio Driver for Windows",
+              "releasedAt": "2022-03-08T13:55:13.000000Z",
+              "createdAt": "2021-08-16T09:30:52.000000Z",
+              "updatedAt": "2022-03-08T13:55:13.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405086448921"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416490599449,
+      "productName": "DJM-900NXS2",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416490599449",
+      "sections": [
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404624361113,
+              "title": "DJM-900NXS2 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T14:37:26.000000Z",
+              "createdAt": "2021-08-05T15:22:16.000000Z",
+              "updatedAt": "2024-05-10T14:37:26.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624361113"
+            },
+            {
+              "articleId": 4404624364057,
+              "title": "DJM-900NXS2 Audio Driver for Windows",
+              "releasedAt": "2022-03-08T11:16:23.000000Z",
+              "createdAt": "2021-08-05T15:22:42.000000Z",
+              "updatedAt": "2022-03-08T11:16:23.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624364057"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416490599449?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404631643801,
+              "title": "DJM-900NXS2 PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2023-05-11T13:59:05.000000Z",
+              "createdAt": "2021-08-05T15:24:13.000000Z",
+              "updatedAt": "2023-05-11T13:59:05.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404631643801"
+            },
+            {
+              "articleId": 4404624376729,
+              "title": "DJM-900NXS2 PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2023-05-11T14:00:46.000000Z",
+              "createdAt": "2021-08-05T15:24:40.000000Z",
+              "updatedAt": "2023-05-11T14:00:46.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624376729"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416497659929,
+      "productName": "DJM-250MK2",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416497659929",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416497659929?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416497659929?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405085952409,
+              "title": "DJM-250MK2 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T14:53:19.000000Z",
+              "createdAt": "2021-08-16T09:04:14.000000Z",
+              "updatedAt": "2024-05-10T14:53:19.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405085952409"
+            },
+            {
+              "articleId": 4405085981849,
+              "title": "DJM-250MK2 Audio Driver for Windows",
+              "releasedAt": "2022-05-30T10:59:13.000000Z",
+              "createdAt": "2021-08-16T09:05:25.000000Z",
+              "updatedAt": "2022-05-30T10:59:13.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405085981849"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416503148057,
+      "productName": "DJM-450",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416503148057",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416503148057?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416503148057?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405085903257,
+              "title": "DJM-450 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T15:01:44.000000Z",
+              "createdAt": "2021-08-16T08:59:07.000000Z",
+              "updatedAt": "2024-05-10T15:01:44.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405085903257"
+            },
+            {
+              "articleId": 4405082287001,
+              "title": "DJM-450 Audio Driver for Windows",
+              "releasedAt": "2022-03-08T11:47:17.000000Z",
+              "createdAt": "2021-08-16T09:00:13.000000Z",
+              "updatedAt": "2022-03-08T11:47:17.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405082287001"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416503568025,
+      "productName": "DJM-750MK2",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416503568025",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416503568025?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416503568025?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405085699737,
+              "title": "DJM-750MK2 Audio Driver for macOS Sonoma",
+              "releasedAt": "2023-11-28T08:00:31.000000Z",
+              "createdAt": "2021-08-16T08:34:46.000000Z",
+              "updatedAt": "2023-11-28T08:00:31.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405085699737"
+            },
+            {
+              "articleId": 4405085702937,
+              "title": "DJM-750MK2 Audio Driver for Windows",
+              "releasedAt": "2022-03-08T11:36:53.000000Z",
+              "createdAt": "2021-08-16T08:35:22.000000Z",
+              "updatedAt": "2022-03-08T11:36:53.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405085702937"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416496912665,
+      "productName": "DJM-S9",
+      "productStatus": "Active",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416496912665",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416496912665?section=25",
+          "articleCount": 0,
+          "articles": []
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496912665?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4405092987161,
+              "title": "DJM-S9 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T15:29:08.000000Z",
+              "createdAt": "2021-08-16T09:17:15.000000Z",
+              "updatedAt": "2024-05-10T15:29:08.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405092987161"
+            },
+            {
+              "articleId": 4405086205977,
+              "title": "DJM-S9 Audio Driver for Windows",
+              "releasedAt": "2023-10-09T11:33:39.000000Z",
+              "createdAt": "2021-08-16T09:18:16.000000Z",
+              "updatedAt": "2023-10-09T11:33:39.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4405086205977"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 19760856407321,
+      "productName": "DJM-TOUR1",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/19760856407321",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21933300289561,
+              "title": "DJM-TOUR1 Firmware",
+              "releasedAt": "2023-10-05T11:48:14.000000Z",
+              "createdAt": "2023-08-17T13:56:39.000000Z",
+              "updatedAt": "2023-10-05T11:48:14.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21933300289561"
+            },
+            {
+              "articleId": 21933711509657,
+              "title": "DJM-TOUR1 Firmware Update Guide",
+              "releasedAt": "2023-10-05T11:32:26.000000Z",
+              "createdAt": "2023-08-17T14:10:11.000000Z",
+              "updatedAt": "2023-10-05T11:32:26.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21933711509657"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21932948980377,
+              "title": "DJM-TOUR1 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T14:18:21.000000Z",
+              "createdAt": "2023-08-17T13:39:53.000000Z",
+              "updatedAt": "2024-05-10T14:18:21.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21932948980377"
+            },
+            {
+              "articleId": 21933069346969,
+              "title": "DJM-TOUR1 Audio Driver for Windows",
+              "releasedAt": "2023-10-05T13:04:34.000000Z",
+              "createdAt": "2023-08-17T13:45:48.000000Z",
+              "updatedAt": "2023-10-05T13:04:34.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21933069346969"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/19760856407321?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21934016195481,
+              "title": "DJM-TOUR1 PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2023-10-05T13:11:49.000000Z",
+              "createdAt": "2023-08-17T14:24:42.000000Z",
+              "updatedAt": "2023-10-05T13:11:49.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21934016195481"
+            },
+            {
+              "articleId": 21934366369177,
+              "title": "DJM-TOUR1 PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2023-10-05T13:10:31.000000Z",
+              "createdAt": "2023-08-17T14:43:19.000000Z",
+              "updatedAt": "2023-10-05T13:10:31.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21934366369177"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416502508057,
+      "productName": "DJM-750",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416502508057",
+      "sections": [
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416502508057?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22674816295193,
+              "title": "DJM-750 Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T15:07:59.000000Z",
+              "createdAt": "2023-09-06T10:27:54.000000Z",
+              "updatedAt": "2024-05-10T15:07:59.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22674816295193"
+            },
+            {
+              "articleId": 22675088300313,
+              "title": "DJM-750 Audio Driver for Windows",
+              "releasedAt": "2023-10-06T13:16:26.000000Z",
+              "createdAt": "2023-09-06T10:35:09.000000Z",
+              "updatedAt": "2023-10-06T13:16:26.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22675088300313"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416496743065,
+      "productName": "DJM-900SRT",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416496743065",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416496743065?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22491229052057,
+              "title": "DJM-900SRT Firmware for Windows",
+              "releasedAt": "2023-10-06T08:34:16.000000Z",
+              "createdAt": "2023-09-01T10:20:34.000000Z",
+              "updatedAt": "2023-10-06T08:34:16.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22491229052057"
+            },
+            {
+              "articleId": 22491561424409,
+              "title": "DJM-900SRT Firmware for Mac",
+              "releasedAt": "2023-10-06T08:30:39.000000Z",
+              "createdAt": "2023-09-01T10:30:19.000000Z",
+              "updatedAt": "2023-10-06T08:30:39.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22491561424409"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496743065?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22491955618585,
+              "title": "DJM-900SRT Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T14:43:21.000000Z",
+              "createdAt": "2023-09-01T10:42:21.000000Z",
+              "updatedAt": "2024-05-10T14:43:21.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22491955618585"
+            },
+            {
+              "articleId": 22492188785433,
+              "title": "DJM-900SRT Driver for Windows",
+              "releasedAt": "2023-10-06T08:57:06.000000Z",
+              "createdAt": "2023-09-01T10:52:42.000000Z",
+              "updatedAt": "2023-10-06T08:57:06.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22492188785433"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416490369817,
+      "productName": "DJM-2000NXS",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416490369817",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416490369817?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22072416693913,
+              "title": "DJM-2000NXS Firmware for Mac",
+              "releasedAt": "2023-10-09T09:40:36.000000Z",
+              "createdAt": "2023-08-21T15:34:27.000000Z",
+              "updatedAt": "2023-10-09T09:40:36.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22072416693913"
+            },
+            {
+              "articleId": 22072186038297,
+              "title": "DJM-2000NXS Firmware for Windows",
+              "releasedAt": "2023-10-09T09:44:29.000000Z",
+              "createdAt": "2023-08-21T15:21:54.000000Z",
+              "updatedAt": "2023-10-09T09:44:29.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22072186038297"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490369817?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21935665329177,
+              "title": "DJM-2000NXS Audio Driver for macOS Sonoma",
+              "releasedAt": "2024-05-10T14:14:31.000000Z",
+              "createdAt": "2023-08-17T15:47:41.000000Z",
+              "updatedAt": "2024-05-10T14:14:31.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21935665329177"
+            },
+            {
+              "articleId": 21935679426713,
+              "title": "DJM-2000NXS Audio Driver for Windows",
+              "releasedAt": "2023-10-09T09:53:06.000000Z",
+              "createdAt": "2023-08-17T15:53:13.000000Z",
+              "updatedAt": "2023-10-09T09:53:06.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21935679426713"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416502475673,
+      "productName": "DJM-850",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416502475673",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416502475673?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22497001934489,
+              "title": "DJM-850 Firmware for Mac",
+              "releasedAt": "2023-10-06T10:31:28.000000Z",
+              "createdAt": "2023-09-01T13:52:16.000000Z",
+              "updatedAt": "2023-10-06T10:31:28.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22497001934489"
+            },
+            {
+              "articleId": 22497321864217,
+              "title": "DJM-850 Firmware for Windows",
+              "releasedAt": "2023-10-06T10:34:04.000000Z",
+              "createdAt": "2023-09-01T14:04:59.000000Z",
+              "updatedAt": "2023-10-06T10:34:04.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22497321864217"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416502475673?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22629802508953,
+              "title": "DJM-850 Audio Driver for macOS Ventura",
+              "releasedAt": "2024-05-10T15:17:16.000000Z",
+              "createdAt": "2023-09-05T08:58:15.000000Z",
+              "updatedAt": "2024-05-10T15:17:16.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22629802508953"
+            },
+            {
+              "articleId": 22630703019673,
+              "title": "DJM-850 Audio Driver for Windows",
+              "releasedAt": "2023-10-06T10:39:31.000000Z",
+              "createdAt": "2023-09-05T09:17:04.000000Z",
+              "updatedAt": "2023-10-06T10:39:31.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22630703019673"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416496757913,
+      "productName": "DJM-900NXS",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416496757913",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416496757913?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22719014051737,
+              "title": "DJM-900NXS Firmware for Mac",
+              "releasedAt": "2023-10-06T09:30:41.000000Z",
+              "createdAt": "2023-09-07T11:47:14.000000Z",
+              "updatedAt": "2023-10-06T09:30:41.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22719014051737"
+            },
+            {
+              "articleId": 22718882008089,
+              "title": "DJM-900NXS Firmware for Windows",
+              "releasedAt": "2023-10-06T09:32:59.000000Z",
+              "createdAt": "2023-09-07T11:42:22.000000Z",
+              "updatedAt": "2023-10-06T09:32:59.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22718882008089"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496757913?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22719246110745,
+              "title": "DJM-900NXS Audio Driver for macOS Ventura",
+              "releasedAt": "2024-05-10T15:18:51.000000Z",
+              "createdAt": "2023-09-07T11:55:07.000000Z",
+              "updatedAt": "2024-05-10T15:18:51.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22719246110745"
+            },
+            {
+              "articleId": 22719364257561,
+              "title": "DJM-900NXS Audio Driver for Windows",
+              "releasedAt": "2023-10-06T09:43:56.000000Z",
+              "createdAt": "2023-09-07T12:00:16.000000Z",
+              "updatedAt": "2023-10-06T09:43:56.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22719364257561"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416496747673,
+      "productName": "DJM-900NXS-M",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416496747673",
+      "sections": [
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496747673?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23972470042265,
+              "title": "DJM-900NXS rekordbox",
+              "releasedAt": "2025-12-09T06:59:17.000000Z",
+              "createdAt": "2023-10-12T12:17:58.000000Z",
+              "updatedAt": "2025-12-09T06:59:17.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23972470042265"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 20025195633817,
+      "productName": "DJM-350",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/20025195633817",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/20025195633817?section=25",
+          "articleCount": 4,
+          "articles": [
+            {
+              "articleId": 22678281123865,
+              "title": "DJM-350 Firmware",
+              "releasedAt": "2023-10-09T08:23:37.000000Z",
+              "createdAt": "2023-09-06T12:22:25.000000Z",
+              "updatedAt": "2023-10-09T08:23:37.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22678281123865"
+            },
+            {
+              "articleId": 22678141224601,
+              "title": "DJM-350-W Firmware",
+              "releasedAt": "2023-10-09T08:27:26.000000Z",
+              "createdAt": "2023-09-06T12:16:37.000000Z",
+              "updatedAt": "2023-10-09T08:27:26.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22678141224601"
+            },
+            {
+              "articleId": 22677548276377,
+              "title": "DJM-350 Firmware Effects",
+              "releasedAt": "2023-10-09T08:38:22.000000Z",
+              "createdAt": "2023-09-06T11:59:18.000000Z",
+              "updatedAt": "2023-10-09T08:38:22.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22677548276377"
+            },
+            {
+              "articleId": 22677885308953,
+              "title": "DJM-350-W Firmware Effects",
+              "releasedAt": "2023-10-09T08:37:31.000000Z",
+              "createdAt": "2023-09-06T12:08:55.000000Z",
+              "updatedAt": "2023-10-09T08:37:31.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22677885308953"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416490374553,
+      "productName": "DJM-2000",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416490374553",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416490374553?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22111237730969,
+              "title": "DJM-2000 Firmware for Windows",
+              "releasedAt": "2023-10-09T10:41:19.000000Z",
+              "createdAt": "2023-08-22T13:18:04.000000Z",
+              "updatedAt": "2023-10-09T10:41:19.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22111237730969"
+            },
+            {
+              "articleId": 22111311387033,
+              "title": "DJM-2000 Firmware for Mac",
+              "releasedAt": "2025-09-08T16:49:53.000000Z",
+              "createdAt": "2023-08-22T13:21:16.000000Z",
+              "updatedAt": "2025-09-08T16:49:53.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22111311387033"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490374553?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22111499250457,
+              "title": "DJM-2000 Audio Driver for Windows 10",
+              "releasedAt": "2023-10-09T10:52:09.000000Z",
+              "createdAt": "2023-08-22T13:27:42.000000Z",
+              "updatedAt": "2023-10-09T10:52:09.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22111499250457"
+            },
+            {
+              "articleId": 22111559625753,
+              "title": "DJM-2000 Audio Driver for macOS El Capitan",
+              "releasedAt": "2023-10-09T10:48:23.000000Z",
+              "createdAt": "2023-08-22T13:30:29.000000Z",
+              "updatedAt": "2023-10-09T10:48:23.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22111559625753"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416496725273,
+      "productName": "DJM-T1",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416496725273",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 22713130968601,
+              "title": "DJM-T1 Firmware for Mac",
+              "releasedAt": "2023-10-05T15:15:03.000000Z",
+              "createdAt": "2023-09-07T08:50:23.000000Z",
+              "updatedAt": "2023-10-05T15:15:03.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22713130968601"
+            },
+            {
+              "articleId": 22713335413401,
+              "title": "DJM-T1 Firmware for Windows",
+              "releasedAt": "2023-10-05T15:43:05.000000Z",
+              "createdAt": "2023-09-07T08:56:11.000000Z",
+              "updatedAt": "2023-10-05T15:43:05.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22713335413401"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496725273?section=26",
+          "articleCount": 4,
+          "articles": [
+            {
+              "articleId": 22714153156121,
+              "title": "DJM-T1 Audio Driver for macOS El Capitan or Later",
+              "releasedAt": "2023-10-05T15:25:41.000000Z",
+              "createdAt": "2023-09-07T09:13:56.000000Z",
+              "updatedAt": "2023-10-05T15:25:41.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22714153156121"
+            },
+            {
+              "articleId": 22714477559065,
+              "title": "DJM-T1 Audio Driver for macOS Yosemite",
+              "releasedAt": "2023-10-05T15:29:00.000000Z",
+              "createdAt": "2023-09-07T09:24:24.000000Z",
+              "updatedAt": "2023-10-05T15:29:00.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22714477559065"
+            },
+            {
+              "articleId": 22713788402073,
+              "title": "DJM-T1 Audio Driver for Windows 10",
+              "releasedAt": "2023-09-07T09:05:35.000000Z",
+              "createdAt": "2023-09-07T09:05:35.000000Z",
+              "updatedAt": "2023-09-07T09:05:35.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22713788402073"
+            },
+            {
+              "articleId": 22714304660121,
+              "title": "DJM-T1 Audio Driver for Windows 8.1 / 7",
+              "releasedAt": "2023-10-05T15:36:54.000000Z",
+              "createdAt": "2023-09-07T09:18:27.000000Z",
+              "updatedAt": "2023-10-05T15:36:54.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22714304660121"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416490173977,
+      "productName": "DJM-5000",
+      "productStatus": "Archived",
+      "categoryId": 4416175418393,
+      "categoryName": "DJ Mixers",
+      "url": "https://support.alphatheta.com/en-US/products/4416490173977",
+      "sections": [
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416490173977?section=26",
+          "articleCount": 3,
+          "articles": [
+            {
+              "articleId": 22722142637337,
+              "title": "DJM-5000 Audio Driver for macOS El Capitan or later",
+              "releasedAt": "2023-10-06T15:00:40.000000Z",
+              "createdAt": "2023-09-07T13:37:08.000000Z",
+              "updatedAt": "2023-10-06T15:00:40.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22722142637337"
+            },
+            {
+              "articleId": 22722229963033,
+              "title": "DJM-5000 Audio Driver for macOS Yosemite",
+              "releasedAt": "2023-10-06T15:04:35.000000Z",
+              "createdAt": "2023-09-07T13:41:21.000000Z",
+              "updatedAt": "2023-10-06T15:04:35.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22722229963033"
+            },
+            {
+              "articleId": 22722340631065,
+              "title": "DJM-5000 Audio Driver for Windows",
+              "releasedAt": "2023-10-06T15:07:58.000000Z",
+              "createdAt": "2023-09-07T13:45:17.000000Z",
+              "updatedAt": "2023-10-06T15:07:58.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22722340631065"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 48245720355353,
+      "productName": "CDJ-3000X",
+      "productStatus": "Active",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/48245720355353",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 50228449553049,
+              "title": "CDJ-3000X Firmware",
+              "releasedAt": "2025-10-21T07:00:08.000000Z",
+              "createdAt": "2025-08-29T08:18:30.000000Z",
+              "updatedAt": "2026-03-17T15:14:44.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/50228449553049"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 49515575185049,
+              "title": "CDJ-3000X Audio Driver for Windows",
+              "releasedAt": "2025-10-22T23:38:53.000000Z",
+              "createdAt": "2025-08-05T07:12:42.000000Z",
+              "updatedAt": "2026-03-17T18:12:36.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/49515575185049"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/48245720355353?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 49513695213081,
+              "title": "CDJ-3000X CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:41:58.000000Z",
+              "createdAt": "2025-08-05T06:21:59.000000Z",
+              "updatedAt": "2025-09-09T07:41:58.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/49513695213081"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416175863961,
+      "productName": "CDJ-3000",
+      "productStatus": "Active",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416175863961",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=25",
+          "articleCount": 3,
+          "articles": [
+            {
+              "articleId": 4404623755545,
+              "title": "CDJ-3000 Firmware",
+              "releasedAt": "2025-11-04T07:26:47.000000Z",
+              "createdAt": "2021-08-05T13:03:48.000000Z",
+              "updatedAt": "2026-02-12T05:45:10.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404623755545"
+            },
+            {
+              "articleId": 40738749245337,
+              "title": "Firmware release (ver. 3.18) for CDJ-3000",
+              "releasedAt": "2024-12-04T10:28:29.000000Z",
+              "createdAt": "2024-12-04T00:36:32.000000Z",
+              "updatedAt": "2024-12-04T10:28:29.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/40738749245337"
+            },
+            {
+              "articleId": 4413929605529,
+              "title": "CDJ-3000 Firmware Update Guide",
+              "releasedAt": "2024-08-23T23:48:34.000000Z",
+              "createdAt": "2022-01-05T19:30:19.000000Z",
+              "updatedAt": "2024-08-23T23:48:34.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413929605529"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404617666841,
+              "title": "CDJ-3000 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:09:33.000000Z",
+              "createdAt": "2021-08-05T13:08:32.000000Z",
+              "updatedAt": "2026-04-01T14:18:14.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404617666841"
+            },
+            {
+              "articleId": 4404617669401,
+              "title": "CDJ-3000 USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2024-03-14T10:44:00.000000Z",
+              "createdAt": "2021-08-05T13:09:07.000000Z",
+              "updatedAt": "2024-03-14T10:44:00.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404617669401"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404617658521,
+              "title": "CDJ-3000 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:16.000000Z",
+              "createdAt": "2021-08-05T13:06:41.000000Z",
+              "updatedAt": "2025-09-09T07:03:16.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404617658521"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416175863961?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404617679129,
+              "title": "CDJ-3000 PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2023-10-05T13:10:37.000000Z",
+              "createdAt": "2021-08-05T13:11:21.000000Z",
+              "updatedAt": "2023-10-05T13:10:37.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404617679129"
+            },
+            {
+              "articleId": 4404623787673,
+              "title": "CDJ-3000 PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2023-10-05T09:39:36.000000Z",
+              "createdAt": "2021-08-05T13:12:00.000000Z",
+              "updatedAt": "2023-10-05T09:39:36.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404623787673"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416488054425,
+      "productName": "CDJ-2000NXS2",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416488054425",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404624126489,
+              "title": "CDJ-2000NXS2 Firmware",
+              "releasedAt": "2024-05-14T07:00:00.000000Z",
+              "createdAt": "2021-08-05T14:36:00.000000Z",
+              "updatedAt": "2024-05-14T07:00:00.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624126489"
+            },
+            {
+              "articleId": 4413929671065,
+              "title": "CDJ-2000NXS2 Firmware Update Guide",
+              "releasedAt": "2025-04-08T01:17:03.000000Z",
+              "createdAt": "2022-01-05T19:37:52.000000Z",
+              "updatedAt": "2025-04-08T01:17:03.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413929671065"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404624136729,
+              "title": "CDJ-2000NXS2 Audio Driver for Windows",
+              "releasedAt": "2023-02-08T16:12:51.000000Z",
+              "createdAt": "2021-08-05T14:37:44.000000Z",
+              "updatedAt": "2026-04-01T14:20:11.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624136729"
+            },
+            {
+              "articleId": 4404624139161,
+              "title": "CDJ-2000NXS2 USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2023-02-08T16:17:03.000000Z",
+              "createdAt": "2021-08-05T14:38:21.000000Z",
+              "updatedAt": "2023-02-08T16:17:03.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624139161"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404624132633,
+              "title": "CDJ-2000NXS2 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:16.000000Z",
+              "createdAt": "2021-08-05T14:36:57.000000Z",
+              "updatedAt": "2025-09-09T07:03:16.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624132633"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/4416488054425?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404624144537,
+              "title": "CDJ-2000NXS2 PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2023-03-07T16:38:57.000000Z",
+              "createdAt": "2021-08-05T14:39:16.000000Z",
+              "updatedAt": "2023-03-07T16:38:57.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624144537"
+            },
+            {
+              "articleId": 4404624147097,
+              "title": "CDJ-2000NXS2 PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2024-04-01T14:36:57.000000Z",
+              "createdAt": "2021-08-05T14:39:44.000000Z",
+              "updatedAt": "2024-04-01T14:36:57.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404624147097"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416494703385,
+      "productName": "XDJ-1000MK2",
+      "productStatus": "Active",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416494703385",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404821857945,
+              "title": "XDJ-1000MK2 Firmware",
+              "releasedAt": "2024-08-22T06:54:58.000000Z",
+              "createdAt": "2021-08-10T08:05:22.000000Z",
+              "updatedAt": "2024-08-22T06:54:58.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404821857945"
+            },
+            {
+              "articleId": 4413945754649,
+              "title": "XDJ-1000MK2 Firmware Update Guide ",
+              "releasedAt": "2023-12-05T08:09:30.000000Z",
+              "createdAt": "2022-01-05T20:08:37.000000Z",
+              "updatedAt": "2023-12-05T08:09:30.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413945754649"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404832984345,
+              "title": "XDJ-1000MK2 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:03:20.000000Z",
+              "createdAt": "2021-08-10T09:06:03.000000Z",
+              "updatedAt": "2026-04-01T14:13:56.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404832984345"
+            },
+            {
+              "articleId": 4404828247449,
+              "title": "XDJ-1000MK2 USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2023-02-02T15:07:32.000000Z",
+              "createdAt": "2021-08-10T09:18:09.000000Z",
+              "updatedAt": "2023-02-02T15:07:32.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404828247449"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416494703385?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404787032089,
+              "title": "XDJ-1000MK2 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:09.000000Z",
+              "createdAt": "2021-08-09T14:59:57.000000Z",
+              "updatedAt": "2025-09-09T07:03:09.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404787032089"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416488404249,
+      "productName": "XDJ-700",
+      "productStatus": "Active",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416488404249",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404827627545,
+              "title": "XDJ-700 Firmware",
+              "releasedAt": "2024-11-05T07:56:57.000000Z",
+              "createdAt": "2021-08-10T08:24:19.000000Z",
+              "updatedAt": "2024-11-05T07:56:57.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404827627545"
+            },
+            {
+              "articleId": 4413945804441,
+              "title": "XDJ-700 Firmware Update Guide",
+              "releasedAt": "2024-11-05T07:57:15.000000Z",
+              "createdAt": "2022-01-05T20:15:28.000000Z",
+              "updatedAt": "2024-11-05T07:57:15.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413945804441"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404833005849,
+              "title": "XDJ-700 Audio Driver for Windows",
+              "releasedAt": "2025-11-09T23:51:52.000000Z",
+              "createdAt": "2021-08-10T09:09:05.000000Z",
+              "updatedAt": "2025-11-09T23:51:52.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404833005849"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416488404249?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404787049497,
+              "title": "XDJ-700 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:06.000000Z",
+              "createdAt": "2021-08-09T15:03:17.000000Z",
+              "updatedAt": "2025-09-09T07:03:06.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404787049497"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416495357209,
+      "productName": "CDJ-900NXS",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416495357209",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 4404787206681,
+              "title": "CDJ-900NXS Firmware",
+              "releasedAt": "2023-02-10T16:39:23.000000Z",
+              "createdAt": "2021-08-09T15:38:58.000000Z",
+              "updatedAt": "2023-02-10T16:39:23.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404787206681"
+            },
+            {
+              "articleId": 4413945599385,
+              "title": "CDJ-900NXS Firmware Update Guide",
+              "releasedAt": "2023-12-05T08:09:32.000000Z",
+              "createdAt": "2022-01-05T19:43:55.000000Z",
+              "updatedAt": "2023-12-05T08:09:32.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4413945599385"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404822415641,
+              "title": "CDJ-900NXS Audio Driver for Windows",
+              "releasedAt": "2025-09-12T10:46:45.000000Z",
+              "createdAt": "2021-08-10T08:48:40.000000Z",
+              "updatedAt": "2025-09-12T10:46:45.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404822415641"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416495357209?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 4404786993305,
+              "title": "CDJ-900NXS CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:23.000000Z",
+              "createdAt": "2021-08-09T14:52:14.000000Z",
+              "updatedAt": "2025-09-09T07:03:23.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/4404786993305"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 19333380404505,
+      "productName": "CDJ-TOUR1",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/19333380404505",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21627090278937,
+              "title": "CDJ-TOUR1 Firmware",
+              "releasedAt": "2024-05-14T07:03:15.000000Z",
+              "createdAt": "2023-08-09T10:31:50.000000Z",
+              "updatedAt": "2024-05-14T07:03:15.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21627090278937"
+            },
+            {
+              "articleId": 21627957734809,
+              "title": "CDJ-TOUR1 Firmware Update Guide ",
+              "releasedAt": "2023-12-05T08:10:05.000000Z",
+              "createdAt": "2023-08-09T11:01:54.000000Z",
+              "updatedAt": "2023-12-05T08:10:05.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21627957734809"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=26",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21628623888153,
+              "title": "CDJ-TOUR1 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:09:29.000000Z",
+              "createdAt": "2023-08-09T11:21:47.000000Z",
+              "updatedAt": "2026-04-01T14:17:18.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21628623888153"
+            },
+            {
+              "articleId": 23696496146713,
+              "title": "CDJ-TOUR1 USB Connection (Link Export) driver for Windows10",
+              "releasedAt": "2023-10-05T09:37:59.000000Z",
+              "createdAt": "2023-10-05T09:37:59.000000Z",
+              "updatedAt": "2023-10-05T09:37:59.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23696496146713"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21627437265817,
+              "title": "CDJ-TOUR1 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:15.000000Z",
+              "createdAt": "2023-08-09T10:44:17.000000Z",
+              "updatedAt": "2025-09-09T07:03:15.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21627437265817"
+            }
+          ]
+        },
+        {
+          "sectionId": 30,
+          "label": "PRO DJ LINK Bridge",
+          "artifactType": "prodj-link-bridge",
+          "url": "https://support.alphatheta.com/en-US/products/19333380404505?section=30",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21628906394265,
+              "title": "CDJ-TOUR1 PRO DJ LINK Bridge for Windows",
+              "releasedAt": "2023-08-14T08:00:25.000000Z",
+              "createdAt": "2023-08-09T11:30:55.000000Z",
+              "updatedAt": "2023-08-14T08:00:25.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21628906394265"
+            },
+            {
+              "articleId": 21628922920601,
+              "title": "CDJ-TOUR1 PRO DJ LINK Bridge for Mac",
+              "releasedAt": "2023-10-05T09:39:28.000000Z",
+              "createdAt": "2023-08-09T11:32:02.000000Z",
+              "updatedAt": "2023-10-05T09:39:28.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21628922920601"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416489399705,
+      "productName": "XDJ-1000",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416489399705",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21814176693401,
+              "title": "XDJ-1000 Firmware Update Guide ",
+              "releasedAt": "2023-12-05T08:09:43.000000Z",
+              "createdAt": "2023-08-14T14:20:51.000000Z",
+              "updatedAt": "2023-12-05T08:09:43.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21814176693401"
+            },
+            {
+              "articleId": 21814264053529,
+              "title": "XDJ-1000 Firmware",
+              "releasedAt": "2025-01-28T15:50:52.000000Z",
+              "createdAt": "2023-08-14T14:25:16.000000Z",
+              "updatedAt": "2025-01-28T15:50:52.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21814264053529"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21814598224537,
+              "title": "XDJ-1000 Audio Driver for Windows",
+              "releasedAt": "2025-01-28T16:55:28.000000Z",
+              "createdAt": "2023-08-14T14:41:19.000000Z",
+              "updatedAt": "2026-04-01T14:28:27.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21814598224537"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489399705?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21814511022489,
+              "title": "XDJ-1000 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:08.000000Z",
+              "createdAt": "2023-08-14T14:35:45.000000Z",
+              "updatedAt": "2025-09-09T07:03:08.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21814511022489"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4405832296601,
+      "productName": "CDJ-2000NXS",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4405832296601",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21976530021913,
+              "title": "CDJ-2000NXS Firmware Update Guide",
+              "releasedAt": "2023-12-05T08:09:44.000000Z",
+              "createdAt": "2023-08-18T16:02:02.000000Z",
+              "updatedAt": "2023-12-05T08:09:44.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21976530021913"
+            },
+            {
+              "articleId": 21976886580633,
+              "title": "CDJ-2000NXS Firmware",
+              "releasedAt": "2024-02-27T07:53:25.000000Z",
+              "createdAt": "2023-08-18T16:22:08.000000Z",
+              "updatedAt": "2024-02-27T07:53:25.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21976886580633"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 22064379852953,
+              "title": "CDJ-2000NXS Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:09:34.000000Z",
+              "createdAt": "2023-08-21T10:17:13.000000Z",
+              "updatedAt": "2026-04-01T14:21:23.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22064379852953"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4405832296601?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 22064148476569,
+              "title": "CDJ-2000NXS CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:13.000000Z",
+              "createdAt": "2023-08-21T10:10:46.000000Z",
+              "updatedAt": "2025-09-09T07:03:13.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22064148476569"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416496076569,
+      "productName": "CDJ-900",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416496076569",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21708238994585,
+              "title": "CDJ-900 Firmware",
+              "releasedAt": "2023-10-04T14:45:50.000000Z",
+              "createdAt": "2023-08-11T10:52:10.000000Z",
+              "updatedAt": "2023-10-04T14:45:50.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21708238994585"
+            },
+            {
+              "articleId": 21708658469529,
+              "title": "CDJ-900 Firmware Update Guide ",
+              "releasedAt": "2023-12-05T08:09:46.000000Z",
+              "createdAt": "2023-08-11T11:04:32.000000Z",
+              "updatedAt": "2023-12-05T08:09:46.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21708658469529"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21709832209305,
+              "title": "CDJ-900 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:03:24.000000Z",
+              "createdAt": "2023-08-11T11:45:37.000000Z",
+              "updatedAt": "2026-04-01T14:24:46.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21709832209305"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416496076569?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21709599669785,
+              "title": "CDJ-900 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:00:52.000000Z",
+              "createdAt": "2023-08-11T11:38:22.000000Z",
+              "updatedAt": "2025-09-09T07:00:52.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21709599669785"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416489311769,
+      "productName": "CDJ-850",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416489311769",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21811421828761,
+              "title": "CDJ-850 Firmware",
+              "releasedAt": "2023-10-05T08:08:09.000000Z",
+              "createdAt": "2023-08-14T12:34:33.000000Z",
+              "updatedAt": "2023-10-05T08:08:09.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21811421828761"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21811744817433,
+              "title": "CDJ-850 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:03:28.000000Z",
+              "createdAt": "2023-08-14T12:47:15.000000Z",
+              "updatedAt": "2026-04-01T14:26:34.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21811744817433"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489311769?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21811698490521,
+              "title": "CDJ-850 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:26.000000Z",
+              "createdAt": "2023-08-14T12:44:26.000000Z",
+              "updatedAt": "2025-09-09T07:03:26.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21811698490521"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416495702169,
+      "productName": "CDJ-350",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416495702169",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23663922833689,
+              "title": "CDJ-350 Firmware",
+              "releasedAt": "2023-10-04T13:45:54.000000Z",
+              "createdAt": "2023-10-04T13:45:54.000000Z",
+              "updatedAt": "2023-10-04T13:45:54.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23663922833689"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23664082122521,
+              "title": "CDJ-350 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:03:14.000000Z",
+              "createdAt": "2023-10-04T13:53:08.000000Z",
+              "updatedAt": "2026-04-01T14:07:04.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23664082122521"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416495702169?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23664577436825,
+              "title": "CDJ-350 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:01:49.000000Z",
+              "createdAt": "2023-10-04T14:12:27.000000Z",
+              "updatedAt": "2025-09-09T07:01:49.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23664577436825"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416501603737,
+      "productName": "CDJ-2000",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416501603737",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=25",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 21672743079193,
+              "title": "CDJ-2000 Firmware Update Guide ",
+              "releasedAt": "2023-12-05T08:09:42.000000Z",
+              "createdAt": "2023-08-10T13:03:31.000000Z",
+              "updatedAt": "2023-12-05T08:09:42.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21672743079193"
+            },
+            {
+              "articleId": 21672760299417,
+              "title": "CDJ-2000 Firmware",
+              "releasedAt": "2023-10-04T09:23:40.000000Z",
+              "createdAt": "2023-08-10T13:03:49.000000Z",
+              "updatedAt": "2023-10-04T09:23:40.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21672760299417"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21705824313625,
+              "title": "CDJ-2000 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T07:03:07.000000Z",
+              "createdAt": "2023-08-11T09:37:37.000000Z",
+              "updatedAt": "2026-04-01T14:23:51.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21705824313625"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416501603737?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23657250210329,
+              "title": "CDJ-2000 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:01:21.000000Z",
+              "createdAt": "2023-10-04T10:03:17.000000Z",
+              "updatedAt": "2025-09-09T07:01:21.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23657250210329"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416489259801,
+      "productName": "CDJ-400",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416489259801",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21851836384153,
+              "title": "CDJ-400 Firmware",
+              "releasedAt": "2023-10-03T14:22:04.000000Z",
+              "createdAt": "2023-08-15T15:20:19.000000Z",
+              "updatedAt": "2023-10-03T14:22:04.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21851836384153"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=26",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21852150884377,
+              "title": "CDJ-400 Audio Driver for Windows",
+              "releasedAt": "2025-09-09T09:00:03.000000Z",
+              "createdAt": "2023-08-15T15:35:21.000000Z",
+              "updatedAt": "2026-04-01T14:15:28.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21852150884377"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/4416489259801?section=28",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 21851931995417,
+              "title": "CDJ-400 CDJ/XDJ Aggregator Tool for Mac",
+              "releasedAt": "2025-09-09T07:03:01.000000Z",
+              "createdAt": "2023-08-15T15:24:15.000000Z",
+              "updatedAt": "2025-09-09T07:03:01.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/21851931995417"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416501725465,
+      "productName": "CDJ-800MK2",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416501725465",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416501725465?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23623875699993,
+              "title": "CDJ-800MK2 Firmware",
+              "releasedAt": "2023-10-03T14:03:54.000000Z",
+              "createdAt": "2023-10-03T14:03:54.000000Z",
+              "updatedAt": "2026-02-10T06:55:17.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23623875699993"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 4416501788953,
+      "productName": "DVJ-X1",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/4416501788953",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/4416501788953?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 22071324472089,
+              "title": "DVJ-X1 Firmware",
+              "releasedAt": "2023-10-03T12:59:41.000000Z",
+              "createdAt": "2023-08-21T14:39:23.000000Z",
+              "updatedAt": "2023-10-03T12:59:41.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/22071324472089"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 36403827027481,
+      "productName": "DVJ-1000",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/36403827027481",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/36403827027481?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 36404599996953,
+              "title": "DVJ-1000 Firmware",
+              "releasedAt": "2024-08-15T09:02:37.000000Z",
+              "createdAt": "2024-08-15T09:02:37.000000Z",
+              "updatedAt": "2024-08-15T09:02:37.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/36404599996953"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 21018205942425,
+      "productName": "MEP-7000",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/21018205942425",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23841316697881,
+              "title": "MEP-7000 Firmware",
+              "releasedAt": "2023-10-09T15:00:56.000000Z",
+              "createdAt": "2023-10-09T14:58:43.000000Z",
+              "updatedAt": "2026-02-27T05:02:57.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23841316697881"
+            }
+          ]
+        },
+        {
+          "sectionId": 26,
+          "label": "Drivers",
+          "artifactType": "drivers",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=26",
+          "articleCount": 3,
+          "articles": [
+            {
+              "articleId": 23841593618713,
+              "title": "MEP-7000 Audio Driver for macOS Sierra and El Capitan",
+              "releasedAt": "2023-10-09T15:17:05.000000Z",
+              "createdAt": "2023-10-09T15:09:31.000000Z",
+              "updatedAt": "2023-10-09T15:17:05.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23841593618713"
+            },
+            {
+              "articleId": 23841872318873,
+              "title": "MEP-7000 Audio Driver for macOS Yosemite",
+              "releasedAt": "2023-10-09T15:34:34.000000Z",
+              "createdAt": "2023-10-09T15:25:20.000000Z",
+              "updatedAt": "2023-10-09T15:34:34.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23841872318873"
+            },
+            {
+              "articleId": 23841857538841,
+              "title": "MEP-7000 Audio Driver for Windows",
+              "releasedAt": "2023-10-09T15:29:14.000000Z",
+              "createdAt": "2023-10-09T15:25:56.000000Z",
+              "updatedAt": "2023-10-09T15:29:14.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23841857538841"
+            }
+          ]
+        },
+        {
+          "sectionId": 28,
+          "label": "Software Update",
+          "artifactType": "software-update",
+          "url": "https://support.alphatheta.com/en-US/products/21018205942425?section=28",
+          "articleCount": 2,
+          "articles": [
+            {
+              "articleId": 23841465834521,
+              "title": "MEP-7000 Library Creator for Mac",
+              "releasedAt": "2023-10-09T15:05:27.000000Z",
+              "createdAt": "2023-10-09T15:02:52.000000Z",
+              "updatedAt": "2023-10-09T15:05:27.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23841465834521"
+            },
+            {
+              "articleId": 23841533682841,
+              "title": "MEP-7000 Library Creator for Windows",
+              "releasedAt": "2023-10-09T15:08:20.000000Z",
+              "createdAt": "2023-10-09T15:06:13.000000Z",
+              "updatedAt": "2023-10-09T15:08:20.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23841533682841"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "productId": 21054527926809,
+      "productName": "MEP-4000",
+      "productStatus": "Archived",
+      "categoryId": 4416169767193,
+      "categoryName": "DJ Players",
+      "url": "https://support.alphatheta.com/en-US/products/21054527926809",
+      "sections": [
+        {
+          "sectionId": 25,
+          "label": "Firmware Update",
+          "artifactType": "firmware",
+          "url": "https://support.alphatheta.com/en-US/products/21054527926809?section=25",
+          "articleCount": 1,
+          "articles": [
+            {
+              "articleId": 23841116556953,
+              "title": "MEP-4000 Firmware",
+              "releasedAt": "2023-11-14T16:31:58.000000Z",
+              "createdAt": "2023-10-09T14:47:49.000000Z",
+              "updatedAt": "2023-11-14T16:31:58.000000Z",
+              "status": "published",
+              "visibility": "public",
+              "url": "https://support.alphatheta.com/en-US/articles/23841116556953"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "collectedAt": "2026-04-08T07:59:49.776Z",
+  "selectedCount": 21,
+  "acquiredCount": 5,
+  "totalBytes": 548749209,
+  "products": [
+    "CDJ-3000",
+    "XDJ-AZ",
+    "OMNIS-DUO",
+    "OPUS-QUAD",
+    "DJM-A9"
+  ],
+  "artifactKinds": [
+    "archive"
+  ],
+  "artifacts": [
+    {
+      "productName": "XDJ-AZ",
+      "articleTitle": "XDJ-AZ Firmware",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/XDJ-AZ/XDJAZv124.zip",
+      "fileName": "XDJAZv124.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZv124.zip",
+      "sizeBytes": 175737008
+    },
+    {
+      "productName": "XDJ-AZ",
+      "articleTitle": "XDJ-AZ Audio Driver for Windows",
+      "sectionLabel": "Drivers",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/drivers/all-in-one-dj-systems/XDJ-AZ/XDJAZ1000exe.zip",
+      "fileName": "XDJAZ1000exe.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/xdj-az/XDJAZ1000exe.zip",
+      "sizeBytes": 9434763
+    },
+    {
+      "productName": "OMNIS-DUO",
+      "articleTitle": "OMNIS-DUO Firmware",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/OMNIS-DUO/OMNISDUOv123.zip",
+      "fileName": "OMNISDUOv123.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUOv123.zip",
+      "sizeBytes": 177758389
+    },
+    {
+      "productName": "OMNIS-DUO",
+      "articleTitle": "OMNIS-DUO Audio Driver for Windows",
+      "sectionLabel": "Drivers",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/drivers/all-in-one-dj-systems/OMNIS-DUO/OMNISDUO1000exe.zip",
+      "fileName": "OMNISDUO1000exe.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/omnis-duo/OMNISDUO1000exe.zip",
+      "sizeBytes": 9423747
+    },
+    {
+      "productName": "OPUS-QUAD",
+      "articleTitle": "OPUS-QUAD Firmware",
+      "sectionLabel": "Firmware Update",
+      "artifactKind": "archive",
+      "href": "https://downloads.support.alphatheta.com/firmwares/all-in-one-dj-systems/OPUS-QUAD/OPUSQUADv132.zip",
+      "fileName": "OPUSQUADv132.zip",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/alphatheta-archives/opus-quad/OPUSQUADv132.zip",
+      "sizeBytes": 176395302
+    }
+  ]
+}

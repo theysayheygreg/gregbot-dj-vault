@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+tmp/
+data/*.sqlite*
+research/corpus/
+research/downloads/
+research/tmp/
+*.log

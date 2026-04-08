@@ -1,0 +1,236 @@
+{
+  "vendor": "pioneer-alphatheta",
+  "collectedAt": "2026-04-08T00:02:47.756Z",
+  "category": {
+    "id": 4416175427481,
+    "name": "rekordbox",
+    "url": "https://support.alphatheta.com/en-US/categories/4416175427481"
+  },
+  "products": [
+    {
+      "id": 32552325927193,
+      "name": "rekordbox 7",
+      "status": "Active",
+      "categoryId": 4416175427481,
+      "createdAt": "2024-05-16",
+      "updatedAt": "2025-06-27",
+      "url": "https://support.alphatheta.com/en-US/products/32552325927193",
+      "sectionLinks": [
+        {
+          "sectionId": 31,
+          "label": "Product Tutorials",
+          "url": "https://support.alphatheta.com/en-US/products/32552325927193?section=31"
+        },
+        {
+          "sectionId": 35,
+          "label": "System Requirements",
+          "url": "https://support.alphatheta.com/en-US/products/32552325927193?section=35"
+        },
+        {
+          "sectionId": 205,
+          "label": "Product Tutorials",
+          "url": "https://support.alphatheta.com/en-US/products/32552325927193?section=205"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 47623212479001,
+          "title": "System Requirements",
+          "releasedAt": "2025-03-17T06:44:13.000000Z"
+        },
+        {
+          "articleId": 44589565125785,
+          "title": "rekordbox Manuals",
+          "releasedAt": "2025-03-17T06:43:35.000000Z"
+        },
+        {
+          "articleId": 44589155900697,
+          "title": "rekordbox for Mac / Windows (ver. 7) FAQ",
+          "releasedAt": "2025-03-17T06:41:26.000000Z"
+        },
+        {
+          "articleId": 44586695331097,
+          "title": "Troubleshooting audio noise in Windows",
+          "releasedAt": "2025-06-27T07:46:44.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 22674643352729,
+      "name": "rekordbox for iOS",
+      "status": "Active",
+      "categoryId": 4416175427481,
+      "createdAt": "2023-09-06",
+      "updatedAt": "2024-08-24",
+      "url": "https://support.alphatheta.com/en-US/products/22674643352729",
+      "sectionLinks": [
+        {
+          "sectionId": 35,
+          "label": "System Requirements",
+          "url": "https://support.alphatheta.com/en-US/products/22674643352729?section=35"
+        },
+        {
+          "sectionId": 200,
+          "label": "System Requirements",
+          "url": "https://support.alphatheta.com/en-US/products/22674643352729?section=200"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 30812670336409,
+          "title": "Which plan do I need to subscribe to in order to use Beatport Streaming on rekordbox for iOS?",
+          "releasedAt": "2024-04-04T14:39:51.000000Z"
+        },
+        {
+          "articleId": 30812606411929,
+          "title": "Can I play Beatport Streaming tracks on rekordbox for iOS even in an offline environment?",
+          "releasedAt": "2024-04-04T14:37:01.000000Z"
+        },
+        {
+          "articleId": 30812550203161,
+          "title": "Which countries can Beatport Streaming be used in?",
+          "releasedAt": "2024-04-04T14:29:52.000000Z"
+        },
+        {
+          "articleId": 30812383553561,
+          "title": "What is Beatport Streaming?",
+          "releasedAt": "2024-04-04T14:25:41.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 22674638413465,
+      "name": "rekordbox for Android",
+      "status": "Active",
+      "categoryId": 4416175427481,
+      "createdAt": "2023-09-06",
+      "updatedAt": "2024-08-23",
+      "url": "https://support.alphatheta.com/en-US/products/22674638413465",
+      "sectionLinks": [
+        {
+          "sectionId": 35,
+          "label": "System Requirements",
+          "url": "https://support.alphatheta.com/en-US/products/22674638413465?section=35"
+        },
+        {
+          "sectionId": 201,
+          "label": "System Requirements",
+          "url": "https://support.alphatheta.com/en-US/products/22674638413465?section=201"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 30364673767577,
+          "title": "Do I need to sign up for a subscription from the app in order to DJ while connected to a supported controller?",
+          "releasedAt": "2023-12-13T16:34:36.000000Z"
+        },
+        {
+          "articleId": 26363771360153,
+          "title": "I have a subscribing plan for rekordbox.com. Do I need to sign up for a subscription from the app separately in order to use the paid functions of rekordbox for Android?",
+          "releasedAt": "2023-12-13T16:32:58.000000Z"
+        },
+        {
+          "articleId": 26363713766297,
+          "title": "I have signed up for a subscription from the app of rekordbox for iOS. Can I also use the paid functions on rekordbox for Android?",
+          "releasedAt": "2023-12-13T16:31:21.000000Z"
+        },
+        {
+          "articleId": 26363681230617,
+          "title": "Can the in-app subscription be refunded?",
+          "releasedAt": "2023-12-13T16:27:53.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 9366984218137,
+      "name": "rekordbox 6",
+      "status": "Active",
+      "categoryId": 4416175427481,
+      "createdAt": "2022-08-10",
+      "updatedAt": "2026-03-16",
+      "url": "https://support.alphatheta.com/en-US/products/9366984218137",
+      "sectionLinks": [
+        {
+          "sectionId": 31,
+          "label": "Product Tutorials",
+          "url": "https://support.alphatheta.com/en-US/products/9366984218137?section=31"
+        },
+        {
+          "sectionId": 35,
+          "label": "System Requirements",
+          "url": "https://support.alphatheta.com/en-US/products/9366984218137?section=35"
+        },
+        {
+          "sectionId": 179,
+          "label": "Product Tutorials",
+          "url": "https://support.alphatheta.com/en-US/products/9366984218137?section=179"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 38877168079385,
+          "title": "I can no longer load tracks from Tidal",
+          "releasedAt": "2024-08-23T17:09:45.000000Z"
+        },
+        {
+          "articleId": 35656931962521,
+          "title": "Can I convert USB libraries I’ve been using into Device Library Plus?",
+          "releasedAt": "2023-12-21T11:32:35.000000Z"
+        },
+        {
+          "articleId": 26689155007641,
+          "title": "Which DJ equipment supports Device Library Plus or the traditional Device Library is unclear.",
+          "releasedAt": "2023-12-21T11:30:13.000000Z"
+        },
+        {
+          "articleId": 26689072692121,
+          "title": "Can I use both equipment that support Device Library Plus and equipment that support the traditional Device Library in the same way on the same USB memory?",
+          "releasedAt": "2023-12-21T12:05:10.000000Z"
+        }
+      ]
+    },
+    {
+      "id": 9367289395225,
+      "name": "rekordbox 5",
+      "status": "Support ended",
+      "categoryId": 4416175427481,
+      "createdAt": "2022-08-10",
+      "updatedAt": "2026-03-16",
+      "url": "https://support.alphatheta.com/en-US/products/9367289395225",
+      "sectionLinks": [
+        {
+          "sectionId": 23,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/9367289395225?section=23"
+        },
+        {
+          "sectionId": 180,
+          "label": "Manuals",
+          "url": "https://support.alphatheta.com/en-US/products/9367289395225?section=180"
+        }
+      ],
+      "highlights": [
+        {
+          "articleId": 9407489415577,
+          "title": "I’ve signed up for a rekordbox ver. 6 subscription plan, but I can’t activate ver. 5.",
+          "releasedAt": "2022-08-10T13:42:42.000000Z"
+        },
+        {
+          "articleId": 9104737577753,
+          "title": "I have a rekordbox dj license key but I can’t activate rekordbox ver. 6 with it.",
+          "releasedAt": "2022-08-10T13:42:43.000000Z"
+        },
+        {
+          "articleId": 9103213119897,
+          "title": "I have a rekordbox ver. 5 subscription. I want to subscribe to both ver. 5 and ver. 6. How can I do this?",
+          "releasedAt": "2022-08-10T13:42:44.000000Z"
+        },
+        {
+          "articleId": 9102967336473,
+          "title": "I want to use previous rekordbox ver. 5.",
+          "releasedAt": "2022-08-10T13:42:44.000000Z"
+        }
+      ]
+    }
+  ]
+}
