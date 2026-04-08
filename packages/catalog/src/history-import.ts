@@ -20,6 +20,10 @@ export type PlaybackHistoryImportSession = {
     playedAt: string;
     positionInSession?: number;
     sourceRef?: string;
+    rekordboxTrackId?: string;
+    rekordboxLocationUri?: string;
+    traktorAudioId?: string;
+    traktorCollectionPathKey?: string;
     confidence?: number;
     note?: string;
   }>;
@@ -48,8 +52,55 @@ function nowIso(): string {
   return new Date().toISOString();
 }
 
-function resolveTrack(database: DatabaseSync, trackRef: string): TrackMatch | null {
+function resolveTrack(database: DatabaseSync, sourceKind: string, trackRef: string, sourceRef?: string, hints?: {
+  rekordboxTrackId?: string;
+  rekordboxLocationUri?: string;
+  traktorAudioId?: string;
+  traktorCollectionPathKey?: string;
+}): TrackMatch | null {
   const ref = requireNonEmpty(trackRef, 'trackRef');
+  const vendorMatches = (() => {
+    if (sourceKind.startsWith('rekordbox')) {
+      return database.prepare(`
+        SELECT id, title
+        FROM tracks
+        WHERE rekordbox_track_id = ?
+           OR rekordbox_track_id = ?
+           OR rekordbox_location_uri = ?
+           OR rekordbox_location_uri = ?
+        ORDER BY title COLLATE NOCASE, id
+      `).all(
+        hints?.rekordboxTrackId ?? null,
+        sourceRef ?? null,
+        hints?.rekordboxLocationUri ?? null,
+        sourceRef ?? null,
+      ) as TrackMatch[];
+    }
+
+    if (sourceKind.startsWith('traktor')) {
+      return database.prepare(`
+        SELECT id, title
+        FROM tracks
+        WHERE traktor_audio_id = ?
+           OR traktor_audio_id = ?
+           OR traktor_collection_path_key = ?
+           OR traktor_collection_path_key = ?
+        ORDER BY title COLLATE NOCASE, id
+      `).all(
+        hints?.traktorAudioId ?? null,
+        sourceRef ?? null,
+        hints?.traktorCollectionPathKey ?? null,
+        sourceRef ?? null,
+      ) as TrackMatch[];
+    }
+
+    return [];
+  })();
+
+  if (vendorMatches.length === 1) {
+    return vendorMatches[0];
+  }
+
   const matches = database.prepare(`
     SELECT id, title
     FROM tracks
@@ -57,8 +108,21 @@ function resolveTrack(database: DatabaseSync, trackRef: string): TrackMatch | nu
        OR hash_sha256 = ?
        OR lower(title) = lower(?)
        OR lower(file_name) = lower(?)
+       OR rekordbox_track_id = ?
+       OR rekordbox_location_uri = ?
+       OR traktor_audio_id = ?
+       OR traktor_collection_path_key = ?
     ORDER BY title COLLATE NOCASE, id
-  `).all(ref, ref, ref, ref) as TrackMatch[];
+  `).all(
+    ref,
+    ref,
+    ref,
+    ref,
+    hints?.rekordboxTrackId ?? sourceRef ?? null,
+    hints?.rekordboxLocationUri ?? sourceRef ?? null,
+    hints?.traktorAudioId ?? sourceRef ?? null,
+    hints?.traktorCollectionPathKey ?? sourceRef ?? null,
+  ) as TrackMatch[];
 
   if (matches.length !== 1) {
     return null;
@@ -118,7 +182,12 @@ export async function importPlaybackHistory(databasePath: string, payload: Playb
       sessionCount += 1;
 
       for (const event of session.events ?? []) {
-        const track = resolveTrack(database, event.trackRef);
+        const track = resolveTrack(database, session.sourceKind, event.trackRef, event.sourceRef, {
+          rekordboxTrackId: event.rekordboxTrackId,
+          rekordboxLocationUri: event.rekordboxLocationUri,
+          traktorAudioId: event.traktorAudioId,
+          traktorCollectionPathKey: event.traktorCollectionPathKey,
+        });
         if (!track) {
           skippedTrackRefs.push(event.trackRef);
           continue;

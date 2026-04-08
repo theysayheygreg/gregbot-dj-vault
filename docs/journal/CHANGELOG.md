@@ -186,7 +186,9 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - `docs/design/PLAYBACK-HISTORY-IMPORT.md`
 - `docs/reference/playback-history.sample.json`
 - `packages/catalog/src/vendor-history.ts`
+- `packages/catalog/src/vendor-library.ts`
 - vendor-specific history import CLIs for `rekordbox` XML and Traktor NML
+- vendor-specific collection link import CLIs for `rekordbox` XML and Traktor NML
 - `docs/reference/rekordbox-history.sample.xml`
 - `docs/reference/traktor-history.sample.nml`
 
@@ -197,6 +199,7 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - generated QMD track documents now include added/played recency timestamps
 - README now documents the canonical playback-history import seam
 - backlog fixture-parser items for Rekordbox and Traktor are now real capabilities
+- history import now prefers vendor-native app IDs and location keys before falling back to title/file-name matching
 
 ### Why
 

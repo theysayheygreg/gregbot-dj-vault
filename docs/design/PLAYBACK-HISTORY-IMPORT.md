@@ -64,7 +64,9 @@ DJ Vault now also includes fixture-oriented vendor compilers that target this ca
 
 Current direct commands:
 
+- `npm run catalog:import-rekordbox-collection -- <rekordbox-xml-path>`
 - `npm run catalog:import-rekordbox-history -- <rekordbox-history-xml-path>`
+- `npm run catalog:import-traktor-collection -- <traktor-nml-path>`
 - `npm run catalog:import-traktor-history -- <traktor-history-nml-path>`
 
 Tracked fixture examples:
@@ -91,6 +93,23 @@ The current Traktor compiler assumes:
 - session membership comes from `PLAYLIST > ENTRY > PRIMARYKEY`
 
 When exact event timestamps are absent, DJ Vault currently infers event order from playlist order and assigns synthetic per-track times one minute apart from the parsed session start.
+
+## Matching Priority
+
+DJ Vault now tries to resolve vendor history against native app identities before falling back to human-readable fields.
+
+Current preferred matches are:
+
+- Rekordbox:
+  - `rekordbox_track_id`
+  - `rekordbox_location_uri`
+- Traktor:
+  - `traktor_audio_id`
+  - `traktor_collection_path_key`
+
+If those are not present, DJ Vault still falls back to UUID, SHA-256, exact title, and exact file name.
+
+That is why the vendor collection import commands matter: they let DJ Vault bind app-native identities onto catalog tracks before session history is imported.
 
 ## Current Matching Behavior
 

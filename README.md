@@ -173,6 +173,13 @@ npm run catalog:import-rekordbox-history -- /absolute/path/to/rekordbox-history.
 npm run catalog:import-traktor-history -- /absolute/path/to/traktor-history.nml
 ```
 
+To import native vendor collection IDs into existing DJ Vault tracks before history import:
+
+```bash
+npm run catalog:import-rekordbox-collection -- /absolute/path/to/rekordbox-export.xml
+npm run catalog:import-traktor-collection -- /absolute/path/to/traktor-collection.nml
+```
+
 Tracked sample fixtures live at:
 
 - [docs/reference/rekordbox-history.sample.xml](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/rekordbox-history.sample.xml)

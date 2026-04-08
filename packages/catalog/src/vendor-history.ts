@@ -9,6 +9,10 @@ type VendorTrackRef = {
   artist: string | null;
   fileName: string | null;
   sourceRef: string | null;
+  rekordboxTrackId?: string;
+  rekordboxLocationUri?: string;
+  traktorAudioId?: string;
+  traktorCollectionPathKey?: string;
 };
 
 function requireRootName(node: XmlNode, expected: string): void {
@@ -75,6 +79,10 @@ function toCanonicalSession(
       playedAt: sessionEventPlayedAt(session.startedAt, index),
       positionInSession: index + 1,
       sourceRef: track.sourceRef ?? track.fileName ?? track.title ?? undefined,
+      rekordboxTrackId: track.rekordboxTrackId,
+      rekordboxLocationUri: track.rekordboxLocationUri,
+      traktorAudioId: track.traktorAudioId,
+      traktorCollectionPathKey: track.traktorCollectionPathKey,
       confidence: track.title ? 0.95 : 0.7,
       note: track.artist ? `Artist: ${track.artist}` : undefined,
     })),
@@ -111,6 +119,8 @@ export function compileRekordboxHistoryXml(xml: string): PlaybackHistoryImportFi
       artist: trackNode.attributes.Artist ?? null,
       fileName: normalizeLocationFileName(trackNode.attributes.Location ?? null),
       sourceRef: trackId,
+      rekordboxTrackId: trackId,
+      rekordboxLocationUri: trackNode.attributes.Location ?? undefined,
     });
   }
 
@@ -177,6 +187,8 @@ export function compileTraktorHistoryNml(xml: string): PlaybackHistoryImportFile
       artist: entry.attributes.ARTIST ?? null,
       fileName,
       sourceRef: audioId ?? (pathKey || null),
+      traktorAudioId: audioId ?? undefined,
+      traktorCollectionPathKey: pathKey || undefined,
     };
 
     if (audioId) {

@@ -101,4 +101,6 @@ The next move should be to import vendor history evidence:
 - Traktor history nodes / played markers
 - app-specific "last session" and "added" timestamps
 
+The quality hinge is native app identity. Vendor-side IDs and path keys should be imported alongside history so recency survives title edits and imperfect filename normalization.
+
 That will let DJ Vault compute recency from richer source evidence instead of only native events.
