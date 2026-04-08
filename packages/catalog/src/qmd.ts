@@ -29,6 +29,7 @@ type TrackRow = {
   comment: string | null;
   description: string | null;
   play_count: number;
+  last_played_at: string | null;
   liked: number;
   hidden: number;
   rekordbox_track_id: string | null;
@@ -365,7 +366,7 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
   try {
     const tracks = database.prepare(`
       SELECT
-        id, canonical_path, file_name, extension, added_at, title, mix_name, album, label, year, genre,
+        id, canonical_path, file_name, extension, added_at, last_played_at, title, mix_name, album, label, year, genre,
         bpm, bpm_float, key_display, key_camelot, key_open_key, energy, color, rating,
         comment, description, play_count, liked, hidden, rekordbox_track_id, rekordbox_location_uri,
         traktor_collection_path_key, traktor_audio_id, source, source_url
