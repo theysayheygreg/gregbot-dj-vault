@@ -102,6 +102,8 @@ type Track = {
 };
 ```
 
+Vendor library-state import now maps selected Rekordbox and Traktor cue/grid structures into this `analysis` block, not only track identity and playlists.
+
 ---
 
 ## Cue Points & Loops

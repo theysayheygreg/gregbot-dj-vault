@@ -187,6 +187,8 @@ npm run catalog:import-rekordbox-library -- /absolute/path/to/rekordbox-export.x
 npm run catalog:import-traktor-library -- /absolute/path/to/traktor-collection.nml
 ```
 
+Those library-state imports now also carry fixture-oriented cue, loop, and beat-grid state into DJ Vault analysis tables.
+
 Tracked sample fixtures live at:
 
 - [docs/reference/rekordbox-history.sample.xml](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/rekordbox-history.sample.xml)

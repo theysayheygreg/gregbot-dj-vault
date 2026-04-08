@@ -2,7 +2,13 @@
 <DJ_PLAYLISTS Version="1.0.0">
   <PRODUCT Name="rekordbox" Version="7.2.13" Company="AlphaTheta"/>
   <COLLECTION Entries="1">
-    <TRACK TrackID="1" Name="Funk" Artist="DJ Vault" Album="Warehouse Tools" Location="file://localhost/Volumes/Music/Funk.aiff" Comments="Warehouse staple" Rating="4" DateAdded="2026-04-01 04:30:00"/>
+    <TRACK TrackID="1" Name="Funk" Artist="DJ Vault" Album="Warehouse Tools" Location="file://localhost/Volumes/Music/Funk.aiff" Comments="Warehouse staple" Rating="4" DateAdded="2026-04-01 04:30:00">
+      <TEMPO Inizio="0.000" Bpm="128.00" Battito="1"/>
+      <TEMPO Inizio="32.000" Bpm="128.00" Battito="1"/>
+      <POSITION_MARK Name="Intro" Type="0" Start="8.000" Num="-1" Color="#ff9900" Comment="Bring in early"/>
+      <POSITION_MARK Name="Drop" Type="1" Start="64.000" Num="1" Color="#00ccff" Comment="Main drop"/>
+      <POSITION_MARK Name="Loop Prep" Type="4" Start="96.000" End="104.000" Num="2" Color="#33cc66" Comment="8-beat tension loop"/>
+    </TRACK>
   </COLLECTION>
   <PLAYLISTS>
     <NODE Type="0" Name="ROOT">

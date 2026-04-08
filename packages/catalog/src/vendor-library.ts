@@ -7,6 +7,37 @@ import { findChildren, findFirstChild, parseXml, type XmlNode } from './xml.js';
 
 type VendorName = 'rekordbox' | 'traktor';
 
+type VendorCuePoint = {
+  name?: string | null;
+  type: 'memory' | 'hotcue' | 'grid' | 'load' | 'fadein' | 'fadeout';
+  cueIndex?: number | null;
+  startSec: number;
+  color?: string | null;
+  comment?: string | null;
+};
+
+type VendorLoopPoint = {
+  name?: string | null;
+  startSec: number;
+  endSec: number;
+  loopIndex?: number | null;
+  active?: boolean;
+  color?: string | null;
+};
+
+type VendorBeatGrid = {
+  anchorSec: number;
+  bpm: number;
+  meterNumerator?: number | null;
+  meterDenominator?: number | null;
+  locked?: boolean;
+  markers: Array<{
+    startSec: number;
+    bpm: number;
+    beatNumber?: number | null;
+  }>;
+};
+
 export type VendorTrackLink = {
   vendor: VendorName;
   title: string | null;
@@ -18,6 +49,9 @@ export type VendorTrackLink = {
   rekordboxLocationUri?: string;
   traktorAudioId?: string;
   traktorCollectionPathKey?: string;
+  cuePoints?: VendorCuePoint[];
+  loopPoints?: VendorLoopPoint[];
+  beatGrid?: VendorBeatGrid | null;
 };
 
 export type VendorPlaylistState = {
@@ -108,6 +142,28 @@ function parseOptionalRating(value: string | null | undefined): number | null {
   return null;
 }
 
+function parseOptionalFloat(value: string | null | undefined): number | null {
+  const normalized = normalizeText(value);
+  if (!normalized) {
+    return null;
+  }
+  const parsed = Number.parseFloat(normalized);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function parseOptionalInt(value: string | null | undefined): number | null {
+  const normalized = normalizeText(value);
+  if (!normalized) {
+    return null;
+  }
+  const parsed = Number.parseInt(normalized, 10);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function isPresent<T>(value: T | null): value is T {
+  return value !== null;
+}
+
 function pathRef(segments: string[]): string {
   return segments.filter(Boolean).join(' / ');
 }
@@ -161,6 +217,26 @@ function upsertTrackLinks(database: DatabaseSync, vendor: VendorName, links: Ven
       entity_kind, entity_id, field_path, source_kind, source_name, source_ref, confidence, observed_at, value_json
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
   `);
+  const deleteBeatGridMarkers = database.prepare(`DELETE FROM beat_grid_markers WHERE track_id = ?`);
+  const deleteBeatGrid = database.prepare(`DELETE FROM beat_grids WHERE track_id = ?`);
+  const deleteLoopPoints = database.prepare(`DELETE FROM loop_points WHERE track_id = ?`);
+  const deleteCuePoints = database.prepare(`DELETE FROM cue_points WHERE track_id = ?`);
+  const insertCuePoint = database.prepare(`
+    INSERT INTO cue_points (id, track_id, name, type, cue_index, start_sec, color, comment)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+  `);
+  const insertLoopPoint = database.prepare(`
+    INSERT INTO loop_points (id, track_id, name, start_sec, end_sec, loop_index, active, color)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+  `);
+  const insertBeatGrid = database.prepare(`
+    INSERT INTO beat_grids (track_id, anchor_sec, bpm, meter_numerator, meter_denominator, locked)
+    VALUES (?, ?, ?, ?, ?, ?)
+  `);
+  const insertBeatGridMarker = database.prepare(`
+    INSERT INTO beat_grid_markers (track_id, position, start_sec, bpm, beat_number)
+    VALUES (?, ?, ?, ?, ?)
+  `);
 
   let linkedCount = 0;
   let skippedCount = 0;
@@ -211,12 +287,60 @@ function upsertTrackLinks(database: DatabaseSync, vendor: VendorName, links: Ven
     if (link.rating !== null && link.rating !== undefined) {
       insertProvenance.run('track', trackId, 'musical.rating', 'vendor-library', vendor, link.title ?? link.fileName ?? null, 0.8, observedAt, JSON.stringify(link.rating));
     }
-    if (link.addedAt) {
-      insertProvenance.run('track', trackId, 'file.addedAt', 'vendor-library', vendor, link.title ?? link.fileName ?? null, 0.8, observedAt, JSON.stringify(link.addedAt));
-    }
+      if (link.addedAt) {
+        insertProvenance.run('track', trackId, 'file.addedAt', 'vendor-library', vendor, link.title ?? link.fileName ?? null, 0.8, observedAt, JSON.stringify(link.addedAt));
+      }
 
-    linkedCount += 1;
-  }
+      if ((link.cuePoints?.length ?? 0) > 0 || (link.loopPoints?.length ?? 0) > 0 || link.beatGrid) {
+        deleteBeatGridMarkers.run(trackId);
+        deleteBeatGrid.run(trackId);
+        deleteLoopPoints.run(trackId);
+        deleteCuePoints.run(trackId);
+
+        for (const cuePoint of link.cuePoints ?? []) {
+          insertCuePoint.run(
+            randomUUID(),
+            trackId,
+            cuePoint.name ?? null,
+            cuePoint.type,
+            cuePoint.cueIndex ?? null,
+            cuePoint.startSec,
+            cuePoint.color ?? null,
+            cuePoint.comment ?? null,
+          );
+        }
+
+        for (const loopPoint of link.loopPoints ?? []) {
+          insertLoopPoint.run(
+            randomUUID(),
+            trackId,
+            loopPoint.name ?? null,
+            loopPoint.startSec,
+            loopPoint.endSec,
+            loopPoint.loopIndex ?? null,
+            loopPoint.active ? 1 : 0,
+            loopPoint.color ?? null,
+          );
+        }
+
+        if (link.beatGrid) {
+          insertBeatGrid.run(
+            trackId,
+            link.beatGrid.anchorSec,
+            link.beatGrid.bpm,
+            link.beatGrid.meterNumerator ?? null,
+            link.beatGrid.meterDenominator ?? null,
+            link.beatGrid.locked ? 1 : 0,
+          );
+
+          for (const [index, marker] of link.beatGrid.markers.entries()) {
+            insertBeatGridMarker.run(trackId, index, marker.startSec, marker.bpm, marker.beatNumber ?? null);
+          }
+        }
+      }
+
+      linkedCount += 1;
+    }
 
   return {
     linkedCount,
@@ -350,16 +474,87 @@ function extractRekordboxLinks(xml: string): VendorTrackLink[] {
   }
 
   return findChildren(collection, 'TRACK')
-    .map((trackNode) => ({
-      vendor: 'rekordbox' as const,
-      title: normalizeText(trackNode.attributes.Name),
-      fileName: normalizeLocationFileName(trackNode.attributes.Location ?? null),
-      comment: normalizeText(trackNode.attributes.Comments),
-      rating: parseOptionalRating(trackNode.attributes.Rating),
-      addedAt: parseOptionalDate(trackNode.attributes.DateAdded),
-      rekordboxTrackId: trackNode.attributes.TrackID ?? undefined,
-      rekordboxLocationUri: trackNode.attributes.Location ?? undefined,
-    }))
+    .map((trackNode) => {
+      const positionMarks = findChildren(trackNode, 'POSITION_MARK');
+      const tempos = findChildren(trackNode, 'TEMPO');
+      const cuePoints: VendorCuePoint[] = positionMarks
+        .map((mark) => {
+          const startSec = parseOptionalFloat(mark.attributes.Start);
+          if (startSec === null) {
+            return null;
+          }
+          const typeCode = mark.attributes.Type ?? '0';
+          const num = parseOptionalInt(mark.attributes.Num);
+          const mappedType: VendorCuePoint['type'] =
+            typeCode === '0' ? 'memory' :
+            typeCode === '1' ? 'hotcue' :
+            typeCode === '3' ? 'load' :
+            'memory';
+          return {
+            name: normalizeText(mark.attributes.Name) ?? null,
+            type: mappedType,
+            cueIndex: num,
+            startSec,
+            color: normalizeText(mark.attributes.Color) ?? null,
+            comment: normalizeText(mark.attributes.Comment) ?? null,
+          };
+        })
+        .filter(isPresent);
+      const loopPoints: VendorLoopPoint[] = positionMarks
+        .map((mark) => {
+          const startSec = parseOptionalFloat(mark.attributes.Start);
+          const endSec = parseOptionalFloat(mark.attributes.End);
+          if (startSec === null || endSec === null || endSec <= startSec) {
+            return null;
+          }
+          return {
+            name: normalizeText(mark.attributes.Name) ?? null,
+            startSec,
+            endSec,
+            loopIndex: parseOptionalInt(mark.attributes.Num),
+            active: false,
+            color: normalizeText(mark.attributes.Color) ?? null,
+          };
+        })
+        .filter(isPresent);
+      const beatGrid = tempos.length > 0
+        ? {
+            anchorSec: parseOptionalFloat(tempos[0].attributes.Inizio) ?? 0,
+            bpm: parseOptionalFloat(tempos[0].attributes.Bpm) ?? 0,
+            meterNumerator: parseOptionalInt(tempos[0].attributes.Battito),
+            meterDenominator: 4,
+            locked: true,
+            markers: tempos
+              .map((tempo) => {
+                const startSec = parseOptionalFloat(tempo.attributes.Inizio);
+                const bpm = parseOptionalFloat(tempo.attributes.Bpm);
+                if (startSec === null || bpm === null) {
+                  return null;
+                }
+                return {
+                  startSec,
+                  bpm,
+                  beatNumber: parseOptionalInt(tempo.attributes.Battito),
+                };
+              })
+              .filter(isPresent),
+          }
+        : null;
+
+      return {
+        vendor: 'rekordbox' as const,
+        title: normalizeText(trackNode.attributes.Name),
+        fileName: normalizeLocationFileName(trackNode.attributes.Location ?? null),
+        comment: normalizeText(trackNode.attributes.Comments),
+        rating: parseOptionalRating(trackNode.attributes.Rating),
+        addedAt: parseOptionalDate(trackNode.attributes.DateAdded),
+        rekordboxTrackId: trackNode.attributes.TrackID ?? undefined,
+        rekordboxLocationUri: trackNode.attributes.Location ?? undefined,
+        cuePoints,
+        loopPoints,
+        beatGrid,
+      };
+    })
     .filter((link) => Boolean(link.rekordboxTrackId || link.rekordboxLocationUri));
 }
 
@@ -440,8 +635,72 @@ function collectTraktorTrackLinks(root: XmlNode): VendorTrackLink[] {
     .map((entry) => {
       const location = findFirstChild(entry, 'LOCATION');
       const info = findFirstChild(entry, 'INFO');
+      const cues = findChildren(entry, 'CUE_V2');
+      const tempos = findChildren(entry, 'TEMPO');
       const dir = location?.attributes.DIR ?? '';
       const fileName = location?.attributes.FILE ?? null;
+      const cuePoints: VendorCuePoint[] = cues
+        .map((cue) => {
+          const startSec = parseOptionalFloat(cue.attributes.START ?? cue.attributes.STARTPOINT);
+          if (startSec === null) {
+            return null;
+          }
+          const typeName = (cue.attributes.TYPE ?? '').toUpperCase();
+          const mappedType: VendorCuePoint['type'] =
+            typeName.includes('LOAD') ? 'load' :
+            typeName.includes('GRID') ? 'grid' :
+            typeName.includes('HOTCUE') || typeName.includes('CUE') ? 'hotcue' :
+            'memory';
+          return {
+            name: normalizeText(cue.attributes.NAME) ?? null,
+            type: mappedType,
+            cueIndex: parseOptionalInt(cue.attributes.HOTCUE),
+            startSec,
+            color: normalizeText(cue.attributes.COLOR) ?? null,
+            comment: normalizeText(cue.attributes.COMMENT) ?? null,
+          };
+        })
+        .filter(isPresent);
+      const loopPoints: VendorLoopPoint[] = cues
+        .map((cue) => {
+          const startSec = parseOptionalFloat(cue.attributes.START ?? cue.attributes.STARTPOINT);
+          const endSec = parseOptionalFloat(cue.attributes.END ?? cue.attributes.ENDPOINT);
+          if (startSec === null || endSec === null || endSec <= startSec) {
+            return null;
+          }
+          return {
+            name: normalizeText(cue.attributes.NAME) ?? null,
+            startSec,
+            endSec,
+            loopIndex: parseOptionalInt(cue.attributes.HOTCUE),
+            active: false,
+            color: normalizeText(cue.attributes.COLOR) ?? null,
+          };
+        })
+        .filter(isPresent);
+      const beatGrid = tempos.length > 0
+        ? {
+            anchorSec: parseOptionalFloat(tempos[0].attributes.POSITION) ?? 0,
+            bpm: parseOptionalFloat(tempos[0].attributes.BPM) ?? 0,
+            meterNumerator: parseOptionalInt(tempos[0].attributes.METER ?? tempos[0].attributes.NUMERATOR),
+            meterDenominator: 4,
+            locked: true,
+            markers: tempos
+              .map((tempo) => {
+                const startSec = parseOptionalFloat(tempo.attributes.POSITION);
+                const bpm = parseOptionalFloat(tempo.attributes.BPM);
+                if (startSec === null || bpm === null) {
+                  return null;
+                }
+                return {
+                  startSec,
+                  bpm,
+                  beatNumber: parseOptionalInt(tempo.attributes.BEAT),
+                };
+              })
+              .filter(isPresent),
+          }
+        : null;
       return {
         vendor: 'traktor' as const,
         title: normalizeText(entry.attributes.TITLE),
@@ -451,6 +710,9 @@ function collectTraktorTrackLinks(root: XmlNode): VendorTrackLink[] {
         addedAt: parseOptionalDate(info?.attributes.IMPORT_DATE ?? entry.attributes.DATE_ADDED),
         traktorAudioId: entry.attributes.AUDIO_ID ?? undefined,
         traktorCollectionPathKey: `${dir}${fileName ?? ''}` || undefined,
+        cuePoints,
+        loopPoints,
+        beatGrid,
       };
     })
     .filter((link) => Boolean(link.traktorAudioId || link.traktorCollectionPathKey));

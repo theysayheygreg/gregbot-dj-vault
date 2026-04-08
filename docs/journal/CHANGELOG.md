@@ -202,6 +202,7 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - backlog fixture-parser items for Rekordbox and Traktor are now real capabilities
 - history import now prefers vendor-native app IDs and location keys before falling back to title/file-name matching
 - library-state import now carries selected vendor track metadata and non-history playlist trees into the catalog
+- library-state import now also maps fixture-oriented vendor cue, loop, and tempo/grid data into DJ Vault analysis tables
 
 ### Why
 

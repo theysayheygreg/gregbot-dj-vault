@@ -5,6 +5,11 @@
     <ENTRY TITLE="Funk" ARTIST="DJ Vault" AUDIO_ID="track-funk">
       <INFO COMMENT="Warehouse staple" RANKING="4" IMPORT_DATE="2026-04-02 03:15:00"/>
       <LOCATION DIR="/:Volumes/:Music/:" FILE="Funk.aiff"/>
+      <TEMPO POSITION="0.000" BPM="128.00" METER="1"/>
+      <TEMPO POSITION="32.000" BPM="128.00" METER="1"/>
+      <CUE_V2 NAME="Load In" TYPE="LOAD" START="0.500" COLOR="#ff9900" COMMENT="Open on phrase"/>
+      <CUE_V2 NAME="Peak Cue" TYPE="HOTCUE" HOTCUE="1" START="64.000" COLOR="#00ccff" COMMENT="Main peak"/>
+      <CUE_V2 NAME="Loop Tension" TYPE="LOOP" HOTCUE="2" START="96.000" END="104.000" COLOR="#33cc66" COMMENT="8-beat loop"/>
     </ENTRY>
   </COLLECTION>
   <PLAYLISTS>

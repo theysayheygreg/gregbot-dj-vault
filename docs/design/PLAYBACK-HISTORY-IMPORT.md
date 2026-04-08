@@ -115,6 +115,13 @@ That is why the vendor collection import commands matter: they let DJ Vault bind
 
 The newer library-state import commands go one step further: they bind vendor-native IDs, import selected track metadata like rating/comment/added date, and compile non-history playlist trees into DJ Vault playlists with stable external links.
 
+They also now map fixture-oriented analysis state into DJ Vault analysis tables:
+
+- Rekordbox `POSITION_MARK` -> `cue_points` / `loop_points`
+- Rekordbox `TEMPO` -> `beat_grids` / `beat_grid_markers`
+- Traktor `CUE_V2` -> `cue_points` / `loop_points`
+- Traktor `TEMPO` -> `beat_grids` / `beat_grid_markers`
+
 ## Current Matching Behavior
 
 Imported events resolve tracks by:
