@@ -11,6 +11,7 @@ type TrackRow = {
   canonical_path: string;
   file_name: string;
   extension: string;
+  added_at: string;
   title: string;
   mix_name: string | null;
   album: string | null;
@@ -192,6 +193,8 @@ function buildTrackMarkdown(track: TrackRow, people: TrackPersonRow[], tags: Tra
     `- liked: ${track.liked ? 'yes' : 'no'}`,
     `- hidden: ${track.hidden ? 'yes' : 'no'}`,
     `- play_count: ${track.play_count}`,
+    `- added_at: ${track.added_at}`,
+    `- last_played_at: ${track.last_played_at ?? 'never'}`,
     '',
     '## File',
     `- canonical_path: ${track.canonical_path}`,
@@ -362,7 +365,7 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
   try {
     const tracks = database.prepare(`
       SELECT
-        id, canonical_path, file_name, extension, title, mix_name, album, label, year, genre,
+        id, canonical_path, file_name, extension, added_at, title, mix_name, album, label, year, genre,
         bpm, bpm_float, key_display, key_camelot, key_open_key, energy, color, rating,
         comment, description, play_count, liked, hidden, rekordbox_track_id, rekordbox_location_uri,
         traktor_collection_path_key, traktor_audio_id, source, source_url

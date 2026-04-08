@@ -1,4 +1,4 @@
-export const catalogSchemaVersion = 2;
+export const catalogSchemaVersion = 3;
 
 export const catalogSchemaSql = `
 PRAGMA foreign_keys = ON;
@@ -226,6 +226,29 @@ CREATE TABLE IF NOT EXISTS export_jobs (
   note TEXT
 );
 
+CREATE TABLE IF NOT EXISTS playback_sessions (
+  id TEXT PRIMARY KEY,
+  started_at TEXT NOT NULL,
+  ended_at TEXT,
+  source_kind TEXT NOT NULL,
+  source_ref TEXT,
+  venue TEXT,
+  context TEXT,
+  note TEXT
+);
+
+CREATE TABLE IF NOT EXISTS playback_events (
+  id TEXT PRIMARY KEY,
+  session_id TEXT REFERENCES playback_sessions(id) ON DELETE SET NULL,
+  track_id TEXT NOT NULL REFERENCES tracks(id) ON DELETE CASCADE,
+  played_at TEXT NOT NULL,
+  position_in_session INTEGER,
+  source_kind TEXT NOT NULL,
+  source_ref TEXT,
+  confidence REAL,
+  note TEXT
+);
+
 CREATE TABLE IF NOT EXISTS vault_nodes (
   id TEXT PRIMARY KEY,
   name TEXT NOT NULL UNIQUE,
@@ -289,6 +312,9 @@ CREATE INDEX IF NOT EXISTS idx_track_tags_kind_value ON track_tags(tag_kind, val
 CREATE INDEX IF NOT EXISTS idx_playlist_items_track_id ON playlist_items(track_id);
 CREATE INDEX IF NOT EXISTS idx_set_tracks_track_id ON set_tracks(track_id);
 CREATE INDEX IF NOT EXISTS idx_metadata_provenance_lookup ON metadata_provenance(entity_kind, entity_id, field_path);
+CREATE INDEX IF NOT EXISTS idx_playback_events_track_id ON playback_events(track_id);
+CREATE INDEX IF NOT EXISTS idx_playback_events_session_id ON playback_events(session_id);
+CREATE INDEX IF NOT EXISTS idx_playback_events_played_at ON playback_events(played_at);
 CREATE INDEX IF NOT EXISTS idx_storage_locations_node_id ON storage_locations(node_id);
 CREATE INDEX IF NOT EXISTS idx_track_residencies_storage_location_id ON track_residencies(storage_location_id);
 CREATE INDEX IF NOT EXISTS idx_export_execution_plans_node_id ON export_execution_plans(execution_node_id);

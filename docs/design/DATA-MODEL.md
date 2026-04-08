@@ -79,6 +79,14 @@ type Track = {
     lastPlayedAt?: string;
     liked?: boolean;
     hidden?: boolean;
+    recency?: {
+      addedDaysAgo?: number;
+      playedDaysAgo?: number;
+      recentSessionCount?: number;
+      recencyBucket?: 'new' | 'hot' | 'cooling' | 'dormant' | 'never-played';
+      mentalWeight?: 'front-of-mind' | 'active-option' | 'archive-pressure' | 'unknown';
+      recencyScore?: number;
+    };
   };
 
   links: {
@@ -204,6 +212,37 @@ type SetTrack = {
 ```
 
 **The distinction:** Playlists are dumb collections. Sets are sequences with intent. See [PILLARS.md](PILLARS.md#5-sets-are-not-playlists).
+
+---
+
+## Playback History
+
+Playback history is a first-class source of truth for recency.
+
+```ts
+type PlaybackSession = {
+  id: string;
+  startedAt: string;
+  endedAt?: string;
+  sourceKind: string;         // dj-vault | rekordbox-history | traktor-history
+  sourceRef?: string;
+  venue?: string;
+  context?: string;
+  note?: string;
+};
+
+type PlaybackEvent = {
+  id: string;
+  sessionId?: string;
+  trackId: string;
+  playedAt: string;
+  positionInSession?: number;
+  sourceKind: string;
+  sourceRef?: string;
+  confidence?: number;
+  note?: string;
+};
+```
 
 ---
 

@@ -148,6 +148,16 @@ npm run catalog:register-storage -- <node-id> "Main Library" local-disk /Volumes
 npm run catalog:plan-export-execution -- usb-device <node-id> <source-storage-id> <destination-storage-id> tailscale remote
 ```
 
+To start tracking recency and playback history:
+
+```bash
+npm run catalog:create-playback-session -- dj-vault "Warehouse" "Friday peak"
+npm run catalog:log-playback-event -- "Track Title" dj-vault <session-id>
+npm run catalog:recency-report
+```
+
+That recency layer is meant to absorb both native DJ Vault playback history and imported vendor history later, including Rekordbox/Traktor-style "added", "last played", and session/history artifacts.
+
 To set up local QMD search collections for DJ Vault:
 
 ```bash
@@ -167,6 +177,7 @@ npm run catalog:qmd:embed
 - [Data Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DATA-MODEL.md)
 - [Distributed Topology](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DISTRIBUTED-TOPOLOGY.md)
 - [QMD Integration](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/QMD-INTEGRATION.md)
+- [Recency Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/RECENCY-MODEL.md)
 - [SQLite Schema](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/SQLITE-SCHEMA.md)
 - [Research Program](/Users/theysayheygreg/clawd/projects/dj-vault/docs/project/RESEARCH-PROGRAM.md)
 - [First 10 Days](/Users/theysayheygreg/clawd/projects/dj-vault/docs/project/FIRST-10-DAYS.md)

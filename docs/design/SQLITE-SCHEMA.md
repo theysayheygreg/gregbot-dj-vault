@@ -50,6 +50,8 @@ It is not the final shape. It is the first shape that is:
 - `import_jobs`
 - `export_jobs`
 - `app_metadata`
+- `playback_sessions`
+- `playback_events`
 
 ### Topology and remote execution
 
@@ -66,6 +68,7 @@ It is not the final shape. It is the first shape that is:
 - Metadata provenance is a first-class table now, because the north star depends on tracking where important values came from.
 - Import/export jobs are in the schema from the beginning so operational history does not become an afterthought.
 - Storage topology is now modeled explicitly so the project can separate catalog location, media location, and export-execution location.
+- Recency is now backed by real playback-session and playback-event tables instead of only `last_played_at` and `play_count`.
 
 ## Current Gaps
 

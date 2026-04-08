@@ -173,3 +173,21 @@ The catalog needed to stop being ingest-only. Playlists and sets are core produc
 ### Why
 
 DJ Vault needs to support the real-world case where the database, the full library, and the USB/export destination do not live on the same machine. This scaffolding is the foundation for remote export and transport-aware planning.
+
+## 2026-04-08 — Recency and playback history model
+
+### Added
+
+- `packages/catalog/src/recency.ts`
+- playback session, playback event, and recency-report CLIs
+- `docs/design/RECENCY-MODEL.md`
+
+### Changed
+
+- schema now includes `playback_sessions` and `playback_events`
+- data model now treats recency as a first-class usage concept instead of only a bare timestamp/count pair
+- generated QMD track documents now include added/played recency timestamps
+
+### Why
+
+Recency has real DJ meaning. Tracks that are new, hot, cooling, dormant, or never played carry different mental weight during selection, and vendor history logs are useful source evidence for that model.
