@@ -166,6 +166,18 @@ npm run catalog:import-playback-history -- /absolute/path/to/playback-history.js
 
 A tracked example import payload lives at [docs/reference/playback-history.sample.json](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/playback-history.sample.json), and the import contract is documented in [Playback History Import](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/PLAYBACK-HISTORY-IMPORT.md).
 
+To compile and import fixture-oriented vendor history directly:
+
+```bash
+npm run catalog:import-rekordbox-history -- /absolute/path/to/rekordbox-history.xml
+npm run catalog:import-traktor-history -- /absolute/path/to/traktor-history.nml
+```
+
+Tracked sample fixtures live at:
+
+- [docs/reference/rekordbox-history.sample.xml](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/rekordbox-history.sample.xml)
+- [docs/reference/traktor-history.sample.nml](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/traktor-history.sample.nml)
+
 To set up local QMD search collections for DJ Vault:
 
 ```bash

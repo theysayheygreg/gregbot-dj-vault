@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NML VERSION="19">
+  <HEAD COMPANY="Native Instruments" PROGRAM="Traktor Pro" VERSION="4.4.2"/>
+  <COLLECTION ENTRIES="1">
+    <ENTRY TITLE="Funk" ARTIST="DJ Vault" AUDIO_ID="track-funk">
+      <LOCATION DIR="/:Volumes/:Music/:" FILE="Funk.aiff"/>
+    </ENTRY>
+  </COLLECTION>
+  <PLAYLISTS>
+    <NODE NAME="ROOT" TYPE="FOLDER">
+      <SUBNODES>
+        <NODE NAME="History" TYPE="FOLDER">
+          <SUBNODES>
+            <NODE NAME="2026-04-06 01:15 Warehouse Peak" TYPE="PLAYLIST">
+              <PLAYLIST ENTRIES="1">
+                <ENTRY>
+                  <PRIMARYKEY TYPE="TRACK" KEY="track-funk"/>
+                </ENTRY>
+              </PLAYLIST>
+            </NODE>
+          </SUBNODES>
+        </NODE>
+      </SUBNODES>
+    </NODE>
+  </PLAYLISTS>
+</NML>

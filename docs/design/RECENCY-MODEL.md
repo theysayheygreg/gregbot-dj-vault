@@ -90,6 +90,8 @@ The canonical import contract is documented in:
 
 - `docs/design/PLAYBACK-HISTORY-IMPORT.md`
 - `docs/reference/playback-history.sample.json`
+- `docs/reference/rekordbox-history.sample.xml`
+- `docs/reference/traktor-history.sample.nml`
 
 ## Near-Term Next Step
 

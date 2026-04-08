@@ -40,6 +40,8 @@
     "catalog:log-playback-event": "npm run log:playback-event --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:recency-report": "npm run recency:report --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:import-playback-history": "npm run import:playback-history --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:import-rekordbox-history": "npm run import:rekordbox-history --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:import-traktor-history": "npm run import:traktor-history --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:register-node": "npm run register:node --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:register-storage": "npm run register:storage --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:record-track-residency": "npm run record:track-residency --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",

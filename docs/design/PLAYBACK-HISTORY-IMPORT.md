@@ -54,6 +54,44 @@ What DJ Vault needs is a stable internal landing zone for:
 
 This import seam gives us that landing zone now.
 
+## Vendor Fixture Compilers
+
+DJ Vault now also includes fixture-oriented vendor compilers that target this canonical shape:
+
+- `packages/catalog/src/vendor-history.ts`
+- `packages/catalog/src/cli/import-rekordbox-history.ts`
+- `packages/catalog/src/cli/import-traktor-history.ts`
+
+Current direct commands:
+
+- `npm run catalog:import-rekordbox-history -- <rekordbox-history-xml-path>`
+- `npm run catalog:import-traktor-history -- <traktor-history-nml-path>`
+
+Tracked fixture examples:
+
+- `docs/reference/rekordbox-history.sample.xml`
+- `docs/reference/traktor-history.sample.nml`
+
+These compilers are intentionally narrow right now.
+
+They are meant to prove the canonical landing zone and exercise real vendor-flavored structure without claiming full parser parity for every export/history variant in the wild.
+
+## Current Vendor Assumptions
+
+The current Rekordbox compiler assumes:
+
+- collection tracks are declared in `COLLECTION`
+- history playlists live under a `NODE` named `HISTORY`
+- session membership comes from ordered `TRACK Key="..."`
+
+The current Traktor compiler assumes:
+
+- collection entries live in `COLLECTION`
+- history playlists live under a `NODE` named `History`
+- session membership comes from `PLAYLIST > ENTRY > PRIMARYKEY`
+
+When exact event timestamps are absent, DJ Vault currently infers event order from playlist order and assigns synthetic per-track times one minute apart from the parsed session start.
+
 ## Current Matching Behavior
 
 Imported events resolve tracks by:

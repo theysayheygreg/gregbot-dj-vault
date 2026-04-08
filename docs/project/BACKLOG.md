@@ -21,8 +21,8 @@
 - [ ] Track ingest CLI
 - [ ] Embedded metadata read path
 - [ ] Provenance data structures for conflicting values
-- [ ] Traktor NML fixture parser
-- [ ] Rekordbox XML fixture parser
+- [x] Traktor NML fixture parser
+- [x] Rekordbox XML fixture parser
 - [ ] First release-note corpus summaries
 - [ ] First USB/export workflow findings
 - [ ] Native Instruments anti-bot/access strategy note

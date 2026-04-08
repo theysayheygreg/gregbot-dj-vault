@@ -4,5 +4,7 @@ export * from './ingest-files.js';
 export * from './authoring.js';
 export * from './recency.js';
 export * from './history-import.js';
+export * from './vendor-history.js';
 export * from './topology.js';
 export * from './qmd.js';
+export * from './xml.js';

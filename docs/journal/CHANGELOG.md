@@ -185,6 +185,10 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - playback-history import CLI in `packages/catalog/src/cli/import-playback-history.ts`
 - `docs/design/PLAYBACK-HISTORY-IMPORT.md`
 - `docs/reference/playback-history.sample.json`
+- `packages/catalog/src/vendor-history.ts`
+- vendor-specific history import CLIs for `rekordbox` XML and Traktor NML
+- `docs/reference/rekordbox-history.sample.xml`
+- `docs/reference/traktor-history.sample.nml`
 
 ### Changed
 
@@ -192,6 +196,7 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - data model now treats recency as a first-class usage concept instead of only a bare timestamp/count pair
 - generated QMD track documents now include added/played recency timestamps
 - README now documents the canonical playback-history import seam
+- backlog fixture-parser items for Rekordbox and Traktor are now real capabilities
 
 ### Why
 

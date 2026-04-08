@@ -23,6 +23,8 @@
     "log:playback-event": "node dist/cli/log-playback-event.js",
     "recency:report": "node dist/cli/recency-report.js",
     "import:playback-history": "node dist/cli/import-playback-history.js",
+    "import:rekordbox-history": "node dist/cli/import-rekordbox-history.js",
+    "import:traktor-history": "node dist/cli/import-traktor-history.js",
     "register:node": "node dist/cli/register-node.js",
     "register:storage": "node dist/cli/register-storage.js",
     "record:track-residency": "node dist/cli/record-track-residency.js",

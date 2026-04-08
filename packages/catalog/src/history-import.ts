@@ -68,7 +68,10 @@ function resolveTrack(database: DatabaseSync, trackRef: string): TrackMatch | nu
 }
 
 export async function importPlaybackHistoryFromFile(databasePath: string, historyFilePath: string): Promise<PlaybackHistoryImportResult> {
-  const payload = JSON.parse(await readFile(historyFilePath, 'utf8')) as PlaybackHistoryImportFile;
+  return importPlaybackHistory(databasePath, JSON.parse(await readFile(historyFilePath, 'utf8')) as PlaybackHistoryImportFile);
+}
+
+export async function importPlaybackHistory(databasePath: string, payload: PlaybackHistoryImportFile): Promise<PlaybackHistoryImportResult> {
   const database = new DatabaseSync(databasePath);
 
   try {
