@@ -2,6 +2,8 @@
 
 DJ Vault is a local-first DJ music operating system.
 
+It now includes a first-class `qmd` search lane for local keyword, vector, and hybrid search across generated track metadata documents, project docs, manifests, and research notes.
+
 The project now has two jobs:
 
 1. Build a clean-slate library, metadata, import, export, and visibility toolchain for DJs.
@@ -14,6 +16,7 @@ The north star is straightforward: give DJs one source of truth for music, metad
 - A canonical music library that does not depend on Apple Music, iTunes, TIDAL, Rekordbox Cloud, or other paid/cloud lock-in.
 - A metadata engine that merges the best available truth from tags, store data, analysis tools, legacy DJ software, and user curation.
 - An integration/export engine that can compile DJ Vault state into app- and hardware-specific views.
+- A local semantic search layer powered by `qmd` for cross-references across track metadata, project docs, and research notes.
 - Visibility layers for closed ecosystems where direct modification is not practical.
 - An emulation program for club workflows, especially Pioneer/AlphaTheta and Native Instruments surfaces.
 - A reverse-engineering corpus for firmware, desktop apps, export formats, and device behavior.
@@ -127,10 +130,24 @@ To ingest into DJ Vault's managed library root instead of keeping source paths a
 npm run catalog:ingest -- --library-root /absolute/path/to/dj-vault-library /absolute/path/to/music
 ```
 
+To set up local QMD search collections for DJ Vault:
+
+```bash
+npm run catalog:qmd:setup
+npm run catalog:qmd:update
+```
+
+To build vector embeddings for semantic search:
+
+```bash
+npm run catalog:qmd:embed
+```
+
 ## Important Docs
 
 - [Architecture](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/ARCHITECTURE.md)
 - [Data Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DATA-MODEL.md)
+- [QMD Integration](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/QMD-INTEGRATION.md)
 - [SQLite Schema](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/SQLITE-SCHEMA.md)
 - [Research Program](/Users/theysayheygreg/clawd/projects/dj-vault/docs/project/RESEARCH-PROGRAM.md)
 - [First 10 Days](/Users/theysayheygreg/clawd/projects/dj-vault/docs/project/FIRST-10-DAYS.md)

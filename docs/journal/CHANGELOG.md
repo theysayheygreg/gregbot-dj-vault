@@ -120,3 +120,21 @@ The repo needed a clear cross-vendor catalog of software, firmware, and booth-fa
 ### Why
 
 The earlier sequential mapping left the largest Engine payloads mislabeled as `uboot`, which would have contaminated later reverse-engineering work. This fixes the naming at the source and records a more truthful artifact catalog.
+
+## 2026-04-08 — QMD search integration
+
+### Added
+
+- `@tobilu/qmd` as a repo dependency
+- `packages/catalog/src/qmd.ts`
+- catalog QMD CLIs for export, setup, update, embed, and status
+- `docs/design/QMD-INTEGRATION.md`
+
+### Changed
+
+- `README.md` now documents QMD as a first-class DJ Vault search subsystem
+- root package scripts now expose QMD setup and sync commands
+
+### Why
+
+DJ Vault needs more than exact-match lookup. QMD gives the project a local semantic search layer that can connect track metadata, research notes, and project documentation without adding a cloud dependency.

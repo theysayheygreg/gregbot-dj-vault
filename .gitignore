@@ -3,6 +3,7 @@ dist/
 .DS_Store
 tmp/
 data/*.sqlite*
+data/qmd/
 research/corpus/
 research/downloads/
 research/tmp/

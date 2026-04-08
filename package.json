@@ -32,6 +32,14 @@
     "corpus:generate-cross-vendor-catalog": "npm run generate:cross-vendor-catalog --workspace @dj-vault/corpus -- /Users/theysayheygreg/clawd/projects/dj-vault/research/manifests",
     "catalog:init": "npm run init --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:ingest": "npm run ingest:files --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:qmd:export": "npm run qmd:export --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",
+    "catalog:qmd:setup": "npm run qmd:setup --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",
+    "catalog:qmd:update": "npm run qmd:update --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",
+    "catalog:qmd:embed": "npm run qmd:embed --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
+    "catalog:qmd:status": "npm run qmd:status --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
     "dev": "npm run dev --workspace @dj-vault/desktop"
+  },
+  "devDependencies": {
+    "@tobilu/qmd": "^2.1.0"
   }
 }

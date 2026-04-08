@@ -14,7 +14,12 @@
     "build": "tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
     "init": "node dist/cli/init-catalog.js",
-    "ingest:files": "node dist/cli/ingest-files.js"
+    "ingest:files": "node dist/cli/ingest-files.js",
+    "qmd:export": "node dist/cli/qmd-export.js",
+    "qmd:setup": "node dist/cli/qmd-setup.js",
+    "qmd:update": "node dist/cli/qmd-update.js",
+    "qmd:embed": "node dist/cli/qmd-embed.js",
+    "qmd:status": "node dist/cli/qmd-status.js"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
