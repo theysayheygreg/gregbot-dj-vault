@@ -66,8 +66,10 @@ Current direct commands:
 
 - `npm run catalog:import-rekordbox-collection -- <rekordbox-xml-path>`
 - `npm run catalog:import-rekordbox-history -- <rekordbox-history-xml-path>`
+- `npm run catalog:import-rekordbox-library -- <rekordbox-xml-path>`
 - `npm run catalog:import-traktor-collection -- <traktor-nml-path>`
 - `npm run catalog:import-traktor-history -- <traktor-history-nml-path>`
+- `npm run catalog:import-traktor-library -- <traktor-nml-path>`
 
 Tracked fixture examples:
 
@@ -110,6 +112,8 @@ Current preferred matches are:
 If those are not present, DJ Vault still falls back to UUID, SHA-256, exact title, and exact file name.
 
 That is why the vendor collection import commands matter: they let DJ Vault bind app-native identities onto catalog tracks before session history is imported.
+
+The newer library-state import commands go one step further: they bind vendor-native IDs, import selected track metadata like rating/comment/added date, and compile non-history playlist trees into DJ Vault playlists with stable external links.
 
 ## Current Matching Behavior
 

@@ -160,6 +160,10 @@ type Playlist = {
     traktor?: { enabled: boolean; name?: string; folderPath?: string };
     rekordbox?: { enabled: boolean; name?: string; folderPath?: string };
   };
+  externalLinks?: {
+    rekordbox?: { sourceRef: string };
+    traktor?: { sourceRef: string };
+  };
 };
 
 type PlaylistItem = {

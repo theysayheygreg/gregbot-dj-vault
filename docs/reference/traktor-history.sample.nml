@@ -3,12 +3,24 @@
   <HEAD COMPANY="Native Instruments" PROGRAM="Traktor Pro" VERSION="4.4.2"/>
   <COLLECTION ENTRIES="1">
     <ENTRY TITLE="Funk" ARTIST="DJ Vault" AUDIO_ID="track-funk">
+      <INFO COMMENT="Warehouse staple" RANKING="4" IMPORT_DATE="2026-04-02 03:15:00"/>
       <LOCATION DIR="/:Volumes/:Music/:" FILE="Funk.aiff"/>
     </ENTRY>
   </COLLECTION>
   <PLAYLISTS>
     <NODE NAME="ROOT" TYPE="FOLDER">
       <SUBNODES>
+        <NODE NAME="Imported" TYPE="FOLDER">
+          <SUBNODES>
+            <NODE NAME="Late Set" TYPE="PLAYLIST">
+              <PLAYLIST ENTRIES="1">
+                <ENTRY>
+                  <PRIMARYKEY TYPE="TRACK" KEY="track-funk"/>
+                </ENTRY>
+              </PLAYLIST>
+            </NODE>
+          </SUBNODES>
+        </NODE>
         <NODE NAME="History" TYPE="FOLDER">
           <SUBNODES>
             <NODE NAME="2026-04-06 01:15 Warehouse Peak" TYPE="PLAYLIST">

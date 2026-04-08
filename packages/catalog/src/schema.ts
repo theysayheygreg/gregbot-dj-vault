@@ -1,4 +1,4 @@
-export const catalogSchemaVersion = 3;
+export const catalogSchemaVersion = 4;
 
 export const catalogSchemaSql = `
 PRAGMA foreign_keys = ON;
@@ -142,6 +142,15 @@ CREATE TABLE IF NOT EXISTS playlist_items (
   note TEXT,
   transition_note TEXT,
   PRIMARY KEY (playlist_id, position)
+);
+
+CREATE TABLE IF NOT EXISTS external_playlist_links (
+  vendor TEXT NOT NULL,
+  source_ref TEXT NOT NULL,
+  playlist_id TEXT NOT NULL REFERENCES playlists(id) ON DELETE CASCADE,
+  parent_source_ref TEXT,
+  updated_at TEXT NOT NULL,
+  PRIMARY KEY (vendor, source_ref)
 );
 
 CREATE TABLE IF NOT EXISTS playlist_export_targets (
@@ -310,6 +319,7 @@ CREATE INDEX IF NOT EXISTS idx_tracks_title ON tracks(title);
 CREATE INDEX IF NOT EXISTS idx_tracks_artist_role ON track_people(role, name);
 CREATE INDEX IF NOT EXISTS idx_track_tags_kind_value ON track_tags(tag_kind, value);
 CREATE INDEX IF NOT EXISTS idx_playlist_items_track_id ON playlist_items(track_id);
+CREATE INDEX IF NOT EXISTS idx_external_playlist_links_playlist_id ON external_playlist_links(playlist_id);
 CREATE INDEX IF NOT EXISTS idx_set_tracks_track_id ON set_tracks(track_id);
 CREATE INDEX IF NOT EXISTS idx_metadata_provenance_lookup ON metadata_provenance(entity_kind, entity_id, field_path);
 CREATE INDEX IF NOT EXISTS idx_playback_events_track_id ON playback_events(track_id);

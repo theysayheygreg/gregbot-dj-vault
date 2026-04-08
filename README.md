@@ -180,6 +180,13 @@ npm run catalog:import-rekordbox-collection -- /absolute/path/to/rekordbox-expor
 npm run catalog:import-traktor-collection -- /absolute/path/to/traktor-collection.nml
 ```
 
+To import broader vendor library state, including track metadata and playlist membership:
+
+```bash
+npm run catalog:import-rekordbox-library -- /absolute/path/to/rekordbox-export.xml
+npm run catalog:import-traktor-library -- /absolute/path/to/traktor-collection.nml
+```
+
 Tracked sample fixtures live at:
 
 - [docs/reference/rekordbox-history.sample.xml](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/rekordbox-history.sample.xml)

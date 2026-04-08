@@ -189,6 +189,7 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - `packages/catalog/src/vendor-library.ts`
 - vendor-specific history import CLIs for `rekordbox` XML and Traktor NML
 - vendor-specific collection link import CLIs for `rekordbox` XML and Traktor NML
+- vendor-specific library-state import CLIs for `rekordbox` XML and Traktor NML
 - `docs/reference/rekordbox-history.sample.xml`
 - `docs/reference/traktor-history.sample.nml`
 
@@ -200,6 +201,7 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - README now documents the canonical playback-history import seam
 - backlog fixture-parser items for Rekordbox and Traktor are now real capabilities
 - history import now prefers vendor-native app IDs and location keys before falling back to title/file-name matching
+- library-state import now carries selected vendor track metadata and non-history playlist trees into the catalog
 
 ### Why
 

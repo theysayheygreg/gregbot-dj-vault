@@ -2,10 +2,15 @@
 <DJ_PLAYLISTS Version="1.0.0">
   <PRODUCT Name="rekordbox" Version="7.2.13" Company="AlphaTheta"/>
   <COLLECTION Entries="1">
-    <TRACK TrackID="1" Name="Funk" Artist="DJ Vault" Album="Warehouse Tools" Location="file://localhost/Volumes/Music/Funk.aiff"/>
+    <TRACK TrackID="1" Name="Funk" Artist="DJ Vault" Album="Warehouse Tools" Location="file://localhost/Volumes/Music/Funk.aiff" Comments="Warehouse staple" Rating="4" DateAdded="2026-04-01 04:30:00"/>
   </COLLECTION>
   <PLAYLISTS>
     <NODE Type="0" Name="ROOT">
+      <NODE Type="0" Name="Prep">
+        <NODE Type="1" Name="Warmup Imports" Entries="1">
+          <TRACK Key="1"/>
+        </NODE>
+      </NODE>
       <NODE Type="0" Name="HISTORY">
         <NODE Type="1" Name="2026-04-05 Warehouse Open" Entries="1">
           <TRACK Key="1"/>
