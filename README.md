@@ -130,6 +130,15 @@ To ingest into DJ Vault's managed library root instead of keeping source paths a
 npm run catalog:ingest -- --library-root /absolute/path/to/dj-vault-library /absolute/path/to/music
 ```
 
+To start authoring playlists and sets in the catalog:
+
+```bash
+npm run catalog:create-playlist -- "Warmup Crate"
+npm run catalog:create-set -- "Friday Peak" "Warehouse" 90 "dark and driving"
+npm run catalog:add-track-to-playlist -- <playlist-id> <track-id-or-title>
+npm run catalog:add-track-to-set -- <set-id> <track-id-or-title> builder blend
+```
+
 To set up local QMD search collections for DJ Vault:
 
 ```bash

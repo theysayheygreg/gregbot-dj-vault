@@ -139,3 +139,19 @@ The earlier sequential mapping left the largest Engine payloads mislabeled as `u
 ### Why
 
 DJ Vault needs more than exact-match lookup. QMD gives the project a local semantic search layer that can connect track metadata, research notes, and project documentation without adding a cloud dependency.
+
+## 2026-04-08 — Playlist and set authoring commands
+
+### Added
+
+- `packages/catalog/src/authoring.ts`
+- catalog CLIs for playlist creation, set creation, and appending tracks to playlists and sets
+
+### Changed
+
+- root scripts now expose playlist/set authoring commands against the main catalog DB
+- README and schema docs now describe playlist/set authoring as a real capability
+
+### Why
+
+The catalog needed to stop being ingest-only. Playlists and sets are core product objects, and real authoring commands are the cleanest first seam before wiring the desktop app to them.

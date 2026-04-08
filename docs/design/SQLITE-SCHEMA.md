@@ -69,6 +69,7 @@ It is not the final shape. It is the first shape that is:
 - Managed-library copy/import now exists as an optional mode that copies files into a hash-sharded canonical library root and preserves source-path provenance.
 - Embedded metadata extraction now covers basic title, duration, sample rate, bitrate, album, and artist fallback where available, but deeper analysis is still missing.
 - Catalog data can now be exported into QMD-ready markdown documents for local BM25/vector/hybrid search without coupling the search layer directly to SQLite.
+- Basic authoring commands now exist for creating playlists and DJ sets and appending tracks to each, so the schema is no longer only an ingest target.
 
 ## Immediate Next Step
 
