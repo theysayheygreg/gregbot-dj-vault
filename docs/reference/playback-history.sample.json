@@ -1,0 +1,23 @@
+{
+  "sessions": [
+    {
+      "startedAt": "2026-04-05T05:00:00Z",
+      "endedAt": "2026-04-05T06:30:00Z",
+      "sourceKind": "rekordbox-history",
+      "sourceRef": "History/2026-04-05/Warehouse-Open.xml",
+      "venue": "Warehouse",
+      "context": "Friday open",
+      "note": "Canonical sample import payload for DJ Vault history ingestion.",
+      "events": [
+        {
+          "trackRef": "Funk",
+          "playedAt": "2026-04-05T05:12:00Z",
+          "positionInSession": 1,
+          "sourceRef": "entry-1",
+          "confidence": 0.95,
+          "note": "Opening track"
+        }
+      ]
+    }
+  ]
+}

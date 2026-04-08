@@ -158,6 +158,14 @@ npm run catalog:recency-report
 
 That recency layer is meant to absorb both native DJ Vault playback history and imported vendor history later, including Rekordbox/Traktor-style "added", "last played", and session/history artifacts.
 
+To import canonical playback-history JSON into that recency model:
+
+```bash
+npm run catalog:import-playback-history -- /absolute/path/to/playback-history.json
+```
+
+A tracked example import payload lives at [docs/reference/playback-history.sample.json](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/playback-history.sample.json), and the import contract is documented in [Playback History Import](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/PLAYBACK-HISTORY-IMPORT.md).
+
 To set up local QMD search collections for DJ Vault:
 
 ```bash
@@ -177,6 +185,7 @@ npm run catalog:qmd:embed
 - [Data Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DATA-MODEL.md)
 - [Distributed Topology](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DISTRIBUTED-TOPOLOGY.md)
 - [QMD Integration](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/QMD-INTEGRATION.md)
+- [Playback History Import](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/PLAYBACK-HISTORY-IMPORT.md)
 - [Recency Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/RECENCY-MODEL.md)
 - [SQLite Schema](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/SQLITE-SCHEMA.md)
 - [Research Program](/Users/theysayheygreg/clawd/projects/dj-vault/docs/project/RESEARCH-PROGRAM.md)

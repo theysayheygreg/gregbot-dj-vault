@@ -84,6 +84,12 @@ That requires event history, not just a single timestamp.
 - `npm run catalog:create-playback-session -- <source-kind> [venue] [context] [note]`
 - `npm run catalog:log-playback-event -- <track-ref> <source-kind> [session-id] [note]`
 - `npm run catalog:recency-report`
+- `npm run catalog:import-playback-history -- <history-json-path>`
+
+The canonical import contract is documented in:
+
+- `docs/design/PLAYBACK-HISTORY-IMPORT.md`
+- `docs/reference/playback-history.sample.json`
 
 ## Near-Term Next Step
 

@@ -22,6 +22,7 @@
     "create:playback-session": "node dist/cli/create-playback-session.js",
     "log:playback-event": "node dist/cli/log-playback-event.js",
     "recency:report": "node dist/cli/recency-report.js",
+    "import:playback-history": "node dist/cli/import-playback-history.js",
     "register:node": "node dist/cli/register-node.js",
     "register:storage": "node dist/cli/register-storage.js",
     "record:track-residency": "node dist/cli/record-track-residency.js",

@@ -181,12 +181,17 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - `packages/catalog/src/recency.ts`
 - playback session, playback event, and recency-report CLIs
 - `docs/design/RECENCY-MODEL.md`
+- canonical playback-history importer in `packages/catalog/src/history-import.ts`
+- playback-history import CLI in `packages/catalog/src/cli/import-playback-history.ts`
+- `docs/design/PLAYBACK-HISTORY-IMPORT.md`
+- `docs/reference/playback-history.sample.json`
 
 ### Changed
 
 - schema now includes `playback_sessions` and `playback_events`
 - data model now treats recency as a first-class usage concept instead of only a bare timestamp/count pair
 - generated QMD track documents now include added/played recency timestamps
+- README now documents the canonical playback-history import seam
 
 ### Why
 
