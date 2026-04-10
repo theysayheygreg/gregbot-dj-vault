@@ -33,6 +33,8 @@
     "register:storage": "node dist/cli/register-storage.js",
     "record:track-residency": "node dist/cli/record-track-residency.js",
     "plan:export-execution": "node dist/cli/plan-export-execution.js",
+    "export:rekordbox-xml": "node dist/cli/export-rekordbox-xml.js",
+    "export:traktor-nml": "node dist/cli/export-traktor-nml.js",
     "qmd:export": "node dist/cli/qmd-export.js",
     "qmd:setup": "node dist/cli/qmd-setup.js",
     "qmd:update": "node dist/cli/qmd-update.js",

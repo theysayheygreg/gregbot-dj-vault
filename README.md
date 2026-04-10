@@ -189,6 +189,15 @@ npm run catalog:import-traktor-library -- /absolute/path/to/traktor-collection.n
 
 Those library-state imports now also carry fixture-oriented cue, loop, and beat-grid state into DJ Vault analysis tables.
 
+To export DJ Vault playlists and analysis state back out as vendor library files:
+
+```bash
+npm run catalog:export-rekordbox-xml -- /absolute/path/to/output.xml [playlist-id ...]
+npm run catalog:export-traktor-nml -- /absolute/path/to/output.nml [playlist-id ...]
+```
+
+If no playlist IDs are supplied, DJ Vault exports the full current playlist tree.
+
 Tracked sample fixtures live at:
 
 - [docs/reference/rekordbox-history.sample.xml](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/rekordbox-history.sample.xml)

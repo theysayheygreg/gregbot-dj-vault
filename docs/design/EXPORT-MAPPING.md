@@ -105,3 +105,24 @@
 3. **Idempotent output** — running export twice with no intervening changes produces byte-identical files (modulo the DJ_PLAYLISTS/COLLECTION header timestamp)
 4. **Validate before write** — run a schema check and a round-trip parse before overwriting the target file
 5. **Atomic writes** — write to `file.tmp`, fsync, rename — never corrupt a working collection
+
+## Current Compiler Surface
+
+Current implementation:
+
+- `packages/catalog/src/export.ts`
+- `packages/catalog/src/cli/export-rekordbox-xml.ts`
+- `packages/catalog/src/cli/export-traktor-nml.ts`
+
+Current commands:
+
+- `npm run catalog:export-rekordbox-xml -- <output-path> [playlist-id ...]`
+- `npm run catalog:export-traktor-nml -- <output-path> [playlist-id ...]`
+
+Current behavior:
+
+- exports the selected playlist tree, or all playlists when no IDs are passed
+- includes referenced tracks only
+- emits cue points, loops, and beat-grid markers from DJ Vault analysis tables
+- records an `export_jobs` row for each completed export
+- persists missing Rekordbox `TrackID` and Traktor `AUDIO_ID` values back into `tracks`

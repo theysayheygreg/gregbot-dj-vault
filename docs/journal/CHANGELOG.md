@@ -203,6 +203,7 @@ DJ Vault needs to support the real-world case where the database, the full libra
 - history import now prefers vendor-native app IDs and location keys before falling back to title/file-name matching
 - library-state import now carries selected vendor track metadata and non-history playlist trees into the catalog
 - library-state import now also maps fixture-oriented vendor cue, loop, and tempo/grid data into DJ Vault analysis tables
+- DJ Vault now has first export compilers for Rekordbox XML and Traktor NML, with export job records and deterministic playlist-scoped output
 
 ### Why
 

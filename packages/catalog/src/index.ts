@@ -6,6 +6,7 @@ export * from './recency.js';
 export * from './history-import.js';
 export * from './vendor-history.js';
 export * from './vendor-library.js';
+export * from './export.js';
 export * from './topology.js';
 export * from './qmd.js';
 export * from './xml.js';
