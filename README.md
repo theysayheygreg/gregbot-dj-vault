@@ -199,6 +199,7 @@ npm run catalog:plan-rekordbox-device-export -- <playlist-ref> <execution-node-r
 npm run catalog:export-rekordbox-device -- /absolute/path/to/staging-root [playlist-id ...]
 npm run catalog:export-rekordbox-device-target -- <playlist-ref>
 npm run catalog:prepare-rekordbox-pdb-plan -- /absolute/path/to/staging-root
+npm run catalog:prepare-rekordbox-pdb-row-plan -- /absolute/path/to/database.sqlite /absolute/path/to/staging-root
 npm run catalog:validate-rekordbox-device-export -- /absolute/path/to/staging-root
 npm run catalog:export-rekordbox-xml -- /absolute/path/to/output.xml [playlist-id ...]
 npm run catalog:export-traktor-nml -- /absolute/path/to/output.nml [playlist-id ...]
@@ -208,7 +209,7 @@ If no playlist IDs are supplied, DJ Vault exports the full current playlist tree
 
 The new `catalog:export-rekordbox-device` command is the v1 old-device staging path. It builds a deterministic `PIONEER/rekordbox/` bundle, copies referenced media into a `Contents/` tree, emits a Rekordbox XML mirror for inspection, and records a machine-readable manifest of what still remains before full `export.pdb` / `ANLZ` parity.
 
-The saved-target workflow is now first-class too: save a playlist target once, ask DJ Vault to plan the execution against real source/destination storage, export directly into that target root, prepare a native `export.pdb` write plan from local reference exports, and validate the staged result before trying it on hardware.
+The saved-target workflow is now first-class too: save a playlist target once, ask DJ Vault to plan the execution against real source/destination storage, export directly into that target root, prepare a native `export.pdb` write plan from local reference exports, compile deterministic native rows for the first covered PDB tables, and validate the staged result before trying it on hardware.
 
 Tracked sample fixtures live at:
 

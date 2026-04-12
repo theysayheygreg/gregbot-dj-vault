@@ -283,3 +283,20 @@ The product value is not “we can write files into a folder.” The value is �
 ### Why
 
 `export.pdb` is the next real native artifact, but writing it blind would be wasteful. The repo now compares local empty and populated reference PDBs, summarizes their table/page structure, and emits a write plan against DJ Vault's staged export so the eventual writer can target the smallest honest table set first.
+
+## 2026-04-12 — Rekordbox PDB row-plan compiler
+
+### Added
+
+- `packages/catalog/src/rekordbox-pdb-row-plan.ts`
+- `packages/catalog/src/cli/prepare-rekordbox-pdb-row-plan.ts`
+
+### Changed
+
+- root and workspace package scripts now expose `catalog:prepare-rekordbox-pdb-row-plan`
+- device-export workflow docs now include the native row-plan step between reference diffing and a future binary writer
+- export docs now distinguish coarse PDB diff planning from deterministic row-plan compilation
+
+### Why
+
+The binary writer should not have to discover artist, label, key, and track row data on its own. DJ Vault now compiles deterministic native rows for the first reference-covered tables so the eventual `export.pdb` writer can focus on bytes and pages instead of catalog-to-row transformation logic.

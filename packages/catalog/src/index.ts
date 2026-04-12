@@ -10,6 +10,7 @@ export * from './export.js';
 export * from './rekordbox-device-export.js';
 export * from './device-export-workflow.js';
 export * from './rekordbox-pdb.js';
+export * from './rekordbox-pdb-row-plan.js';
 export * from './topology.js';
 export * from './qmd.js';
 export * from './xml.js';
