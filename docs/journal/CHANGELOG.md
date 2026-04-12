@@ -332,3 +332,16 @@ The project had gone too long without a real surface to exercise. The desktop ap
 ### Why
 
 The project needed to stop looking like a status dashboard and start behaving like a tool. The v1 interface now prioritizes the mental model DJs actually need on a laptop: smart collections, a track browser, playlist and export workflows, and an inspector that keeps operational detail visible without hiding the library behind oversized cards.
+
+## 2026-04-12 — Workflow-capable desktop browser
+
+### Changed
+
+- `apps/desktop/src/App.tsx` now supports sortable track columns, keyboard-driven browsing, and tabbed inspectors
+- the desktop app can now rehearse playlist creation, device-target saving, and export-plan kickoff in local UI state
+- `apps/desktop/src/styles.css` now includes action bars, inline forms, tab styling, and denser browser affordances
+- README now clarifies that the desktop app is a real workflow scaffold, not just a static viewer
+
+### Why
+
+The app needed to do more than display state. This pass gives us a practical v1 testing loop inside the interface: move through a dense library, inspect details without losing context, and walk through the first user-facing steps of the export workflow even before every backend mutation is wired through.
