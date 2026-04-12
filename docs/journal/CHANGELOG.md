@@ -245,3 +245,24 @@ The narrowed target is much closer to what real DJs actually use at home and in 
 ### Why
 
 The v1 target is no longer “generic export someday.” DJ Vault needs a concrete old-device export path that can stage media, playlists, and deterministic manifests for NXS2-era validation even before `export.pdb` and `ANLZ` writing are complete.
+
+## 2026-04-12 — Rekordbox device-export workflow commands
+
+### Added
+
+- `packages/catalog/src/device-export-workflow.ts`
+- `packages/catalog/src/cli/save-rekordbox-device-target.ts`
+- `packages/catalog/src/cli/plan-rekordbox-device-export.ts`
+- `packages/catalog/src/cli/export-rekordbox-device-target.ts`
+- `packages/catalog/src/cli/validate-rekordbox-device-export.ts`
+- `docs/design/DEVICE-EXPORT-WORKFLOW.md`
+
+### Changed
+
+- root and workspace package scripts now expose save, plan, export-to-target, and validate commands for Rekordbox device exports
+- export docs now describe the saved-target and execution-plan workflow instead of only the raw staging compiler
+- distributed topology docs now point at the first real transport-aware export planner
+
+### Why
+
+The product value is not “we can write files into a folder.” The value is “we can reason about where the music lives, where the USB is, which node should execute the job, and whether the staged export is structurally sane before a DJ leaves for the gig.”

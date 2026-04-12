@@ -113,3 +113,5 @@ The next implementation step should be a transport-aware export planner that ans
 - what transport should be used?
 - what staging path should receive the pulled files?
 - can the export be completed without moving the full library?
+
+That planner now exists in first pass for the Rekordbox device-export lane. It resolves source media from `track_residencies`, persists the result in `export_execution_plans`, and flags whether the run is local or remote from the execution node.
