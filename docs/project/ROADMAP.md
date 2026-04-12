@@ -26,10 +26,10 @@ Exit criteria:
 
 Goals:
 
-- Build vendor/source maps
-- Create artifact manifest formats
-- Start collecting public firmware/software inventory metadata
-- Establish repeatable extraction and note-taking conventions
+- Build the narrowed v1 source map around NXS2-era Pioneer hardware and traditional rekordbox exports
+- Create artifact manifest formats for the owned-hardware and research-reach slice
+- Collect bounded public firmware/software artifacts for the locked v1 targets
+- Establish repeatable extraction and note-taking conventions tied to repo+commit citations
 
 Exit criteria:
 
@@ -60,8 +60,8 @@ Exit criteria:
 
 Goals:
 
-- Implement Traktor, Rekordbox, Serato, and Engine-oriented import/export adapters
-- Build capability maps from corpus findings
+- Implement traditional-device-library import/export adapters first
+- Build capability maps from the narrowed v1 corpus findings
 - Add format validation fixtures
 
 Exit criteria:
@@ -97,18 +97,18 @@ Exit criteria:
 - [ ] At least one non-native visibility projection works
 - [ ] Projection limitations are documented in UI
 
-## Phase 6 — Emulation Layer
+## Phase 6 — Validation Layer
 
 Goals:
 
-- Build practical workflow emulation for selected Pioneer/AlphaTheta and Native Instruments surfaces
-- Model playlist navigation, cue behavior, and export consequences
-- Use corpus findings to drive compatibility assumptions
+- Build practical workflow validation for selected NXS2-era Pioneer surfaces
+- Model playlist navigation, cue behavior, and export consequences that matter to owned hardware
+- Use corpus findings and referenced external reverse-engineering work to drive compatibility assumptions
 
 Exit criteria:
 
 - [ ] A DJ can inspect how a collection/set will appear on at least one target workflow
-- [ ] Emulator constraints are documented with evidence
+- [ ] Validation-layer constraints are documented with evidence
 - [ ] Unsupported behavior is explicitly surfaced, not implied
 
 ## Phase 7 — Open Development

@@ -208,3 +208,23 @@ DJ Vault needs to support the real-world case where the database, the full libra
 ### Why
 
 Recency has real DJ meaning. Tracks that are new, hot, cooling, dormant, or never played carry different mental weight during selection, and vendor history logs are useful source evidence for that model.
+
+## 2026-04-12 — V1 scope narrowed to traditional rekordbox exports
+
+### Added
+
+- `docs/design/V1-TARGETS.md`
+- `research/analysis/v1-target-acquisition-2026-04-12.md`
+- `research/analysis/deep-symmetry-orientation-2026-04-12.md`
+- `research/manifests/inventories/v1-target-artifacts-2026-04-12.json`
+
+### Changed
+
+- v1 is now explicitly centered on NXS2-era Pioneer hardware and the traditional rekordbox device library
+- `rekordbox 6.8.6` is now the canonical 6.x desktop target, with `rekordbox 7.x` treated as a compatibility source only when it still produces the same traditional device export
+- bleeding-edge hardware, Device Library Plus, Denon hardware, and current-gen AlphaTheta firmware lanes are explicitly frozen for post-v1 work
+- roadmap and backlog now reflect a validation-first target instead of open-ended hardware emulation
+
+### Why
+
+The narrowed target is much closer to what real DJs actually use at home and in clubs, and it keeps the project aimed at a format we can validate on owned hardware without burning time on flagship-only complexity.

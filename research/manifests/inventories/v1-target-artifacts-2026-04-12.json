@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-04-12",
+  "scope": "v1-target-narrowing",
+  "software": {
+    "rekordbox6": {
+      "version": "6.8.6",
+      "source": "https://rekordbox.com/en/support/faq/rekordbox6/#faq-q600141",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/rekordbox/v6/Install_rekordbox_x64_6_8_6.zip",
+      "sizeBytes": 659771601,
+      "sha256": "bcaa831d7604f125809b3f131505bdec9d2af52733636316bcaad429aa209f50"
+    }
+  },
+  "firmware": [
+    {
+      "product": "DJM-900NXS2",
+      "version": "2.07",
+      "sourceArticle": "https://support.alphatheta.com/en-US/articles/4404624354969",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/v1-targets/firmware/DJM-900NXS2_207.zip",
+      "sizeBytes": 1234334,
+      "sha256": "6207ad1001f639bfb7c757ff545cea03721a3ce430e435dc834015049857acef",
+      "archiveEntries": [
+        "DJM-900NXS2_207.upd"
+      ]
+    },
+    {
+      "product": "XDJ-1000MK2",
+      "version": "1.45",
+      "sourceArticle": "https://support.alphatheta.com/en-US/articles/4404821857945",
+      "localPath": "/Users/theysayheygreg/clawd/projects/dj-vault/research/corpus/v1-targets/firmware/XDJ1000MK2_v145.zip",
+      "sizeBytes": 11838058,
+      "sha256": "535d2d424380d68c5c9f5903fb28001fbfcfc3cc42b190410a542b3f294c0b17",
+      "archiveEntries": [
+        "XDJ1KMK2.UPD"
+      ]
+    }
+  ],
+  "referenceRepos": [
+    {
+      "name": "dysentery",
+      "url": "https://github.com/Deep-Symmetry/dysentery",
+      "commit": "45ad4c09667abf3d502c258113465e5fcacaa3fd"
+    },
+    {
+      "name": "crate-digger",
+      "url": "https://github.com/Deep-Symmetry/crate-digger",
+      "commit": "d95c444bde4bec6763cbbffd1a405dda0cc08750"
+    },
+    {
+      "name": "rekordcrate",
+      "url": "https://github.com/Holzhaus/rekordcrate",
+      "commit": "befc9eb9077a18ecc3bfb1e2263aabf5820209d0"
+    }
+  ]
+}

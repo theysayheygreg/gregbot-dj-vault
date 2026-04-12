@@ -18,7 +18,7 @@ The north star is straightforward: give DJs one source of truth for music, metad
 - An integration/export engine that can compile DJ Vault state into app- and hardware-specific views.
 - A local semantic search layer powered by `qmd` for cross-references across track metadata, project docs, and research notes.
 - Visibility layers for closed ecosystems where direct modification is not practical.
-- An emulation program for club workflows, especially Pioneer/AlphaTheta and Native Instruments surfaces.
+- A practical validation layer for club workflows, focused first on NXS2-era Pioneer gear and the traditional rekordbox device library.
 - A reverse-engineering corpus for firmware, desktop apps, export formats, and device behavior.
 
 ## Repo Layout
@@ -67,13 +67,15 @@ Open-project hygiene now lives in:
 
 ## Research Scope
 
-The corpus program currently targets:
+The current v1 focus is deliberately narrower:
 
-- Pioneer DJ / AlphaTheta hardware firmware and software
-- Rekordbox desktop software and release notes
-- Native Instruments Traktor software and hardware
-- Serato software and hardware
-- Denon DJ / Engine DJ hardware and intersecting export behavior
+- NXS2-era Pioneer hardware Greg actually owns or can plausibly validate against
+- `rekordbox 6.8.6` as the canonical desktop baseline
+- `rekordbox 7.x` only when it is still producing the same traditional device library
+- traditional rekordbox USB/device export structures, not Device Library Plus
+- Deep Symmetry and related public format work as reference corpus, not duplicated effort
+
+The broader AlphaTheta current-gen, Denon, Serato hardware, and flagship-device lanes stay on disk as reference-only corpus until v1 ships.
 
 The research work should stay inside public artifacts, public documentation, release notes, static inspection, and lawful reverse engineering. No credential abuse, no DRM circumvention, and no destructive probing.
 
@@ -218,6 +220,7 @@ npm run catalog:qmd:embed
 
 ## Important Docs
 
+- [V1 Targets](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/V1-TARGETS.md)
 - [Architecture](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/ARCHITECTURE.md)
 - [Data Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DATA-MODEL.md)
 - [Distributed Topology](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DISTRIBUTED-TOPOLOGY.md)

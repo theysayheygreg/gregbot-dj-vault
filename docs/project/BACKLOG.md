@@ -30,15 +30,15 @@
 
 ## Research Program
 
-- [ ] Pioneer/AlphaTheta firmware inventory for CDJ, XDJ, DJM families
+- [ ] NXS2-era Pioneer firmware inventory for locked and research-reach devices
 - [x] Pioneer/AlphaTheta product-family enumeration for players, mixers, all-in-one systems, and rekordbox support products
-- [ ] Rekordbox software version inventory with release notes and package notes
+- [ ] Rekordbox 6.8.6 + 7.x traditional-device-library package notes
 - [ ] Rekordbox release-note entry collector
-- [ ] Traktor software and hardware inventory
-- [ ] Serato software and hardware inventory
-- [ ] Denon / Engine DJ inventory and interoperability notes
+- [ ] Deep Symmetry / rekordcrate coverage map for DJ Vault v1
+- [ ] Traktor software-only compatibility note
+- [ ] Freeze-note for current-gen AlphaTheta / Denon / Serato hardware lanes
 - [ ] Vendor capability matrix from observed artifacts
-- [ ] Target constraint summaries for export/emulation design
+- [ ] Target constraint summaries for export/validation design
 
 ## Later
 
@@ -51,6 +51,10 @@
 
 ## Deferred
 
+- [ ] Device Library Plus support
+- [ ] Flagship AlphaTheta hardware validation
+- [ ] Denon / Engine DJ v1 support
+- [ ] NI hardware modeling
 - [ ] Deep dynamic firmware instrumentation without a specific legal/research need
 - [ ] Perfect hardware simulation
 - [ ] Streaming service integrations

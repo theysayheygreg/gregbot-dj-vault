@@ -10,32 +10,23 @@ We are not collecting vendor artifacts out of curiosity. We are building an evid
 - metadata survivability rules
 - playlist and USB projection behavior
 - target capability maps
-- practical workflow emulation
+- practical workflow validation
 
 ## Target Families
 
 ### Pioneer DJ / AlphaTheta
 
-- CDJ players
-- XDJ players and all-in-ones
-- DJM mixers where public firmware exists
-- Rekordbox desktop software and release notes
+- locked v1 hardware: `DJM-900NXS2`, `XDJ-1000MK2`, `XDJ-RX2`
+- research-reach hardware: `CDJ-2000NXS2`, `XDJ-700`, `DJM-750MK2`
+- rekordbox desktop software focused on `6.8.6` and `7.x` traditional-device-library compatibility
+- traditional rekordbox USB/device export format
 
-### Native Instruments
+### Reference-Only For Post-v1
 
-- Traktor desktop software
-- Traktor-oriented hardware with public firmware/update artifacts
-
-### Serato
-
-- Serato DJ software
-- Supported hardware surfaces where public update artifacts exist
-
-### Denon DJ / Engine DJ
-
-- Standalone players/controllers
-- Engine DJ desktop software
-- Export/media interaction with other ecosystems
+- Native Instruments / Traktor hardware
+- Serato hardware lanes
+- Denon DJ / Engine DJ hardware lanes
+- current-generation AlphaTheta flagship devices
 
 ## Collection Principles
 
@@ -64,7 +55,7 @@ The work should remain inside public artifacts, public documentation, release no
 - product-family notes
 - format behavior notes
 - USB/media layout notes
-- emulator design implications
+- validation-layer design implications
 
 ## Output Conventions
 
