@@ -300,3 +300,23 @@ The product value is not “we can write files into a folder.” The value is �
 ### Why
 
 The binary writer should not have to discover artist, label, key, and track row data on its own. DJ Vault now compiles deterministic native rows for the first reference-covered tables so the eventual `export.pdb` writer can focus on bytes and pages instead of catalog-to-row transformation logic.
+
+## 2026-04-12 — First operator dashboard frontend
+
+### Added
+
+- `packages/catalog/src/dashboard.ts`
+- `packages/catalog/src/cli/export-dashboard-json.ts`
+- `apps/desktop/src/dashboard-types.ts`
+- `apps/desktop/src/generated/catalog-dashboard.json`
+
+### Changed
+
+- `apps/desktop/src/App.tsx` now renders a live operator dashboard instead of a static shell
+- `apps/desktop/src/styles.css` now supports the dashboard layout and empty states
+- root package scripts now expose `catalog:export-dashboard-json`, `desktop:refresh-dashboard`, and a top-level `npm run dev` flow that refreshes the snapshot before opening the app
+- README now documents the first user-facing test loop
+
+### Why
+
+The project had gone too long without a real surface to exercise. The desktop app now exposes live catalog truth, recency, playlist/set state, export readiness, and distributed-topology planning in one place so we can test the product with actual DJ Vault state instead of reading only manifests and CLI output.

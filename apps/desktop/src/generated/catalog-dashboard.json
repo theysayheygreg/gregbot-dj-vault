@@ -1,0 +1,231 @@
+{
+  "generatedAt": "2026-04-12T21:51:59.291Z",
+  "summary": {
+    "trackCount": 1,
+    "playlistCount": 1,
+    "setCount": 1,
+    "exportTargetCount": 1,
+    "readyPlanCount": 2,
+    "recentExportCount": 4,
+    "hotTrackCount": 1,
+    "trackWarningCount": 5
+  },
+  "hero": {
+    "title": "DJ Vault",
+    "subtitle": "Catalog truth, remote export planning, and old-device Rekordbox workflow in one place.",
+    "focus": "Current testing focus: NXS2-era USB/device export, not flagship-only hardware."
+  },
+  "tracks": [
+    {
+      "id": "af2f9039-d5eb-4f08-834f-2b83eed4dbd0",
+      "title": "Funk",
+      "artist": null,
+      "album": null,
+      "label": null,
+      "keyDisplay": null,
+      "bpm": null,
+      "durationSec": 0,
+      "playCount": 1,
+      "addedAt": "2026-04-08T01:20:43.873Z",
+      "lastPlayedAt": "2026-04-08T17:41:30.917Z",
+      "recencyBucket": "hot",
+      "mentalWeight": "front-of-mind",
+      "recencyScore": 88,
+      "warnings": [
+        "Missing artist",
+        "No bitrate analysis",
+        "No BPM analysis",
+        "No duration analysis",
+        "No sample-rate analysis"
+      ]
+    }
+  ],
+  "playlists": [
+    {
+      "id": "c66dfa55-a0cb-4ba3-bb48-2c43e2995526",
+      "name": "Warmup Crate",
+      "type": "playlist",
+      "itemCount": 1,
+      "hasDeviceTarget": true,
+      "deviceTargetName": "Warmup USB"
+    }
+  ],
+  "sets": [
+    {
+      "id": "a1ee7b88-333c-4d10-9dd7-0a9b85ef69ce",
+      "name": "Friday Peak",
+      "trackCount": 1
+    }
+  ],
+  "exportTargets": [
+    {
+      "playlistId": "c66dfa55-a0cb-4ba3-bb48-2c43e2995526",
+      "playlistName": "Warmup Crate",
+      "name": "Warmup USB",
+      "enabled": true,
+      "folderPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export-targets/warmup-crate",
+      "pendingNativeArtifacts": [
+        "export.pdb",
+        "ANLZ analysis files"
+      ],
+      "referenceCoveredTables": [
+        "tracks",
+        "artists",
+        "labels",
+        "keys"
+      ],
+      "referenceGapTables": [
+        "albums",
+        "playlist_tree",
+        "playlist_entries",
+        "columns"
+      ],
+      "rowPlanWarnings": [
+        "Track \"Funk\" has zero duration in the catalog and needs analysis backfill before native export.",
+        "Track \"Funk\" is missing artist metadata; ArtistId will remain 0."
+      ]
+    }
+  ],
+  "exportPlans": [
+    {
+      "id": "425bce00-cd44-4a9f-913b-4b9a04f5555f",
+      "playlistName": "Warmup Crate",
+      "status": "ready",
+      "targetKind": "usb-device",
+      "executionNodeName": "Studio Export Worker",
+      "sourceStorageName": "MacBook Main Library",
+      "destinationStorageName": "USB Staging",
+      "transport": "tailscale",
+      "requiresRemoteAccess": true,
+      "missingTrackIds": [],
+      "savedTargetFolderPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export-targets/warmup-crate"
+    },
+    {
+      "id": "9b78e10c-643a-49d7-820a-3547d9cc19b2",
+      "playlistName": "Warmup Crate",
+      "status": "ready",
+      "targetKind": "usb-device",
+      "executionNodeName": "Studio Export Worker",
+      "sourceStorageName": "MacBook Main Library",
+      "destinationStorageName": "USB Staging",
+      "transport": "tailscale",
+      "requiresRemoteAccess": true,
+      "missingTrackIds": [],
+      "savedTargetFolderPath": null
+    },
+    {
+      "id": "c680cce9-2a5d-45fb-9227-b80b5afb6968",
+      "playlistName": null,
+      "status": "planned",
+      "targetKind": "usb-device",
+      "executionNodeName": "Studio Export Worker",
+      "sourceStorageName": "MacBook Main Library",
+      "destinationStorageName": "USB Staging",
+      "transport": "tailscale",
+      "requiresRemoteAccess": true,
+      "missingTrackIds": [],
+      "savedTargetFolderPath": null
+    }
+  ],
+  "topology": {
+    "nodes": [
+      {
+        "id": "a86c5299-c500-4930-b555-b499e3f9953e",
+        "name": "Basement NAS",
+        "role": "media-host",
+        "transport": "smb",
+        "address": "nas.local",
+        "isOnline": false
+      },
+      {
+        "id": "d386efbd-deac-4e3e-bf02-bf629ad83605",
+        "name": "Mac mini",
+        "role": "catalog-primary",
+        "transport": "local",
+        "address": "local-mac-mini",
+        "isOnline": true
+      },
+      {
+        "id": "c412418b-38cf-4853-8f07-68cb1704f6e7",
+        "name": "MacBook Pro",
+        "role": "media-host",
+        "transport": "tailscale",
+        "address": "100.88.10.12",
+        "isOnline": false
+      },
+      {
+        "id": "ada80a31-ce26-4e4e-95a2-d113e96cae1a",
+        "name": "Studio Export Worker",
+        "role": "export-worker",
+        "transport": "tailscale",
+        "address": "100.88.10.50",
+        "isOnline": false
+      }
+    ],
+    "storages": [
+      {
+        "id": "af6187e3-4efe-41f7-8c31-e4163c4bc97a",
+        "nodeName": "MacBook Pro",
+        "name": "MacBook Main Library",
+        "kind": "local-disk",
+        "isManagedLibrary": true,
+        "isAvailable": true,
+        "mountPath": "/Volumes/GregMusic"
+      },
+      {
+        "id": "e7ece5a3-75b7-4b65-abbf-9eb8f169acce",
+        "nodeName": "Basement NAS",
+        "name": "NAS Deep Archive",
+        "kind": "nas",
+        "isManagedLibrary": false,
+        "isAvailable": false,
+        "mountPath": "/Volumes/NAS/DJLibrary"
+      },
+      {
+        "id": "6fa2f0ad-90f3-4676-a8c5-3cd67153cdab",
+        "nodeName": "Studio Export Worker",
+        "name": "USB Staging",
+        "kind": "external-drive",
+        "isManagedLibrary": false,
+        "isAvailable": false,
+        "mountPath": "/Volumes/DJUSB"
+      }
+    ]
+  },
+  "recentExports": [
+    {
+      "id": "1d19aa51-e7ed-498b-8727-53c55dab6c08",
+      "targetKind": "rekordbox-device",
+      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export-targets/warmup-crate",
+      "status": "completed",
+      "completedAt": "2026-04-12T20:51:53.285Z"
+    },
+    {
+      "id": "16a7e974-d08f-4dea-80b2-fb7a0fe4746c",
+      "targetKind": "rekordbox-device",
+      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export/rekordbox-device-v1",
+      "status": "completed",
+      "completedAt": "2026-04-12T20:41:34.877Z"
+    },
+    {
+      "id": "d6c7ddb4-2d62-4240-881d-aecc6413ac27",
+      "targetKind": "traktor-nml",
+      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export/traktor.nml",
+      "status": "completed",
+      "completedAt": "2026-04-10T21:08:11.689Z"
+    },
+    {
+      "id": "59eb09e0-84f3-43e0-8558-6b7b30a58a78",
+      "targetKind": "rekordbox-xml",
+      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export/rekordbox.xml",
+      "status": "completed",
+      "completedAt": "2026-04-10T21:08:11.414Z"
+    }
+  ],
+  "focusNotes": [
+    "1 saved Rekordbox device target ready for testing",
+    "Catalog still has metadata and analysis gaps that show up in native export planning",
+    "Playlist and column PDB tables still need stronger reference coverage before native writing",
+    "Remote export planning is live: source media and USB execution can live on different nodes"
+  ]
+}

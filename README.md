@@ -94,6 +94,14 @@ To run the first app shell:
 npm run dev --workspace @dj-vault/desktop
 ```
 
+To refresh the desktop app from the live catalog and then open the current operator surface:
+
+```bash
+npm run dev
+```
+
+The desktop app is now wired to a generated snapshot at [apps/desktop/src/generated/catalog-dashboard.json](/Users/theysayheygreg/clawd/projects/dj-vault/apps/desktop/src/generated/catalog-dashboard.json). That surface is meant to be the first real testing loop: library pulse, recency, playlist/set state, remote export planning, and native Rekordbox device-export gaps in one screen.
+
 To collect the current official source-surface inventory:
 
 ```bash
@@ -210,6 +218,12 @@ If no playlist IDs are supplied, DJ Vault exports the full current playlist tree
 The new `catalog:export-rekordbox-device` command is the v1 old-device staging path. It builds a deterministic `PIONEER/rekordbox/` bundle, copies referenced media into a `Contents/` tree, emits a Rekordbox XML mirror for inspection, and records a machine-readable manifest of what still remains before full `export.pdb` / `ANLZ` parity.
 
 The saved-target workflow is now first-class too: save a playlist target once, ask DJ Vault to plan the execution against real source/destination storage, export directly into that target root, prepare a native `export.pdb` write plan from local reference exports, compile deterministic native rows for the first covered PDB tables, and validate the staged result before trying it on hardware.
+
+To regenerate the frontend dashboard snapshot without opening the app:
+
+```bash
+npm run catalog:export-dashboard-json
+```
 
 Tracked sample fixtures live at:
 

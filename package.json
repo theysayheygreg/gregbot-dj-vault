@@ -58,13 +58,16 @@
     "catalog:export-traktor-nml": "npm run export:traktor-nml --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:prepare-rekordbox-pdb-plan": "npm run prepare:rekordbox-pdb-plan --workspace @dj-vault/catalog --",
     "catalog:prepare-rekordbox-pdb-row-plan": "npm run prepare:rekordbox-pdb-row-plan --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:export-dashboard-json": "npm run export:dashboard-json --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/apps/desktop/src/generated/catalog-dashboard.json",
     "catalog:validate-rekordbox-device-export": "npm run validate:rekordbox-device-export --workspace @dj-vault/catalog --",
     "catalog:qmd:export": "npm run qmd:export --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",
     "catalog:qmd:setup": "npm run qmd:setup --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",
     "catalog:qmd:update": "npm run qmd:update --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",
     "catalog:qmd:embed": "npm run qmd:embed --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
     "catalog:qmd:status": "npm run qmd:status --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
-    "dev": "npm run dev --workspace @dj-vault/desktop"
+    "desktop:refresh-dashboard": "npm run catalog:export-dashboard-json",
+    "desktop:dev": "npm run dev --workspace @dj-vault/desktop",
+    "dev": "npm run desktop:refresh-dashboard && npm run desktop:dev"
   },
   "devDependencies": {
     "@tobilu/qmd": "^2.1.0"
