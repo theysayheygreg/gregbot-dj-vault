@@ -266,3 +266,20 @@ The v1 target is no longer “generic export someday.” DJ Vault needs a concre
 ### Why
 
 The product value is not “we can write files into a folder.” The value is “we can reason about where the music lives, where the USB is, which node should execute the job, and whether the staged export is structurally sane before a DJ leaves for the gig.”
+
+## 2026-04-12 — Rekordbox PDB write-plan groundwork
+
+### Added
+
+- `packages/catalog/src/rekordbox-pdb.ts`
+- `packages/catalog/src/cli/prepare-rekordbox-pdb-plan.ts`
+
+### Changed
+
+- root and workspace package scripts now expose `catalog:prepare-rekordbox-pdb-plan`
+- device-export workflow docs now include the native PDB planning step
+- export docs now describe `pdb-write-plan.json` as the bridge between staged exports and a future binary writer
+
+### Why
+
+`export.pdb` is the next real native artifact, but writing it blind would be wasteful. The repo now compares local empty and populated reference PDBs, summarizes their table/page structure, and emits a write plan against DJ Vault's staged export so the eventual writer can target the smallest honest table set first.

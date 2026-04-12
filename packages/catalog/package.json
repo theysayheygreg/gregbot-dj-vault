@@ -39,6 +39,7 @@
     "export:rekordbox-device-target": "node dist/cli/export-rekordbox-device-target.js",
     "export:rekordbox-xml": "node dist/cli/export-rekordbox-xml.js",
     "export:traktor-nml": "node dist/cli/export-traktor-nml.js",
+    "prepare:rekordbox-pdb-plan": "node dist/cli/prepare-rekordbox-pdb-plan.js",
     "validate:rekordbox-device-export": "node dist/cli/validate-rekordbox-device-export.js",
     "qmd:export": "node dist/cli/qmd-export.js",
     "qmd:setup": "node dist/cli/qmd-setup.js",

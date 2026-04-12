@@ -9,6 +9,7 @@ export * from './vendor-library.js';
 export * from './export.js';
 export * from './rekordbox-device-export.js';
 export * from './device-export-workflow.js';
+export * from './rekordbox-pdb.js';
 export * from './topology.js';
 export * from './qmd.js';
 export * from './xml.js';

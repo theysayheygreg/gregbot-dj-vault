@@ -56,6 +56,7 @@
     "catalog:export-rekordbox-device-target": "npm run export:rekordbox-device-target --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:export-rekordbox-xml": "npm run export:rekordbox-xml --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:export-traktor-nml": "npm run export:traktor-nml --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:prepare-rekordbox-pdb-plan": "npm run prepare:rekordbox-pdb-plan --workspace @dj-vault/catalog --",
     "catalog:validate-rekordbox-device-export": "npm run validate:rekordbox-device-export --workspace @dj-vault/catalog --",
     "catalog:qmd:export": "npm run qmd:export --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",
     "catalog:qmd:setup": "npm run qmd:setup --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite /Users/theysayheygreg/clawd/projects/dj-vault/data/qmd",

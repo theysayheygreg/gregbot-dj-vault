@@ -22,6 +22,7 @@ That is the product move. The export compiler is only part of it.
 npm run catalog:save-rekordbox-device-target -- <playlist-ref> <folder-path> [name]
 npm run catalog:plan-rekordbox-device-export -- <playlist-ref> <execution-node-ref> [destination-storage-ref] [source-storage-ref] [transport] [note]
 npm run catalog:export-rekordbox-device-target -- <playlist-ref>
+npm run catalog:prepare-rekordbox-pdb-plan -- <export-root> [empty-reference-pdb] [populated-reference-pdb]
 npm run catalog:validate-rekordbox-device-export -- <export-root>
 ```
 
@@ -33,7 +34,8 @@ npm run catalog:validate-rekordbox-device-export -- <export-root>
 2. Record where the relevant media physically lives.
 3. Ask DJ Vault to plan the export.
 4. Run the export into the saved target root.
-5. Validate the staged bundle before touching hardware.
+5. Prepare the `export.pdb` write plan from local reference exports.
+6. Validate the staged bundle before touching hardware.
 
 The saved target is per-playlist and lives in `playlist_export_targets`.
 
@@ -75,6 +77,8 @@ Still pending:
 - `ANLZ` analysis artifacts
 
 Those gaps are explicit in the manifest and validation output.
+
+The new `catalog:prepare-rekordbox-pdb-plan` command bridges that gap by comparing a local empty and populated reference `export.pdb`, then writing a `pdb-write-plan.json` into the staged export root. That plan is not the binary writer yet, but it does ground the next writer tranche in observed table/page differences instead of guesswork.
 
 ---
 

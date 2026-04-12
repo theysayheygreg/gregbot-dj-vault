@@ -122,6 +122,7 @@ Current commands:
 - `npm run catalog:plan-rekordbox-device-export -- <playlist-ref> <execution-node-ref> [destination-storage-ref] [source-storage-ref] [transport] [note]`
 - `npm run catalog:export-rekordbox-device -- <staging-root> [playlist-id ...]`
 - `npm run catalog:export-rekordbox-device-target -- <playlist-ref>`
+- `npm run catalog:prepare-rekordbox-pdb-plan -- <staging-root> [empty-reference-pdb] [populated-reference-pdb]`
 - `npm run catalog:validate-rekordbox-device-export -- <staging-root>`
 - `npm run catalog:export-rekordbox-xml -- <output-path> [playlist-id ...]`
 - `npm run catalog:export-traktor-nml -- <output-path> [playlist-id ...]`
@@ -136,6 +137,7 @@ Current behavior:
   - `PIONEER/rekordbox/dj-vault/device-export-manifest.json` as the machine-readable copy/export plan
   - `PIONEER/rekordbox/dj-vault/playlists/*.m3u8` for quick sanity-checking playlist order
 - `catalog:export-rekordbox-device-target` runs that same export directly against a saved playlist target
+- `catalog:prepare-rekordbox-pdb-plan` compares local Deep Symmetry reference PDBs and emits `pdb-write-plan.json` for the staged export
 - `catalog:validate-rekordbox-device-export` checks the staged manifest, media files, playlist references, and XML references
 - exports the selected playlist tree, or all playlists when no IDs are passed
 - includes referenced tracks only
