@@ -194,11 +194,14 @@ Those library-state imports now also carry fixture-oriented cue, loop, and beat-
 To export DJ Vault playlists and analysis state back out as vendor library files:
 
 ```bash
+npm run catalog:export-rekordbox-device -- /absolute/path/to/staging-root [playlist-id ...]
 npm run catalog:export-rekordbox-xml -- /absolute/path/to/output.xml [playlist-id ...]
 npm run catalog:export-traktor-nml -- /absolute/path/to/output.nml [playlist-id ...]
 ```
 
 If no playlist IDs are supplied, DJ Vault exports the full current playlist tree.
+
+The new `catalog:export-rekordbox-device` command is the v1 old-device staging path. It builds a deterministic `PIONEER/rekordbox/` bundle, copies referenced media into a `Contents/` tree, emits a Rekordbox XML mirror for inspection, and records a machine-readable manifest of what still remains before full `export.pdb` / `ANLZ` parity.
 
 Tracked sample fixtures live at:
 
@@ -224,6 +227,7 @@ npm run catalog:qmd:embed
 - [Architecture](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/ARCHITECTURE.md)
 - [Data Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DATA-MODEL.md)
 - [Distributed Topology](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/DISTRIBUTED-TOPOLOGY.md)
+- [Export Mapping](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/EXPORT-MAPPING.md)
 - [QMD Integration](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/QMD-INTEGRATION.md)
 - [Playback History Import](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/PLAYBACK-HISTORY-IMPORT.md)
 - [Recency Model](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/RECENCY-MODEL.md)

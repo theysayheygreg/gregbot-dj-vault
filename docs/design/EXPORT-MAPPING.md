@@ -111,18 +111,35 @@
 Current implementation:
 
 - `packages/catalog/src/export.ts`
+- `packages/catalog/src/rekordbox-device-export.ts`
+- `packages/catalog/src/cli/export-rekordbox-device.ts`
 - `packages/catalog/src/cli/export-rekordbox-xml.ts`
 - `packages/catalog/src/cli/export-traktor-nml.ts`
 
 Current commands:
 
+- `npm run catalog:export-rekordbox-device -- <staging-root> [playlist-id ...]`
 - `npm run catalog:export-rekordbox-xml -- <output-path> [playlist-id ...]`
 - `npm run catalog:export-traktor-nml -- <output-path> [playlist-id ...]`
 
 Current behavior:
 
+- `catalog:export-rekordbox-device` stages a traditional-device export tree with:
+  - `Contents/` media copies in deterministic artist/album/title layout
+  - `PIONEER/rekordbox/dj-vault/DJ_VAULT_COLLECTION.xml` as an inspection mirror
+  - `PIONEER/rekordbox/dj-vault/device-export-manifest.json` as the machine-readable copy/export plan
+  - `PIONEER/rekordbox/dj-vault/playlists/*.m3u8` for quick sanity-checking playlist order
 - exports the selected playlist tree, or all playlists when no IDs are passed
 - includes referenced tracks only
 - emits cue points, loops, and beat-grid markers from DJ Vault analysis tables
 - records an `export_jobs` row for each completed export
 - persists missing Rekordbox `TrackID` and Traktor `AUDIO_ID` values back into `tracks`
+
+### Device-export caveat
+
+The current `catalog:export-rekordbox-device` command is intentionally a strong staging layer, not full native media parity yet. It does **not** currently emit:
+
+- `export.pdb`
+- `ANLZ` analysis blobs
+
+That gap is now explicit in the staged manifest so the next implementation tranche can close it without ambiguity.

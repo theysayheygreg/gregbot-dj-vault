@@ -228,3 +228,20 @@ Recency has real DJ meaning. Tracks that are new, hot, cooling, dormant, or neve
 ### Why
 
 The narrowed target is much closer to what real DJs actually use at home and in clubs, and it keeps the project aimed at a format we can validate on owned hardware without burning time on flagship-only complexity.
+
+## 2026-04-12 — Traditional Rekordbox device-export staging path
+
+### Added
+
+- `packages/catalog/src/rekordbox-device-export.ts`
+- `packages/catalog/src/cli/export-rekordbox-device.ts`
+
+### Changed
+
+- root and workspace package scripts now expose `catalog:export-rekordbox-device`
+- export mapping docs now distinguish desktop XML export from traditional-device staging export
+- README now documents the old-device staging command and its current native-artifact gap
+
+### Why
+
+The v1 target is no longer “generic export someday.” DJ Vault needs a concrete old-device export path that can stage media, playlists, and deterministic manifests for NXS2-era validation even before `export.pdb` and `ANLZ` writing are complete.
