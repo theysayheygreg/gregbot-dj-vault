@@ -236,7 +236,7 @@ async function readJsonIfPresent<T>(filePath: string): Promise<T | null> {
 
 async function atomicWrite(outputPath: string, contents: string): Promise<void> {
   await mkdir(path.dirname(outputPath), { recursive: true });
-  const tmpPath = `${outputPath}.tmp`;
+  const tmpPath = `${outputPath}.${process.pid}.${Date.now()}.${Math.random().toString(16).slice(2)}.tmp`;
   await writeFile(tmpPath, contents, 'utf8');
   await rename(tmpPath, outputPath);
 }

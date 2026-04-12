@@ -104,7 +104,7 @@ The desktop app is now wired to a generated snapshot at [apps/desktop/src/genera
 
 The UI direction is now explicitly desktop-first and Mac-native in spirit: sidebar, dense browser, right-hand inspector, and operational views that feel closer to Finder, Music, and pro media tools than a generic web dashboard.
 
-It also now has the first user-facing workflow scaffolding inside the app itself: sortable track browsing, keyboard navigation, tabbed inspectors, local playlist creation, local device-target saving, and local export-plan rehearsal. Those actions are still UI-side scaffolding rather than live database writes, but they give us something real to test while the backend bindings catch up.
+It also now has the first user-facing workflow scaffolding inside the app itself: sortable track browsing, keyboard navigation, tabbed inspectors, playlist creation, device-target saving, and export-plan rehearsal. In local development, those actions now go through a small Vite-hosted API bridge into the live catalog for real playlist creation, Rekordbox target saving, export planning, and target export execution.
 
 To collect the current official source-surface inventory:
 

@@ -1,9 +1,7 @@
 import { startTransition, useDeferredValue, useEffect, useState, type FormEvent, type KeyboardEvent } from 'react';
 
-import dashboardJson from './generated/catalog-dashboard.json';
+import bundledDashboardJson from './generated/catalog-dashboard.json';
 import type { DashboardSnapshot } from './dashboard-types';
-
-const dashboard = dashboardJson as DashboardSnapshot;
 
 type TrackItem = DashboardSnapshot['tracks'][number];
 type PlaylistItem = DashboardSnapshot['playlists'][number];
@@ -19,6 +17,15 @@ type SmartCollection = 'all' | 'hot' | 'cooling' | 'dormant' | 'warnings';
 type TrackSortKey = 'title' | 'artist' | 'recency' | 'bpm' | 'duration' | 'warnings';
 type SortDirection = 'asc' | 'desc';
 type InspectorTab = 'overview' | 'metadata' | 'readiness' | 'sets' | 'target' | 'native' | 'plans' | 'storage' | 'activity';
+type ConnectionMode = 'bundled' | 'live';
+
+type MutationResponse<T> = {
+  ok: true;
+  result: T;
+  snapshot: DashboardSnapshot;
+};
+
+const bundledDashboard = bundledDashboardJson as DashboardSnapshot;
 
 const smartCollectionLabels: Record<SmartCollection, string> = {
   all: 'All Tracks',
@@ -47,18 +54,6 @@ function defaultInspectorTab(view: ActiveView): InspectorTab {
     case 'topology':
       return 'storage';
   }
-}
-
-function createId(prefix: string): string {
-  return `${prefix}-${Math.random().toString(36).slice(2, 10)}`;
-}
-
-function slugify(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 48);
 }
 
 function formatDate(value: string | null): string {
@@ -166,27 +161,50 @@ function EmptyState({ message }: { message: string }) {
   );
 }
 
+async function getDashboardSnapshot(): Promise<DashboardSnapshot> {
+  const response = await fetch('/api/dashboard');
+  if (!response.ok) {
+    throw new Error(`Dashboard refresh failed with ${response.status}.`);
+  }
+  return await response.json() as DashboardSnapshot;
+}
+
+async function postMutation<T>(path: string, payload: Record<string, unknown>): Promise<MutationResponse<T>> {
+  const response = await fetch(path, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const body = await response.json() as MutationResponse<T> | { error?: string };
+  if (!response.ok || !('ok' in body) || body.ok !== true) {
+    throw new Error('error' in body && body.error ? body.error : `Request failed with ${response.status}.`);
+  }
+  return body;
+}
+
 export function App() {
+  const [snapshot, setSnapshot] = useState<DashboardSnapshot>(bundledDashboard);
+  const [connectionMode, setConnectionMode] = useState<ConnectionMode>('bundled');
   const [query, setQuery] = useState('');
   const [activeView, setActiveView] = useState<ActiveView>('library');
   const [activeCollection, setActiveCollection] = useState<SmartCollection>('all');
   const [trackSortKey, setTrackSortKey] = useState<TrackSortKey>('recency');
   const [trackSortDirection, setTrackSortDirection] = useState<SortDirection>('asc');
   const [inspectorTab, setInspectorTab] = useState<InspectorTab>(defaultInspectorTab('library'));
+  const [isSyncing, setIsSyncing] = useState(false);
+  const [actionError, setActionError] = useState<string | null>(null);
+  const [statusMessage, setStatusMessage] = useState<string>('Loaded bundled snapshot.');
 
-  const [playlists, setPlaylists] = useState<PlaylistItem[]>(dashboard.playlists);
-  const [djSets] = useState<SetItem[]>(dashboard.sets);
-  const [exportTargets, setExportTargets] = useState<ExportTargetItem[]>(dashboard.exportTargets);
-  const [exportPlans, setExportPlans] = useState<ExportPlanItem[]>(dashboard.exportPlans);
-  const [recentExports, setRecentExports] = useState<ExportJobItem[]>(dashboard.recentExports);
-
-  const [selectedTrackId, setSelectedTrackId] = useState<string | null>(dashboard.tracks[0]?.id ?? null);
-  const [selectedPlaylistId, setSelectedPlaylistId] = useState<string | null>(dashboard.playlists[0]?.id ?? null);
-  const [selectedTargetId, setSelectedTargetId] = useState<string | null>(dashboard.exportTargets[0]?.playlistId ?? null);
-  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(dashboard.topology.nodes[0]?.id ?? null);
+  const [selectedTrackId, setSelectedTrackId] = useState<string | null>(bundledDashboard.tracks[0]?.id ?? null);
+  const [selectedPlaylistId, setSelectedPlaylistId] = useState<string | null>(bundledDashboard.playlists[0]?.id ?? null);
+  const [selectedTargetId, setSelectedTargetId] = useState<string | null>(bundledDashboard.exportTargets[0]?.playlistId ?? null);
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(bundledDashboard.topology.nodes[0]?.id ?? null);
 
   const [playlistDraftName, setPlaylistDraftName] = useState('');
-  const [playlistDraftType, setPlaylistDraftType] = useState<'playlist' | 'smart-playlist'>('playlist');
+  const [playlistDraftType, setPlaylistDraftType] = useState<'playlist' | 'smart'>('playlist');
   const [playlistDraftOpen, setPlaylistDraftOpen] = useState(false);
 
   const [targetDraftName, setTargetDraftName] = useState('');
@@ -194,18 +212,49 @@ export function App() {
   const [targetDraftOpen, setTargetDraftOpen] = useState(false);
 
   const [planDraftOpen, setPlanDraftOpen] = useState(false);
-  const [planExecutionNodeId, setPlanExecutionNodeId] = useState(dashboard.topology.nodes.find((node) => node.role === 'export-worker')?.id ?? dashboard.topology.nodes[0]?.id ?? '');
-  const [planSourceStorageId, setPlanSourceStorageId] = useState(dashboard.topology.storages.find((storage) => storage.isManagedLibrary)?.id ?? dashboard.topology.storages[0]?.id ?? '');
-  const [planDestinationStorageId, setPlanDestinationStorageId] = useState(dashboard.topology.storages.find((storage) => storage.kind === 'external-drive')?.id ?? dashboard.topology.storages[0]?.id ?? '');
+  const [planExecutionNodeId, setPlanExecutionNodeId] = useState(bundledDashboard.topology.nodes.find((node) => node.role === 'export-worker')?.id ?? bundledDashboard.topology.nodes[0]?.id ?? '');
+  const [planSourceStorageId, setPlanSourceStorageId] = useState(bundledDashboard.topology.storages.find((storage) => storage.isManagedLibrary)?.id ?? bundledDashboard.topology.storages[0]?.id ?? '');
+  const [planDestinationStorageId, setPlanDestinationStorageId] = useState(bundledDashboard.topology.storages.find((storage) => storage.kind === 'external-drive')?.id ?? bundledDashboard.topology.storages[0]?.id ?? '');
   const [planTransport, setPlanTransport] = useState('tailscale');
 
   const deferredQuery = useDeferredValue(query.trim().toLowerCase());
 
   useEffect(() => {
+    if (!import.meta.env.DEV) {
+      return;
+    }
+
+    void (async () => {
+      try {
+        setIsSyncing(true);
+        const liveSnapshot = await getDashboardSnapshot();
+        setSnapshot(liveSnapshot);
+        setConnectionMode('live');
+        setStatusMessage('Connected to live catalog.');
+      } catch (error) {
+        const message = error instanceof Error ? error.message : 'Failed to reach live catalog.';
+        setActionError(message);
+        setStatusMessage('Using bundled snapshot fallback.');
+      } finally {
+        setIsSyncing(false);
+      }
+    })();
+  }, []);
+
+  useEffect(() => {
     setInspectorTab(defaultInspectorTab(activeView));
   }, [activeView]);
 
-  const visibleTracks = dashboard.tracks
+  const tracks = snapshot.tracks;
+  const playlists = snapshot.playlists;
+  const djSets = snapshot.sets;
+  const exportTargets = snapshot.exportTargets;
+  const exportPlans = snapshot.exportPlans;
+  const recentExports = snapshot.recentExports;
+  const nodes = snapshot.topology.nodes;
+  const storages = snapshot.topology.storages;
+
+  const visibleTracks = tracks
     .filter((track) => filterTrackByCollection(track, activeCollection))
     .filter((track) => matchesQuery(
       [track.title, track.artist, track.album, track.label, track.keyDisplay, track.recencyBucket, ...track.warnings],
@@ -225,18 +274,18 @@ export function App() {
     [plan.playlistName, plan.executionNodeName, plan.sourceStorageName, plan.destinationStorageName, plan.transport, plan.status],
     deferredQuery,
   ));
-  const visibleNodes = dashboard.topology.nodes.filter((node) => matchesQuery(
+  const visibleNodes = nodes.filter((node) => matchesQuery(
     [node.name, node.role, node.transport, node.address],
     deferredQuery,
   ));
-  const visibleStorages = dashboard.topology.storages.filter((storage) => matchesQuery(
+  const visibleStorages = storages.filter((storage) => matchesQuery(
     [storage.name, storage.nodeName, storage.kind, storage.mountPath],
     deferredQuery,
   ));
   const resultCount = visibleTracks.length + visiblePlaylists.length + visibleTargets.length + visiblePlans.length;
 
   const selectedTrack = visibleTracks.find((track) => track.id === selectedTrackId)
-    ?? dashboard.tracks.find((track) => track.id === selectedTrackId)
+    ?? tracks.find((track) => track.id === selectedTrackId)
     ?? visibleTracks[0]
     ?? null;
   const selectedPlaylist = visiblePlaylists.find((playlist) => playlist.id === selectedPlaylistId)
@@ -248,7 +297,7 @@ export function App() {
     ?? visibleTargets[0]
     ?? null;
   const selectedNode = visibleNodes.find((node) => node.id === selectedNodeId)
-    ?? dashboard.topology.nodes.find((node) => node.id === selectedNodeId)
+    ?? nodes.find((node) => node.id === selectedNodeId)
     ?? visibleNodes[0]
     ?? null;
 
@@ -264,6 +313,57 @@ export function App() {
   const selectedNodeStorages = selectedNode
     ? visibleStorages.filter((storage) => storage.nodeName === selectedNode.name)
     : visibleStorages;
+
+  async function refreshSnapshot(nextStatus?: string): Promise<DashboardSnapshot | null> {
+    if (!import.meta.env.DEV) {
+      return null;
+    }
+    try {
+      setIsSyncing(true);
+      setActionError(null);
+      const liveSnapshot = await getDashboardSnapshot();
+      setSnapshot(liveSnapshot);
+      setConnectionMode('live');
+      if (nextStatus) {
+        setStatusMessage(nextStatus);
+      }
+      return liveSnapshot;
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Failed to refresh dashboard.';
+      setActionError(message);
+      setStatusMessage('Refresh failed. Keeping last snapshot.');
+      return null;
+    } finally {
+      setIsSyncing(false);
+    }
+  }
+
+  async function runMutation<T>(
+    path: string,
+    payload: Record<string, unknown>,
+    onSuccess: (result: T, nextSnapshot: DashboardSnapshot) => void,
+    nextStatus: string,
+  ) {
+    if (!import.meta.env.DEV) {
+      setActionError('Live mutations are only wired in local dev right now.');
+      return;
+    }
+
+    try {
+      setIsSyncing(true);
+      setActionError(null);
+      const response = await postMutation<T>(path, payload);
+      setSnapshot(response.snapshot);
+      setConnectionMode('live');
+      setStatusMessage(nextStatus);
+      onSuccess(response.result, response.snapshot);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Mutation failed.';
+      setActionError(message);
+    } finally {
+      setIsSyncing(false);
+    }
+  }
 
   function toggleTrackSort(key: TrackSortKey) {
     if (trackSortKey === key) {
@@ -316,20 +416,18 @@ export function App() {
       return;
     }
 
-    const newPlaylist: PlaylistItem = {
-      id: createId('playlist'),
-      name,
-      type: playlistDraftType,
-      itemCount: 0,
-      hasDeviceTarget: false,
-      deviceTargetName: null,
-    };
-
-    setPlaylists((current) => [newPlaylist, ...current]);
-    setSelectedPlaylistId(newPlaylist.id);
-    setActiveView('playlists');
-    setInspectorTab('overview');
-    setPlaylistDraftOpen(false);
+    void runMutation<{ id: string; name: string }>(
+      '/api/playlists',
+      { name, type: playlistDraftType },
+      (result) => {
+        setSelectedPlaylistId(result.id);
+        setActiveView('playlists');
+        setInspectorTab('overview');
+        setPlaylistDraftOpen(false);
+        setPlaylistDraftName('');
+      },
+      `Created playlist "${name}".`,
+    );
   }
 
   function openTargetDraft() {
@@ -337,9 +435,8 @@ export function App() {
       return;
     }
 
-    const existingTarget = exportTargets.find((target) => target.playlistId === selectedPlaylist.id);
-    setTargetDraftName(existingTarget?.name ?? `${selectedPlaylist.name} USB`);
-    setTargetDraftFolderPath(existingTarget?.folderPath ?? `/Volumes/DJUSB/${slugify(selectedPlaylist.name)}`);
+    setTargetDraftName(selectedPlaylistTarget?.name ?? `${selectedPlaylist.name} USB`);
+    setTargetDraftFolderPath(selectedPlaylistTarget?.folderPath ?? `/Volumes/DJUSB/${selectedPlaylist.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`);
     setTargetDraftOpen(true);
   }
 
@@ -348,38 +445,27 @@ export function App() {
     if (!selectedPlaylist) {
       return;
     }
-
-    const draftName = targetDraftName.trim();
-    const draftFolderPath = targetDraftFolderPath.trim();
-    if (!draftName || !draftFolderPath) {
+    const name = targetDraftName.trim();
+    const folderPath = targetDraftFolderPath.trim();
+    if (!name || !folderPath) {
       return;
     }
 
-    const nextTarget: ExportTargetItem = {
-      playlistId: selectedPlaylist.id,
-      playlistName: selectedPlaylist.name,
-      name: draftName,
-      enabled: true,
-      folderPath: draftFolderPath,
-      pendingNativeArtifacts: selectedPlaylistTarget?.pendingNativeArtifacts ?? ['export.pdb', 'ANLZ analysis files'],
-      referenceCoveredTables: selectedPlaylistTarget?.referenceCoveredTables ?? ['tracks', 'artists', 'labels', 'keys'],
-      referenceGapTables: selectedPlaylistTarget?.referenceGapTables ?? ['albums', 'playlist_tree', 'playlist_entries', 'columns'],
-      rowPlanWarnings: selectedPlaylistTarget?.rowPlanWarnings ?? ['No row plan has been generated for this new target yet.'],
-    };
-
-    setExportTargets((current) => {
-      const withoutExisting = current.filter((target) => target.playlistId !== selectedPlaylist.id);
-      return [nextTarget, ...withoutExisting];
-    });
-    setPlaylists((current) => current.map((playlist) => (
-      playlist.id === selectedPlaylist.id
-        ? { ...playlist, hasDeviceTarget: true, deviceTargetName: draftName }
-        : playlist
-    )));
-    setSelectedTargetId(selectedPlaylist.id);
-    setActiveView('exports');
-    setInspectorTab('native');
-    setTargetDraftOpen(false);
+    void runMutation<{ playlistId: string; folderPath: string; name: string | null }>(
+      '/api/export-targets',
+      {
+        playlistRef: selectedPlaylist.id,
+        name,
+        folderPath,
+      },
+      (result) => {
+        setSelectedTargetId(result.playlistId);
+        setActiveView('exports');
+        setInspectorTab('native');
+        setTargetDraftOpen(false);
+      },
+      `Saved device target for "${selectedPlaylist.name}".`,
+    );
   }
 
   function openPlanDraft() {
@@ -387,13 +473,9 @@ export function App() {
       return;
     }
 
-    const defaultNode = dashboard.topology.nodes.find((node) => node.role === 'export-worker')?.id ?? dashboard.topology.nodes[0]?.id ?? '';
-    const defaultSource = dashboard.topology.storages.find((storage) => storage.isManagedLibrary)?.id ?? dashboard.topology.storages[0]?.id ?? '';
-    const defaultDestination = dashboard.topology.storages.find((storage) => storage.kind === 'external-drive')?.id ?? dashboard.topology.storages[0]?.id ?? '';
-
-    setPlanExecutionNodeId(defaultNode);
-    setPlanSourceStorageId(defaultSource);
-    setPlanDestinationStorageId(defaultDestination);
+    setPlanExecutionNodeId(nodes.find((node) => node.role === 'export-worker')?.id ?? nodes[0]?.id ?? '');
+    setPlanSourceStorageId(storages.find((storage) => storage.isManagedLibrary)?.id ?? storages[0]?.id ?? '');
+    setPlanDestinationStorageId(storages.find((storage) => storage.kind === 'external-drive')?.id ?? storages[0]?.id ?? '');
     setPlanTransport('tailscale');
     setPlanDraftOpen(true);
   }
@@ -404,30 +486,22 @@ export function App() {
       return;
     }
 
-    const executionNode = dashboard.topology.nodes.find((node) => node.id === planExecutionNodeId);
-    const sourceStorage = dashboard.topology.storages.find((storage) => storage.id === planSourceStorageId);
-    const destinationStorage = dashboard.topology.storages.find((storage) => storage.id === planDestinationStorageId);
-    if (!executionNode || !sourceStorage || !destinationStorage) {
-      return;
-    }
-
-    const newPlan: ExportPlanItem = {
-      id: createId('plan'),
-      playlistName: selectedTarget.playlistName,
-      status: 'ready',
-      targetKind: 'usb-device',
-      executionNodeName: executionNode.name,
-      sourceStorageName: sourceStorage.name,
-      destinationStorageName: destinationStorage.name,
-      transport: planTransport,
-      requiresRemoteAccess: planTransport !== 'local',
-      missingTrackIds: [],
-      savedTargetFolderPath: selectedTarget.folderPath,
-    };
-
-    setExportPlans((current) => [newPlan, ...current]);
-    setPlanDraftOpen(false);
-    setInspectorTab('plans');
+    void runMutation<{ planId: string; playlistId: string }>(
+      '/api/export-plans',
+      {
+        playlistRef: selectedTarget.playlistId,
+        executionNodeRef: planExecutionNodeId,
+        sourceStorageRef: planSourceStorageId,
+        destinationStorageRef: planDestinationStorageId,
+        transport: planTransport,
+      },
+      (result) => {
+        setSelectedTargetId(result.playlistId);
+        setInspectorTab('plans');
+        setPlanDraftOpen(false);
+      },
+      `Planned export for "${selectedTarget.playlistName}".`,
+    );
   }
 
   function handleKickOffExport() {
@@ -435,19 +509,19 @@ export function App() {
       return;
     }
 
-    const queuedJob: ExportJobItem = {
-      id: createId('job'),
-      targetKind: 'rekordbox-device',
-      targetPath: selectedTarget.folderPath,
-      status: 'queued',
-      completedAt: null,
-    };
-
-    setRecentExports((current) => [queuedJob, ...current]);
-    setInspectorTab('plans');
+    void runMutation<{ targetPath: string | null }>(
+      '/api/export-jobs',
+      {
+        playlistRef: selectedTarget.playlistId,
+      },
+      () => {
+        setInspectorTab('plans');
+      },
+      `Ran export for "${selectedTarget.playlistName}".`,
+    );
   }
 
-  const summaryTrackWarningCount = dashboard.tracks.filter((track) => track.warnings.length > 0).length;
+  const summaryTrackWarningCount = tracks.filter((track) => track.warnings.length > 0).length;
 
   return (
     <main className="workspace-shell">
@@ -455,15 +529,15 @@ export function App() {
         <div className="sidebar-brand">
           <p className="eyebrow">DJ Vault</p>
           <h1>Operator Desk</h1>
-          <p className="sidebar-copy">{dashboard.hero.focus}</p>
+          <p className="sidebar-copy">{snapshot.hero.focus}</p>
         </div>
 
         <nav className="sidebar-nav" aria-label="Primary views">
           {([
-            ['library', 'Library', `${dashboard.summary.trackCount} tracks in the catalog`],
+            ['library', 'Library', `${tracks.length} tracks in the catalog`],
             ['playlists', 'Playlists', `${playlists.length} playlists, ${djSets.length} sets`],
             ['exports', 'Exports', `${exportTargets.length} targets, ${exportPlans.filter((plan) => plan.status === 'ready').length} ready plans`],
-            ['topology', 'Topology', `${dashboard.topology.nodes.length} nodes, ${dashboard.topology.storages.length} storage locations`],
+            ['topology', 'Topology', `${nodes.length} nodes, ${storages.length} storage locations`],
           ] as Array<[ActiveView, string, string]>).map(([view, label, meta]) => (
             <button
               className={`sidebar-button ${activeView === view ? 'is-active' : ''}`}
@@ -493,7 +567,7 @@ export function App() {
                 type="button"
               >
                 <span>{smartCollectionLabels[collection]}</span>
-                <strong>{metricValue(collection, dashboard.tracks)}</strong>
+                <strong>{metricValue(collection, tracks)}</strong>
               </button>
             ))}
           </div>
@@ -502,7 +576,7 @@ export function App() {
         <section className="sidebar-section">
           <h2>Run Focus</h2>
           <div className="focus-stack">
-            {dashboard.focusNotes.map((note) => (
+            {snapshot.focusNotes.map((note) => (
               <article className="focus-card" key={note}>
                 <p>{note}</p>
               </article>
@@ -515,7 +589,7 @@ export function App() {
         <header className="toolbar">
           <div>
             <p className="eyebrow">Live Snapshot</p>
-            <h2>{dashboard.hero.subtitle}</h2>
+            <h2>{snapshot.hero.subtitle}</h2>
           </div>
 
           <div className="toolbar-actions">
@@ -528,18 +602,28 @@ export function App() {
               />
             </label>
             <div className="toolbar-meta">
-              <span>Refreshed {formatGeneratedAt(dashboard.generatedAt)}</span>
+              <span>Refreshed {formatGeneratedAt(snapshot.generatedAt)}</span>
               <span>{resultCount} matching surfaces</span>
-              <span>Track browser supports ↑ ↓ Home End and J / K</span>
+              <span>{connectionMode === 'live' ? 'Live catalog connected' : 'Bundled snapshot mode'}</span>
             </div>
+            <div className="status-strip">
+              <span className={`status-chip ${connectionMode === 'live' ? 'status-ready' : 'status-muted'}`}>
+                {isSyncing ? 'Syncing…' : connectionMode === 'live' ? 'Live' : 'Bundled'}
+              </span>
+              <p className="status-copy">{statusMessage}</p>
+              <button className="action-button" onClick={() => void refreshSnapshot('Refreshed from live catalog.')} type="button">
+                Refresh
+              </button>
+            </div>
+            {actionError ? <p className="error-banner">{actionError}</p> : null}
           </div>
         </header>
 
         <section className="summary-bar">
           <article className="summary-card">
             <span>Tracks</span>
-            <strong>{dashboard.summary.trackCount}</strong>
-            <small>{dashboard.summary.hotTrackCount} front-of-mind</small>
+            <strong>{tracks.length}</strong>
+            <small>{snapshot.summary.hotTrackCount} front-of-mind</small>
           </article>
           <article className="summary-card">
             <span>Metadata Gaps</span>
@@ -570,11 +654,7 @@ export function App() {
                   <p className="panel-copy">Sortable, keyboard-driven, and dense by design. This is the start of a real library browser.</p>
                 </div>
                 {visibleTracks.length > 0 ? (
-                  <div
-                    className="table-shell"
-                    onKeyDown={handleTrackBrowserKeyDown}
-                    tabIndex={0}
-                  >
+                  <div className="table-shell" onKeyDown={handleTrackBrowserKeyDown} tabIndex={0}>
                     <div className="table-header table-row">
                       {([
                         ['title', 'Title'],
@@ -628,7 +708,7 @@ export function App() {
                     <p className="eyebrow">Crates and Sets</p>
                     <h3>Playlist Browser</h3>
                   </div>
-                  <p className="panel-copy">Create crates, attach device targets, and keep the target workflow visible without leaving the app.</p>
+                  <p className="panel-copy">These actions now write through to the live catalog in local dev.</p>
                 </div>
                 <div className="action-row">
                   <button className="action-button primary" onClick={openPlaylistDraft} type="button">New Playlist</button>
@@ -642,9 +722,9 @@ export function App() {
                     </label>
                     <label>
                       <span>Type</span>
-                      <select onChange={(event) => setPlaylistDraftType(event.target.value as 'playlist' | 'smart-playlist')} value={playlistDraftType}>
+                      <select onChange={(event) => setPlaylistDraftType(event.target.value as 'playlist' | 'smart')} value={playlistDraftType}>
                         <option value="playlist">playlist</option>
-                        <option value="smart-playlist">smart-playlist</option>
+                        <option value="smart">smart</option>
                       </select>
                     </label>
                     <div className="inline-form-actions">
@@ -677,7 +757,7 @@ export function App() {
                         key={playlist.id}
                         onClick={() => {
                           setSelectedPlaylistId(playlist.id);
-                          setInspectorTab('target');
+                          setInspectorTab('overview');
                         }}
                         type="button"
                       >
@@ -718,7 +798,7 @@ export function App() {
                     <p className="eyebrow">Run Queue</p>
                     <h3>Export Targets</h3>
                   </div>
-                  <p className="panel-copy">Queue planning and export activity directly from the target surface. These actions are local UI scaffolding for now, but they reflect the real workflow.</p>
+                  <p className="panel-copy">Plan and trigger real exports against the live catalog in local dev.</p>
                 </div>
                 <div className="action-row">
                   <button className="action-button" disabled={!selectedTarget} onClick={openPlanDraft} type="button">Plan Export</button>
@@ -729,7 +809,7 @@ export function App() {
                     <label>
                       <span>Execution Node</span>
                       <select onChange={(event) => setPlanExecutionNodeId(event.target.value)} value={planExecutionNodeId}>
-                        {dashboard.topology.nodes.map((node) => (
+                        {nodes.map((node) => (
                           <option key={node.id} value={node.id}>{node.name}</option>
                         ))}
                       </select>
@@ -737,7 +817,7 @@ export function App() {
                     <label>
                       <span>Source Storage</span>
                       <select onChange={(event) => setPlanSourceStorageId(event.target.value)} value={planSourceStorageId}>
-                        {dashboard.topology.storages.map((storage) => (
+                        {storages.map((storage) => (
                           <option key={storage.id} value={storage.id}>{storage.name}</option>
                         ))}
                       </select>
@@ -745,7 +825,7 @@ export function App() {
                     <label>
                       <span>Destination Storage</span>
                       <select onChange={(event) => setPlanDestinationStorageId(event.target.value)} value={planDestinationStorageId}>
-                        {dashboard.topology.storages.map((storage) => (
+                        {storages.map((storage) => (
                           <option key={storage.id} value={storage.id}>{storage.name}</option>
                         ))}
                       </select>
@@ -772,7 +852,7 @@ export function App() {
                         key={target.playlistId}
                         onClick={() => {
                           setSelectedTargetId(target.playlistId);
-                          setInspectorTab('native');
+                          setInspectorTab('overview');
                         }}
                         type="button"
                       >
@@ -826,7 +906,7 @@ export function App() {
                         key={node.id}
                         onClick={() => {
                           setSelectedNodeId(node.id);
-                          setInspectorTab('storage');
+                          setInspectorTab('overview');
                         }}
                         type="button"
                       >

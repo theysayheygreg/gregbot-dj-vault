@@ -345,3 +345,16 @@ The project needed to stop looking like a status dashboard and start behaving li
 ### Why
 
 The app needed to do more than display state. This pass gives us a practical v1 testing loop inside the interface: move through a dense library, inspect details without losing context, and walk through the first user-facing steps of the export workflow even before every backend mutation is wired through.
+
+## 2026-04-12 — Live desktop app bridge
+
+### Changed
+
+- `apps/desktop/src/App.tsx` now fetches a live dashboard snapshot in local development and routes key UI actions through a small local API
+- `apps/desktop/vite.config.ts` now exposes dev-only API endpoints for dashboard refresh, playlist creation, target saving, export planning, and target export execution
+- `packages/catalog/src/dashboard.ts` now uses unique temporary filenames for snapshot writes so concurrent refreshes do not corrupt the generated JSON
+- `apps/desktop/src/vite-env.d.ts` was added for Vite environment typing in the desktop app
+
+### Why
+
+The app had reached the point where pretending to mutate state was holding us back. The desktop surface now talks to the real catalog during local development, which means we can test actual workflow mutations without waiting for a heavier native wrapper or a separate backend service.
