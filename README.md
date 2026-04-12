@@ -102,6 +102,8 @@ npm run dev
 
 The desktop app is now wired to a generated snapshot at [apps/desktop/src/generated/catalog-dashboard.json](/Users/theysayheygreg/clawd/projects/dj-vault/apps/desktop/src/generated/catalog-dashboard.json). That surface is meant to be the first real testing loop: library pulse, recency, playlist/set state, remote export planning, and native Rekordbox device-export gaps in one screen.
 
+The UI direction is now explicitly desktop-first and Mac-native in spirit: sidebar, dense browser, right-hand inspector, and operational views that feel closer to Finder, Music, and pro media tools than a generic web dashboard.
+
 To collect the current official source-surface inventory:
 
 ```bash

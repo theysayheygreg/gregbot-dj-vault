@@ -320,3 +320,15 @@ The binary writer should not have to discover artist, label, key, and track row 
 ### Why
 
 The project had gone too long without a real surface to exercise. The desktop app now exposes live catalog truth, recency, playlist/set state, export readiness, and distributed-topology planning in one place so we can test the product with actual DJ Vault state instead of reading only manifests and CLI output.
+
+## 2026-04-12 — Desktop-first operator workspace layout
+
+### Changed
+
+- `apps/desktop/src/App.tsx` now uses a sidebar, dense browser, and right-hand inspector layout instead of stacked dashboard panels
+- `apps/desktop/src/styles.css` now styles the app like a desktop operator tool rather than a marketing-style landing surface
+- README now states the v1 UI direction plainly: desktop-first and Mac-native in spirit
+
+### Why
+
+The project needed to stop looking like a status dashboard and start behaving like a tool. The v1 interface now prioritizes the mental model DJs actually need on a laptop: smart collections, a track browser, playlist and export workflows, and an inspector that keeps operational detail visible without hiding the library behind oversized cards.
