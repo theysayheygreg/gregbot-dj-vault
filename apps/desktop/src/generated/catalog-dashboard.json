@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T22:19:13.447Z",
+  "generatedAt": "2026-04-13T01:48:53.669Z",
   "summary": {
     "trackCount": 1,
     "playlistCount": 1,
@@ -11,7 +11,7 @@
     "trackWarningCount": 5
   },
   "hero": {
-    "title": "DJ Vault",
+    "title": "VaultBuddy",
     "subtitle": "Catalog truth, remote export planning, and old-device Rekordbox workflow in one place.",
     "focus": "Current testing focus: NXS2-era USB/device export, not flagship-only hardware."
   },

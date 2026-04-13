@@ -494,7 +494,7 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
         trackWarningCount: trackCards.reduce((sum, track) => sum + track.warnings.length, 0),
       },
       hero: {
-        title: 'DJ Vault',
+        title: 'VaultBuddy',
         subtitle: 'Catalog truth, remote export planning, and old-device Rekordbox workflow in one place.',
         focus: 'Current testing focus: NXS2-era USB/device export, not flagship-only hardware.',
       },

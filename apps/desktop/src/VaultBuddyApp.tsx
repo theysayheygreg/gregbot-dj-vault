@@ -185,7 +185,7 @@ async function postMutation<T>(path: string, payload: Record<string, unknown>): 
   return body;
 }
 
-export function App() {
+export function VaultBuddyApp() {
   const [snapshot, setSnapshot] = useState<DashboardSnapshot>(bundledDashboard);
   const [connectionMode, setConnectionMode] = useState<ConnectionMode>('bundled');
   const [query, setQuery] = useState('');
@@ -527,7 +527,7 @@ export function App() {
     <main className="workspace-shell">
       <aside className="sidebar">
         <div className="sidebar-brand">
-          <p className="eyebrow">DJ Vault</p>
+          <p className="eyebrow">VaultBuddy</p>
           <h1>Operator Desk</h1>
           <p className="sidebar-copy">{snapshot.hero.focus}</p>
         </div>
