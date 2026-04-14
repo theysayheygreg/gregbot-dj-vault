@@ -154,6 +154,14 @@ To bootstrap the first local catalog database:
 npm run catalog:init
 ```
 
+To build the controlled v1 sandbox library fixture for merge and export testing:
+
+```bash
+npm run fixture:build-sandbox-v1
+```
+
+That fixture is documented in [Sandbox V1 Fixture](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/SANDBOX-V1-FIXTURE.md).
+
 To ingest local audio files into the catalog:
 
 ```bash

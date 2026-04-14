@@ -1,5 +1,23 @@
 # DJ Vault — Changelog
 
+## 2026-04-14 — Sandbox v1 fixture pack
+
+### Added
+
+- `scripts/build-sandbox-v1-fixture.sh`
+- `docs/reference/SANDBOX-V1-FIXTURE.md`
+- root script `fixture:build-sandbox-v1`
+
+### Changed
+
+- staged a controlled six-track source pool into `tmp/sandbox-v1/source-pool`
+- built three divergent library views plus nine playlists under `tmp/sandbox-v1`
+- verified the canonical view ingests cleanly into a scratch catalog
+
+### Why
+
+We need a believable, controlled library test before we point DJ Vault at Greg's fragile long-term libraries.
+
 ## 2026-04-14 — VaultBuddy live editing and laptop runtime
 
 ### Added
