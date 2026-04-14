@@ -43,6 +43,12 @@ type TrackPersonRow = {
   name: string;
 };
 
+type PlaylistItemRow = {
+  playlist_id: string;
+  track_id: string;
+  position: number;
+};
+
 type ExportTargetRow = {
   playlist_id: string;
   playlist_name: string;
@@ -136,6 +142,8 @@ export type DashboardSnapshot = {
     keyDisplay: string | null;
     bpm: number | null;
     durationSec: number;
+    rating: number | null;
+    comment: string | null;
     playCount: number;
     addedAt: string;
     lastPlayedAt: string | null;
@@ -151,6 +159,13 @@ export type DashboardSnapshot = {
     itemCount: number;
     hasDeviceTarget: boolean;
     deviceTargetName: string | null;
+    entries: Array<{
+      trackId: string;
+      title: string;
+      artist: string | null;
+      position: number;
+      durationSec: number;
+    }>;
   }>;
   sets: Array<{
     id: string;
@@ -300,6 +315,11 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
       GROUP BY playlists.id
       ORDER BY playlists.name COLLATE NOCASE, playlists.id
     `).all() as PlaylistRow[];
+    const playlistItems = database.prepare(`
+      SELECT playlist_id, track_id, position
+      FROM playlist_items
+      ORDER BY playlist_id, position
+    `).all() as PlaylistItemRow[];
 
     const djSets = database.prepare(`
       SELECT dj_sets.id, dj_sets.name, COUNT(set_tracks.track_id) AS track_count
@@ -369,6 +389,7 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
     }));
     const artifactsByPlaylistId = new Map(targetArtifacts);
 
+    const trackById = new Map(tracks.map((track) => [track.id, track]));
     const trackCards = tracks.map((track) => {
       const recency = recencyByTrackId.get(track.id);
       const artist = joinArtists(people, track.id);
@@ -389,6 +410,8 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
         keyDisplay: normalizeText(track.key_display),
         bpm: track.bpm ?? track.bpm_float,
         durationSec: Math.max(0, Math.round(track.duration_sec ?? 0)),
+        rating: track.rating,
+        comment: normalizeText(track.comment),
         playCount: track.play_count,
         addedAt: track.added_at,
         lastPlayedAt: track.last_played_at,
@@ -401,6 +424,18 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
 
     const playlistCards = playlists.map((playlist) => {
       const target = exportTargetByPlaylistId.get(playlist.id);
+      const entries = playlistItems
+        .filter((entry) => entry.playlist_id === playlist.id)
+        .map((entry) => {
+          const track = trackById.get(entry.track_id);
+          return {
+            trackId: entry.track_id,
+            title: track?.title ?? entry.track_id,
+            artist: track ? joinArtists(people, entry.track_id) : null,
+            position: entry.position,
+            durationSec: Math.max(0, Math.round(track?.duration_sec ?? 0)),
+          };
+        });
       return {
         id: playlist.id,
         name: playlist.name,
@@ -408,6 +443,7 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
         itemCount: playlist.item_count,
         hasDeviceTarget: Boolean(target?.enabled),
         deviceTargetName: target?.name ?? null,
+        entries,
       };
     });
 

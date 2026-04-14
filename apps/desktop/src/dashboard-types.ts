@@ -24,6 +24,8 @@ export type DashboardSnapshot = {
     keyDisplay: string | null;
     bpm: number | null;
     durationSec: number;
+    rating: number | null;
+    comment: string | null;
     playCount: number;
     addedAt: string;
     lastPlayedAt: string | null;
@@ -39,6 +41,13 @@ export type DashboardSnapshot = {
     itemCount: number;
     hasDeviceTarget: boolean;
     deviceTargetName: string | null;
+    entries: Array<{
+      trackId: string;
+      title: string;
+      artist: string | null;
+      position: number;
+      durationSec: number;
+    }>;
   }>;
   sets: Array<{
     id: string;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:48:53.669Z",
+  "generatedAt": "2026-04-14T20:02:33.982Z",
   "summary": {
     "trackCount": 1,
     "playlistCount": 1,
@@ -25,12 +25,14 @@
       "keyDisplay": null,
       "bpm": null,
       "durationSec": 0,
+      "rating": null,
+      "comment": null,
       "playCount": 1,
       "addedAt": "2026-04-08T01:20:43.873Z",
       "lastPlayedAt": "2026-04-08T17:41:30.917Z",
       "recencyBucket": "hot",
       "mentalWeight": "front-of-mind",
-      "recencyScore": 88,
+      "recencyScore": 80,
       "warnings": [
         "Missing artist",
         "No bitrate analysis",
@@ -47,7 +49,16 @@
       "type": "playlist",
       "itemCount": 1,
       "hasDeviceTarget": true,
-      "deviceTargetName": "Warmup USB"
+      "deviceTargetName": "Warmup USB",
+      "entries": [
+        {
+          "trackId": "af2f9039-d5eb-4f08-834f-2b83eed4dbd0",
+          "title": "Funk",
+          "artist": null,
+          "position": 0,
+          "durationSec": 0
+        }
+      ]
     }
   ],
   "sets": [

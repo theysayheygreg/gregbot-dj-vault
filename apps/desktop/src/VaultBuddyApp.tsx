@@ -196,7 +196,7 @@ export function VaultBuddyApp() {
   const [inspectorTab, setInspectorTab] = useState<InspectorTab>(defaultInspectorTab('library'));
   const [isSyncing, setIsSyncing] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
-  const [statusMessage, setStatusMessage] = useState<string>('Loaded bundled snapshot.');
+  const [statusMessage, setStatusMessage] = useState<string>('Loaded bundled snapshot while the live runtime connects.');
 
   const [selectedTrackId, setSelectedTrackId] = useState<string | null>(bundledDashboard.tracks[0]?.id ?? null);
   const [selectedPlaylistId, setSelectedPlaylistId] = useState<string | null>(bundledDashboard.playlists[0]?.id ?? null);
@@ -216,21 +216,25 @@ export function VaultBuddyApp() {
   const [planSourceStorageId, setPlanSourceStorageId] = useState(bundledDashboard.topology.storages.find((storage) => storage.isManagedLibrary)?.id ?? bundledDashboard.topology.storages[0]?.id ?? '');
   const [planDestinationStorageId, setPlanDestinationStorageId] = useState(bundledDashboard.topology.storages.find((storage) => storage.kind === 'external-drive')?.id ?? bundledDashboard.topology.storages[0]?.id ?? '');
   const [planTransport, setPlanTransport] = useState('tailscale');
+  const [trackDraftTitle, setTrackDraftTitle] = useState('');
+  const [trackDraftArtist, setTrackDraftArtist] = useState('');
+  const [trackDraftAlbum, setTrackDraftAlbum] = useState('');
+  const [trackDraftLabel, setTrackDraftLabel] = useState('');
+  const [trackDraftKeyDisplay, setTrackDraftKeyDisplay] = useState('');
+  const [trackDraftBpm, setTrackDraftBpm] = useState('');
+  const [trackDraftRating, setTrackDraftRating] = useState('');
+  const [trackDraftComment, setTrackDraftComment] = useState('');
 
   const deferredQuery = useDeferredValue(query.trim().toLowerCase());
 
   useEffect(() => {
-    if (!import.meta.env.DEV) {
-      return;
-    }
-
     void (async () => {
       try {
         setIsSyncing(true);
         const liveSnapshot = await getDashboardSnapshot();
         setSnapshot(liveSnapshot);
         setConnectionMode('live');
-        setStatusMessage('Connected to live catalog.');
+        setStatusMessage('Connected to the live VaultBuddy catalog.');
       } catch (error) {
         const message = error instanceof Error ? error.message : 'Failed to reach live catalog.';
         setActionError(message);
@@ -314,10 +318,31 @@ export function VaultBuddyApp() {
     ? visibleStorages.filter((storage) => storage.nodeName === selectedNode.name)
     : visibleStorages;
 
-  async function refreshSnapshot(nextStatus?: string): Promise<DashboardSnapshot | null> {
-    if (!import.meta.env.DEV) {
-      return null;
+  useEffect(() => {
+    if (!selectedTrack) {
+      return;
     }
+    setTrackDraftTitle(selectedTrack.title);
+    setTrackDraftArtist(selectedTrack.artist ?? '');
+    setTrackDraftAlbum(selectedTrack.album ?? '');
+    setTrackDraftLabel(selectedTrack.label ?? '');
+    setTrackDraftKeyDisplay(selectedTrack.keyDisplay ?? '');
+    setTrackDraftBpm(selectedTrack.bpm ? selectedTrack.bpm.toFixed(1) : '');
+    setTrackDraftRating(selectedTrack.rating ? String(selectedTrack.rating) : '');
+    setTrackDraftComment(selectedTrack.comment ?? '');
+  }, [
+    selectedTrack?.id,
+    selectedTrack?.title,
+    selectedTrack?.artist,
+    selectedTrack?.album,
+    selectedTrack?.label,
+    selectedTrack?.keyDisplay,
+    selectedTrack?.bpm,
+    selectedTrack?.rating,
+    selectedTrack?.comment,
+  ]);
+
+  async function refreshSnapshot(nextStatus?: string): Promise<DashboardSnapshot | null> {
     try {
       setIsSyncing(true);
       setActionError(null);
@@ -344,11 +369,6 @@ export function VaultBuddyApp() {
     onSuccess: (result: T, nextSnapshot: DashboardSnapshot) => void,
     nextStatus: string,
   ) {
-    if (!import.meta.env.DEV) {
-      setActionError('Live mutations are only wired in local dev right now.');
-      return;
-    }
-
     try {
       setIsSyncing(true);
       setActionError(null);
@@ -518,6 +538,69 @@ export function VaultBuddyApp() {
         setInspectorTab('plans');
       },
       `Ran export for "${selectedTarget.playlistName}".`,
+    );
+  }
+
+  function handleSaveTrackMetadata(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!selectedTrack) {
+      return;
+    }
+
+    void runMutation<{ trackId: string; title: string }>(
+      '/api/tracks/update',
+      {
+        trackRef: selectedTrack.id,
+        title: trackDraftTitle,
+        artist: trackDraftArtist,
+        album: trackDraftAlbum,
+        label: trackDraftLabel,
+        keyDisplay: trackDraftKeyDisplay,
+        bpm: trackDraftBpm.trim() ? Number.parseFloat(trackDraftBpm) : null,
+        rating: trackDraftRating.trim() ? Number.parseInt(trackDraftRating, 10) : null,
+        comment: trackDraftComment,
+      },
+      (result) => {
+        setSelectedTrackId(result.trackId);
+        setInspectorTab('metadata');
+      },
+      `Updated metadata for "${selectedTrack.title}".`,
+    );
+  }
+
+  function handleAddSelectedTrackToPlaylist() {
+    if (!selectedTrack || !selectedPlaylist) {
+      return;
+    }
+
+    void runMutation<{ playlistId: string; trackId: string; position: number }>(
+      '/api/playlist-items/add',
+      {
+        playlistId: selectedPlaylist.id,
+        trackRef: selectedTrack.id,
+      },
+      () => {
+        setInspectorTab('overview');
+      },
+      `Added "${selectedTrack.title}" to "${selectedPlaylist.name}".`,
+    );
+  }
+
+  function handleRemovePlaylistEntry(position: number) {
+    if (!selectedPlaylist) {
+      return;
+    }
+
+    void runMutation<{ playlistId: string; removedPosition: number }>(
+      '/api/playlist-items/remove',
+      {
+        playlistId: selectedPlaylist.id,
+        position,
+      },
+      () => {
+        setInspectorTab('overview');
+      },
+      `Removed track ${position + 1} from "${selectedPlaylist.name}".`,
     );
   }
 
@@ -713,6 +796,9 @@ export function VaultBuddyApp() {
                 <div className="action-row">
                   <button className="action-button primary" onClick={openPlaylistDraft} type="button">New Playlist</button>
                   <button className="action-button" disabled={!selectedPlaylist} onClick={openTargetDraft} type="button">Save Device Target</button>
+                  <button className="action-button" disabled={!selectedPlaylist || !selectedTrack} onClick={handleAddSelectedTrackToPlaylist} type="button">
+                    {selectedTrack ? `Add "${selectedTrack.title}"` : 'Add Selected Track'}
+                  </button>
                 </div>
                 {playlistDraftOpen ? (
                   <form className="inline-form" onSubmit={handleCreatePlaylist}>
@@ -1016,6 +1102,50 @@ export function VaultBuddyApp() {
                 ) : null}
                 {inspectorTab === 'metadata' ? (
                   <>
+                    <form className="inline-form" onSubmit={handleSaveTrackMetadata}>
+                      <label>
+                        <span>Title</span>
+                        <input onChange={(event) => setTrackDraftTitle(event.target.value)} value={trackDraftTitle} />
+                      </label>
+                      <label>
+                        <span>Artist</span>
+                        <input onChange={(event) => setTrackDraftArtist(event.target.value)} value={trackDraftArtist} />
+                      </label>
+                      <label>
+                        <span>Album</span>
+                        <input onChange={(event) => setTrackDraftAlbum(event.target.value)} value={trackDraftAlbum} />
+                      </label>
+                      <label>
+                        <span>Label</span>
+                        <input onChange={(event) => setTrackDraftLabel(event.target.value)} value={trackDraftLabel} />
+                      </label>
+                      <label>
+                        <span>Key</span>
+                        <input onChange={(event) => setTrackDraftKeyDisplay(event.target.value)} value={trackDraftKeyDisplay} />
+                      </label>
+                      <label>
+                        <span>BPM</span>
+                        <input onChange={(event) => setTrackDraftBpm(event.target.value)} value={trackDraftBpm} />
+                      </label>
+                      <label>
+                        <span>Rating</span>
+                        <select onChange={(event) => setTrackDraftRating(event.target.value)} value={trackDraftRating}>
+                          <option value="">unrated</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </label>
+                      <label className="form-span">
+                        <span>Comment</span>
+                        <input onChange={(event) => setTrackDraftComment(event.target.value)} value={trackDraftComment} />
+                      </label>
+                      <div className="inline-form-actions">
+                        <button className="action-button primary" type="submit">Save Track Metadata</button>
+                      </div>
+                    </form>
                     <div className="inspector-section">
                       <h4>History</h4>
                       <p className="muted">Added {formatDate(selectedTrack.addedAt)} · last played {formatDate(selectedTrack.lastPlayedAt)}</p>
@@ -1058,13 +1188,31 @@ export function VaultBuddyApp() {
                   </span>
                 </div>
                 {inspectorTab === 'overview' ? (
-                  <div className="inspector-section">
-                    <dl className="inspector-grid">
-                      <div><dt>Type</dt><dd>{selectedPlaylist.type}</dd></div>
-                      <div><dt>Tracks</dt><dd>{selectedPlaylist.itemCount}</dd></div>
-                      <div><dt>Target</dt><dd>{selectedPlaylist.deviceTargetName ?? 'Not configured'}</dd></div>
-                    </dl>
-                  </div>
+                  <>
+                    <div className="inspector-section">
+                      <dl className="inspector-grid">
+                        <div><dt>Type</dt><dd>{selectedPlaylist.type}</dd></div>
+                        <div><dt>Tracks</dt><dd>{selectedPlaylist.itemCount}</dd></div>
+                        <div><dt>Target</dt><dd>{selectedPlaylist.deviceTargetName ?? 'Not configured'}</dd></div>
+                      </dl>
+                    </div>
+                    <div className="inspector-section">
+                      <h4>Playlist Contents</h4>
+                      {selectedPlaylist.entries.length > 0 ? (
+                        <div className="stack tight">
+                          {selectedPlaylist.entries.map((entry) => (
+                            <article className="list-card" key={`${entry.trackId}-${entry.position}`}>
+                              <div>
+                                <strong>{entry.position + 1}. {entry.title}</strong>
+                                <small>{entry.artist ?? 'Unknown artist'} · {formatDuration(entry.durationSec)}</small>
+                              </div>
+                              <button className="action-button" onClick={() => handleRemovePlaylistEntry(entry.position)} type="button">Remove</button>
+                            </article>
+                          ))}
+                        </div>
+                      ) : <p className="muted">This playlist is empty right now.</p>}
+                    </div>
+                  </>
                 ) : null}
                 {inspectorTab === 'target' ? (
                   <div className="inspector-section">

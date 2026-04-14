@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 
 import react from '@vitejs/plugin-react';
 import {
+  addTrackToPlaylist,
   createPlaylist,
 } from '../../packages/catalog/src/authoring';
 import { exportDashboardSnapshot } from '../../packages/catalog/src/dashboard';
@@ -11,6 +12,10 @@ import {
   planRekordboxDeviceExport,
   saveRekordboxDeviceTarget,
 } from '../../packages/catalog/src/device-export-workflow';
+import {
+  removeTrackFromPlaylist,
+  updateTrackMetadata,
+} from '../../packages/catalog/src/editing';
 import { defineConfig } from 'vite';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
@@ -67,6 +72,46 @@ export default defineConfig({
               const result = createPlaylist(databasePath, {
                 name: String(body.name ?? ''),
                 type: (body.type as 'crate' | 'playlist' | 'smart' | 'set' | undefined) ?? 'playlist',
+              });
+              const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
+              sendJson(response, 200, { ok: true, result, snapshot });
+              return;
+            }
+
+            if (request.method === 'POST' && url.pathname === '/api/tracks/update') {
+              const body = await readJsonBody(request);
+              const result = updateTrackMetadata(databasePath, {
+                trackRef: String(body.trackRef ?? ''),
+                title: typeof body.title === 'string' ? body.title : null,
+                artist: typeof body.artist === 'string' ? body.artist : null,
+                album: typeof body.album === 'string' ? body.album : null,
+                label: typeof body.label === 'string' ? body.label : null,
+                keyDisplay: typeof body.keyDisplay === 'string' ? body.keyDisplay : null,
+                bpm: typeof body.bpm === 'number' ? body.bpm : null,
+                rating: typeof body.rating === 'number' ? body.rating : null,
+                comment: typeof body.comment === 'string' ? body.comment : null,
+              });
+              const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
+              sendJson(response, 200, { ok: true, result, snapshot });
+              return;
+            }
+
+            if (request.method === 'POST' && url.pathname === '/api/playlist-items/add') {
+              const body = await readJsonBody(request);
+              const result = addTrackToPlaylist(databasePath, {
+                playlistId: String(body.playlistId ?? ''),
+                trackRef: String(body.trackRef ?? ''),
+              });
+              const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
+              sendJson(response, 200, { ok: true, result, snapshot });
+              return;
+            }
+
+            if (request.method === 'POST' && url.pathname === '/api/playlist-items/remove') {
+              const body = await readJsonBody(request);
+              const result = removeTrackFromPlaylist(databasePath, {
+                playlistId: String(body.playlistId ?? ''),
+                position: Number(body.position ?? -1),
               });
               const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
               sendJson(response, 200, { ok: true, result, snapshot });

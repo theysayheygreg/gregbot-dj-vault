@@ -66,6 +66,8 @@
     "catalog:qmd:embed": "npm run qmd:embed --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
     "catalog:qmd:status": "npm run qmd:status --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
     "desktop:refresh-dashboard": "npm run catalog:export-dashboard-json",
+    "desktop:serve": "node apps/desktop/server.mjs",
+    "desktop:runtime": "npm run build --workspace @dj-vault/core && npm run build --workspace @dj-vault/catalog && npm run build --workspace @dj-vault/desktop && npm run desktop:serve",
     "desktop:dev": "npm run dev --workspace @dj-vault/desktop",
     "dev": "npm run desktop:refresh-dashboard && npm run desktop:dev"
   },

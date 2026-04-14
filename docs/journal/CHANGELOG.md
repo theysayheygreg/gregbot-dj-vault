@@ -1,5 +1,23 @@
 # DJ Vault — Changelog
 
+## 2026-04-14 — VaultBuddy live editing and laptop runtime
+
+### Added
+
+- `packages/catalog/src/editing.ts` for live track metadata edits and playlist item removal
+- `apps/desktop/server.mjs` as a built local runtime for `VaultBuddy`
+- [Laptop Runtime Setup](/Users/theysayheygreg/clawd/projects/dj-vault/docs/project/LAPTOP-RUNTIME-SETUP.md)
+
+### Changed
+
+- `VaultBuddy` now edits track metadata and playlist membership through the same local API surface in both Vite and built runtime modes
+- dashboard snapshots now include track ratings, comments, and playlist entry detail for the inspector
+- root npm scripts now include `desktop:serve` and `desktop:runtime`
+
+### Why
+
+The app needed to stop being a development-only viewer and become a practical local tool we can point at a real laptop library.
+
 ## 2026-04-07 — Workspace bootstrap reset
 
 ### Added
