@@ -66,6 +66,7 @@
     "catalog:qmd:embed": "npm run qmd:embed --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
     "catalog:qmd:status": "npm run qmd:status --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault",
     "fixture:build-sandbox-v1": "bash scripts/build-sandbox-v1-fixture.sh",
+    "fixture:test-sandbox-v1": "npm run build --workspace @dj-vault/catalog && node scripts/run-sandbox-v1-test.mjs",
     "desktop:refresh-dashboard": "npm run catalog:export-dashboard-json",
     "desktop:serve": "node apps/desktop/server.mjs",
     "desktop:runtime": "npm run build --workspace @dj-vault/core && npm run build --workspace @dj-vault/catalog && npm run build --workspace @dj-vault/desktop && npm run desktop:serve",

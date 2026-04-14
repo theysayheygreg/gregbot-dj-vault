@@ -5,14 +5,17 @@
 ### Added
 
 - `scripts/build-sandbox-v1-fixture.sh`
+- `scripts/run-sandbox-v1-test.mjs`
 - `docs/reference/SANDBOX-V1-FIXTURE.md`
 - root script `fixture:build-sandbox-v1`
+- root script `fixture:test-sandbox-v1`
 
 ### Changed
 
 - staged a controlled six-track source pool into `tmp/sandbox-v1/source-pool`
 - built three divergent library views plus nine playlists under `tmp/sandbox-v1`
 - verified the canonical view ingests cleanly into a scratch catalog
+- added duplicate-file metadata provenance capture during ingest, so later same-song opinions survive even when a track is skipped as already seen
 
 ### Why
 

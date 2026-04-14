@@ -137,6 +137,91 @@ function deriveTitleAndArtists(fileName: string, metadata: ExtractedAudioMetadat
   };
 }
 
+function recordObservedMetadata(
+  insertProvenance: ReturnType<DatabaseSync['prepare']>,
+  trackId: string,
+  filePath: string,
+  fileName: string,
+  observedAt: string,
+  metadata: ExtractedAudioMetadata,
+  normalized: { title: string; artists: string[] },
+  libraryRoot: string | null,
+  canonicalPath: string,
+): void {
+  insertProvenance.run(
+    'track',
+    trackId,
+    'file.canonicalPath',
+    libraryRoot ? 'managed-library' : 'filesystem',
+    libraryRoot ? 'managed-copy' : 'filesystem-scan',
+    canonicalPath,
+    1.0,
+    observedAt,
+    JSON.stringify(canonicalPath),
+  );
+  insertProvenance.run(
+    'track',
+    trackId,
+    'file.sourcePath',
+    'filesystem',
+    'filesystem-scan',
+    filePath,
+    1.0,
+    observedAt,
+    JSON.stringify(filePath),
+  );
+  insertProvenance.run(
+    'track',
+    trackId,
+    'identity.title',
+    metadata.title ? 'embedded-tags' : 'derived',
+    metadata.title ? 'ffprobe/mdls' : 'file-name',
+    fileName,
+    metadata.title ? 0.8 : 0.5,
+    observedAt,
+    JSON.stringify(normalized.title),
+  );
+  if (metadata.sampleRateHz !== null) {
+    insertProvenance.run('track', trackId, 'file.sampleRateHz', 'embedded-tags', 'ffprobe/mdls', filePath, 0.9, observedAt, JSON.stringify(metadata.sampleRateHz));
+  }
+  if (metadata.bitrateKbps !== null) {
+    insertProvenance.run('track', trackId, 'file.bitrateKbps', 'embedded-tags', 'ffprobe/mdls', filePath, 0.9, observedAt, JSON.stringify(metadata.bitrateKbps));
+  }
+  if (metadata.durationSec > 0) {
+    insertProvenance.run('track', trackId, 'file.durationSec', 'embedded-tags', 'ffprobe/mdls', filePath, 0.9, observedAt, JSON.stringify(metadata.durationSec));
+  }
+  const normalizedAlbum = normalizeText(metadata.album);
+  if (normalizedAlbum) {
+    insertProvenance.run(
+      'track',
+      trackId,
+      'identity.album',
+      metadata.album ? 'embedded-tags' : 'normalized',
+      metadata.album ? 'ffprobe/mdls' : 'normalization',
+      filePath,
+      metadata.album ? 0.8 : 0.35,
+      observedAt,
+      JSON.stringify(normalizedAlbum),
+    );
+  }
+  if (metadata.year !== null) {
+    insertProvenance.run('track', trackId, 'identity.year', 'embedded-tags', 'ffprobe/mdls', filePath, 0.8, observedAt, JSON.stringify(metadata.year));
+  }
+  for (const [index, artist] of normalized.artists.entries()) {
+    insertProvenance.run(
+      'track',
+      trackId,
+      `identity.artist.${index}`,
+      metadata.artists.length > 0 ? 'embedded-tags' : 'derived',
+      metadata.artists.length > 0 ? 'ffprobe/mdls' : 'file-name',
+      filePath,
+      metadata.artists.length > 0 ? 0.8 : 0.45,
+      observedAt,
+      JSON.stringify(artist),
+    );
+  }
+}
+
 async function extractWithFfprobe(filePath: string): Promise<ExtractedAudioMetadata | null> {
   try {
     const { stdout } = await execFileAsync('/opt/homebrew/bin/ffprobe', [
@@ -320,17 +405,33 @@ export async function ingestFilesIntoCatalog(
       const canonicalPath = libraryRoot
         ? await ensureManagedLibraryCopy(filePath, fileHash, extension, libraryRoot)
         : filePath;
+      const observedAt = new Date().toISOString();
+      const metadata = await extractAudioMetadata(filePath);
+      const normalized = deriveTitleAndArtists(fileName, metadata);
+      const existingByHash = findExistingByHash.get(fileHash) as { id: string } | undefined;
+      const existingByPath = findExistingByPath.get(canonicalPath) as { id: string } | undefined;
 
-      if (findExistingByHash.get(fileHash) || findExistingByPath.get(canonicalPath)) {
+      if (existingByHash || existingByPath) {
+        const existingTrackId = existingByHash?.id ?? existingByPath?.id;
+        if (existingTrackId) {
+          recordObservedMetadata(
+            insertProvenance,
+            existingTrackId,
+            filePath,
+            fileName,
+            observedAt,
+            metadata,
+            normalized,
+            libraryRoot,
+            canonicalPath,
+          );
+        }
         skippedExistingCount += 1;
         continue;
       }
 
       const stat = await lstat(filePath);
       const trackId = randomUUID();
-      const observedAt = new Date().toISOString();
-      const metadata = await extractAudioMetadata(filePath);
-      const normalized = deriveTitleAndArtists(fileName, metadata);
       const normalizedAlbum = normalizeText(metadata.album);
 
       insertTrack.run(
@@ -368,77 +469,17 @@ export async function ingestFilesIntoCatalog(
         observedAt,
         JSON.stringify(fileHash),
       );
-      insertProvenance.run(
-        'track',
+      recordObservedMetadata(
+        insertProvenance,
         trackId,
-        'file.canonicalPath',
-        libraryRoot ? 'managed-library' : 'filesystem',
-        libraryRoot ? 'managed-copy' : 'filesystem-scan',
-        canonicalPath,
-        1.0,
-        observedAt,
-        JSON.stringify(canonicalPath),
-      );
-      insertProvenance.run(
-        'track',
-        trackId,
-        'file.sourcePath',
-        'filesystem',
-        'filesystem-scan',
         filePath,
-        1.0,
-        observedAt,
-        JSON.stringify(filePath),
-      );
-      insertProvenance.run(
-        'track',
-        trackId,
-        'identity.title',
-        metadata.title ? 'embedded-tags' : 'derived',
-        metadata.title ? 'ffprobe/mdls' : 'file-name',
         fileName,
-        metadata.title ? 0.8 : 0.5,
         observedAt,
-        JSON.stringify(normalized.title),
+        metadata,
+        normalized,
+        libraryRoot,
+        canonicalPath,
       );
-      if (metadata.sampleRateHz !== null) {
-        insertProvenance.run('track', trackId, 'file.sampleRateHz', 'embedded-tags', 'ffprobe/mdls', filePath, 0.9, observedAt, JSON.stringify(metadata.sampleRateHz));
-      }
-      if (metadata.bitrateKbps !== null) {
-        insertProvenance.run('track', trackId, 'file.bitrateKbps', 'embedded-tags', 'ffprobe/mdls', filePath, 0.9, observedAt, JSON.stringify(metadata.bitrateKbps));
-      }
-      if (metadata.durationSec > 0) {
-        insertProvenance.run('track', trackId, 'file.durationSec', 'embedded-tags', 'ffprobe/mdls', filePath, 0.9, observedAt, JSON.stringify(metadata.durationSec));
-      }
-      if (normalizedAlbum) {
-        insertProvenance.run(
-          'track',
-          trackId,
-          'identity.album',
-          metadata.album ? 'embedded-tags' : 'normalized',
-          metadata.album ? 'ffprobe/mdls' : 'normalization',
-          filePath,
-          metadata.album ? 0.8 : 0.35,
-          observedAt,
-          JSON.stringify(normalizedAlbum),
-        );
-      }
-      if (metadata.year !== null) {
-        insertProvenance.run('track', trackId, 'identity.year', 'embedded-tags', 'ffprobe/mdls', filePath, 0.8, observedAt, JSON.stringify(metadata.year));
-      }
-      for (const [index, artist] of normalized.artists.entries()) {
-        insertProvenance.run(
-          'track',
-          trackId,
-          `identity.artist.${index}`,
-          metadata.artists.length > 0 ? 'embedded-tags' : 'derived',
-          metadata.artists.length > 0 ? 'ffprobe/mdls' : 'file-name',
-          filePath,
-          metadata.artists.length > 0 ? 0.8 : 0.45,
-          observedAt,
-          JSON.stringify(artist),
-        );
-      }
 
       insertedTrackCount += 1;
     }

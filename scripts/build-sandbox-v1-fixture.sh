@@ -135,41 +135,41 @@ rewrite_mp3 "$SOURCE_POOL/06-zdarlight.mp3" \
   "Zdarlight" "Digitalism" "Electro Folder" "2006" "Electronic" "Same audio, alternate path duplicate."
 
 write_playlist "$PLAYLISTS_DIR/canonical-embedded/Warmup Tools.m3u8" \
-  "../views/canonical-embedded/music/warmup/Gorillaz - Dare (Soulwax Remix).mp3" \
-  "../views/canonical-embedded/music/warmup/Shiny Toy Guns - Le Disko (Tommie Sunshine Brooklyn Fire Retouch).mp3" \
-  "../views/canonical-embedded/music/warmup/Digitalism - Zdarlight.mp3"
+  "../../views/canonical-embedded/music/warmup/Gorillaz - Dare (Soulwax Remix).mp3" \
+  "../../views/canonical-embedded/music/warmup/Shiny Toy Guns - Le Disko (Tommie Sunshine Brooklyn Fire Retouch).mp3" \
+  "../../views/canonical-embedded/music/warmup/Digitalism - Zdarlight.mp3"
 write_playlist "$PLAYLISTS_DIR/canonical-embedded/Peak Pressure.m3u8" \
-  "../views/canonical-embedded/music/peak/Depeche Mode - A Pain That I'm Used To (Jacques Lu Cont Remix).mp3" \
-  "../views/canonical-embedded/music/peak/Alter Ego - Rocker (Eric Prydz Remix).mp3" \
-  "../views/canonical-embedded/music/curveballs/Freeform Five - No More Conversations (Mylo Remix).mp3"
+  "../../views/canonical-embedded/music/peak/Depeche Mode - A Pain That I'm Used To (Jacques Lu Cont Remix).mp3" \
+  "../../views/canonical-embedded/music/peak/Alter Ego - Rocker (Eric Prydz Remix).mp3" \
+  "../../views/canonical-embedded/music/curveballs/Freeform Five - No More Conversations (Mylo Remix).mp3"
 write_playlist "$PLAYLISTS_DIR/canonical-embedded/Left Turns.m3u8" \
-  "../views/canonical-embedded/music/warmup/Digitalism - Zdarlight.mp3" \
-  "../views/canonical-embedded/music/curveballs/Freeform Five - No More Conversations (Mylo Remix).mp3" \
-  "../views/canonical-embedded/music/warmup/Gorillaz - Dare (Soulwax Remix).mp3"
+  "../../views/canonical-embedded/music/warmup/Digitalism - Zdarlight.mp3" \
+  "../../views/canonical-embedded/music/curveballs/Freeform Five - No More Conversations (Mylo Remix).mp3" \
+  "../../views/canonical-embedded/music/warmup/Gorillaz - Dare (Soulwax Remix).mp3"
 
 write_playlist "$PLAYLISTS_DIR/rekordbox6-dirty/Warmup Tools.m3u8" \
-  "../views/rekordbox6-dirty/music/warmup/Gorillaz - Dare (Soulwax Club Copy).mp3" \
-  "../views/rekordbox6-dirty/music/warmup/Shiny Toy Guns - Le Disko [Tommire Sunshine's Brooklyn Fire Retouch].mp3" \
-  "../views/rekordbox6-dirty/music/warmup/Digitalism - Zdarlight.mp3"
+  "../../views/rekordbox6-dirty/music/warmup/Gorillaz - Dare (Soulwax Club Copy).mp3" \
+  "../../views/rekordbox6-dirty/music/warmup/Shiny Toy Guns - Le Disko [Tommire Sunshine's Brooklyn Fire Retouch].mp3" \
+  "../../views/rekordbox6-dirty/music/warmup/Digitalism - Zdarlight.mp3"
 write_playlist "$PLAYLISTS_DIR/rekordbox6-dirty/Peak Pressure.m3u8" \
-  "../views/rekordbox6-dirty/music/peak/Depeche Mode - A Pain That I'm Used To [Jacques Lu Cont Remix].mp3" \
-  "../views/rekordbox6-dirty/music/peak/Alter Ego - Rocker [Eric Prydz Remix].mp3" \
-  "../views/rekordbox6-dirty/music/curveballs/Freeform Five - No More Conversations [Mylo Remix].mp3"
+  "../../views/rekordbox6-dirty/music/peak/Depeche Mode - A Pain That I'm Used To [Jacques Lu Cont Remix].mp3" \
+  "../../views/rekordbox6-dirty/music/peak/Alter Ego - Rocker [Eric Prydz Remix].mp3" \
+  "../../views/rekordbox6-dirty/music/curveballs/Freeform Five - No More Conversations [Mylo Remix].mp3"
 write_playlist "$PLAYLISTS_DIR/rekordbox6-dirty/Last Session.m3u8" \
-  "../views/rekordbox6-dirty/music/peak/Alter Ego - Rocker [Eric Prydz Remix].mp3" \
-  "../views/rekordbox6-dirty/music/curveballs/Freeform Five - No More Conversations [Mylo Remix].mp3"
+  "../../views/rekordbox6-dirty/music/peak/Alter Ego - Rocker [Eric Prydz Remix].mp3" \
+  "../../views/rekordbox6-dirty/music/curveballs/Freeform Five - No More Conversations [Mylo Remix].mp3"
 
 write_playlist "$PLAYLISTS_DIR/traktor-dirty/Warmup Tools.m3u8" \
-  "../views/traktor-dirty/music/warmup/Unknown Artist - Zdar Light.mp3" \
-  "../views/traktor-dirty/music/warmup/Gorillaz feat. Soulwax - Dare [Soulwax Remix].mp3" \
-  "../views/traktor-dirty/music/warmup/Shiny Toy Guns - Le Disko [Tommire Sunshine's Brooklyn Fire Retouch].mp3"
+  "../../views/traktor-dirty/music/warmup/Unknown Artist - Zdar Light.mp3" \
+  "../../views/traktor-dirty/music/warmup/Gorillaz feat. Soulwax - Dare [Soulwax Remix].mp3" \
+  "../../views/traktor-dirty/music/warmup/Shiny Toy Guns - Le Disko [Tommire Sunshine's Brooklyn Fire Retouch].mp3"
 write_playlist "$PLAYLISTS_DIR/traktor-dirty/Peak Pressure.m3u8" \
-  "../views/traktor-dirty/music/peak/Depeche Mode - A Pain That I'm Used To (Jacques Lu Cont Mix).mp3" \
-  "../views/traktor-dirty/music/peak/Alter Ego - Rocker (Eric Prydz Remix).mp3" \
-  "../views/traktor-dirty/music/curveballs/Freeform Five - No More Conversations (Mylo Dub).mp3"
+  "../../views/traktor-dirty/music/peak/Depeche Mode - A Pain That I'm Used To (Jacques Lu Cont Mix).mp3" \
+  "../../views/traktor-dirty/music/peak/Alter Ego - Rocker (Eric Prydz Remix).mp3" \
+  "../../views/traktor-dirty/music/curveballs/Freeform Five - No More Conversations (Mylo Dub).mp3"
 write_playlist "$PLAYLISTS_DIR/traktor-dirty/Dubious Duplicates.m3u8" \
-  "../views/traktor-dirty/music/warmup/Unknown Artist - Zdar Light.mp3" \
-  "../views/traktor-dirty/music/duplicates/Digitalism - Zdarlight (Alt Path).mp3"
+  "../../views/traktor-dirty/music/warmup/Unknown Artist - Zdar Light.mp3" \
+  "../../views/traktor-dirty/music/duplicates/Digitalism - Zdarlight (Alt Path).mp3"
 
 cat > "$EXPECTED_DIR/canonical-truth.tsv" <<'EOF'
 slug	expected_title	expected_artist	expected_album	expected_notes

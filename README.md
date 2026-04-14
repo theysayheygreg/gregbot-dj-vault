@@ -162,6 +162,14 @@ npm run fixture:build-sandbox-v1
 
 That fixture is documented in [Sandbox V1 Fixture](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/SANDBOX-V1-FIXTURE.md).
 
+To run the first full DJ Vault sandbox test against that fixture:
+
+```bash
+npm run fixture:test-sandbox-v1
+```
+
+That creates a fresh scratch catalog, ingests all three sandbox views into one managed library, imports the fixture playlists, seeds one playback session, and writes reports under `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports`.
+
 To ingest local audio files into the catalog:
 
 ```bash

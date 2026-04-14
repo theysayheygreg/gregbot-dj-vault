@@ -148,3 +148,30 @@ npm run fixture:build-sandbox-v1
 ```
 
 That command assumes the source pool already exists in `tmp/sandbox-v1/source-pool`.
+
+## Full System Test
+
+To stand this up as a real first DJ Vault test:
+
+```bash
+npm run fixture:test-sandbox-v1
+```
+
+That run currently tests four things at once:
+
+1. managed-library ingest across all three views
+2. duplicate-file provenance capture
+3. playlist import by audio hash
+4. recency seeding through one simulated playback session
+
+The current report lands here:
+
+- `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-test-report.json`
+- `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-test-report.md`
+
+The first honest finding from this run is important:
+
+- the canonical expected rows do exist
+- but DJ Vault still splits metadata-rewritten copies into separate tracks because identity is currently based on full-file SHA-256, not audio-content identity
+
+That means this fixture is already doing useful work. It gives us a concrete regression target for the next identity/merge tranche.
