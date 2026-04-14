@@ -173,5 +173,6 @@ The first honest finding from this run is important:
 
 - the canonical expected rows do exist
 - but DJ Vault still splits metadata-rewritten copies into separate tracks because identity is currently based on full-file SHA-256, not audio-content identity
+- that behavior is now considered a known implementation limitation, not a settled product truth
 
 That means this fixture is already doing useful work. It gives us a concrete regression target for the next identity/merge tranche.

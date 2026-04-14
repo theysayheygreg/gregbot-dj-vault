@@ -21,6 +21,7 @@
 - [ ] Track ingest CLI
 - [ ] Embedded metadata read path
 - [ ] Provenance data structures for conflicting values
+- [ ] Rework content identity beyond full-file SHA-256 so same songs with rewritten tags or different download wrappers can converge safely
 - [x] Traktor NML fixture parser
 - [x] Rekordbox XML fixture parser
 - [ ] First release-note corpus summaries
@@ -45,6 +46,7 @@
 - [ ] Metadata editor UI
 - [ ] Playlist and set builder UI
 - [ ] Export inspector UI
+- [ ] Audio-fingerprint or metadata-insensitive identity strategy evaluation for cross-source duplicate detection
 - [ ] Visibility layer compiler
 - [ ] Behavioral workflow emulator
 - [ ] Hardware-oriented control surface simulation
