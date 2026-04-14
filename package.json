@@ -37,6 +37,8 @@
     "catalog:add-track-to-playlist": "npm run add:track-to-playlist --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:add-track-to-set": "npm run add:track-to-set --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:create-playback-session": "npm run create:playback-session --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:merge-apply": "npm run merge:apply --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
+    "catalog:merge-report": "npm run merge:report --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:log-playback-event": "npm run log:playback-event --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:identity-report": "npm run identity:report --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",
     "catalog:recency-report": "npm run recency:report --workspace @dj-vault/catalog -- /Users/theysayheygreg/clawd/projects/dj-vault/data/dj-vault.sqlite",

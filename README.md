@@ -176,6 +176,13 @@ To inspect identity convergence and duplicate clusters in any catalog:
 npm run catalog:identity-report
 ```
 
+To review or apply the current provenance-driven merge policy in any catalog:
+
+```bash
+npm run catalog:merge-report
+npm run catalog:merge-apply
+```
+
 To ingest local audio files into the catalog:
 
 ```bash

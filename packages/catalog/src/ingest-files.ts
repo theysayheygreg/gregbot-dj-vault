@@ -219,7 +219,7 @@ function recordObservedMetadata(
     'identity.title',
     metadata.title ? 'embedded-tags' : 'derived',
     metadata.title ? 'ffprobe/mdls' : 'file-name',
-    fileName,
+    filePath,
     metadata.title ? 0.8 : 0.5,
     observedAt,
     JSON.stringify(normalized.title),

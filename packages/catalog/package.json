@@ -20,6 +20,8 @@
     "add:track-to-playlist": "node dist/cli/add-track-to-playlist.js",
     "add:track-to-set": "node dist/cli/add-track-to-set.js",
     "create:playback-session": "node dist/cli/create-playback-session.js",
+    "merge:apply": "node dist/cli/merge-apply.js",
+    "merge:report": "node dist/cli/merge-report.js",
     "log:playback-event": "node dist/cli/log-playback-event.js",
     "identity:report": "node dist/cli/identity-report.js",
     "recency:report": "node dist/cli/recency-report.js",

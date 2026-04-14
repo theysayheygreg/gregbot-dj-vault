@@ -169,6 +169,13 @@ The current report lands here:
 - `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-test-report.json`
 - `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-test-report.md`
 
+The sandbox run now also applies the current merge policy before it imports playlists and recency data. You can inspect or replay that policy directly with:
+
+```bash
+npm run catalog:merge-report
+npm run catalog:merge-apply
+```
+
 The first honest finding from this run is important:
 
 - the canonical expected rows exist

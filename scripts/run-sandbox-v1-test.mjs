@@ -139,13 +139,37 @@ async function importPlaylists(databasePathValue, playlistRoot) {
   return imported;
 }
 
+async function applyMerge(databasePathValue) {
+  const { applyMergeSelections, generateMergeReport } = await import(path.join(catalogDistDir, 'merge.js'));
+  const before = generateMergeReport(databasePathValue);
+  const result = applyMergeSelections(databasePathValue);
+  const after = generateMergeReport(databasePathValue);
+  return {
+    changedTrackCount: result.changedTrackCount,
+    beforeChangedTrackCount: before.changedTrackCount,
+    afterChangedTrackCount: after.changedTrackCount,
+    sampleChanges: before.plans.filter((plan) => plan.changedFields.length > 0).slice(0, 6),
+  };
+}
+
 async function resolveCanonicalTrackId(databasePathValue, title) {
   const database = new DatabaseSync(databasePathValue, { readOnly: true });
   try {
-    const match = database.prepare(`
+    const exactCanonical = database.prepare(`
       SELECT id
       FROM tracks
       WHERE title = ? AND album = 'Sandbox V1 Canonical'
+      ORDER BY created_at ASC
+      LIMIT 1
+    `).get(title);
+    if (exactCanonical?.id) {
+      return exactCanonical.id;
+    }
+
+    const match = database.prepare(`
+      SELECT id
+      FROM tracks
+      WHERE title = ?
       ORDER BY created_at ASC
       LIMIT 1
     `).get(title);
@@ -200,7 +224,7 @@ function loadExpectedTruth(expectedPath) {
   });
 }
 
-function collectReport(databasePathValue, importedPlaylists, playbackSeed) {
+function collectReport(databasePathValue, importedPlaylists, playbackSeed, mergeResult) {
   const database = new DatabaseSync(databasePathValue, { readOnly: true });
 
   try {
@@ -284,6 +308,7 @@ function collectReport(databasePathValue, importedPlaylists, playbackSeed) {
       },
       importedPlaylists,
       playbackSeed,
+      mergeResult,
       trackResults: tracks.map((track) => ({
         id: track.id,
         title: track.title,
@@ -332,6 +357,13 @@ function renderMarkdownReport(report) {
     '',
     ...report.trackResults.map((track) => `- ${track.title} | artist=${track.artist ?? 'missing'} | title opinions=${track.distinctTitleOpinionCount} | source paths=${track.distinctSourcePathCount} | duplicate title group=${track.duplicateTitleSlugCount} | playCount=${track.playCount}`),
     '',
+    '## Merge Result',
+    '',
+    `- Tracks needing changes before apply: ${report.mergeResult.beforeChangedTrackCount}`,
+    `- Tracks changed by merge: ${report.mergeResult.changedTrackCount}`,
+    `- Tracks still needing changes after apply: ${report.mergeResult.afterChangedTrackCount}`,
+    ...report.mergeResult.sampleChanges.map((plan) => `- ${plan.current.title} -> ${plan.selected.title} | changed fields: ${plan.changedFields.join(', ')}`),
+    '',
     '## Expected Canonical Truth',
     '',
     ...report.expectationResults.map((result) => `- ${result.slug}: title ${result.titleMatches ? 'ok' : 'mismatch'} | artist ${result.artistMatches ? 'ok' : 'mismatch'} | actual="${result.actualTitle ?? 'missing'}" / "${result.actualArtist ?? 'missing'}"`),
@@ -367,16 +399,17 @@ await run('node', [
   databasePath,
   '--library-root',
   managedLibraryRoot,
-  path.join(fixtureRoot, 'views/canonical-embedded/music'),
   path.join(fixtureRoot, 'views/rekordbox6-dirty/music'),
   path.join(fixtureRoot, 'views/traktor-dirty/music'),
+  path.join(fixtureRoot, 'views/canonical-embedded/music'),
 ]);
 
+const mergeResult = await applyMerge(databasePath);
 const importedPlaylists = await importPlaylists(databasePath, path.join(fixtureRoot, 'playlists'));
 const playbackSeed = await seedPlaybackHistory(databasePath);
 const { generateIdentityReport } = await import(path.join(catalogDistDir, 'identity.js'));
 const report = {
-  ...collectReport(databasePath, importedPlaylists, playbackSeed),
+  ...collectReport(databasePath, importedPlaylists, playbackSeed, mergeResult),
   identityReport: generateIdentityReport(databasePath),
 };
 
