@@ -1,4 +1,4 @@
-export const catalogSchemaVersion = 4;
+export const catalogSchemaVersion = 5;
 
 export const catalogSchemaSql = `
 PRAGMA foreign_keys = ON;
@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS tracks (
   sample_rate_hz INTEGER,
   bitrate_kbps INTEGER,
   hash_sha256 TEXT NOT NULL UNIQUE,
+  content_hash_sha256 TEXT,
   audio_format TEXT NOT NULL,
   modified_at TEXT,
   added_at TEXT NOT NULL,
@@ -315,6 +316,7 @@ CREATE TABLE IF NOT EXISTS export_execution_plans (
 );
 
 CREATE INDEX IF NOT EXISTS idx_tracks_hash_sha256 ON tracks(hash_sha256);
+CREATE INDEX IF NOT EXISTS idx_tracks_content_hash_sha256 ON tracks(content_hash_sha256);
 CREATE INDEX IF NOT EXISTS idx_tracks_title ON tracks(title);
 CREATE INDEX IF NOT EXISTS idx_tracks_artist_role ON track_people(role, name);
 CREATE INDEX IF NOT EXISTS idx_track_tags_kind_value ON track_tags(tag_kind, value);

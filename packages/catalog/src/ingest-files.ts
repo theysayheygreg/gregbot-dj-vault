@@ -1,6 +1,7 @@
 import { createHash, randomUUID } from 'node:crypto';
 import { execFile } from 'node:child_process';
 import { createReadStream } from 'node:fs';
+import { readFile } from 'node:fs/promises';
 import { copyFile, lstat, mkdir, readdir, realpath } from 'node:fs/promises';
 import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
@@ -72,6 +73,36 @@ async function hashFile(filePath: string): Promise<string> {
   });
 
   return hash.digest('hex');
+}
+
+function decodeSynchsafeInteger(bytes: Buffer): number {
+  return ((bytes[0] ?? 0) << 21) | ((bytes[1] ?? 0) << 14) | ((bytes[2] ?? 0) << 7) | (bytes[3] ?? 0);
+}
+
+function stripMp3Tags(buffer: Buffer): Buffer {
+  let start = 0;
+  let end = buffer.length;
+
+  if (buffer.length >= 10 && buffer.subarray(0, 3).toString('latin1') === 'ID3') {
+    const flags = buffer[5] ?? 0;
+    const size = decodeSynchsafeInteger(buffer.subarray(6, 10));
+    start = 10 + size + ((flags & 0x10) !== 0 ? 10 : 0);
+  }
+
+  if (end - start >= 128 && buffer.subarray(end - 128, end - 125).toString('latin1') === 'TAG') {
+    end -= 128;
+  }
+
+  return buffer.subarray(Math.min(start, buffer.length), Math.max(Math.min(end, buffer.length), start));
+}
+
+async function hashAudioContent(filePath: string, extension: string): Promise<string> {
+  if (extension === 'mp3') {
+    const buffer = await readFile(filePath);
+    return createHash('sha256').update(stripMp3Tags(buffer)).digest('hex');
+  }
+
+  return hashFile(filePath);
 }
 
 function normalizeText(value: string | null): string | null {
@@ -147,7 +178,19 @@ function recordObservedMetadata(
   normalized: { title: string; artists: string[] },
   libraryRoot: string | null,
   canonicalPath: string,
+  contentHash: string,
 ): void {
+  insertProvenance.run(
+    'track',
+    trackId,
+    'file.contentHashSha256',
+    'filesystem',
+    'content-hash',
+    filePath,
+    1.0,
+    observedAt,
+    JSON.stringify(contentHash),
+  );
   insertProvenance.run(
     'track',
     trackId,
@@ -373,12 +416,13 @@ export async function ingestFilesIntoCatalog(
     }
 
     const findExistingByHash = database.prepare(`SELECT id FROM tracks WHERE hash_sha256 = ?`);
+    const findExistingByContentHash = database.prepare(`SELECT id FROM tracks WHERE content_hash_sha256 = ? ORDER BY created_at ASC LIMIT 1`);
     const findExistingByPath = database.prepare(`SELECT id FROM tracks WHERE canonical_path = ?`);
     const insertTrack = database.prepare(`
       INSERT INTO tracks (
         id, canonical_path, file_name, extension, size_bytes, duration_sec, sample_rate_hz, bitrate_kbps,
-        hash_sha256, audio_format, modified_at, added_at, title, album, year, created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        hash_sha256, content_hash_sha256, audio_format, modified_at, added_at, title, album, year, created_at, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
     const insertTrackPerson = database.prepare(`
       INSERT INTO track_people (track_id, role, name, position)
@@ -402,6 +446,7 @@ export async function ingestFilesIntoCatalog(
       const fileHash = await hashFile(filePath);
       const fileName = path.basename(filePath);
       const extension = path.extname(fileName).replace(/^\./, '').toLowerCase();
+      const contentHash = await hashAudioContent(filePath, extension);
       const canonicalPath = libraryRoot
         ? await ensureManagedLibraryCopy(filePath, fileHash, extension, libraryRoot)
         : filePath;
@@ -409,10 +454,11 @@ export async function ingestFilesIntoCatalog(
       const metadata = await extractAudioMetadata(filePath);
       const normalized = deriveTitleAndArtists(fileName, metadata);
       const existingByHash = findExistingByHash.get(fileHash) as { id: string } | undefined;
+      const existingByContentHash = findExistingByContentHash.get(contentHash) as { id: string } | undefined;
       const existingByPath = findExistingByPath.get(canonicalPath) as { id: string } | undefined;
 
-      if (existingByHash || existingByPath) {
-        const existingTrackId = existingByHash?.id ?? existingByPath?.id;
+      if (existingByHash || existingByContentHash || existingByPath) {
+        const existingTrackId = existingByHash?.id ?? existingByContentHash?.id ?? existingByPath?.id;
         if (existingTrackId) {
           recordObservedMetadata(
             insertProvenance,
@@ -424,6 +470,7 @@ export async function ingestFilesIntoCatalog(
             normalized,
             libraryRoot,
             canonicalPath,
+            contentHash,
           );
         }
         skippedExistingCount += 1;
@@ -444,6 +491,7 @@ export async function ingestFilesIntoCatalog(
         metadata.sampleRateHz,
         metadata.bitrateKbps,
         fileHash,
+        contentHash,
         extension,
         new Date(stat.mtimeMs).toISOString(),
         observedAt,
@@ -479,6 +527,7 @@ export async function ingestFilesIntoCatalog(
         normalized,
         libraryRoot,
         canonicalPath,
+        contentHash,
       );
 
       insertedTrackCount += 1;

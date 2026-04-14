@@ -21,6 +21,20 @@ async function fileExists(filePath: string): Promise<boolean> {
   }
 }
 
+function hasColumn(database: DatabaseSync, tableName: string, columnName: string): boolean {
+  const rows = database.prepare(`PRAGMA table_info(${tableName})`).all() as Array<{ name: string }>;
+  return rows.some((row) => row.name === columnName);
+}
+
+function runMigrations(database: DatabaseSync): void {
+  if (!hasColumn(database, 'tracks', 'content_hash_sha256')) {
+    database.exec(`ALTER TABLE tracks ADD COLUMN content_hash_sha256 TEXT;`);
+  }
+
+  database.exec(`CREATE INDEX IF NOT EXISTS idx_tracks_content_hash_sha256 ON tracks(content_hash_sha256);`);
+  database.exec(`UPDATE tracks SET content_hash_sha256 = hash_sha256 WHERE content_hash_sha256 IS NULL;`);
+}
+
 export async function initializeCatalog(databasePath: string): Promise<CatalogInitResult> {
   await mkdir(path.dirname(databasePath), { recursive: true });
 
@@ -31,6 +45,7 @@ export async function initializeCatalog(databasePath: string): Promise<CatalogIn
     database.exec('PRAGMA journal_mode = WAL;');
     database.exec('PRAGMA synchronous = NORMAL;');
     database.exec(catalogSchemaSql);
+    runMigrations(database);
 
     const setMetadata = database.prepare(`
       INSERT INTO app_metadata (key, value)

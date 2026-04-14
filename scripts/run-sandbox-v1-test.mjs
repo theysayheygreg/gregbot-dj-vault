@@ -42,6 +42,35 @@ async function hashFile(filePath) {
   return hash.digest('hex');
 }
 
+function decodeSynchsafeInteger(bytes) {
+  return ((bytes[0] ?? 0) << 21) | ((bytes[1] ?? 0) << 14) | ((bytes[2] ?? 0) << 7) | (bytes[3] ?? 0);
+}
+
+function stripMp3Tags(buffer) {
+  let start = 0;
+  let end = buffer.length;
+
+  if (buffer.length >= 10 && buffer.subarray(0, 3).toString('latin1') === 'ID3') {
+    const flags = buffer[5] ?? 0;
+    const size = decodeSynchsafeInteger(buffer.subarray(6, 10));
+    start = 10 + size + ((flags & 0x10) !== 0 ? 10 : 0);
+  }
+
+  if (end - start >= 128 && buffer.subarray(end - 128, end - 125).toString('latin1') === 'TAG') {
+    end -= 128;
+  }
+
+  return buffer.subarray(Math.min(start, buffer.length), Math.max(Math.min(end, buffer.length), start));
+}
+
+async function hashAudioContent(filePath) {
+  if (path.extname(filePath).toLowerCase() === '.mp3') {
+    const buffer = await readFile(filePath);
+    return createHash('sha256').update(stripMp3Tags(buffer)).digest('hex');
+  }
+  return hashFile(filePath);
+}
+
 async function collectPlaylistFiles(root) {
   const entries = [];
   const views = await readDirSorted(root);
@@ -91,7 +120,7 @@ async function importPlaylists(databasePathValue, playlistRoot) {
 
     for (const line of lines) {
       const mediaPath = path.resolve(path.dirname(entry.playlistPath), line);
-      const mediaHash = await hashFile(mediaPath);
+      const mediaHash = await hashAudioContent(mediaPath);
       addTrackToPlaylist(databasePathValue, {
         playlistId: playlist.id,
         trackRef: mediaHash,
@@ -270,8 +299,8 @@ function collectReport(databasePathValue, importedPlaylists, playbackSeed) {
       observations: [
         'Current ingest now preserves conflicting duplicate-file metadata as provenance instead of discarding later opinions outright.',
         'Canonical track fields still come from first-write ingestion order; this test exposes where a future merge engine should take over.',
-        'Playlist import is hash-based, so differing file paths still resolve onto one canonical track when audio content matches.',
-        'Because identity currently uses full-file SHA-256, metadata-rewritten copies can still split into multiple tracks even when the audible song is effectively the same.',
+        'Playlist import now follows the same metadata-insensitive content hash as ingest, so differing file paths still resolve onto one canonical track when the audio payload matches.',
+        'The current content hash solves metadata-rewritten MP3 copies, but it is not yet a full audio fingerprint for differently encoded downloads or alternate masters.',
       ],
     };
 
@@ -297,6 +326,7 @@ function renderMarkdownReport(report) {
     `- Playback sessions: ${report.ingest.playbackSessionCount}`,
     `- Playback events: ${report.ingest.playbackEventCount}`,
     `- Provenance rows: ${report.ingest.provenanceCount}`,
+    `- Duplicate content clusters: ${report.identityReport.duplicateClusterCount}`,
     '',
     '## Track Results',
     '',
@@ -309,6 +339,12 @@ function renderMarkdownReport(report) {
     '## Notes',
     '',
     ...report.observations.map((note) => `- ${note}`),
+    '',
+    '## Identity Report',
+    '',
+    `- Tracks with content hash: ${report.identityReport.contentHashTrackCount}`,
+    `- Duplicate clusters: ${report.identityReport.duplicateClusterCount}`,
+    ...report.identityReport.clusters.slice(0, 8).map((cluster) => `- cluster ${cluster.clusterKey.slice(0, 12)}… has ${cluster.trackCount} tracks: ${cluster.tracks.map((track) => track.title).join(' | ')}`),
     '',
     failingExpectations.length === 0
       ? 'All canonical-title and artist expectations matched in the current ingest order.'
@@ -338,7 +374,11 @@ await run('node', [
 
 const importedPlaylists = await importPlaylists(databasePath, path.join(fixtureRoot, 'playlists'));
 const playbackSeed = await seedPlaybackHistory(databasePath);
-const report = collectReport(databasePath, importedPlaylists, playbackSeed);
+const { generateIdentityReport } = await import(path.join(catalogDistDir, 'identity.js'));
+const report = {
+  ...collectReport(databasePath, importedPlaylists, playbackSeed),
+  identityReport: generateIdentityReport(databasePath),
+};
 
 const reportJsonPath = path.join(reportsRoot, 'sandbox-v1-test-report.json');
 const reportMdPath = path.join(reportsRoot, 'sandbox-v1-test-report.md');

@@ -21,6 +21,7 @@
     "add:track-to-set": "node dist/cli/add-track-to-set.js",
     "create:playback-session": "node dist/cli/create-playback-session.js",
     "log:playback-event": "node dist/cli/log-playback-event.js",
+    "identity:report": "node dist/cli/identity-report.js",
     "recency:report": "node dist/cli/recency-report.js",
     "import:playback-history": "node dist/cli/import-playback-history.js",
     "import:rekordbox-collection": "node dist/cli/import-rekordbox-collection.js",

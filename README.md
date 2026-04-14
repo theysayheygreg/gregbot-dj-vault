@@ -170,6 +170,12 @@ npm run fixture:test-sandbox-v1
 
 That creates a fresh scratch catalog, ingests all three sandbox views into one managed library, imports the fixture playlists, seeds one playback session, and writes reports under `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports`.
 
+To inspect identity convergence and duplicate clusters in any catalog:
+
+```bash
+npm run catalog:identity-report
+```
+
 To ingest local audio files into the catalog:
 
 ```bash

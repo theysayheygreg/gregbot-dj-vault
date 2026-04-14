@@ -24,7 +24,7 @@ Decisions here are load-bearing. If you're about to revisit one, read the full e
 
 **Why:** Traktor and Rekordbox IDs are not stable across reinstalls and collections. Paths change when files move. UUID + hash is the only combination that survives everything — reinstalls, drive swaps, file renames.
 
-**Implementation note added 2026-04-14:** The `sandbox-v1` system test exposed an important caveat: full-file SHA-256 is too sensitive when the same song is wrapped in different tags, filenames, or download-source metadata. The foundational decision stays closed, but the implementation of "content identity" is now explicitly open for refinement. We likely need an audio-content fingerprint or another metadata-insensitive layer in addition to the raw file hash.
+**Implementation note added 2026-04-14:** The `sandbox-v1` system test exposed an important caveat: full-file SHA-256 is too sensitive when the same song is wrapped in different tags, filenames, or download-source metadata. DJ Vault now supplements that with a metadata-insensitive MP3 content hash for the tag-rewrite case, but the broader implementation of "content identity" is still open for refinement. We likely need an audio-content fingerprint or another metadata-insensitive layer for cross-encode, cross-source, or alternate-master comparisons in addition to the raw file hash.
 
 **Door status:** Closed at the model level, open at the implementation level for a less brittle content-identity strategy.
 

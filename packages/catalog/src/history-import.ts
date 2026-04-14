@@ -106,6 +106,7 @@ function resolveTrack(database: DatabaseSync, sourceKind: string, trackRef: stri
     FROM tracks
     WHERE id = ?
        OR hash_sha256 = ?
+       OR content_hash_sha256 = ?
        OR lower(title) = lower(?)
        OR lower(file_name) = lower(?)
        OR rekordbox_track_id = ?
@@ -114,6 +115,7 @@ function resolveTrack(database: DatabaseSync, sourceKind: string, trackRef: stri
        OR traktor_collection_path_key = ?
     ORDER BY title COLLATE NOCASE, id
   `).all(
+    ref,
     ref,
     ref,
     ref,

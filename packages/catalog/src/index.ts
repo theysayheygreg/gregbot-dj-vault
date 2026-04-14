@@ -3,6 +3,7 @@ export * from './init-catalog.js';
 export * from './ingest-files.js';
 export * from './authoring.js';
 export * from './editing.js';
+export * from './identity.js';
 export * from './recency.js';
 export * from './history-import.js';
 export * from './vendor-history.js';

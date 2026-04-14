@@ -47,10 +47,11 @@ function resolveTrack(database: DatabaseSync, trackRef: string): { id: string; t
     FROM tracks
     WHERE id = ?
        OR hash_sha256 = ?
+       OR content_hash_sha256 = ?
        OR lower(title) = lower(?)
        OR lower(file_name) = lower(?)
     ORDER BY title COLLATE NOCASE, id
-  `).all(ref, ref, ref, ref) as Array<{ id: string; title: string }>;
+  `).all(ref, ref, ref, ref, ref) as Array<{ id: string; title: string }>;
 
   if (matches.length === 0) {
     throw new Error(`No track matched "${ref}".`);

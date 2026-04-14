@@ -6,9 +6,11 @@
 
 - `scripts/build-sandbox-v1-fixture.sh`
 - `scripts/run-sandbox-v1-test.mjs`
+- `packages/catalog/src/identity.ts`
 - `docs/reference/SANDBOX-V1-FIXTURE.md`
 - root script `fixture:build-sandbox-v1`
 - root script `fixture:test-sandbox-v1`
+- root script `catalog:identity-report`
 
 ### Changed
 
@@ -16,6 +18,8 @@
 - built three divergent library views plus nine playlists under `tmp/sandbox-v1`
 - verified the canonical view ingests cleanly into a scratch catalog
 - added duplicate-file metadata provenance capture during ingest, so later same-song opinions survive even when a track is skipped as already seen
+- added a metadata-insensitive MP3 content hash and used it for ingest dedupe and downstream track resolution
+- `sandbox-v1` now converges from 20 track rows to 6 canonical tracks while preserving title and path disagreements in provenance
 
 ### Why
 

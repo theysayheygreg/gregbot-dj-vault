@@ -171,8 +171,9 @@ The current report lands here:
 
 The first honest finding from this run is important:
 
-- the canonical expected rows do exist
-- but DJ Vault still splits metadata-rewritten copies into separate tracks because identity is currently based on full-file SHA-256, not audio-content identity
-- that behavior is now considered a known implementation limitation, not a settled product truth
+- the canonical expected rows exist
+- DJ Vault now converges metadata-rewritten MP3 copies onto six canonical tracks using a metadata-insensitive content hash
+- provenance still preserves the competing title and path opinions from all three views
+- this is a real improvement, but it is not yet a full cross-source duplicate solution for differently encoded downloads or alternate masters
 
-That means this fixture is already doing useful work. It gives us a concrete regression target for the next identity/merge tranche.
+That means this fixture is already doing useful work. It now acts as a regression target for the next identity tranche: expanding from tag-insensitive convergence to broader cross-source song identity.
