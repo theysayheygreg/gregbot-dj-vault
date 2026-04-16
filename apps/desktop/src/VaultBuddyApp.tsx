@@ -13,8 +13,8 @@ type StorageItem = DashboardSnapshot['topology']['storages'][number];
 type ExportJobItem = DashboardSnapshot['recentExports'][number];
 
 type ActiveView = 'library' | 'playlists' | 'exports' | 'topology';
-type SmartCollection = 'all' | 'hot' | 'cooling' | 'dormant' | 'warnings';
-type TrackSortKey = 'title' | 'artist' | 'recency' | 'bpm' | 'duration' | 'warnings';
+type SmartCollection = 'all' | 'hot' | 'cooling' | 'dormant' | 'needs-ears' | 'warnings';
+type TrackSortKey = 'title' | 'artist' | 'trust' | 'recency' | 'bpm' | 'duration' | 'warnings';
 type SortDirection = 'asc' | 'desc';
 type InspectorTab = 'overview' | 'metadata' | 'readiness' | 'sets' | 'target' | 'native' | 'plans' | 'storage' | 'activity';
 type ConnectionMode = 'bundled' | 'live';
@@ -32,6 +32,7 @@ const smartCollectionLabels: Record<SmartCollection, string> = {
   hot: 'Hot Right Now',
   cooling: 'Cooling Off',
   dormant: 'Dormant',
+  'needs-ears': 'Needs Ears',
   warnings: 'Needs Attention',
 };
 
@@ -41,6 +42,20 @@ const recencyOrder: Record<TrackItem['recencyBucket'], number> = {
   cooling: 2,
   dormant: 3,
   'never-played': 4,
+};
+
+const trustOrder: Record<TrackItem['trustState'], number> = {
+  blocked: 0,
+  'needs-attention': 1,
+  chosen: 2,
+  trusted: 3,
+};
+
+const trustLabels: Record<TrackItem['trustState'], string> = {
+  trusted: 'Settled',
+  chosen: 'Chosen',
+  'needs-attention': 'Needs Ears',
+  blocked: 'Blocked',
 };
 
 function defaultInspectorTab(view: ActiveView): InspectorTab {
@@ -107,6 +122,9 @@ function compareTracks(a: TrackItem, b: TrackItem, key: TrackSortKey, direction:
     case 'artist':
       result = compareText(a.artist, b.artist);
       break;
+    case 'trust':
+      result = trustOrder[a.trustState] - trustOrder[b.trustState] || compareNumber(a.trustScore, b.trustScore);
+      break;
     case 'recency':
       result = recencyOrder[a.recencyBucket] - recencyOrder[b.recencyBucket];
       break;
@@ -133,6 +151,8 @@ function metricValue(label: SmartCollection, tracks: TrackItem[]): number {
       return tracks.filter((track) => track.recencyBucket === 'cooling' || track.recencyBucket === 'new').length;
     case 'dormant':
       return tracks.filter((track) => track.recencyBucket === 'dormant' || track.recencyBucket === 'never-played').length;
+    case 'needs-ears':
+      return tracks.filter((track) => track.trustState === 'needs-attention' || track.trustState === 'blocked').length;
     case 'warnings':
       return tracks.filter((track) => track.warnings.length > 0).length;
   }
@@ -148,6 +168,8 @@ function filterTrackByCollection(track: TrackItem, collection: SmartCollection):
       return track.recencyBucket === 'cooling' || track.recencyBucket === 'new';
     case 'dormant':
       return track.recencyBucket === 'dormant' || track.recencyBucket === 'never-played';
+    case 'needs-ears':
+      return track.trustState === 'needs-attention' || track.trustState === 'blocked';
     case 'warnings':
       return track.warnings.length > 0;
   }
@@ -261,7 +283,7 @@ export function VaultBuddyApp() {
   const visibleTracks = tracks
     .filter((track) => filterTrackByCollection(track, activeCollection))
     .filter((track) => matchesQuery(
-      [track.title, track.artist, track.album, track.label, track.keyDisplay, track.recencyBucket, ...track.warnings],
+      [track.title, track.artist, track.album, track.label, track.keyDisplay, track.recencyBucket, trustLabels[track.trustState], track.trustRationale, ...track.trustReasons, ...track.warnings],
       deferredQuery,
     ))
     .sort((a, b) => compareTracks(a, b, trackSortKey, trackSortDirection));
@@ -604,8 +626,6 @@ export function VaultBuddyApp() {
     );
   }
 
-  const summaryTrackWarningCount = tracks.filter((track) => track.warnings.length > 0).length;
-
   return (
     <main className="workspace-shell">
       <aside className="sidebar">
@@ -637,7 +657,7 @@ export function VaultBuddyApp() {
         <section className="sidebar-section">
           <h2>Smart Collections</h2>
           <div className="sidebar-list">
-            {(['all', 'hot', 'cooling', 'dormant', 'warnings'] as SmartCollection[]).map((collection) => (
+            {(['all', 'hot', 'cooling', 'dormant', 'needs-ears', 'warnings'] as SmartCollection[]).map((collection) => (
               <button
                 className={`collection-chip ${activeCollection === collection ? 'is-active' : ''}`}
                 key={collection}
@@ -709,9 +729,9 @@ export function VaultBuddyApp() {
             <small>{snapshot.summary.hotTrackCount} front-of-mind</small>
           </article>
           <article className="summary-card">
-            <span>Metadata Gaps</span>
-            <strong>{summaryTrackWarningCount}</strong>
-            <small>Needs cleanup before USB confidence</small>
+            <span>Library Trust</span>
+            <strong>{snapshot.summary.libraryTrust.needsAttentionTrackCount + snapshot.summary.libraryTrust.blockedTrackCount}</strong>
+            <small>{snapshot.summary.libraryTrust.chosenTrackCount} quietly chosen by DJ Vault</small>
           </article>
           <article className="summary-card">
             <span>Export Plans</span>
@@ -742,10 +762,10 @@ export function VaultBuddyApp() {
                       {([
                         ['title', 'Title'],
                         ['artist', 'Artist'],
+                        ['trust', 'Trust'],
                         ['recency', 'Recency'],
                         ['bpm', 'BPM'],
-                        ['duration', 'Length'],
-                        ['warnings', 'Warnings'],
+                        ['warnings', 'Gaps'],
                       ] as Array<[TrackSortKey, string]>).map(([key, label]) => (
                         <button
                           className="table-header-button"
@@ -773,9 +793,9 @@ export function VaultBuddyApp() {
                           <small>{track.album ?? 'Unknown album'}</small>
                         </span>
                         <span>{track.artist ?? 'Unknown artist'}</span>
+                        <span><span className={`trust-chip trust-${track.trustState}`}>{trustLabels[track.trustState]}</span></span>
                         <span><span className={`bucket-chip bucket-${track.recencyBucket}`}>{track.recencyBucket}</span></span>
                         <span>{track.bpm ? track.bpm.toFixed(1) : '—'}</span>
-                        <span>{formatDuration(track.durationSec)}</span>
                         <span>{track.warnings.length}</span>
                       </button>
                     ))}
@@ -1040,7 +1060,7 @@ export function VaultBuddyApp() {
                 ? ([
                   ['overview', 'Overview'],
                   ['metadata', 'Metadata'],
-                  ['readiness', 'Export Readiness'],
+                  ['readiness', 'Library Trust'],
                 ] as Array<[InspectorTab, string]>)
                 : activeView === 'playlists'
                   ? ([
@@ -1092,6 +1112,7 @@ export function VaultBuddyApp() {
                         <div><dt>BPM</dt><dd>{selectedTrack.bpm ? selectedTrack.bpm.toFixed(1) : 'No BPM'}</dd></div>
                         <div><dt>Length</dt><dd>{formatDuration(selectedTrack.durationSec)}</dd></div>
                         <div><dt>Recency Score</dt><dd>{selectedTrack.recencyScore}</dd></div>
+                        <div><dt>Trust</dt><dd>{trustLabels[selectedTrack.trustState]} · {selectedTrack.trustScore}</dd></div>
                       </dl>
                     </div>
                     <div className="inspector-section">
@@ -1163,15 +1184,38 @@ export function VaultBuddyApp() {
                   </>
                 ) : null}
                 {inspectorTab === 'readiness' ? (
-                  <div className="inspector-section">
-                    <h4>Old-Device Readiness</h4>
-                    <p className="muted">This track will not round-trip cleanly until its metadata gaps are resolved. The current native writer planning especially cares about artist, duration, bitrate, sample rate, and BPM.</p>
-                    <div className="tag-row">
-                      {selectedTrack.warnings.map((warning) => (
-                        <span className="mini-tag caution" key={warning}>{warning}</span>
-                      ))}
+                  <>
+                    <div className="inspector-section">
+                      <h4>Library Trust</h4>
+                      <p>{selectedTrack.trustRationale}</p>
+                      <div className="tag-row">
+                        <span className={`trust-chip trust-${selectedTrack.trustState}`}>{trustLabels[selectedTrack.trustState]}</span>
+                        <span className="mini-tag muted">{selectedTrack.sourceOpinionCount} source opinions</span>
+                        {selectedTrack.mergeChangedFields.map((field) => (
+                          <span className="mini-tag success" key={field}>{field} chosen</span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                    <div className="inspector-section">
+                      <h4>Why DJ Vault Picked This</h4>
+                      {selectedTrack.trustReasons.length > 0 ? (
+                        <ul className="compact-list">
+                          {selectedTrack.trustReasons.map((reason) => (
+                            <li key={reason}>{reason}</li>
+                          ))}
+                        </ul>
+                      ) : <p className="muted">No source disagreement needs to interrupt prep for this track.</p>}
+                    </div>
+                    <div className="inspector-section">
+                      <h4>Old-Device Readiness</h4>
+                      <p className="muted">The current native writer planning especially cares about artist, duration, bitrate, sample rate, and BPM. These are export-quality signals, not merge-conflict chores.</p>
+                      <div className="tag-row">
+                        {selectedTrack.warnings.length > 0 ? selectedTrack.warnings.map((warning) => (
+                          <span className="mini-tag caution" key={warning}>{warning}</span>
+                        )) : <span className="mini-tag success">No export metadata gaps</span>}
+                      </div>
+                    </div>
+                  </>
                 ) : null}
               </>
             ) : null}

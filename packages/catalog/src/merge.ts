@@ -31,6 +31,17 @@ export type MergeFieldOpinion = {
   sourceRefs: string[];
 };
 
+export type TrustState = 'trusted' | 'chosen' | 'needs-attention' | 'blocked';
+
+export type MergeFieldTrust = {
+  field: 'title' | 'artist' | 'album';
+  state: TrustState;
+  score: number;
+  rationale: string;
+  selectedValue: string | null;
+  competingValueCount: number;
+};
+
 export type TrackMergePlan = {
   trackId: string;
   current: {
@@ -47,6 +58,18 @@ export type TrackMergePlan = {
     title: MergeFieldOpinion[];
     artist: MergeFieldOpinion[];
     album: MergeFieldOpinion[];
+  };
+  trust: {
+    state: TrustState;
+    score: number;
+    rationale: string;
+    reasons: string[];
+    sourceOpinionCount: number;
+    fields: {
+      title: MergeFieldTrust;
+      artist: MergeFieldTrust;
+      album: MergeFieldTrust;
+    };
   };
   changedFields: string[];
 };
@@ -134,6 +157,151 @@ function bestOpinion(opinions: MergeFieldOpinion[], fallback: string | null): st
     return opinions[0].value;
   }
   return fallback;
+}
+
+function sourceLabel(sourceRef: string): string {
+  if (sourceRef.includes('/canonical-embedded/')) {
+    return 'canonical embedded tags';
+  }
+  if (sourceRef.includes('/rekordbox6-dirty/')) {
+    return 'Rekordbox 6 view';
+  }
+  if (sourceRef.includes('/traktor-dirty/')) {
+    return 'Traktor view';
+  }
+  if (sourceRef.startsWith('embedded-tags:')) {
+    return 'embedded tags';
+  }
+  if (sourceRef.startsWith('vendor-library:')) {
+    return 'vendor library metadata';
+  }
+  return 'source evidence';
+}
+
+function sourceSummary(opinion: MergeFieldOpinion | undefined): string {
+  if (!opinion || opinion.sourceRefs.length === 0) {
+    return 'the strongest available evidence';
+  }
+  const labels = [...new Set(opinion.sourceRefs.map(sourceLabel))];
+  if (labels.length === 1) {
+    return labels[0] ?? 'the strongest available evidence';
+  }
+  return `${labels.slice(0, -1).join(', ')} and ${labels.at(-1)}`;
+}
+
+function alternateSummary(opinions: MergeFieldOpinion[]): string | null {
+  const alternates = opinions.slice(1, 4).map((opinion) => `"${opinion.value}"`);
+  if (alternates.length === 0) {
+    return null;
+  }
+  return `Alternate ${alternates.length === 1 ? 'opinion was' : 'opinions were'} ${alternates.join(', ')}.`;
+}
+
+function fieldLabel(field: MergeFieldTrust['field']): string {
+  switch (field) {
+    case 'title':
+      return 'title';
+    case 'artist':
+      return 'artist';
+    case 'album':
+      return 'album';
+  }
+}
+
+function evaluateFieldTrust(
+  field: MergeFieldTrust['field'],
+  selectedValue: string | null,
+  opinions: MergeFieldOpinion[],
+  options: { required: boolean },
+): MergeFieldTrust {
+  const label = fieldLabel(field);
+  if (!selectedValue) {
+    return {
+      field,
+      state: options.required ? 'blocked' : 'needs-attention',
+      score: options.required ? 10 : 45,
+      rationale: options.required
+        ? `DJ Vault cannot trust this ${label} yet because it is missing.`
+        : `DJ Vault has no ${label} yet. That is not fatal, but it is worth filling in before an export.`,
+      selectedValue,
+      competingValueCount: opinions.length,
+    };
+  }
+
+  if (opinions.length === 0) {
+    return {
+      field,
+      state: 'trusted',
+      score: 78,
+      rationale: `DJ Vault is keeping the current ${label} because there are no competing source opinions for it.`,
+      selectedValue,
+      competingValueCount: 0,
+    };
+  }
+
+  const top = opinions[0];
+  const second = opinions[1];
+  const margin = top && second ? top.score - second.score : top?.score ?? 0;
+  const summary = sourceSummary(top);
+  const alternate = alternateSummary(opinions);
+
+  if (opinions.length === 1) {
+    return {
+      field,
+      state: 'trusted',
+      score: Math.min(100, 82 + Math.round((top?.score ?? 0) / 12)),
+      rationale: `DJ Vault trusts this ${label} because it is backed by ${summary}.`,
+      selectedValue,
+      competingValueCount: 1,
+    };
+  }
+
+  if (top?.sourceRefs.some((sourceRef) => sourceRef.includes('/canonical-embedded/')) || margin >= 35) {
+    return {
+      field,
+      state: 'chosen',
+      score: Math.min(94, 74 + Math.max(0, Math.round(margin / 2))),
+      rationale: `DJ Vault chose this ${label} because ${summary} outweighed the other source views. ${alternate ?? 'The alternate opinions were preserved in provenance.'}`,
+      selectedValue,
+      competingValueCount: opinions.length,
+    };
+  }
+
+  return {
+    field,
+    state: 'needs-attention',
+    score: Math.max(35, 62 + Math.min(10, Math.round(margin))),
+    rationale: `DJ Vault picked the current best ${label}, but the source evidence is close enough that this may need ears before a serious export. ${alternate ?? ''}`.trim(),
+    selectedValue,
+    competingValueCount: opinions.length,
+  };
+}
+
+function combineTrustState(fields: MergeFieldTrust[]): TrustState {
+  if (fields.some((field) => field.state === 'blocked')) {
+    return 'blocked';
+  }
+  if (fields.some((field) => field.state === 'needs-attention')) {
+    return 'needs-attention';
+  }
+  if (fields.some((field) => field.state === 'chosen')) {
+    return 'chosen';
+  }
+  return 'trusted';
+}
+
+function trackTrustRationale(state: TrustState, fields: MergeFieldTrust[]): string {
+  const competingFields = fields.filter((field) => field.competingValueCount > 1).map((field) => fieldLabel(field.field));
+  switch (state) {
+    case 'trusted':
+      return 'This track looks settled. DJ Vault did not find source disagreement that should interrupt prep.';
+    case 'chosen':
+      return `This track had competing ${competingFields.join(', ') || 'metadata'} opinions. DJ Vault made a confident choice and kept the alternatives as source history.`;
+    case 'needs-attention':
+      return `This track is usable, but DJ Vault found source disagreement or missing context that deserves a quick look before export.`;
+    case 'blocked':
+      return 'This track is missing core identity data and should not be treated as export-ready yet.';
+  }
 }
 
 function parseScalarOpinionRows(rows: ScalarOpinionRow[], fieldPath: string): CandidateOpinion[] {
@@ -248,6 +416,16 @@ export function generateMergeReport(databasePath: string): MergeReport {
         artist: bestOpinion(artistOpinions, current.artist),
         album: bestOpinion(albumOpinions, current.album),
       };
+      const fieldTrust = {
+        title: evaluateFieldTrust('title', selected.title, titleOpinions, { required: true }),
+        artist: evaluateFieldTrust('artist', selected.artist, artistOpinions, { required: false }),
+        album: evaluateFieldTrust('album', selected.album, albumOpinions, { required: false }),
+      };
+      const trustFields = [fieldTrust.title, fieldTrust.artist, fieldTrust.album];
+      const trustState = combineTrustState(trustFields);
+      const reasons = trustFields
+        .filter((field) => field.state !== 'trusted')
+        .map((field) => field.rationale);
       const changedFields = [
         current.title !== selected.title ? 'title' : null,
         current.artist !== selected.artist ? 'artist' : null,
@@ -262,6 +440,14 @@ export function generateMergeReport(databasePath: string): MergeReport {
           title: titleOpinions,
           artist: artistOpinions,
           album: albumOpinions,
+        },
+        trust: {
+          state: trustState,
+          score: Math.round(trustFields.reduce((sum, field) => sum + field.score, 0) / trustFields.length),
+          rationale: trackTrustRationale(trustState, trustFields),
+          reasons,
+          sourceOpinionCount: titleOpinions.length + artistOpinions.length + albumOpinions.length,
+          fields: fieldTrust,
         },
         changedFields,
       };

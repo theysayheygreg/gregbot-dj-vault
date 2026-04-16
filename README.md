@@ -106,6 +106,8 @@ The UI direction is now explicitly desktop-first and Mac-native in spirit: sideb
 
 It also now has the first user-facing workflow scaffolding inside the app itself: sortable track browsing, keyboard navigation, tabbed inspectors, live track metadata editing, playlist membership editing, playlist creation, device-target saving, export planning, and target export execution. Those actions now work against a local API whether you run the app in Vite or from the built runtime server.
 
+The merge experience is framed as [Library Trust](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/LIBRARY-TRUST.md), not IDE-style conflict resolution. DJ Vault resolves when the evidence is strong, preserves source opinions as provenance, and explains uncertainty only when it affects prep or export confidence.
+
 To build and run the local VaultBuddy runtime:
 
 ```bash

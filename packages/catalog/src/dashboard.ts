@@ -3,6 +3,7 @@ import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 
 import { getTrackRecencySummaries, type TrackRecencySummary } from './recency.js';
+import { generateMergeReport, type TrustState } from './merge.js';
 
 type PlaylistRow = {
   id: string;
@@ -127,6 +128,12 @@ export type DashboardSnapshot = {
     recentExportCount: number;
     hotTrackCount: number;
     trackWarningCount: number;
+    libraryTrust: {
+      trustedTrackCount: number;
+      chosenTrackCount: number;
+      needsAttentionTrackCount: number;
+      blockedTrackCount: number;
+    };
   };
   hero: {
     title: string;
@@ -151,6 +158,12 @@ export type DashboardSnapshot = {
     mentalWeight: TrackRecencySummary['mentalWeight'];
     recencyScore: number;
     warnings: string[];
+    trustState: TrustState;
+    trustScore: number;
+    trustRationale: string;
+    trustReasons: string[];
+    sourceOpinionCount: number;
+    mergeChangedFields: string[];
   }>;
   playlists: Array<{
     id: string;
@@ -307,6 +320,8 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
 
     const recencySummaries = getTrackRecencySummaries(databasePath, 1000);
     const recencyByTrackId = new Map(recencySummaries.map((summary) => [summary.trackId, summary]));
+    const mergeReport = generateMergeReport(databasePath);
+    const mergePlanByTrackId = new Map(mergeReport.plans.map((plan) => [plan.trackId, plan]));
 
     const playlists = database.prepare(`
       SELECT playlists.id, playlists.name, playlists.type, playlists.parent_id, COUNT(playlist_items.track_id) AS item_count
@@ -392,6 +407,7 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
     const trackById = new Map(tracks.map((track) => [track.id, track]));
     const trackCards = tracks.map((track) => {
       const recency = recencyByTrackId.get(track.id);
+      const mergePlan = mergePlanByTrackId.get(track.id);
       const artist = joinArtists(people, track.id);
       const warnings = uniqueSorted([
         !artist ? 'Missing artist' : null,
@@ -419,6 +435,12 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
         mentalWeight: recency?.mentalWeight ?? 'unknown',
         recencyScore: recency?.recencyScore ?? 0,
         warnings,
+        trustState: mergePlan?.trust.state ?? (warnings.length > 0 ? 'needs-attention' : 'trusted'),
+        trustScore: mergePlan?.trust.score ?? (warnings.length > 0 ? 68 : 88),
+        trustRationale: mergePlan?.trust.rationale ?? 'DJ Vault has not found competing source evidence for this track yet.',
+        trustReasons: mergePlan?.trust.reasons ?? [],
+        sourceOpinionCount: mergePlan?.trust.sourceOpinionCount ?? 0,
+        mergeChangedFields: mergePlan?.changedFields ?? [],
       };
     }).sort((a, b) => b.recencyScore - a.recencyScore || a.title.localeCompare(b.title));
 
@@ -514,6 +536,7 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
       counts.export_target_count > 0 ? `${counts.export_target_count} saved Rekordbox device target${counts.export_target_count === 1 ? '' : 's'} ready for testing` : null,
       targetCards.some((target) => target.referenceGapTables.length > 0) ? 'Playlist and column PDB tables still need stronger reference coverage before native writing' : null,
       trackCards.some((track) => track.warnings.length > 0) ? 'Catalog still has metadata and analysis gaps that show up in native export planning' : null,
+      trackCards.some((track) => track.trustState === 'needs-attention' || track.trustState === 'blocked') ? 'Some tracks need ears: DJ Vault found unresolved trust or identity context' : null,
       planCards.some((plan) => plan.requiresRemoteAccess) ? 'Remote export planning is live: source media and USB execution can live on different nodes' : null,
     ]);
 
@@ -528,6 +551,12 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
         recentExportCount: counts.recent_export_count,
         hotTrackCount: trackCards.filter((track) => track.recencyBucket === 'hot').length,
         trackWarningCount: trackCards.reduce((sum, track) => sum + track.warnings.length, 0),
+        libraryTrust: {
+          trustedTrackCount: trackCards.filter((track) => track.trustState === 'trusted').length,
+          chosenTrackCount: trackCards.filter((track) => track.trustState === 'chosen').length,
+          needsAttentionTrackCount: trackCards.filter((track) => track.trustState === 'needs-attention').length,
+          blockedTrackCount: trackCards.filter((track) => track.trustState === 'blocked').length,
+        },
       },
       hero: {
         title: 'VaultBuddy',

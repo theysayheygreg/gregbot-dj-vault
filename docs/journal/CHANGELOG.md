@@ -1,5 +1,22 @@
 # DJ Vault — Changelog
 
+## 2026-04-16 — Library Trust surface
+
+### Added
+
+- [Library Trust](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/LIBRARY-TRUST.md)
+- track-level trust states and rationale in the merge report
+- Library Trust and Needs Ears surfaces in VaultBuddy
+
+### Changed
+
+- VaultBuddy now presents merge evidence as DJ-facing trust/readiness, not IDE-style conflict resolution
+- dashboard snapshots now include trust scores, source-opinion counts, rationale, and selected-field context
+
+### Why
+
+DJ Vault needs to explain metadata decisions without making DJs do database arbitration while they are preparing music.
+
 ## 2026-04-14 — Sandbox v1 fixture pack
 
 ### Added

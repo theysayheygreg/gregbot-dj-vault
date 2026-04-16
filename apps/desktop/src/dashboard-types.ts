@@ -9,6 +9,12 @@ export type DashboardSnapshot = {
     recentExportCount: number;
     hotTrackCount: number;
     trackWarningCount: number;
+    libraryTrust: {
+      trustedTrackCount: number;
+      chosenTrackCount: number;
+      needsAttentionTrackCount: number;
+      blockedTrackCount: number;
+    };
   };
   hero: {
     title: string;
@@ -33,6 +39,12 @@ export type DashboardSnapshot = {
     mentalWeight: 'front-of-mind' | 'active-option' | 'archive-pressure' | 'unknown';
     recencyScore: number;
     warnings: string[];
+    trustState: 'trusted' | 'chosen' | 'needs-attention' | 'blocked';
+    trustScore: number;
+    trustRationale: string;
+    trustReasons: string[];
+    sourceOpinionCount: number;
+    mergeChangedFields: string[];
   }>;
   playlists: Array<{
     id: string;

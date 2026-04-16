@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T20:02:33.982Z",
+  "generatedAt": "2026-04-16T18:51:35.954Z",
   "summary": {
     "trackCount": 1,
     "playlistCount": 1,
@@ -7,8 +7,14 @@
     "exportTargetCount": 1,
     "readyPlanCount": 2,
     "recentExportCount": 4,
-    "hotTrackCount": 1,
-    "trackWarningCount": 5
+    "hotTrackCount": 0,
+    "trackWarningCount": 5,
+    "libraryTrust": {
+      "trustedTrackCount": 0,
+      "chosenTrackCount": 0,
+      "needsAttentionTrackCount": 1,
+      "blockedTrackCount": 0
+    }
   },
   "hero": {
     "title": "VaultBuddy",
@@ -30,16 +36,25 @@
       "playCount": 1,
       "addedAt": "2026-04-08T01:20:43.873Z",
       "lastPlayedAt": "2026-04-08T17:41:30.917Z",
-      "recencyBucket": "hot",
-      "mentalWeight": "front-of-mind",
-      "recencyScore": 80,
+      "recencyBucket": "cooling",
+      "mentalWeight": "active-option",
+      "recencyScore": 67,
       "warnings": [
         "Missing artist",
         "No bitrate analysis",
         "No BPM analysis",
         "No duration analysis",
         "No sample-rate analysis"
-      ]
+      ],
+      "trustState": "needs-attention",
+      "trustScore": 58,
+      "trustRationale": "This track is usable, but DJ Vault found source disagreement or missing context that deserves a quick look before export.",
+      "trustReasons": [
+        "DJ Vault has no artist yet. That is not fatal, but it is worth filling in before an export.",
+        "DJ Vault has no album yet. That is not fatal, but it is worth filling in before an export."
+      ],
+      "sourceOpinionCount": 1,
+      "mergeChangedFields": []
     }
   ],
   "playlists": [
@@ -237,6 +252,7 @@
     "1 saved Rekordbox device target ready for testing",
     "Catalog still has metadata and analysis gaps that show up in native export planning",
     "Playlist and column PDB tables still need stronger reference coverage before native writing",
-    "Remote export planning is live: source media and USB execution can live on different nodes"
+    "Remote export planning is live: source media and USB execution can live on different nodes",
+    "Some tracks need ears: DJ Vault found unresolved trust or identity context"
   ]
 }

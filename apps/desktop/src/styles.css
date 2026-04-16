@@ -534,7 +534,8 @@ ul {
 
 .mini-tag,
 .status-chip,
-.bucket-chip {
+.bucket-chip,
+.trust-chip {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
@@ -551,7 +552,8 @@ ul {
 
 .mini-tag.success,
 .status-ready,
-.bucket-hot {
+.bucket-hot,
+.trust-trusted {
   background: var(--teal-soft);
   color: var(--teal);
   border: 1px solid rgba(13, 118, 104, 0.16);
@@ -559,13 +561,16 @@ ul {
 
 .mini-tag.caution,
 .bucket-cooling,
-.bucket-new {
+.bucket-new,
+.trust-chosen {
   background: var(--accent-soft);
   color: var(--accent);
   border: 1px solid rgba(184, 87, 26, 0.16);
 }
 
-.mini-tag.danger {
+.mini-tag.danger,
+.trust-needs-attention,
+.trust-blocked {
   background: var(--danger-soft);
   color: var(--danger);
   border: 1px solid rgba(180, 35, 24, 0.16);
