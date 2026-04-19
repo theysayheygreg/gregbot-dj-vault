@@ -20,7 +20,7 @@ Exit criteria:
 - [x] Expanded roadmap and research program exist
 - [x] Day-based initial execution plan exists
 - [x] GitHub/publication baseline files exist
-- [ ] GitHub-ready baseline docs and metadata exist
+- [x] GitHub-ready baseline docs and metadata exist
 
 ## Phase 1 — Corpus Intake Infrastructure
 
@@ -33,12 +33,12 @@ Goals:
 
 Exit criteria:
 
-- [ ] Source maps for Pioneer/AlphaTheta, Native Instruments, Serato, Denon, and Rekordbox are documented
+- [x] Source maps for Pioneer/AlphaTheta, Native Instruments, Serato, Denon, and Rekordbox are documented
 - [x] First source-surface collector exists and generates inventory snapshots
 - [x] First AlphaTheta family enumerator exists and generates dated product-family inventories
-- [ ] Artifact manifest schema is locked
-- [ ] First pass inventory for last 10 years exists for each target family
-- [ ] Download/extraction workflow is documented and testable
+- [x] Artifact manifest schema is locked
+- [ ] First pass inventory for last 10 years exists for each target family (partial; NXS2-era firmware acquisition in progress)
+- [x] Download/extraction workflow is documented and testable
 
 ## Phase 2 — Canonical Library Core
 
@@ -51,10 +51,10 @@ Goals:
 
 Exit criteria:
 
-- [ ] Track import works from a local folder
-- [ ] Hash and canonical path are stored
-- [ ] Metadata can be read and normalized
-- [ ] Provenance can represent competing values
+- [x] Track import works from a local folder
+- [x] Hash and canonical path are stored
+- [x] Metadata can be read and normalized
+- [x] Provenance can represent competing values
 
 ## Phase 3 — Interop Adapters
 
@@ -66,7 +66,7 @@ Goals:
 
 Exit criteria:
 
-- [ ] At least one end-to-end export path works
+- [x] At least one end-to-end export path works (Rekordbox XML, Traktor NML, and rekordbox device-export staging bundle; native `export.pdb` and `ANLZ` still pending)
 - [ ] Round-trip fixtures exist for core targets
 - [ ] Adapter constraints are documented with evidence
 
