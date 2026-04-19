@@ -4,6 +4,9 @@ import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 import { promisify } from 'node:util';
 
+import { generateMergeReport, type TrackMergePlan } from './merge.js';
+import { getTrackRecencySummaries, type TrackRecencySummary } from './recency.js';
+
 const execFileAsync = promisify(execFile);
 
 type TrackRow = {
@@ -163,7 +166,13 @@ function parseJsonArray(value: string | null): string[] {
   }
 }
 
-function buildTrackMarkdown(track: TrackRow, people: TrackPersonRow[], tags: TrackTagRow[]): string {
+function buildTrackMarkdown(
+  track: TrackRow,
+  people: TrackPersonRow[],
+  tags: TrackTagRow[],
+  trust: TrackMergePlan['trust'] | null,
+  recency: TrackRecencySummary | null,
+): string {
   const artists = people.filter((person) => person.role === 'artist').map((person) => person.name);
   const groupedPeople = new Map<string, string[]>();
   for (const person of people) {
@@ -196,6 +205,12 @@ function buildTrackMarkdown(track: TrackRow, people: TrackPersonRow[], tags: Tra
     `- play_count: ${track.play_count}`,
     `- added_at: ${track.added_at}`,
     `- last_played_at: ${track.last_played_at ?? 'never'}`,
+    `- recency_bucket: ${recency?.recencyBucket ?? 'unknown'}`,
+    `- mental_weight: ${recency?.mentalWeight ?? 'unknown'}`,
+    `- recency_score: ${recency?.recencyScore ?? 'unknown'}`,
+    `- trust_state: ${trust?.state ?? 'unknown'}`,
+    `- trust_score: ${trust?.score ?? 'unknown'}`,
+    `- source_opinion_count: ${trust?.sourceOpinionCount ?? 0}`,
     '',
     '## File',
     `- canonical_path: ${track.canonical_path}`,
@@ -220,6 +235,18 @@ function buildTrackMarkdown(track: TrackRow, people: TrackPersonRow[], tags: Tra
     '',
     '## Tags',
     ...[...groupedTags.entries()].flatMap(([kind, values]) => [`- ${kind}: ${formatList(values)}`]),
+    '',
+    '## Search Signals',
+    `This track is ${trust?.state ?? 'unscored'} for library trust with a score of ${trust?.score ?? 'unknown'}.`,
+    trust?.rationale ?? 'DJ Vault has not generated a trust rationale for this track yet.',
+    `For playlist retrieval, recency is ${recency?.recencyBucket ?? 'unknown'} and mental weight is ${recency?.mentalWeight ?? 'unknown'}.`,
+    `Useful search facets: trust:${trust?.state ?? 'unknown'}, recency:${recency?.recencyBucket ?? 'unknown'}, rating:${track.rating ?? 'unknown'}, bpm:${track.bpm ?? track.bpm_float ?? 'unknown'}, key:${track.key_display ?? track.key_camelot ?? track.key_open_key ?? 'unknown'}.`,
+    '',
+    '## Trust Rationale',
+    trust?.rationale ?? 'none',
+    '',
+    '## Trust Reasons',
+    ...(trust && trust.reasons.length > 0 ? trust.reasons.map((reason) => `- ${reason}`) : ['- none']),
     '',
     '## Notes',
     normalizeLine(track.comment) ?? 'none',
@@ -458,6 +485,11 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
       ORDER BY started_at DESC, id DESC
     `).all() as ExportJobRow[];
 
+    const recencySummaries = getTrackRecencySummaries(databasePath, 1000);
+    const recencyByTrackId = new Map(recencySummaries.map((summary) => [summary.trackId, summary]));
+    const mergeReport = generateMergeReport(databasePath);
+    const mergePlanByTrackId = new Map(mergeReport.plans.map((plan) => [plan.trackId, plan]));
+
     const peopleByTrack = new Map<string, TrackPersonRow[]>();
     for (const person of people) {
       const bucket = peopleByTrack.get(person.track_id) ?? [];
@@ -503,7 +535,13 @@ export async function exportCatalogToQmd(databasePath: string, exportRoot: strin
 
     for (const track of tracks) {
       const fileName = `${toSlug(track.title || track.file_name || track.id) || track.id}-${track.id}.md`;
-      const markdown = buildTrackMarkdown(track, peopleByTrack.get(track.id) ?? [], tagsByTrack.get(track.id) ?? []);
+      const markdown = buildTrackMarkdown(
+        track,
+        peopleByTrack.get(track.id) ?? [],
+        tagsByTrack.get(track.id) ?? [],
+        mergePlanByTrackId.get(track.id)?.trust ?? null,
+        recencyByTrackId.get(track.id) ?? null,
+      );
       await writeFile(path.join(tracksDir, fileName), markdown, 'utf8');
     }
 

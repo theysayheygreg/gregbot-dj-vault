@@ -300,6 +300,12 @@ To build vector embeddings for semantic search:
 npm run catalog:qmd:embed
 ```
 
+To generate a first trust-aware playlist candidate report:
+
+```bash
+npm run catalog:playlist-candidates -- "90-minute dark warmup crate, no recent repeats" --mode gig-safe --limit 20
+```
+
 ## Important Docs
 
 - [V1 Targets](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/V1-TARGETS.md)

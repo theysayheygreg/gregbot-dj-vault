@@ -26,6 +26,13 @@ function hasColumn(database: DatabaseSync, tableName: string, columnName: string
   return rows.some((row) => row.name === columnName);
 }
 
+function hasTable(database: DatabaseSync, tableName: string): boolean {
+  const row = database
+    .prepare(`SELECT name FROM sqlite_master WHERE type = 'table' AND name = ?`)
+    .get(tableName) as { name?: string } | undefined;
+  return row?.name === tableName;
+}
+
 function runMigrations(database: DatabaseSync): void {
   if (!hasColumn(database, 'tracks', 'content_hash_sha256')) {
     database.exec(`ALTER TABLE tracks ADD COLUMN content_hash_sha256 TEXT;`);
@@ -44,6 +51,9 @@ export async function initializeCatalog(databasePath: string): Promise<CatalogIn
   try {
     database.exec('PRAGMA journal_mode = WAL;');
     database.exec('PRAGMA synchronous = NORMAL;');
+    if (hasTable(database, 'tracks') && !hasColumn(database, 'tracks', 'content_hash_sha256')) {
+      database.exec(`ALTER TABLE tracks ADD COLUMN content_hash_sha256 TEXT;`);
+    }
     database.exec(catalogSchemaSql);
     runMigrations(database);
 

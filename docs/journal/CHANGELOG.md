@@ -1,5 +1,22 @@
 # DJ Vault — Changelog
 
+## 2026-04-19 — Trust-aware playlist retrieval
+
+### Added
+
+- trust and recency search signals in generated QMD track documents
+- `packages/catalog/src/playlist-candidates.ts`
+- `catalog:playlist-candidates` for deterministic trust-aware candidate reports
+
+### Changed
+
+- QMD integration now treats Library Trust as a playlist retrieval feature, not only as a dashboard badge
+- playlist candidate scoring now combines prompt fit, trust, recency, and simple musical facts
+
+### Why
+
+Playlist creation should be able to ask not only "does this track match the vibe?" but also "can DJ Vault stand behind this track strongly enough for the job?"
+
 ## 2026-04-16 — Library Trust surface
 
 ### Added

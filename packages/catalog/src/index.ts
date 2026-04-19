@@ -5,6 +5,7 @@ export * from './authoring.js';
 export * from './editing.js';
 export * from './identity.js';
 export * from './merge.js';
+export * from './playlist-candidates.js';
 export * from './recency.js';
 export * from './history-import.js';
 export * from './vendor-history.js';
