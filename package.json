@@ -72,11 +72,14 @@
     "fixture:build-sandbox-v1": "bash scripts/build-sandbox-v1-fixture.sh",
     "fixture:test-sandbox-v1": "npm run build --workspace @dj-vault/catalog && node scripts/run-sandbox-v1-test.mjs",
     "fixture:test-sandbox-v1-export": "npm run build --workspace @dj-vault/catalog && node scripts/run-sandbox-v1-export-test.mjs",
+    "fixture:prepare-sandbox-v1": "npm run build --workspace @dj-vault/catalog && node scripts/prepare-sandbox-v1-target.mjs",
     "desktop:refresh-dashboard": "npm run catalog:export-dashboard-json",
     "desktop:serve": "node apps/desktop/server.mjs",
     "desktop:runtime": "npm run build --workspace @dj-vault/core && npm run build --workspace @dj-vault/catalog && npm run build --workspace @dj-vault/desktop && npm run desktop:serve",
+    "desktop:runtime:sandbox-v1": "node scripts/run-sandbox-runtime.mjs",
     "desktop:dev": "npm run dev --workspace @dj-vault/desktop",
-    "dev": "npm run desktop:refresh-dashboard && npm run desktop:dev"
+    "dev": "npm run desktop:refresh-dashboard && npm run desktop:dev",
+    "dev:sandbox-v1": "npm run fixture:prepare-sandbox-v1 && DJ_VAULT_DB_PATH=/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/sandbox-v1.sqlite npm run desktop:dev"
   },
   "devDependencies": {
     "@tobilu/qmd": "^2.1.0"

@@ -1,5 +1,24 @@
 # DJ Vault — Changelog
 
+## 2026-04-19 — Sandbox v1 target library
+
+### Added
+
+- `fixture:prepare-sandbox-v1`
+- `dev:sandbox-v1`
+- `desktop:runtime:sandbox-v1`
+- a visible `Target Library: sandbox-v1` badge in VaultBuddy
+
+### Changed
+
+- `sandbox-v1` is now documented and wired as the active v1 target library, not a placeholder for a hidden personal library
+- the generated dashboard snapshot can be refreshed directly from the sandbox target catalog
+- the Vite dev API now honors `DJ_VAULT_DB_PATH`, matching the built runtime behavior
+
+### Why
+
+There is no active long-term DJ library in this repo or on this machine. The controlled sandbox is the real development and acceptance surface for v1.
+
 ## 2026-04-19 — Sandbox export regression
 
 ### Added
@@ -14,7 +33,7 @@
 
 ### Why
 
-V1 needs a repeatable export acceptance loop before Greg's long-term music libraries are touched.
+V1 needs a repeatable export acceptance loop against the active target library.
 
 ## 2026-04-19 — Trust-aware playlist retrieval
 
@@ -77,7 +96,7 @@ DJ Vault needs to explain metadata decisions without making DJs do database arbi
 
 ### Why
 
-We need a believable, controlled library test before we point DJ Vault at Greg's fragile long-term libraries.
+We need a believable, controlled target library that can safely drive product decisions.
 
 ## 2026-04-14 — VaultBuddy live editing and laptop runtime
 

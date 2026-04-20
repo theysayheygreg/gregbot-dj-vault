@@ -1,14 +1,14 @@
 # Sandbox V1 Fixture
 
-This is the first serious DJ Vault library test pack.
+This is the current DJ Vault target library for v1.
 
 The point is not to simulate a perfect library. The point is to simulate a believable small DJ library where the same music appears in multiple systems with slightly different truth.
 
 ## Why This Fixture Exists
 
-We do not want to point early DJ Vault import, merge, and export logic at Greg's long-term library first. That is a good way to damage trust and a bad way to learn.
+There is no active long-term personal DJ library in this repo or on this machine. `sandbox-v1` is therefore the actual v1 acceptance target, not a warmup before some hidden "real" library.
 
-This fixture gives us a controlled lab:
+This fixture gives us a controlled target:
 
 - real MP3 audio
 - small enough to inspect by hand
@@ -17,7 +17,7 @@ This fixture gives us a controlled lab:
 - duplicate-path and duplicate-tag cases
 - playlists that differ by system
 
-If DJ Vault cannot explain this fixture cleanly, it is not ready for a real library.
+If DJ Vault cannot explain this fixture cleanly, the product is not ready.
 
 ## Audio Pool
 
@@ -148,6 +148,28 @@ npm run fixture:build-sandbox-v1
 ```
 
 That command assumes the source pool already exists in `tmp/sandbox-v1/source-pool`.
+
+## Target Preparation
+
+To prepare the target library for VaultBuddy:
+
+```bash
+npm run fixture:prepare-sandbox-v1
+```
+
+That command rebuilds the sandbox catalog, runs the export regression, and refreshes the generated VaultBuddy dashboard snapshot.
+
+To open the dev app against this target:
+
+```bash
+npm run dev:sandbox-v1
+```
+
+To run the built local runtime against this target:
+
+```bash
+npm run desktop:runtime:sandbox-v1
+```
 
 ## Full System Test
 

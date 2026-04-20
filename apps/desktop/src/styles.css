@@ -102,6 +102,28 @@ ul {
   line-height: 0.94;
 }
 
+.target-library-badge {
+  display: inline-grid;
+  gap: 2px;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border: 1px solid rgba(13, 118, 104, 0.18);
+  border-radius: 16px;
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+.target-library-badge span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.target-library-badge strong {
+  color: var(--teal);
+}
+
 .sidebar-copy,
 .panel-copy,
 .toolbar-meta,

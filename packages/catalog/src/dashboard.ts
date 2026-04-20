@@ -560,8 +560,8 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
       },
       hero: {
         title: 'VaultBuddy',
-        subtitle: 'Catalog truth, remote export planning, and old-device Rekordbox workflow in one place.',
-        focus: 'Current testing focus: NXS2-era USB/device export, not flagship-only hardware.',
+        subtitle: 'Sandbox v1 library truth, trust-aware prep, and old-device Rekordbox export in one place.',
+        focus: 'Current target library: sandbox-v1. The fixture is the product acceptance surface until v1 passes cleanly.',
       },
       tracks: trackCards,
       playlists: playlistCards,

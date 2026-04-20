@@ -20,7 +20,9 @@ import { defineConfig } from 'vite';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = path.resolve(rootDir, '../..');
-const databasePath = path.resolve(workspaceRoot, 'data/dj-vault.sqlite');
+const databasePath = process.env.DJ_VAULT_DB_PATH
+  ? path.resolve(process.env.DJ_VAULT_DB_PATH)
+  : path.resolve(workspaceRoot, 'data/dj-vault.sqlite');
 const dashboardOutputPath = path.resolve(rootDir, 'src/generated/catalog-dashboard.json');
 
 type JsonBody = Record<string, unknown>;

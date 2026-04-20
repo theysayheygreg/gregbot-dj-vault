@@ -1,258 +1,552 @@
 {
-  "generatedAt": "2026-04-16T18:51:35.954Z",
+  "generatedAt": "2026-04-20T00:41:55.151Z",
   "summary": {
-    "trackCount": 1,
-    "playlistCount": 1,
-    "setCount": 1,
+    "trackCount": 6,
+    "playlistCount": 9,
+    "setCount": 0,
     "exportTargetCount": 1,
-    "readyPlanCount": 2,
-    "recentExportCount": 4,
+    "readyPlanCount": 1,
+    "recentExportCount": 1,
     "hotTrackCount": 0,
-    "trackWarningCount": 5,
+    "trackWarningCount": 6,
     "libraryTrust": {
       "trustedTrackCount": 0,
-      "chosenTrackCount": 0,
+      "chosenTrackCount": 5,
       "needsAttentionTrackCount": 1,
       "blockedTrackCount": 0
     }
   },
   "hero": {
     "title": "VaultBuddy",
-    "subtitle": "Catalog truth, remote export planning, and old-device Rekordbox workflow in one place.",
-    "focus": "Current testing focus: NXS2-era USB/device export, not flagship-only hardware."
+    "subtitle": "Sandbox v1 library truth, trust-aware prep, and old-device Rekordbox export in one place.",
+    "focus": "Current target library: sandbox-v1. The fixture is the product acceptance surface until v1 passes cleanly."
   },
   "tracks": [
     {
-      "id": "af2f9039-d5eb-4f08-834f-2b83eed4dbd0",
-      "title": "Funk",
-      "artist": null,
-      "album": null,
+      "id": "816e4742-078d-4955-b592-a1a5e25c1794",
+      "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
+      "artist": "Depeche Mode",
+      "album": "Sandbox V1 Canonical",
       "label": null,
       "keyDisplay": null,
       "bpm": null,
-      "durationSec": 0,
+      "durationSec": 435,
+      "rating": null,
+      "comment": null,
+      "playCount": 0,
+      "addedAt": "2026-04-20T00:41:31.410Z",
+      "lastPlayedAt": null,
+      "recencyBucket": "never-played",
+      "mentalWeight": "front-of-mind",
+      "recencyScore": 70,
+      "warnings": [
+        "No BPM analysis"
+      ],
+      "trustState": "chosen",
+      "trustScore": 96,
+      "trustRationale": "This track had competing title, album opinions. DJ Vault made a confident choice and kept the alternatives as source history.",
+      "trustReasons": [
+        "DJ Vault chose this title because canonical embedded tags outweighed the other source views. Alternate opinions were \"A Pain That I'm Used To [Jacques Lu Cont Remix]\", \"A Pain That I'm Used To (Jacques Lu Cont Mix)\".",
+        "DJ Vault chose this album because canonical embedded tags outweighed the other source views. Alternate opinions were \"Ultra Electro\", \"Electro Folder\"."
+      ],
+      "sourceOpinionCount": 7,
+      "mergeChangedFields": []
+    },
+    {
+      "id": "ec495041-1e10-4ee0-8fb4-3a40d97d06d1",
+      "title": "Dare (Soulwax Remix)",
+      "artist": "Gorillaz",
+      "album": "Ultra Electro",
+      "label": null,
+      "keyDisplay": null,
+      "bpm": null,
+      "durationSec": 279,
+      "rating": null,
+      "comment": null,
+      "playCount": 0,
+      "addedAt": "2026-04-20T00:41:31.515Z",
+      "lastPlayedAt": null,
+      "recencyBucket": "never-played",
+      "mentalWeight": "front-of-mind",
+      "recencyScore": 70,
+      "warnings": [
+        "No BPM analysis"
+      ],
+      "trustState": "needs-attention",
+      "trustScore": 86,
+      "trustRationale": "This track is usable, but DJ Vault found source disagreement or missing context that deserves a quick look before export.",
+      "trustReasons": [
+        "DJ Vault chose this title because canonical embedded tags outweighed the other source views. Alternate opinions were \"D.A.R.E. [Soulwax Remix]\", \"Dare (Soulwax Club Copy)\", \"Dare [Soulwax Remix]\".",
+        "DJ Vault chose this artist because canonical embedded tags and Rekordbox 6 view outweighed the other source views. Alternate opinion was \"Gorillaz / Soulwax\".",
+        "DJ Vault picked the current best album, but the source evidence is close enough that this may need ears before a serious export. Alternate opinions were \"Sandbox V1 Canonical\", \"Electro Folder\"."
+      ],
+      "sourceOpinionCount": 9,
+      "mergeChangedFields": []
+    },
+    {
+      "id": "49ec95f8-65c4-4a8f-86f6-08dec474c854",
+      "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
+      "artist": "Shiny Toy Guns",
+      "album": "Sandbox V1 Canonical",
+      "label": null,
+      "keyDisplay": null,
+      "bpm": null,
+      "durationSec": 390,
+      "rating": null,
+      "comment": null,
+      "playCount": 0,
+      "addedAt": "2026-04-20T00:41:31.619Z",
+      "lastPlayedAt": null,
+      "recencyBucket": "never-played",
+      "mentalWeight": "front-of-mind",
+      "recencyScore": 70,
+      "warnings": [
+        "No BPM analysis"
+      ],
+      "trustState": "chosen",
+      "trustScore": 90,
+      "trustRationale": "This track had competing title, album opinions. DJ Vault made a confident choice and kept the alternatives as source history.",
+      "trustReasons": [
+        "DJ Vault chose this title because canonical embedded tags outweighed the other source views. Alternate opinion was \"Le Disko [Tommire Sunshine's Brooklyn Fire Retouch]\".",
+        "DJ Vault chose this album because canonical embedded tags outweighed the other source views. Alternate opinions were \"Ultra Electro\", \"Electro Folder\"."
+      ],
+      "sourceOpinionCount": 6,
+      "mergeChangedFields": []
+    },
+    {
+      "id": "cc55cb6a-172e-4963-bd39-b98a34b07446",
+      "title": "No More Conversations (Mylo Remix)",
+      "artist": "Freeform Five",
+      "album": "Sandbox V1 Canonical",
+      "label": null,
+      "keyDisplay": null,
+      "bpm": null,
+      "durationSec": 399,
       "rating": null,
       "comment": null,
       "playCount": 1,
-      "addedAt": "2026-04-08T01:20:43.873Z",
-      "lastPlayedAt": "2026-04-08T17:41:30.917Z",
+      "addedAt": "2026-04-20T00:41:31.274Z",
+      "lastPlayedAt": "2026-04-10T04:09:00.000Z",
       "recencyBucket": "cooling",
       "mentalWeight": "active-option",
-      "recencyScore": 67,
+      "recencyScore": 66,
       "warnings": [
-        "Missing artist",
-        "No bitrate analysis",
-        "No BPM analysis",
-        "No duration analysis",
-        "No sample-rate analysis"
+        "No BPM analysis"
       ],
-      "trustState": "needs-attention",
-      "trustScore": 58,
-      "trustRationale": "This track is usable, but DJ Vault found source disagreement or missing context that deserves a quick look before export.",
+      "trustState": "chosen",
+      "trustScore": 96,
+      "trustRationale": "This track had competing title, album opinions. DJ Vault made a confident choice and kept the alternatives as source history.",
       "trustReasons": [
-        "DJ Vault has no artist yet. That is not fatal, but it is worth filling in before an export.",
-        "DJ Vault has no album yet. That is not fatal, but it is worth filling in before an export."
+        "DJ Vault chose this title because canonical embedded tags outweighed the other source views. Alternate opinions were \"No More Conversations [Mylo Remix]\", \"No More Conversations (Mylo Dub)\".",
+        "DJ Vault chose this album because canonical embedded tags outweighed the other source views. Alternate opinion was \"Electro Folder\"."
       ],
-      "sourceOpinionCount": 1,
+      "sourceOpinionCount": 6,
+      "mergeChangedFields": []
+    },
+    {
+      "id": "65540c96-8197-4ddf-b0c2-323b0e943410",
+      "title": "Rocker (Eric Prydz Remix)",
+      "artist": "Alter Ego",
+      "album": "Sandbox V1 Canonical",
+      "label": null,
+      "keyDisplay": null,
+      "bpm": null,
+      "durationSec": 303,
+      "rating": null,
+      "comment": null,
+      "playCount": 1,
+      "addedAt": "2026-04-20T00:41:31.343Z",
+      "lastPlayedAt": "2026-04-10T04:02:00.000Z",
+      "recencyBucket": "cooling",
+      "mentalWeight": "active-option",
+      "recencyScore": 66,
+      "warnings": [
+        "No BPM analysis"
+      ],
+      "trustState": "chosen",
+      "trustScore": 96,
+      "trustRationale": "This track had competing title, album opinions. DJ Vault made a confident choice and kept the alternatives as source history.",
+      "trustReasons": [
+        "DJ Vault chose this title because canonical embedded tags and Traktor view outweighed the other source views. Alternate opinion was \"Rocker [Eric Prydz Remix]\".",
+        "DJ Vault chose this album because canonical embedded tags outweighed the other source views. Alternate opinions were \"Ultra Electro\", \"Electro Folder\"."
+      ],
+      "sourceOpinionCount": 6,
+      "mergeChangedFields": []
+    },
+    {
+      "id": "7bde0ca6-070f-4f46-b691-ae91f7261044",
+      "title": "Zdarlight",
+      "artist": "Digitalism",
+      "album": "Sandbox V1 Canonical",
+      "label": null,
+      "keyDisplay": null,
+      "bpm": null,
+      "durationSec": 369,
+      "rating": null,
+      "comment": null,
+      "playCount": 1,
+      "addedAt": "2026-04-20T00:41:31.467Z",
+      "lastPlayedAt": "2026-04-10T04:17:00.000Z",
+      "recencyBucket": "cooling",
+      "mentalWeight": "active-option",
+      "recencyScore": 66,
+      "warnings": [
+        "No BPM analysis"
+      ],
+      "trustState": "chosen",
+      "trustScore": 91,
+      "trustRationale": "This track had competing title, album opinions. DJ Vault made a confident choice and kept the alternatives as source history.",
+      "trustReasons": [
+        "DJ Vault chose this title because canonical embedded tags, Rekordbox 6 view and Traktor view outweighed the other source views. Alternate opinion was \"Zdar Light\".",
+        "DJ Vault chose this album because canonical embedded tags outweighed the other source views. Alternate opinions were \"Electro Folder\", \"Ultra Electro\"."
+      ],
+      "sourceOpinionCount": 6,
       "mergeChangedFields": []
     }
   ],
   "playlists": [
     {
-      "id": "c66dfa55-a0cb-4ba3-bb48-2c43e2995526",
-      "name": "Warmup Crate",
+      "id": "f46b386f-4df9-4c3f-97d0-a7f9c70051c8",
+      "name": "canonical-embedded :: Left Turns",
       "type": "playlist",
-      "itemCount": 1,
-      "hasDeviceTarget": true,
-      "deviceTargetName": "Warmup USB",
+      "itemCount": 3,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "af2f9039-d5eb-4f08-834f-2b83eed4dbd0",
-          "title": "Funk",
-          "artist": null,
+          "trackId": "7bde0ca6-070f-4f46-b691-ae91f7261044",
+          "title": "Zdarlight",
+          "artist": "Digitalism",
           "position": 0,
-          "durationSec": 0
+          "durationSec": 369
+        },
+        {
+          "trackId": "cc55cb6a-172e-4963-bd39-b98a34b07446",
+          "title": "No More Conversations (Mylo Remix)",
+          "artist": "Freeform Five",
+          "position": 1,
+          "durationSec": 399
+        },
+        {
+          "trackId": "ec495041-1e10-4ee0-8fb4-3a40d97d06d1",
+          "title": "Dare (Soulwax Remix)",
+          "artist": "Gorillaz",
+          "position": 2,
+          "durationSec": 279
+        }
+      ]
+    },
+    {
+      "id": "f771b732-87eb-4516-ae22-dbd8c5198464",
+      "name": "canonical-embedded :: Peak Pressure",
+      "type": "playlist",
+      "itemCount": 3,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
+      "entries": [
+        {
+          "trackId": "816e4742-078d-4955-b592-a1a5e25c1794",
+          "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
+          "artist": "Depeche Mode",
+          "position": 0,
+          "durationSec": 435
+        },
+        {
+          "trackId": "65540c96-8197-4ddf-b0c2-323b0e943410",
+          "title": "Rocker (Eric Prydz Remix)",
+          "artist": "Alter Ego",
+          "position": 1,
+          "durationSec": 303
+        },
+        {
+          "trackId": "cc55cb6a-172e-4963-bd39-b98a34b07446",
+          "title": "No More Conversations (Mylo Remix)",
+          "artist": "Freeform Five",
+          "position": 2,
+          "durationSec": 399
+        }
+      ]
+    },
+    {
+      "id": "d6399260-c780-4908-bffe-30305a7bd7b4",
+      "name": "canonical-embedded :: Warmup Tools",
+      "type": "playlist",
+      "itemCount": 3,
+      "hasDeviceTarget": true,
+      "deviceTargetName": "Sandbox V1 Rekordbox USB",
+      "entries": [
+        {
+          "trackId": "ec495041-1e10-4ee0-8fb4-3a40d97d06d1",
+          "title": "Dare (Soulwax Remix)",
+          "artist": "Gorillaz",
+          "position": 0,
+          "durationSec": 279
+        },
+        {
+          "trackId": "49ec95f8-65c4-4a8f-86f6-08dec474c854",
+          "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
+          "artist": "Shiny Toy Guns",
+          "position": 1,
+          "durationSec": 390
+        },
+        {
+          "trackId": "7bde0ca6-070f-4f46-b691-ae91f7261044",
+          "title": "Zdarlight",
+          "artist": "Digitalism",
+          "position": 2,
+          "durationSec": 369
+        }
+      ]
+    },
+    {
+      "id": "e7613869-643b-4b42-84f1-4398b318c8b0",
+      "name": "rekordbox6-dirty :: Last Session",
+      "type": "playlist",
+      "itemCount": 2,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
+      "entries": [
+        {
+          "trackId": "65540c96-8197-4ddf-b0c2-323b0e943410",
+          "title": "Rocker (Eric Prydz Remix)",
+          "artist": "Alter Ego",
+          "position": 0,
+          "durationSec": 303
+        },
+        {
+          "trackId": "cc55cb6a-172e-4963-bd39-b98a34b07446",
+          "title": "No More Conversations (Mylo Remix)",
+          "artist": "Freeform Five",
+          "position": 1,
+          "durationSec": 399
+        }
+      ]
+    },
+    {
+      "id": "bdd9d0a4-571b-4d3a-bf5f-eb7030eb219b",
+      "name": "rekordbox6-dirty :: Peak Pressure",
+      "type": "playlist",
+      "itemCount": 3,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
+      "entries": [
+        {
+          "trackId": "816e4742-078d-4955-b592-a1a5e25c1794",
+          "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
+          "artist": "Depeche Mode",
+          "position": 0,
+          "durationSec": 435
+        },
+        {
+          "trackId": "65540c96-8197-4ddf-b0c2-323b0e943410",
+          "title": "Rocker (Eric Prydz Remix)",
+          "artist": "Alter Ego",
+          "position": 1,
+          "durationSec": 303
+        },
+        {
+          "trackId": "cc55cb6a-172e-4963-bd39-b98a34b07446",
+          "title": "No More Conversations (Mylo Remix)",
+          "artist": "Freeform Five",
+          "position": 2,
+          "durationSec": 399
+        }
+      ]
+    },
+    {
+      "id": "1b38d6bc-a707-41eb-a3c2-f5faa842e90d",
+      "name": "rekordbox6-dirty :: Warmup Tools",
+      "type": "playlist",
+      "itemCount": 3,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
+      "entries": [
+        {
+          "trackId": "ec495041-1e10-4ee0-8fb4-3a40d97d06d1",
+          "title": "Dare (Soulwax Remix)",
+          "artist": "Gorillaz",
+          "position": 0,
+          "durationSec": 279
+        },
+        {
+          "trackId": "49ec95f8-65c4-4a8f-86f6-08dec474c854",
+          "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
+          "artist": "Shiny Toy Guns",
+          "position": 1,
+          "durationSec": 390
+        },
+        {
+          "trackId": "7bde0ca6-070f-4f46-b691-ae91f7261044",
+          "title": "Zdarlight",
+          "artist": "Digitalism",
+          "position": 2,
+          "durationSec": 369
+        }
+      ]
+    },
+    {
+      "id": "da93aac9-79ef-45a3-9ab0-122460945802",
+      "name": "traktor-dirty :: Dubious Duplicates",
+      "type": "playlist",
+      "itemCount": 2,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
+      "entries": [
+        {
+          "trackId": "7bde0ca6-070f-4f46-b691-ae91f7261044",
+          "title": "Zdarlight",
+          "artist": "Digitalism",
+          "position": 0,
+          "durationSec": 369
+        },
+        {
+          "trackId": "7bde0ca6-070f-4f46-b691-ae91f7261044",
+          "title": "Zdarlight",
+          "artist": "Digitalism",
+          "position": 1,
+          "durationSec": 369
+        }
+      ]
+    },
+    {
+      "id": "c2868b39-f41a-4e9d-b5a0-62f10206f604",
+      "name": "traktor-dirty :: Peak Pressure",
+      "type": "playlist",
+      "itemCount": 3,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
+      "entries": [
+        {
+          "trackId": "816e4742-078d-4955-b592-a1a5e25c1794",
+          "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
+          "artist": "Depeche Mode",
+          "position": 0,
+          "durationSec": 435
+        },
+        {
+          "trackId": "65540c96-8197-4ddf-b0c2-323b0e943410",
+          "title": "Rocker (Eric Prydz Remix)",
+          "artist": "Alter Ego",
+          "position": 1,
+          "durationSec": 303
+        },
+        {
+          "trackId": "cc55cb6a-172e-4963-bd39-b98a34b07446",
+          "title": "No More Conversations (Mylo Remix)",
+          "artist": "Freeform Five",
+          "position": 2,
+          "durationSec": 399
+        }
+      ]
+    },
+    {
+      "id": "b3527af3-a103-4af2-813a-8105ec5b07be",
+      "name": "traktor-dirty :: Warmup Tools",
+      "type": "playlist",
+      "itemCount": 3,
+      "hasDeviceTarget": false,
+      "deviceTargetName": null,
+      "entries": [
+        {
+          "trackId": "7bde0ca6-070f-4f46-b691-ae91f7261044",
+          "title": "Zdarlight",
+          "artist": "Digitalism",
+          "position": 0,
+          "durationSec": 369
+        },
+        {
+          "trackId": "ec495041-1e10-4ee0-8fb4-3a40d97d06d1",
+          "title": "Dare (Soulwax Remix)",
+          "artist": "Gorillaz",
+          "position": 1,
+          "durationSec": 279
+        },
+        {
+          "trackId": "49ec95f8-65c4-4a8f-86f6-08dec474c854",
+          "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
+          "artist": "Shiny Toy Guns",
+          "position": 2,
+          "durationSec": 390
         }
       ]
     }
   ],
-  "sets": [
-    {
-      "id": "a1ee7b88-333c-4d10-9dd7-0a9b85ef69ce",
-      "name": "Friday Peak",
-      "trackCount": 1
-    }
-  ],
+  "sets": [],
   "exportTargets": [
     {
-      "playlistId": "c66dfa55-a0cb-4ba3-bb48-2c43e2995526",
-      "playlistName": "Warmup Crate",
-      "name": "Warmup USB",
+      "playlistId": "d6399260-c780-4908-bffe-30305a7bd7b4",
+      "playlistName": "canonical-embedded :: Warmup Tools",
+      "name": "Sandbox V1 Rekordbox USB",
       "enabled": true,
-      "folderPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export-targets/warmup-crate",
+      "folderPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/rekordbox-device-export",
       "pendingNativeArtifacts": [
         "export.pdb",
         "ANLZ analysis files"
       ],
-      "referenceCoveredTables": [
-        "tracks",
-        "artists",
-        "labels",
-        "keys"
-      ],
-      "referenceGapTables": [
-        "albums",
-        "playlist_tree",
-        "playlist_entries",
-        "columns"
-      ],
-      "rowPlanWarnings": [
-        "Track \"Funk\" has zero duration in the catalog and needs analysis backfill before native export.",
-        "Track \"Funk\" is missing artist metadata; ArtistId will remain 0."
-      ]
+      "referenceCoveredTables": [],
+      "referenceGapTables": [],
+      "rowPlanWarnings": []
     }
   ],
   "exportPlans": [
     {
-      "id": "425bce00-cd44-4a9f-913b-4b9a04f5555f",
-      "playlistName": "Warmup Crate",
+      "id": "4f84b8d2-2079-4ebd-a35d-befe29e1779e",
+      "playlistName": "canonical-embedded :: Warmup Tools",
       "status": "ready",
       "targetKind": "usb-device",
-      "executionNodeName": "Studio Export Worker",
-      "sourceStorageName": "MacBook Main Library",
-      "destinationStorageName": "USB Staging",
-      "transport": "tailscale",
-      "requiresRemoteAccess": true,
+      "executionNodeName": "Sandbox Laptop",
+      "sourceStorageName": "Sandbox Managed Library",
+      "destinationStorageName": "Sandbox USB Target",
+      "transport": "local",
+      "requiresRemoteAccess": false,
       "missingTrackIds": [],
-      "savedTargetFolderPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export-targets/warmup-crate"
-    },
-    {
-      "id": "9b78e10c-643a-49d7-820a-3547d9cc19b2",
-      "playlistName": "Warmup Crate",
-      "status": "ready",
-      "targetKind": "usb-device",
-      "executionNodeName": "Studio Export Worker",
-      "sourceStorageName": "MacBook Main Library",
-      "destinationStorageName": "USB Staging",
-      "transport": "tailscale",
-      "requiresRemoteAccess": true,
-      "missingTrackIds": [],
-      "savedTargetFolderPath": null
-    },
-    {
-      "id": "c680cce9-2a5d-45fb-9227-b80b5afb6968",
-      "playlistName": null,
-      "status": "planned",
-      "targetKind": "usb-device",
-      "executionNodeName": "Studio Export Worker",
-      "sourceStorageName": "MacBook Main Library",
-      "destinationStorageName": "USB Staging",
-      "transport": "tailscale",
-      "requiresRemoteAccess": true,
-      "missingTrackIds": [],
-      "savedTargetFolderPath": null
+      "savedTargetFolderPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/rekordbox-device-export"
     }
   ],
   "topology": {
     "nodes": [
       {
-        "id": "a86c5299-c500-4930-b555-b499e3f9953e",
-        "name": "Basement NAS",
-        "role": "media-host",
-        "transport": "smb",
-        "address": "nas.local",
-        "isOnline": false
-      },
-      {
-        "id": "d386efbd-deac-4e3e-bf02-bf629ad83605",
-        "name": "Mac mini",
-        "role": "catalog-primary",
+        "id": "0aebd2c6-ec2e-4333-87ad-6218628fa407",
+        "name": "Sandbox Laptop",
+        "role": "hybrid",
         "transport": "local",
-        "address": "local-mac-mini",
+        "address": null,
         "isOnline": true
-      },
-      {
-        "id": "c412418b-38cf-4853-8f07-68cb1704f6e7",
-        "name": "MacBook Pro",
-        "role": "media-host",
-        "transport": "tailscale",
-        "address": "100.88.10.12",
-        "isOnline": false
-      },
-      {
-        "id": "ada80a31-ce26-4e4e-95a2-d113e96cae1a",
-        "name": "Studio Export Worker",
-        "role": "export-worker",
-        "transport": "tailscale",
-        "address": "100.88.10.50",
-        "isOnline": false
       }
     ],
     "storages": [
       {
-        "id": "af6187e3-4efe-41f7-8c31-e4163c4bc97a",
-        "nodeName": "MacBook Pro",
-        "name": "MacBook Main Library",
+        "id": "df3c6095-487d-4824-9e0a-a09ec338573c",
+        "nodeName": "Sandbox Laptop",
+        "name": "Sandbox Managed Library",
         "kind": "local-disk",
         "isManagedLibrary": true,
         "isAvailable": true,
-        "mountPath": "/Volumes/GregMusic"
+        "mountPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/managed-library"
       },
       {
-        "id": "e7ece5a3-75b7-4b65-abbf-9eb8f169acce",
-        "nodeName": "Basement NAS",
-        "name": "NAS Deep Archive",
-        "kind": "nas",
-        "isManagedLibrary": false,
-        "isAvailable": false,
-        "mountPath": "/Volumes/NAS/DJLibrary"
-      },
-      {
-        "id": "6fa2f0ad-90f3-4676-a8c5-3cd67153cdab",
-        "nodeName": "Studio Export Worker",
-        "name": "USB Staging",
+        "id": "2527d01d-b841-42c2-bfe4-66c32819e389",
+        "nodeName": "Sandbox Laptop",
+        "name": "Sandbox USB Target",
         "kind": "external-drive",
         "isManagedLibrary": false,
-        "isAvailable": false,
-        "mountPath": "/Volumes/DJUSB"
+        "isAvailable": true,
+        "mountPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/rekordbox-device-export"
       }
     ]
   },
   "recentExports": [
     {
-      "id": "1d19aa51-e7ed-498b-8727-53c55dab6c08",
+      "id": "7987b525-ecb9-43ce-a9f6-742c2a55d23f",
       "targetKind": "rekordbox-device",
-      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export-targets/warmup-crate",
+      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/rekordbox-device-export",
       "status": "completed",
-      "completedAt": "2026-04-12T20:51:53.285Z"
-    },
-    {
-      "id": "16a7e974-d08f-4dea-80b2-fb7a0fe4746c",
-      "targetKind": "rekordbox-device",
-      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export/rekordbox-device-v1",
-      "status": "completed",
-      "completedAt": "2026-04-12T20:41:34.877Z"
-    },
-    {
-      "id": "d6c7ddb4-2d62-4240-881d-aecc6413ac27",
-      "targetKind": "traktor-nml",
-      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export/traktor.nml",
-      "status": "completed",
-      "completedAt": "2026-04-10T21:08:11.689Z"
-    },
-    {
-      "id": "59eb09e0-84f3-43e0-8558-6b7b30a58a78",
-      "targetKind": "rekordbox-xml",
-      "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/export/rekordbox.xml",
-      "status": "completed",
-      "completedAt": "2026-04-10T21:08:11.414Z"
+      "completedAt": "2026-04-20T00:41:32.519Z"
     }
   ],
   "focusNotes": [
     "1 saved Rekordbox device target ready for testing",
     "Catalog still has metadata and analysis gaps that show up in native export planning",
-    "Playlist and column PDB tables still need stronger reference coverage before native writing",
-    "Remote export planning is live: source media and USB execution can live on different nodes",
     "Some tracks need ears: DJ Vault found unresolved trust or identity context"
   ]
 }

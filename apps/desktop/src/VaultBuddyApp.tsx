@@ -632,6 +632,10 @@ export function VaultBuddyApp() {
         <div className="sidebar-brand">
           <p className="eyebrow">VaultBuddy</p>
           <h1>Operator Desk</h1>
+          <div className="target-library-badge">
+            <span>Target Library</span>
+            <strong>sandbox-v1</strong>
+          </div>
           <p className="sidebar-copy">{snapshot.hero.focus}</p>
         </div>
 

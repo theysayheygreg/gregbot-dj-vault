@@ -184,7 +184,7 @@ function renderMarkdown(report) {
     '',
     '## Notes',
     '',
-    '- This test uses the generated sandbox libraries, not Greg’s long-term music library.',
+    '- This test uses the generated sandbox libraries as the active v1 target library.',
     '- The export is structurally valid as a staged folder with media, XML, M3U, and manifest output.',
     '- Native `export.pdb` and `ANLZ` remain honest v1 gaps; this test expects those warnings until the native writer lands.',
     '',

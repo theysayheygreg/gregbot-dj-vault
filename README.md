@@ -50,6 +50,8 @@ The original spec work is intact and remains useful. This repository is now bein
 - a research workspace
 - a publication-ready project that can move to GitHub cleanly
 
+The current target library is `sandbox-v1`. It is not a throwaway demo. It is the controlled acceptance library for v1 design and implementation, and every core feature should prove itself there before the scope widens.
+
 ## Immediate Priorities
 
 - Lock the expanded project charter and research program
@@ -88,7 +90,15 @@ npm install
 npm run build
 ```
 
-To run the first app shell:
+To run VaultBuddy against the current target library:
+
+```bash
+npm run dev:sandbox-v1
+```
+
+That command rebuilds the `sandbox-v1` target, refreshes the dashboard snapshot, and opens the dev app against `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/sandbox-v1.sqlite`.
+
+To run the generic app shell against the repo-local development catalog:
 
 ```bash
 npm run dev --workspace @dj-vault/desktop
@@ -108,7 +118,13 @@ It also now has the first user-facing workflow scaffolding inside the app itself
 
 The merge experience is framed as [Library Trust](/Users/theysayheygreg/clawd/projects/dj-vault/docs/design/LIBRARY-TRUST.md), not IDE-style conflict resolution. DJ Vault resolves when the evidence is strong, preserves source opinions as provenance, and explains uncertainty only when it affects prep or export confidence.
 
-To build and run the local VaultBuddy runtime:
+To build and run the local VaultBuddy runtime against `sandbox-v1`:
+
+```bash
+npm run desktop:runtime:sandbox-v1
+```
+
+To build and run the generic local VaultBuddy runtime:
 
 ```bash
 npm run desktop:runtime
@@ -116,7 +132,7 @@ npm run desktop:runtime
 
 That serves the built app at `http://localhost:4187` and uses the repo-local catalog database by default.
 
-To point VaultBuddy at a different database, such as a laptop-local catalog that is sitting beside your real music library:
+To point VaultBuddy at a different database:
 
 ```bash
 DJ_VAULT_DB_PATH=/absolute/path/to/dj-vault.sqlite npm run desktop:runtime
@@ -156,13 +172,21 @@ To bootstrap the first local catalog database:
 npm run catalog:init
 ```
 
-To build the controlled v1 sandbox library fixture for merge and export testing:
+To build the controlled v1 target library fixture:
 
 ```bash
 npm run fixture:build-sandbox-v1
 ```
 
 That fixture is documented in [Sandbox V1 Fixture](/Users/theysayheygreg/clawd/projects/dj-vault/docs/reference/SANDBOX-V1-FIXTURE.md).
+
+To prepare the full `sandbox-v1` target for app work:
+
+```bash
+npm run fixture:prepare-sandbox-v1
+```
+
+That builds the target database, runs the export regression, and refreshes the bundled dashboard snapshot from the sandbox catalog.
 
 To run the first full DJ Vault sandbox test against that fixture:
 
