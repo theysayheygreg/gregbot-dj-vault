@@ -1,4 +1,4 @@
-export const catalogSchemaVersion = 5;
+export const catalogSchemaVersion = 6;
 
 export const catalogSchemaSql = `
 PRAGMA foreign_keys = ON;
@@ -327,6 +327,8 @@ CREATE INDEX IF NOT EXISTS idx_metadata_provenance_lookup ON metadata_provenance
 CREATE INDEX IF NOT EXISTS idx_playback_events_track_id ON playback_events(track_id);
 CREATE INDEX IF NOT EXISTS idx_playback_events_session_id ON playback_events(session_id);
 CREATE INDEX IF NOT EXISTS idx_playback_events_played_at ON playback_events(played_at);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_playback_events_source_identity
+  ON playback_events(source_kind, COALESCE(source_ref, ''), track_id, played_at, COALESCE(position_in_session, -1));
 CREATE INDEX IF NOT EXISTS idx_storage_locations_node_id ON storage_locations(node_id);
 CREATE INDEX IF NOT EXISTS idx_track_residencies_storage_location_id ON track_residencies(storage_location_id);
 CREATE INDEX IF NOT EXISTS idx_export_execution_plans_node_id ON export_execution_plans(execution_node_id);

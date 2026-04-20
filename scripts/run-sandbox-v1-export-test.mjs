@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { access, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
@@ -160,6 +160,7 @@ function renderMarkdown(report) {
     '',
     `- Base sandbox expectations: ${report.baseSandbox.failingExpectationCount === 0 ? 'pass' : 'fail'}`,
     `- Export validation: ${report.validation.valid ? 'pass' : 'fail'}`,
+    `- Stale media prune: ${report.stalePrune.passed ? 'pass' : 'fail'}`,
     `- Missing files: ${report.validation.missingFiles.length}`,
     `- Playlist reference errors: ${report.validation.playlistReferenceErrors.length}`,
     `- Native gaps expected: ${report.nativeGaps.expected ? 'yes' : 'no'}`,
@@ -231,7 +232,30 @@ const executionPlan = planRekordboxDeviceExport(databasePath, {
   transport: 'local',
   note: 'Sandbox v1 export regression.',
 });
+
+const staleTrackPath = path.join(exportRoot, 'Contents', 'Stale Artist', 'Stale Album', 'Ghost Track.mp3');
+const staleManifestPath = path.join(exportRoot, 'PIONEER', 'rekordbox', 'dj-vault', 'device-export-manifest.json');
+await mkdir(path.dirname(staleTrackPath), { recursive: true });
+await mkdir(path.dirname(staleManifestPath), { recursive: true });
+await writeFile(staleTrackPath, 'stale export media', 'utf8');
+await writeFile(staleManifestPath, `${JSON.stringify({
+  version: 1,
+  tracks: [
+    {
+      stagedRelativePath: path.relative(exportRoot, staleTrackPath).split(path.sep).join('/'),
+    },
+  ],
+}, null, 2)}\n`, 'utf8');
+
 const exportResult = await exportRekordboxDeviceToSavedTarget(databasePath, targetPlaylist.id);
+const staleMediaPruned = await (async () => {
+  try {
+    await access(staleTrackPath);
+    return false;
+  } catch {
+    return true;
+  }
+})();
 const validation = await validateRekordboxDeviceExport(exportRoot);
 const manifest = JSON.parse(await readFile(exportResult.manifestPath, 'utf8'));
 const manifestTrackById = new Map(manifest.tracks.map((track) => [track.id, track]));
@@ -268,6 +292,10 @@ const report = {
     expected: nativeGaps.includes('export.pdb') && nativeGaps.some((item) => item.includes('ANLZ')),
     items: nativeGaps,
   },
+  stalePrune: {
+    staleTrackPath,
+    passed: staleMediaPruned,
+  },
   trustSummary: summarizeTrust(trustPlans),
   tracks: playlistTracks.map((track) => ({
     id: track.id,
@@ -285,6 +313,7 @@ const report = {
       && validation.missingFiles.length === 0
       && validation.playlistReferenceErrors.length === 0
       && exportResult.trackCount === playlistTracks.length
+      && staleMediaPruned
       && nativeGaps.includes('export.pdb')
       && nativeGaps.some((item) => item.includes('ANLZ')),
   },

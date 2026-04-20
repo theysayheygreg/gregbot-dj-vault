@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto';
-import { copyFile, mkdir, rename, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
 
@@ -105,6 +105,12 @@ type DeviceExportPlaylistManifest = {
   }>;
 };
 
+type PreviousDeviceExportManifest = {
+  tracks?: Array<{
+    stagedRelativePath?: string | null;
+  }>;
+};
+
 export type RekordboxDeviceExportResult = {
   exportJobId: string;
   targetKind: 'rekordbox-device';
@@ -201,6 +207,39 @@ async function atomicWrite(outputPath: string, contents: string): Promise<void> 
   const tmpPath = `${outputPath}.tmp`;
   await writeFile(tmpPath, contents, 'utf8');
   await rename(tmpPath, outputPath);
+}
+
+function resolveExportChild(outputRoot: string, relativePath: string): string {
+  const absoluteRoot = path.resolve(outputRoot);
+  const absoluteChild = path.resolve(absoluteRoot, relativePath);
+  const relative = path.relative(absoluteRoot, absoluteChild);
+  if (!relative || relative.startsWith('..') || path.isAbsolute(relative)) {
+    throw new Error(`Refusing to prune export path outside the output root: ${relativePath}`);
+  }
+  return absoluteChild;
+}
+
+async function prunePreviousDeviceExport(outputRoot: string, metadataRoot: string, manifestPath: string): Promise<void> {
+  const previousManifest = await (async () => {
+    try {
+      return JSON.parse(await readFile(manifestPath, 'utf8')) as PreviousDeviceExportManifest;
+    } catch (error) {
+      if (error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') {
+        return null;
+      }
+      const detail = error instanceof Error ? error.message : 'unknown parse error';
+      throw new Error(`Previous device-export manifest is unreadable. Refusing to layer a new export over unknown stale media. ${detail}`);
+    }
+  })();
+
+  for (const track of previousManifest?.tracks ?? []) {
+    if (!track.stagedRelativePath) {
+      continue;
+    }
+    await rm(resolveExportChild(outputRoot, track.stagedRelativePath), { force: true });
+  }
+
+  await rm(metadataRoot, { recursive: true, force: true });
 }
 
 function ensureRekordboxTrackIds(database: DatabaseSync, tracks: TrackRow[]): void {
@@ -481,6 +520,8 @@ export async function exportRekordboxDevice(
   const manifestPath = path.join(metadataRoot, 'device-export-manifest.json');
 
   try {
+    await prunePreviousDeviceExport(absoluteOutputRoot, metadataRoot, manifestPath);
+
     database.exec('PRAGMA foreign_keys = ON;');
     database.exec('BEGIN');
 

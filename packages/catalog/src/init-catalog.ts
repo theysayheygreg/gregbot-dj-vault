@@ -40,6 +40,18 @@ function runMigrations(database: DatabaseSync): void {
 
   database.exec(`CREATE INDEX IF NOT EXISTS idx_tracks_content_hash_sha256 ON tracks(content_hash_sha256);`);
   database.exec(`UPDATE tracks SET content_hash_sha256 = hash_sha256 WHERE content_hash_sha256 IS NULL;`);
+  database.exec(`
+    DELETE FROM playback_events
+    WHERE rowid NOT IN (
+      SELECT MIN(rowid)
+      FROM playback_events
+      GROUP BY source_kind, COALESCE(source_ref, ''), track_id, played_at, COALESCE(position_in_session, -1)
+    );
+  `);
+  database.exec(`
+    CREATE UNIQUE INDEX IF NOT EXISTS idx_playback_events_source_identity
+    ON playback_events(source_kind, COALESCE(source_ref, ''), track_id, played_at, COALESCE(position_in_session, -1));
+  `);
 }
 
 export async function initializeCatalog(databasePath: string): Promise<CatalogInitResult> {

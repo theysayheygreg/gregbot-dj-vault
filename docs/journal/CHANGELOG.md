@@ -1,5 +1,24 @@
 # DJ Vault — Changelog
 
+## 2026-04-20 — Export and history trust hardening
+
+### Fixed
+
+- Rekordbox device exports now prune previously staged DJ Vault media from the prior manifest before writing the next export.
+- Playback history import is now idempotent for the same source, track, timestamp, and position identity, preventing duplicate imports from inflating play counts and recency.
+
+### Changed
+
+- Catalog schema version is now `6` and includes a unique playback-event source identity index.
+- Sandbox regressions now assert stale export pruning and duplicate history-import behavior.
+
+### Verified
+
+- `npm run check`
+- `npm run build`
+- `npm run fixture:test-sandbox-v1-export`
+- live VaultBuddy server smoke at `http://localhost:4187/api/dashboard`
+
 ## 2026-04-20 — Sandbox target UI and candidate reports
 
 ### Added

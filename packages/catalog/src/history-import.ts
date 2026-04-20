@@ -36,6 +36,7 @@ export type PlaybackHistoryImportFile = {
 export type PlaybackHistoryImportResult = {
   sessionCount: number;
   eventCount: number;
+  duplicateEventCount: number;
   importedTrackCount: number;
   skippedTrackRefs: string[];
 };
@@ -149,7 +150,7 @@ export async function importPlaybackHistory(databasePath: string, payload: Playb
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `);
     const insertEvent = database.prepare(`
-      INSERT INTO playback_events (
+      INSERT OR IGNORE INTO playback_events (
         id, session_id, track_id, played_at, position_in_session, source_kind, source_ref, confidence, note
       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
@@ -166,6 +167,7 @@ export async function importPlaybackHistory(databasePath: string, payload: Playb
 
     let sessionCount = 0;
     let eventCount = 0;
+    let duplicateEventCount = 0;
     const importedTrackIds = new Set<string>();
     const skippedTrackRefs: string[] = [];
 
@@ -195,17 +197,22 @@ export async function importPlaybackHistory(databasePath: string, payload: Playb
           continue;
         }
 
-        insertEvent.run(
+        const sourceRef = event.sourceRef ?? session.sourceRef ?? null;
+        const insertResult = insertEvent.run(
           randomUUID(),
           sessionId,
           track.id,
           event.playedAt,
           event.positionInSession ?? null,
           session.sourceKind,
-          event.sourceRef ?? session.sourceRef ?? null,
+          sourceRef,
           event.confidence ?? 0.8,
           event.note ?? null,
-        );
+        ) as { changes?: number | bigint };
+        if (Number(insertResult.changes ?? 0) === 0) {
+          duplicateEventCount += 1;
+          continue;
+        }
         updateTrack.run(event.playedAt, event.playedAt, nowIso(), track.id);
 
         importedTrackIds.add(track.id);
@@ -217,6 +224,7 @@ export async function importPlaybackHistory(databasePath: string, payload: Playb
     return {
       sessionCount,
       eventCount,
+      duplicateEventCount,
       importedTrackCount: importedTrackIds.size,
       skippedTrackRefs,
     };

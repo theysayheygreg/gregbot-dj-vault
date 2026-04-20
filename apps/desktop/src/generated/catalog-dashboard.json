@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-20T22:37:11.790Z",
+  "generatedAt": "2026-04-20T22:44:40.688Z",
   "summary": {
     "trackCount": 6,
     "playlistCount": 9,
@@ -23,7 +23,7 @@
   },
   "tracks": [
     {
-      "id": "f428a522-11e1-4cff-b10c-02c706b4d84e",
+      "id": "99e953f8-f569-4d83-b9b4-10da59628639",
       "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
       "artist": "Depeche Mode",
       "album": "Sandbox V1 Canonical",
@@ -34,7 +34,7 @@
       "rating": null,
       "comment": null,
       "playCount": 0,
-      "addedAt": "2026-04-20T22:37:10.393Z",
+      "addedAt": "2026-04-20T22:43:52.330Z",
       "lastPlayedAt": null,
       "recencyBucket": "never-played",
       "mentalWeight": "front-of-mind",
@@ -53,7 +53,7 @@
       "mergeChangedFields": []
     },
     {
-      "id": "3d082bd2-8ea2-49ad-98be-8baaaa91292d",
+      "id": "67830ba0-535e-4be9-8af8-6a255c6ecaff",
       "title": "Dare (Soulwax Remix)",
       "artist": "Gorillaz",
       "album": "Ultra Electro",
@@ -64,7 +64,7 @@
       "rating": null,
       "comment": null,
       "playCount": 0,
-      "addedAt": "2026-04-20T22:37:10.521Z",
+      "addedAt": "2026-04-20T22:43:52.445Z",
       "lastPlayedAt": null,
       "recencyBucket": "never-played",
       "mentalWeight": "front-of-mind",
@@ -84,7 +84,7 @@
       "mergeChangedFields": []
     },
     {
-      "id": "58facfd3-2ea2-43db-ba3f-ea64b0f94355",
+      "id": "33dd8eac-49d1-46f4-bd40-01b94c868b84",
       "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
       "artist": "Shiny Toy Guns",
       "album": "Sandbox V1 Canonical",
@@ -95,7 +95,7 @@
       "rating": null,
       "comment": null,
       "playCount": 0,
-      "addedAt": "2026-04-20T22:37:10.658Z",
+      "addedAt": "2026-04-20T22:43:52.558Z",
       "lastPlayedAt": null,
       "recencyBucket": "never-played",
       "mentalWeight": "front-of-mind",
@@ -114,7 +114,37 @@
       "mergeChangedFields": []
     },
     {
-      "id": "159de79e-c706-4450-8d36-99b5072b75b3",
+      "id": "88c22bc3-7abe-4955-a476-52051203038e",
+      "title": "Zdarlight",
+      "artist": "Digitalism",
+      "album": "Sandbox V1 Canonical",
+      "label": null,
+      "keyDisplay": null,
+      "bpm": null,
+      "durationSec": 369,
+      "rating": null,
+      "comment": null,
+      "playCount": 2,
+      "addedAt": "2026-04-20T22:43:52.392Z",
+      "lastPlayedAt": "2026-04-11T04:02:00.000Z",
+      "recencyBucket": "cooling",
+      "mentalWeight": "active-option",
+      "recencyScore": 69,
+      "warnings": [
+        "No BPM analysis"
+      ],
+      "trustState": "chosen",
+      "trustScore": 91,
+      "trustRationale": "This track had competing title, album opinions. DJ Vault made a confident choice and kept the alternatives as source history.",
+      "trustReasons": [
+        "DJ Vault chose this title because canonical embedded tags, Rekordbox 6 view and Traktor view outweighed the other source views. Alternate opinion was \"Zdar Light\".",
+        "DJ Vault chose this album because canonical embedded tags outweighed the other source views. Alternate opinions were \"Electro Folder\", \"Ultra Electro\"."
+      ],
+      "sourceOpinionCount": 6,
+      "mergeChangedFields": []
+    },
+    {
+      "id": "aeb9f0fa-f7f7-49b3-ac3a-b84a473c7419",
       "title": "No More Conversations (Mylo Remix)",
       "artist": "Freeform Five",
       "album": "Sandbox V1 Canonical",
@@ -125,7 +155,7 @@
       "rating": null,
       "comment": null,
       "playCount": 1,
-      "addedAt": "2026-04-20T22:37:10.244Z",
+      "addedAt": "2026-04-20T22:43:52.197Z",
       "lastPlayedAt": "2026-04-10T04:09:00.000Z",
       "recencyBucket": "cooling",
       "mentalWeight": "active-option",
@@ -144,7 +174,7 @@
       "mergeChangedFields": []
     },
     {
-      "id": "fb9cdd9b-2e73-43ef-b0db-8d9c02e878e1",
+      "id": "cd355ad5-38cb-4cab-8378-2ef9e1c43862",
       "title": "Rocker (Eric Prydz Remix)",
       "artist": "Alter Ego",
       "album": "Sandbox V1 Canonical",
@@ -155,7 +185,7 @@
       "rating": null,
       "comment": null,
       "playCount": 1,
-      "addedAt": "2026-04-20T22:37:10.322Z",
+      "addedAt": "2026-04-20T22:43:52.264Z",
       "lastPlayedAt": "2026-04-10T04:02:00.000Z",
       "recencyBucket": "cooling",
       "mentalWeight": "active-option",
@@ -172,41 +202,11 @@
       ],
       "sourceOpinionCount": 6,
       "mergeChangedFields": []
-    },
-    {
-      "id": "94d584e2-cfdc-4079-94d5-b75ede6424ff",
-      "title": "Zdarlight",
-      "artist": "Digitalism",
-      "album": "Sandbox V1 Canonical",
-      "label": null,
-      "keyDisplay": null,
-      "bpm": null,
-      "durationSec": 369,
-      "rating": null,
-      "comment": null,
-      "playCount": 1,
-      "addedAt": "2026-04-20T22:37:10.463Z",
-      "lastPlayedAt": "2026-04-10T04:17:00.000Z",
-      "recencyBucket": "cooling",
-      "mentalWeight": "active-option",
-      "recencyScore": 65,
-      "warnings": [
-        "No BPM analysis"
-      ],
-      "trustState": "chosen",
-      "trustScore": 91,
-      "trustRationale": "This track had competing title, album opinions. DJ Vault made a confident choice and kept the alternatives as source history.",
-      "trustReasons": [
-        "DJ Vault chose this title because canonical embedded tags, Rekordbox 6 view and Traktor view outweighed the other source views. Alternate opinion was \"Zdar Light\".",
-        "DJ Vault chose this album because canonical embedded tags outweighed the other source views. Alternate opinions were \"Electro Folder\", \"Ultra Electro\"."
-      ],
-      "sourceOpinionCount": 6,
-      "mergeChangedFields": []
     }
   ],
   "playlists": [
     {
-      "id": "ed3e2ccc-ec06-48a6-8411-2de80719ecc9",
+      "id": "82543172-2925-4482-9299-3c71a48a20f5",
       "name": "canonical-embedded :: Left Turns",
       "type": "playlist",
       "itemCount": 3,
@@ -214,21 +214,21 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "94d584e2-cfdc-4079-94d5-b75ede6424ff",
+          "trackId": "88c22bc3-7abe-4955-a476-52051203038e",
           "title": "Zdarlight",
           "artist": "Digitalism",
           "position": 0,
           "durationSec": 369
         },
         {
-          "trackId": "159de79e-c706-4450-8d36-99b5072b75b3",
+          "trackId": "aeb9f0fa-f7f7-49b3-ac3a-b84a473c7419",
           "title": "No More Conversations (Mylo Remix)",
           "artist": "Freeform Five",
           "position": 1,
           "durationSec": 399
         },
         {
-          "trackId": "3d082bd2-8ea2-49ad-98be-8baaaa91292d",
+          "trackId": "67830ba0-535e-4be9-8af8-6a255c6ecaff",
           "title": "Dare (Soulwax Remix)",
           "artist": "Gorillaz",
           "position": 2,
@@ -237,7 +237,7 @@
       ]
     },
     {
-      "id": "25cf32a5-f7a0-4237-8ba5-819a626dd1da",
+      "id": "165e90cd-6768-4995-bab9-d8b5a4d97776",
       "name": "canonical-embedded :: Peak Pressure",
       "type": "playlist",
       "itemCount": 3,
@@ -245,21 +245,21 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "f428a522-11e1-4cff-b10c-02c706b4d84e",
+          "trackId": "99e953f8-f569-4d83-b9b4-10da59628639",
           "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
           "artist": "Depeche Mode",
           "position": 0,
           "durationSec": 435
         },
         {
-          "trackId": "fb9cdd9b-2e73-43ef-b0db-8d9c02e878e1",
+          "trackId": "cd355ad5-38cb-4cab-8378-2ef9e1c43862",
           "title": "Rocker (Eric Prydz Remix)",
           "artist": "Alter Ego",
           "position": 1,
           "durationSec": 303
         },
         {
-          "trackId": "159de79e-c706-4450-8d36-99b5072b75b3",
+          "trackId": "aeb9f0fa-f7f7-49b3-ac3a-b84a473c7419",
           "title": "No More Conversations (Mylo Remix)",
           "artist": "Freeform Five",
           "position": 2,
@@ -268,7 +268,7 @@
       ]
     },
     {
-      "id": "f0613686-0e14-40c9-b978-e5355840f388",
+      "id": "1aaef90f-86bd-4c0d-acf7-41fc3dc0aea3",
       "name": "canonical-embedded :: Warmup Tools",
       "type": "playlist",
       "itemCount": 3,
@@ -276,21 +276,21 @@
       "deviceTargetName": "Sandbox V1 Rekordbox USB",
       "entries": [
         {
-          "trackId": "3d082bd2-8ea2-49ad-98be-8baaaa91292d",
+          "trackId": "67830ba0-535e-4be9-8af8-6a255c6ecaff",
           "title": "Dare (Soulwax Remix)",
           "artist": "Gorillaz",
           "position": 0,
           "durationSec": 279
         },
         {
-          "trackId": "58facfd3-2ea2-43db-ba3f-ea64b0f94355",
+          "trackId": "33dd8eac-49d1-46f4-bd40-01b94c868b84",
           "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
           "artist": "Shiny Toy Guns",
           "position": 1,
           "durationSec": 390
         },
         {
-          "trackId": "94d584e2-cfdc-4079-94d5-b75ede6424ff",
+          "trackId": "88c22bc3-7abe-4955-a476-52051203038e",
           "title": "Zdarlight",
           "artist": "Digitalism",
           "position": 2,
@@ -299,7 +299,7 @@
       ]
     },
     {
-      "id": "e00a3d71-0267-48cc-b1ae-262cef00a707",
+      "id": "d10c5a29-6922-44ff-99d6-cf7fbd2f5f28",
       "name": "rekordbox6-dirty :: Last Session",
       "type": "playlist",
       "itemCount": 2,
@@ -307,14 +307,14 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "fb9cdd9b-2e73-43ef-b0db-8d9c02e878e1",
+          "trackId": "cd355ad5-38cb-4cab-8378-2ef9e1c43862",
           "title": "Rocker (Eric Prydz Remix)",
           "artist": "Alter Ego",
           "position": 0,
           "durationSec": 303
         },
         {
-          "trackId": "159de79e-c706-4450-8d36-99b5072b75b3",
+          "trackId": "aeb9f0fa-f7f7-49b3-ac3a-b84a473c7419",
           "title": "No More Conversations (Mylo Remix)",
           "artist": "Freeform Five",
           "position": 1,
@@ -323,7 +323,7 @@
       ]
     },
     {
-      "id": "7096f514-d0d4-4a24-a116-84eefab05c60",
+      "id": "ad56afc7-6f78-4942-88e6-9ad03a61347f",
       "name": "rekordbox6-dirty :: Peak Pressure",
       "type": "playlist",
       "itemCount": 3,
@@ -331,21 +331,21 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "f428a522-11e1-4cff-b10c-02c706b4d84e",
+          "trackId": "99e953f8-f569-4d83-b9b4-10da59628639",
           "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
           "artist": "Depeche Mode",
           "position": 0,
           "durationSec": 435
         },
         {
-          "trackId": "fb9cdd9b-2e73-43ef-b0db-8d9c02e878e1",
+          "trackId": "cd355ad5-38cb-4cab-8378-2ef9e1c43862",
           "title": "Rocker (Eric Prydz Remix)",
           "artist": "Alter Ego",
           "position": 1,
           "durationSec": 303
         },
         {
-          "trackId": "159de79e-c706-4450-8d36-99b5072b75b3",
+          "trackId": "aeb9f0fa-f7f7-49b3-ac3a-b84a473c7419",
           "title": "No More Conversations (Mylo Remix)",
           "artist": "Freeform Five",
           "position": 2,
@@ -354,7 +354,7 @@
       ]
     },
     {
-      "id": "38822d67-7686-487c-a3e2-874df27ffaa4",
+      "id": "0ab78e62-7448-4b8f-be75-2e6f3929bf65",
       "name": "rekordbox6-dirty :: Warmup Tools",
       "type": "playlist",
       "itemCount": 3,
@@ -362,21 +362,21 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "3d082bd2-8ea2-49ad-98be-8baaaa91292d",
+          "trackId": "67830ba0-535e-4be9-8af8-6a255c6ecaff",
           "title": "Dare (Soulwax Remix)",
           "artist": "Gorillaz",
           "position": 0,
           "durationSec": 279
         },
         {
-          "trackId": "58facfd3-2ea2-43db-ba3f-ea64b0f94355",
+          "trackId": "33dd8eac-49d1-46f4-bd40-01b94c868b84",
           "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
           "artist": "Shiny Toy Guns",
           "position": 1,
           "durationSec": 390
         },
         {
-          "trackId": "94d584e2-cfdc-4079-94d5-b75ede6424ff",
+          "trackId": "88c22bc3-7abe-4955-a476-52051203038e",
           "title": "Zdarlight",
           "artist": "Digitalism",
           "position": 2,
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "id": "22a842cb-0a84-4cb8-8d16-8a4042ced06d",
+      "id": "2b20d78e-e39e-467e-85b7-a6b6921eb1a0",
       "name": "traktor-dirty :: Dubious Duplicates",
       "type": "playlist",
       "itemCount": 2,
@@ -393,14 +393,14 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "94d584e2-cfdc-4079-94d5-b75ede6424ff",
+          "trackId": "88c22bc3-7abe-4955-a476-52051203038e",
           "title": "Zdarlight",
           "artist": "Digitalism",
           "position": 0,
           "durationSec": 369
         },
         {
-          "trackId": "94d584e2-cfdc-4079-94d5-b75ede6424ff",
+          "trackId": "88c22bc3-7abe-4955-a476-52051203038e",
           "title": "Zdarlight",
           "artist": "Digitalism",
           "position": 1,
@@ -409,7 +409,7 @@
       ]
     },
     {
-      "id": "1427e4e1-3245-4dcf-aa47-e2b58e4c5f62",
+      "id": "3b7c3ef2-0f8e-4c44-9524-1c45546aae28",
       "name": "traktor-dirty :: Peak Pressure",
       "type": "playlist",
       "itemCount": 3,
@@ -417,21 +417,21 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "f428a522-11e1-4cff-b10c-02c706b4d84e",
+          "trackId": "99e953f8-f569-4d83-b9b4-10da59628639",
           "title": "A Pain That I'm Used To (Jacques Lu Cont Remix)",
           "artist": "Depeche Mode",
           "position": 0,
           "durationSec": 435
         },
         {
-          "trackId": "fb9cdd9b-2e73-43ef-b0db-8d9c02e878e1",
+          "trackId": "cd355ad5-38cb-4cab-8378-2ef9e1c43862",
           "title": "Rocker (Eric Prydz Remix)",
           "artist": "Alter Ego",
           "position": 1,
           "durationSec": 303
         },
         {
-          "trackId": "159de79e-c706-4450-8d36-99b5072b75b3",
+          "trackId": "aeb9f0fa-f7f7-49b3-ac3a-b84a473c7419",
           "title": "No More Conversations (Mylo Remix)",
           "artist": "Freeform Five",
           "position": 2,
@@ -440,7 +440,7 @@
       ]
     },
     {
-      "id": "cb0bd954-1c6e-4c52-8b48-b371fd7c3dbe",
+      "id": "bc9c51a8-72be-4bcd-8954-12751364b6d9",
       "name": "traktor-dirty :: Warmup Tools",
       "type": "playlist",
       "itemCount": 3,
@@ -448,21 +448,21 @@
       "deviceTargetName": null,
       "entries": [
         {
-          "trackId": "94d584e2-cfdc-4079-94d5-b75ede6424ff",
+          "trackId": "88c22bc3-7abe-4955-a476-52051203038e",
           "title": "Zdarlight",
           "artist": "Digitalism",
           "position": 0,
           "durationSec": 369
         },
         {
-          "trackId": "3d082bd2-8ea2-49ad-98be-8baaaa91292d",
+          "trackId": "67830ba0-535e-4be9-8af8-6a255c6ecaff",
           "title": "Dare (Soulwax Remix)",
           "artist": "Gorillaz",
           "position": 1,
           "durationSec": 279
         },
         {
-          "trackId": "58facfd3-2ea2-43db-ba3f-ea64b0f94355",
+          "trackId": "33dd8eac-49d1-46f4-bd40-01b94c868b84",
           "title": "Le Disko (Tommie Sunshine Brooklyn Fire Retouch)",
           "artist": "Shiny Toy Guns",
           "position": 2,
@@ -474,7 +474,7 @@
   "sets": [],
   "exportTargets": [
     {
-      "playlistId": "f0613686-0e14-40c9-b978-e5355840f388",
+      "playlistId": "1aaef90f-86bd-4c0d-acf7-41fc3dc0aea3",
       "playlistName": "canonical-embedded :: Warmup Tools",
       "name": "Sandbox V1 Rekordbox USB",
       "enabled": true,
@@ -490,7 +490,7 @@
   ],
   "exportPlans": [
     {
-      "id": "b531650a-a9fb-45cd-98e8-8e26504d1eef",
+      "id": "c0cff40f-643f-4cf6-9af8-75b9b4b7a405",
       "playlistName": "canonical-embedded :: Warmup Tools",
       "status": "ready",
       "targetKind": "usb-device",
@@ -506,7 +506,7 @@
   "topology": {
     "nodes": [
       {
-        "id": "da0de41c-a34d-4815-80e0-738dd9b991bb",
+        "id": "dddb0cac-8e77-4476-8514-92ba1862869b",
         "name": "Sandbox Laptop",
         "role": "hybrid",
         "transport": "local",
@@ -516,7 +516,7 @@
     ],
     "storages": [
       {
-        "id": "b78d9987-aa5d-4892-b7ae-d4983637bd52",
+        "id": "31d0c3e7-064b-47d5-8379-8f66cdf136f4",
         "nodeName": "Sandbox Laptop",
         "name": "Sandbox Managed Library",
         "kind": "local-disk",
@@ -525,7 +525,7 @@
         "mountPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/managed-library"
       },
       {
-        "id": "58cb01e3-2fc7-4cfa-aeac-e4b32615cdeb",
+        "id": "99d75d3e-3219-4563-ab8d-fa6dbc9796c6",
         "nodeName": "Sandbox Laptop",
         "name": "Sandbox USB Target",
         "kind": "external-drive",
@@ -537,11 +537,11 @@
   },
   "recentExports": [
     {
-      "id": "dea03016-fe9f-4fa5-bb1e-6182b9b394b0",
+      "id": "30e2c69e-edaa-4397-999d-c57d756c996d",
       "targetKind": "rekordbox-device",
       "targetPath": "/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/runtime/rekordbox-device-export",
       "status": "completed",
-      "completedAt": "2026-04-20T22:37:11.710Z"
+      "completedAt": "2026-04-20T22:43:53.564Z"
     }
   ],
   "focusNotes": [

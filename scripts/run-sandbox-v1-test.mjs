@@ -215,6 +215,44 @@ async function seedPlaybackHistory(databasePathValue) {
   };
 }
 
+async function verifyPlaybackHistoryImportIdempotency(databasePathValue) {
+  const { importPlaybackHistory } = await import(path.join(catalogDistDir, 'history-import.js'));
+  const trackRef = await resolveCanonicalTrackId(databasePathValue, 'Zdarlight');
+  const payload = {
+    sessions: [
+      {
+        startedAt: '2026-04-11T04:00:00.000Z',
+        endedAt: '2026-04-11T04:05:00.000Z',
+        sourceKind: 'rekordbox-history-idempotency',
+        sourceRef: 'fixture-history-2026-04-11.xml',
+        venue: 'Fixture Lab',
+        context: 'duplicate import regression',
+        note: 'Imported twice to prove playback history does not double-count recency.',
+        events: [
+          {
+            trackRef,
+            playedAt: '2026-04-11T04:02:00.000Z',
+            positionInSession: 0,
+            sourceRef: 'fixture-history-2026-04-11.xml#0',
+            confidence: 1,
+            note: 'Idempotency fixture event.',
+          },
+        ],
+      },
+    ],
+  };
+  const firstImport = await importPlaybackHistory(databasePathValue, payload);
+  const secondImport = await importPlaybackHistory(databasePathValue, payload);
+  return {
+    firstImport,
+    secondImport,
+    passed: firstImport.eventCount === 1
+      && firstImport.duplicateEventCount === 0
+      && secondImport.eventCount === 0
+      && secondImport.duplicateEventCount === 1,
+  };
+}
+
 function loadExpectedTruth(expectedPath) {
   const lines = readFileSync(expectedPath, 'utf8').trim().split(/\r?\n/);
   const [, ...rows] = lines;
@@ -224,7 +262,7 @@ function loadExpectedTruth(expectedPath) {
   });
 }
 
-function collectReport(databasePathValue, importedPlaylists, playbackSeed, mergeResult) {
+function collectReport(databasePathValue, importedPlaylists, playbackSeed, historyIdempotency, mergeResult) {
   const database = new DatabaseSync(databasePathValue, { readOnly: true });
 
   try {
@@ -308,6 +346,7 @@ function collectReport(databasePathValue, importedPlaylists, playbackSeed, merge
       },
       importedPlaylists,
       playbackSeed,
+      historyIdempotency,
       mergeResult,
       trackResults: tracks.map((track) => ({
         id: track.id,
@@ -325,6 +364,7 @@ function collectReport(databasePathValue, importedPlaylists, playbackSeed, merge
         'Current ingest now preserves conflicting duplicate-file metadata as provenance instead of discarding later opinions outright.',
         'Canonical track fields still come from first-write ingestion order; this test exposes where a future merge engine should take over.',
         'Playlist import now follows the same metadata-insensitive content hash as ingest, so differing file paths still resolve onto one canonical track when the audio payload matches.',
+        `Playback history import idempotency regression: ${historyIdempotency.passed ? 'pass' : 'fail'}.`,
         'The current content hash solves metadata-rewritten MP3 copies, but it is not yet a full audio fingerprint for differently encoded downloads or alternate masters.',
       ],
     };
@@ -350,6 +390,7 @@ function renderMarkdownReport(report) {
     `- Playlist items: ${report.ingest.playlistItemCount}`,
     `- Playback sessions: ${report.ingest.playbackSessionCount}`,
     `- Playback events: ${report.ingest.playbackEventCount}`,
+    `- History import idempotency: ${report.historyIdempotency.passed ? 'pass' : 'fail'}`,
     `- Provenance rows: ${report.ingest.provenanceCount}`,
     `- Duplicate content clusters: ${report.identityReport.duplicateClusterCount}`,
     '',
@@ -407,9 +448,10 @@ await run('node', [
 const mergeResult = await applyMerge(databasePath);
 const importedPlaylists = await importPlaylists(databasePath, path.join(fixtureRoot, 'playlists'));
 const playbackSeed = await seedPlaybackHistory(databasePath);
+const historyIdempotency = await verifyPlaybackHistoryImportIdempotency(databasePath);
 const { generateIdentityReport } = await import(path.join(catalogDistDir, 'identity.js'));
 const report = {
-  ...collectReport(databasePath, importedPlaylists, playbackSeed, mergeResult),
+  ...collectReport(databasePath, importedPlaylists, playbackSeed, historyIdempotency, mergeResult),
   identityReport: generateIdentityReport(databasePath),
 };
 
