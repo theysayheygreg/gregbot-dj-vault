@@ -218,6 +218,7 @@ ul {
 .focus-card,
 .summary-card,
 .list-card,
+.readiness-card,
 .empty-state {
   padding: 16px;
   border-radius: 18px;
@@ -304,7 +305,7 @@ ul {
 .summary-bar {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .summary-card {
@@ -423,6 +424,27 @@ ul {
   margin-top: 20px;
 }
 
+.readiness-card {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.readiness-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.readiness-heading h3 {
+  margin-bottom: 0;
+}
+
+.readiness-warnings {
+  color: var(--muted);
+}
+
 .subhead {
   font-size: 1rem;
 }
@@ -496,6 +518,71 @@ ul {
   align-items: start;
   justify-content: space-between;
   gap: 12px;
+}
+
+.candidate-form {
+  grid-template-columns: minmax(0, 1fr) 160px 110px;
+}
+
+.candidate-report-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.candidate-button > div:first-child {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.candidate-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 8px;
+}
+
+.candidate-score {
+  width: min(240px, 100%);
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(45, 41, 33, 0.08);
+}
+
+.candidate-score span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--teal));
+}
+
+.score-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: rgba(32, 29, 24, 0.9);
+  color: #fffaf0;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.score-pill.large {
+  min-width: 58px;
+  padding: 10px 14px;
+  font-size: 1rem;
+}
+
+.candidate-artifact {
+  margin: 12px 0 0;
+  color: var(--muted);
 }
 
 .tight {
@@ -674,6 +761,10 @@ ul {
   }
 
   .inspector-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .candidate-form {
     grid-template-columns: 1fr;
   }
 }

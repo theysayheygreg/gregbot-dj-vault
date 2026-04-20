@@ -12,17 +12,108 @@ type NodeItem = DashboardSnapshot['topology']['nodes'][number];
 type StorageItem = DashboardSnapshot['topology']['storages'][number];
 type ExportJobItem = DashboardSnapshot['recentExports'][number];
 
-type ActiveView = 'library' | 'playlists' | 'exports' | 'topology';
+type ActiveView = 'library' | 'playlists' | 'exports' | 'candidates' | 'topology';
 type SmartCollection = 'all' | 'hot' | 'cooling' | 'dormant' | 'needs-ears' | 'warnings';
 type TrackSortKey = 'title' | 'artist' | 'trust' | 'recency' | 'bpm' | 'duration' | 'warnings';
 type SortDirection = 'asc' | 'desc';
 type InspectorTab = 'overview' | 'metadata' | 'readiness' | 'sets' | 'target' | 'native' | 'plans' | 'storage' | 'activity';
 type ConnectionMode = 'bundled' | 'live';
+type PlaylistCandidateMode = 'balanced' | 'gig-safe' | 'discovery' | 'cleanup';
 
 type MutationResponse<T> = {
   ok: true;
   result: T;
   snapshot: DashboardSnapshot;
+};
+
+type SandboxExportReadiness = {
+  generatedAt: string;
+  databasePath: string;
+  targetPlaylist: {
+    id: string;
+    name: string;
+    trackCount: number;
+  };
+  topology: {
+    executionNode: { id: string; name: string };
+    sourceStorage: { id: string; name: string };
+    destinationStorage: { id: string; name: string };
+    plan: {
+      planId: string;
+      transport: string | null;
+      trackCount: number;
+      sourceCoverageCount: number;
+      missingTrackIds: string[];
+      savedTargetFolderPath: string | null;
+    };
+    savedTarget: {
+      name: string | null;
+      folderPath: string | null;
+      enabled: boolean;
+    };
+  };
+  export: {
+    outputRoot: string;
+    collectionXmlPath: string;
+    manifestPath: string;
+    playlistCount: number;
+    trackCount: number;
+  };
+  validation: {
+    missingFiles: string[];
+    playlistReferenceErrors: string[];
+    warnings: string[];
+    valid: boolean;
+  };
+  nativeGaps: {
+    expected: boolean;
+    items: string[];
+  };
+  trustSummary: {
+    trusted: number;
+    chosen: number;
+    needsAttention: number;
+    blocked: number;
+  };
+  acceptance: {
+    passed: boolean;
+  };
+};
+
+type PlaylistCandidateReport = {
+  generatedAt: string;
+  prompt: string;
+  mode: PlaylistCandidateMode;
+  limit: number;
+  candidateCount: number;
+  candidates: Array<{
+    trackId: string;
+    title: string;
+    artist: string | null;
+    album: string | null;
+    score: number;
+    components: {
+      prompt: number;
+      trust: number;
+      recency: number;
+      musical: number;
+    };
+    trustState: TrackItem['trustState'];
+    trustRationale: string;
+    recencyBucket: TrackItem['recencyBucket'];
+    bpm: number | null;
+    keyDisplay: string | null;
+    reasons: string[];
+  }>;
+};
+
+type PlaylistCandidateResponse = {
+  ok: true;
+  result: {
+    jsonPath: string;
+    markdownPath: string;
+    report: PlaylistCandidateReport;
+  };
 };
 
 const bundledDashboard = bundledDashboardJson as DashboardSnapshot;
@@ -66,6 +157,8 @@ function defaultInspectorTab(view: ActiveView): InspectorTab {
       return 'target';
     case 'exports':
       return 'native';
+    case 'candidates':
+      return 'overview';
     case 'topology':
       return 'storage';
   }
@@ -191,6 +284,15 @@ async function getDashboardSnapshot(): Promise<DashboardSnapshot> {
   return await response.json() as DashboardSnapshot;
 }
 
+async function getExportReadiness(): Promise<SandboxExportReadiness> {
+  const response = await fetch('/api/sandbox/export-readiness');
+  const body = await response.json() as { ok: true; readiness: SandboxExportReadiness } | { error?: string };
+  if (!response.ok || !('ok' in body) || body.ok !== true) {
+    throw new Error('error' in body && body.error ? body.error : `Readiness refresh failed with ${response.status}.`);
+  }
+  return body.readiness;
+}
+
 async function postMutation<T>(path: string, payload: Record<string, unknown>): Promise<MutationResponse<T>> {
   const response = await fetch(path, {
     method: 'POST',
@@ -207,6 +309,23 @@ async function postMutation<T>(path: string, payload: Record<string, unknown>): 
   return body;
 }
 
+async function postAction<T>(path: string, payload: Record<string, unknown>): Promise<T> {
+  const response = await fetch(path, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const body = await response.json() as T | { error?: string };
+  if (!response.ok) {
+    const apiError = body as { error?: string };
+    throw new Error(apiError.error ? apiError.error : `Request failed with ${response.status}.`);
+  }
+  return body as T;
+}
+
 export function VaultBuddyApp() {
   const [snapshot, setSnapshot] = useState<DashboardSnapshot>(bundledDashboard);
   const [connectionMode, setConnectionMode] = useState<ConnectionMode>('bundled');
@@ -217,8 +336,13 @@ export function VaultBuddyApp() {
   const [trackSortDirection, setTrackSortDirection] = useState<SortDirection>('asc');
   const [inspectorTab, setInspectorTab] = useState<InspectorTab>(defaultInspectorTab('library'));
   const [isSyncing, setIsSyncing] = useState(false);
+  const [isPreparingTarget, setIsPreparingTarget] = useState(false);
+  const [isBuildingCandidates, setIsBuildingCandidates] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
   const [statusMessage, setStatusMessage] = useState<string>('Loaded bundled snapshot while the live runtime connects.');
+  const [exportReadiness, setExportReadiness] = useState<SandboxExportReadiness | null>(null);
+  const [candidateReport, setCandidateReport] = useState<PlaylistCandidateReport | null>(null);
+  const [candidateArtifactPath, setCandidateArtifactPath] = useState<string | null>(null);
 
   const [selectedTrackId, setSelectedTrackId] = useState<string | null>(bundledDashboard.tracks[0]?.id ?? null);
   const [selectedPlaylistId, setSelectedPlaylistId] = useState<string | null>(bundledDashboard.playlists[0]?.id ?? null);
@@ -238,6 +362,9 @@ export function VaultBuddyApp() {
   const [planSourceStorageId, setPlanSourceStorageId] = useState(bundledDashboard.topology.storages.find((storage) => storage.isManagedLibrary)?.id ?? bundledDashboard.topology.storages[0]?.id ?? '');
   const [planDestinationStorageId, setPlanDestinationStorageId] = useState(bundledDashboard.topology.storages.find((storage) => storage.kind === 'external-drive')?.id ?? bundledDashboard.topology.storages[0]?.id ?? '');
   const [planTransport, setPlanTransport] = useState('tailscale');
+  const [candidatePrompt, setCandidatePrompt] = useState('warmup tools with trustworthy metadata');
+  const [candidateMode, setCandidateMode] = useState<PlaylistCandidateMode>('gig-safe');
+  const [candidateLimit, setCandidateLimit] = useState('8');
   const [trackDraftTitle, setTrackDraftTitle] = useState('');
   const [trackDraftArtist, setTrackDraftArtist] = useState('');
   const [trackDraftAlbum, setTrackDraftAlbum] = useState('');
@@ -253,8 +380,12 @@ export function VaultBuddyApp() {
     void (async () => {
       try {
         setIsSyncing(true);
-        const liveSnapshot = await getDashboardSnapshot();
+        const [liveSnapshot, readiness] = await Promise.all([
+          getDashboardSnapshot(),
+          getExportReadiness().catch(() => null),
+        ]);
         setSnapshot(liveSnapshot);
+        setExportReadiness(readiness);
         setConnectionMode('live');
         setStatusMessage('Connected to the live VaultBuddy catalog.');
       } catch (error) {
@@ -326,6 +457,13 @@ export function VaultBuddyApp() {
     ?? nodes.find((node) => node.id === selectedNodeId)
     ?? visibleNodes[0]
     ?? null;
+  const selectedCandidate = candidateReport?.candidates.find((candidate) => candidate.trackId === selectedTrackId)
+    ?? candidateReport?.candidates[0]
+    ?? null;
+  const targetReadinessPassed = exportReadiness?.acceptance.passed === true && exportReadiness.validation.valid;
+  const targetReadinessLabel = exportReadiness
+    ? targetReadinessPassed ? 'Ready' : 'Needs Work'
+    : 'Unknown';
 
   const selectedPlaylistTarget = selectedPlaylist
     ? exportTargets.find((target) => target.playlistId === selectedPlaylist.id) ?? null
@@ -368,8 +506,12 @@ export function VaultBuddyApp() {
     try {
       setIsSyncing(true);
       setActionError(null);
-      const liveSnapshot = await getDashboardSnapshot();
+      const [liveSnapshot, readiness] = await Promise.all([
+        getDashboardSnapshot(),
+        getExportReadiness().catch(() => exportReadiness),
+      ]);
       setSnapshot(liveSnapshot);
+      setExportReadiness(readiness);
       setConnectionMode('live');
       if (nextStatus) {
         setStatusMessage(nextStatus);
@@ -563,6 +705,61 @@ export function VaultBuddyApp() {
     );
   }
 
+  async function handlePrepareTargetLibrary() {
+    try {
+      setIsPreparingTarget(true);
+      setActionError(null);
+      const response = await postAction<MutationResponse<unknown> & { readiness: SandboxExportReadiness }>(
+        '/api/sandbox/prepare',
+        {},
+      );
+      setSnapshot(response.snapshot);
+      setExportReadiness(response.readiness);
+      setConnectionMode('live');
+      setSelectedTargetId(response.readiness.targetPlaylist.id);
+      setActiveView('exports');
+      setInspectorTab('overview');
+      setStatusMessage(`Prepared sandbox-v1 target library for "${response.readiness.targetPlaylist.name}".`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Target preparation failed.';
+      setActionError(message);
+    } finally {
+      setIsPreparingTarget(false);
+    }
+  }
+
+  async function handleGenerateCandidates(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const prompt = candidatePrompt.trim();
+    if (!prompt) {
+      return;
+    }
+
+    try {
+      setIsBuildingCandidates(true);
+      setActionError(null);
+      const response = await postAction<PlaylistCandidateResponse>(
+        '/api/playlist-candidates',
+        {
+          prompt,
+          mode: candidateMode,
+          limit: candidateLimit,
+        },
+      );
+      setCandidateReport(response.result.report);
+      setCandidateArtifactPath(response.result.markdownPath);
+      setActiveView('candidates');
+      setInspectorTab('overview');
+      setSelectedTrackId(response.result.report.candidates[0]?.trackId ?? selectedTrackId);
+      setStatusMessage(`Built ${response.result.report.candidateCount} trust-aware candidates for "${prompt}".`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Candidate generation failed.';
+      setActionError(message);
+    } finally {
+      setIsBuildingCandidates(false);
+    }
+  }
+
   function handleSaveTrackMetadata(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!selectedTrack) {
@@ -644,6 +841,7 @@ export function VaultBuddyApp() {
             ['library', 'Library', `${tracks.length} tracks in the catalog`],
             ['playlists', 'Playlists', `${playlists.length} playlists, ${djSets.length} sets`],
             ['exports', 'Exports', `${exportTargets.length} targets, ${exportPlans.filter((plan) => plan.status === 'ready').length} ready plans`],
+            ['candidates', 'Candidates', candidateReport ? `${candidateReport.candidateCount} trust-ranked ideas` : 'Trust-aware playlist builder'],
             ['topology', 'Topology', `${nodes.length} nodes, ${storages.length} storage locations`],
           ] as Array<[ActiveView, string, string]>).map(([view, label, meta]) => (
             <button
@@ -741,6 +939,11 @@ export function VaultBuddyApp() {
             <span>Export Plans</span>
             <strong>{exportPlans.filter((plan) => plan.status === 'ready').length}</strong>
             <small>Ready to run</small>
+          </article>
+          <article className="summary-card">
+            <span>Target Ready</span>
+            <strong>{targetReadinessLabel}</strong>
+            <small>{exportReadiness ? `${exportReadiness.targetPlaylist.trackCount} tracks in ${exportReadiness.targetPlaylist.name}` : 'Run sandbox preparation'}</small>
           </article>
           <article className="summary-card">
             <span>Recent Exports</span>
@@ -911,8 +1114,11 @@ export function VaultBuddyApp() {
                   <p className="panel-copy">Plan and trigger real exports against the live catalog in local dev.</p>
                 </div>
                 <div className="action-row">
+                  <button className="action-button primary" disabled={isPreparingTarget} onClick={() => void handlePrepareTargetLibrary()} type="button">
+                    {isPreparingTarget ? 'Preparing Target…' : 'Prepare Target Library'}
+                  </button>
                   <button className="action-button" disabled={!selectedTarget} onClick={openPlanDraft} type="button">Plan Export</button>
-                  <button className="action-button primary" disabled={!selectedTarget} onClick={handleKickOffExport} type="button">Kick Off Export</button>
+                  <button className="action-button" disabled={!selectedTarget} onClick={handleKickOffExport} type="button">Kick Off Export</button>
                 </div>
                 {planDraftOpen ? (
                   <form className="inline-form" onSubmit={handleCreatePlan}>
@@ -954,6 +1160,43 @@ export function VaultBuddyApp() {
                     </div>
                   </form>
                 ) : null}
+                <article className="readiness-card">
+                  <div className="readiness-heading">
+                    <div>
+                      <p className="eyebrow">Sandbox Export Readiness</p>
+                      <h3>{exportReadiness?.targetPlaylist.name ?? 'canonical-embedded :: Warmup Tools'}</h3>
+                    </div>
+                    <span className={`status-chip ${targetReadinessPassed ? 'status-ready' : 'status-muted'}`}>
+                      {targetReadinessLabel}
+                    </span>
+                  </div>
+                  {exportReadiness ? (
+                    <>
+                      <dl className="inspector-grid">
+                        <div><dt>Playlist Tracks</dt><dd>{exportReadiness.targetPlaylist.trackCount}</dd></div>
+                        <div><dt>Exported Tracks</dt><dd>{exportReadiness.export.trackCount}</dd></div>
+                        <div><dt>Missing Files</dt><dd>{exportReadiness.validation.missingFiles.length}</dd></div>
+                        <div><dt>Trust Attention</dt><dd>{exportReadiness.trustSummary.needsAttention + exportReadiness.trustSummary.blocked}</dd></div>
+                      </dl>
+                      <div className="tag-row">
+                        <span className="mini-tag success">{exportReadiness.topology.plan.transport ?? 'manual'} transport</span>
+                        <span className="mini-tag success">{exportReadiness.topology.plan.sourceCoverageCount} source files covered</span>
+                        {exportReadiness.nativeGaps.items.map((item) => (
+                          <span className="mini-tag caution" key={item}>{item} pending</span>
+                        ))}
+                      </div>
+                      {exportReadiness.validation.warnings.length > 0 ? (
+                        <ul className="compact-list readiness-warnings">
+                          {exportReadiness.validation.warnings.map((warning) => (
+                            <li key={warning}>{warning}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </>
+                  ) : (
+                    <p className="muted">No readiness report is loaded yet. Prepare the target library to rebuild the sandbox catalog and export proof.</p>
+                  )}
+                </article>
                 {visibleTargets.length > 0 ? (
                   <div className="stack">
                     {visibleTargets.map((target) => (
@@ -996,6 +1239,82 @@ export function VaultBuddyApp() {
                     </div>
                   ) : <EmptyState message="No export activity is visible yet." />}
                 </div>
+              </>
+            ) : null}
+
+            {activeView === 'candidates' ? (
+              <>
+                <div className="panel-heading">
+                  <div>
+                    <p className="eyebrow">Trust-Aware Selection</p>
+                    <h3>Playlist Candidates</h3>
+                  </div>
+                  <p className="panel-copy">This is the creative surface for trust as a search parameter: ask for a musical job, then see why DJ Vault thinks each track is safe, interesting, or worth checking.</p>
+                </div>
+                <form className="inline-form candidate-form" onSubmit={handleGenerateCandidates}>
+                  <label className="form-span">
+                    <span>Prompt</span>
+                    <input
+                      onChange={(event) => setCandidatePrompt(event.target.value)}
+                      placeholder="warmup tools with trustworthy metadata"
+                      value={candidatePrompt}
+                    />
+                  </label>
+                  <label>
+                    <span>Mode</span>
+                    <select onChange={(event) => setCandidateMode(event.target.value as PlaylistCandidateMode)} value={candidateMode}>
+                      <option value="gig-safe">gig-safe</option>
+                      <option value="balanced">balanced</option>
+                      <option value="discovery">discovery</option>
+                      <option value="cleanup">cleanup</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Limit</span>
+                    <input onChange={(event) => setCandidateLimit(event.target.value)} type="number" min="1" max="50" value={candidateLimit} />
+                  </label>
+                  <div className="inline-form-actions">
+                    <button className="action-button primary" disabled={isBuildingCandidates} type="submit">
+                      {isBuildingCandidates ? 'Building Candidates…' : 'Generate Candidates'}
+                    </button>
+                  </div>
+                </form>
+                {candidateReport ? (
+                  <>
+                    <div className="candidate-report-meta">
+                      <span>Prompt: {candidateReport.prompt}</span>
+                      <span>Mode: {candidateReport.mode}</span>
+                      <span>Generated {formatGeneratedAt(candidateReport.generatedAt)}</span>
+                    </div>
+                    <div className="stack">
+                      {candidateReport.candidates.map((candidate, index) => (
+                        <button
+                          className={`list-button candidate-button ${selectedCandidate?.trackId === candidate.trackId ? 'is-selected' : ''}`}
+                          key={candidate.trackId}
+                          onClick={() => {
+                            setSelectedTrackId(candidate.trackId);
+                            setInspectorTab('overview');
+                          }}
+                          type="button"
+                        >
+                          <div>
+                            <strong>{index + 1}. {candidate.title}</strong>
+                            <small>{candidate.artist ?? 'Unknown artist'} · {candidate.album ?? 'Unknown album'}</small>
+                            <div className="candidate-score">
+                              <span style={{ width: `${candidate.score}%` }} />
+                            </div>
+                          </div>
+                          <div className="candidate-badges">
+                            <span className="score-pill">{candidate.score}</span>
+                            <span className={`trust-chip trust-${candidate.trustState}`}>{trustLabels[candidate.trustState]}</span>
+                            <span className={`bucket-chip bucket-${candidate.recencyBucket}`}>{candidate.recencyBucket}</span>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                    {candidateArtifactPath ? <p className="mono candidate-artifact">{candidateArtifactPath}</p> : null}
+                  </>
+                ) : <EmptyState message="Generate a candidate report from the sandbox catalog to start shaping a playlist by trust, recency, and musical job-to-be-done." />}
               </>
             ) : null}
 
@@ -1078,11 +1397,16 @@ export function VaultBuddyApp() {
                       ['native', 'Native Gaps'],
                       ['plans', 'Plans'],
                     ] as Array<[InspectorTab, string]>)
-                    : ([
-                      ['overview', 'Overview'],
-                      ['storage', 'Storage'],
-                      ['activity', 'Activity'],
-                    ] as Array<[InspectorTab, string]>)
+                    : activeView === 'candidates'
+                      ? ([
+                        ['overview', 'Overview'],
+                        ['readiness', 'Why This'],
+                      ] as Array<[InspectorTab, string]>)
+                      : ([
+                        ['overview', 'Overview'],
+                        ['storage', 'Storage'],
+                        ['activity', 'Activity'],
+                      ] as Array<[InspectorTab, string]>)
               ).map(([tab, label]) => (
                 <button
                   aria-selected={inspectorTab === tab}
@@ -1310,10 +1634,27 @@ export function VaultBuddyApp() {
                   </span>
                 </div>
                 {inspectorTab === 'overview' ? (
-                  <div className="inspector-section">
-                    <h4>Target Path</h4>
-                    <p className="mono">{selectedTarget.folderPath ?? 'No target folder saved'}</p>
-                  </div>
+                  <>
+                    <div className="inspector-section">
+                      <h4>Target Path</h4>
+                      <p className="mono">{selectedTarget.folderPath ?? 'No target folder saved'}</p>
+                    </div>
+                    <div className="inspector-section">
+                      <h4>Readiness Proof</h4>
+                      {exportReadiness ? (
+                        <>
+                          <p>{exportReadiness.acceptance.passed ? 'Sandbox export acceptance is passing.' : 'Sandbox export acceptance is not passing yet.'}</p>
+                          <div className="tag-row">
+                            <span className={`mini-tag ${exportReadiness.validation.valid ? 'success' : 'danger'}`}>
+                              validation {exportReadiness.validation.valid ? 'valid' : 'invalid'}
+                            </span>
+                            <span className="mini-tag muted">{exportReadiness.export.playlistCount} playlist export</span>
+                            <span className="mini-tag muted">{exportReadiness.export.trackCount} staged tracks</span>
+                          </div>
+                        </>
+                      ) : <p className="muted">No sandbox readiness report has been loaded yet.</p>}
+                    </div>
+                  </>
                 ) : null}
                 {inspectorTab === 'native' ? (
                   <>
@@ -1360,6 +1701,63 @@ export function VaultBuddyApp() {
                       </div>
                     ) : <p className="muted">No execution plans are attached to this target yet.</p>}
                   </div>
+                ) : null}
+              </>
+            ) : null}
+
+            {activeView === 'candidates' && selectedCandidate ? (
+              <>
+                <div className="panel-heading">
+                  <div>
+                    <p className="eyebrow">Candidate Inspector</p>
+                    <h3>{selectedCandidate.title}</h3>
+                  </div>
+                  <span className="score-pill large">{selectedCandidate.score}</span>
+                </div>
+                {inspectorTab === 'overview' ? (
+                  <>
+                    <div className="inspector-section">
+                      <dl className="inspector-grid">
+                        <div><dt>Artist</dt><dd>{selectedCandidate.artist ?? 'Unknown artist'}</dd></div>
+                        <div><dt>Album</dt><dd>{selectedCandidate.album ?? 'Unknown album'}</dd></div>
+                        <div><dt>BPM</dt><dd>{selectedCandidate.bpm ? selectedCandidate.bpm.toFixed(1) : 'No BPM'}</dd></div>
+                        <div><dt>Key</dt><dd>{selectedCandidate.keyDisplay ?? 'No key'}</dd></div>
+                        <div><dt>Trust</dt><dd>{trustLabels[selectedCandidate.trustState]}</dd></div>
+                        <div><dt>Recency</dt><dd>{selectedCandidate.recencyBucket}</dd></div>
+                      </dl>
+                    </div>
+                    <div className="inspector-section">
+                      <h4>Score Mix</h4>
+                      <div className="tag-row">
+                        <span className="mini-tag success">prompt {selectedCandidate.components.prompt}</span>
+                        <span className="mini-tag success">trust {selectedCandidate.components.trust}</span>
+                        <span className="mini-tag caution">recency {selectedCandidate.components.recency}</span>
+                        <span className="mini-tag muted">musical {selectedCandidate.components.musical}</span>
+                      </div>
+                    </div>
+                  </>
+                ) : null}
+                {inspectorTab === 'readiness' ? (
+                  <>
+                    <div className="inspector-section">
+                      <h4>Trust Rationale</h4>
+                      <p>{selectedCandidate.trustRationale}</p>
+                    </div>
+                    <div className="inspector-section">
+                      <h4>Why It Ranked</h4>
+                      {selectedCandidate.reasons.length > 0 ? (
+                        <ul className="compact-list">
+                          {selectedCandidate.reasons.map((reason) => (
+                            <li key={reason}>{reason}</li>
+                          ))}
+                        </ul>
+                      ) : <p className="muted">No ranking reasons were emitted for this candidate.</p>}
+                    </div>
+                    <div className="inspector-section">
+                      <h4>Report Artifact</h4>
+                      <p className="mono">{candidateArtifactPath ?? 'Generate a report to persist the rationale.'}</p>
+                    </div>
+                  </>
                 ) : null}
               </>
             ) : null}

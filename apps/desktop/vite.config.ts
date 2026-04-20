@@ -1,5 +1,8 @@
+import { execFile } from 'node:child_process';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { promisify } from 'node:util';
 
 import react from '@vitejs/plugin-react';
 import {
@@ -16,14 +19,22 @@ import {
   removeTrackFromPlaylist,
   updateTrackMetadata,
 } from '../../packages/catalog/src/editing';
+import {
+  writePlaylistCandidateReport,
+  type PlaylistCandidateMode,
+} from '../../packages/catalog/src/playlist-candidates';
 import { defineConfig } from 'vite';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = path.resolve(rootDir, '../..');
+const execFileAsync = promisify(execFile);
+const sandboxDatabasePath = path.resolve(workspaceRoot, 'tmp/sandbox-v1/runtime/sandbox-v1.sqlite');
 const databasePath = process.env.DJ_VAULT_DB_PATH
   ? path.resolve(process.env.DJ_VAULT_DB_PATH)
-  : path.resolve(workspaceRoot, 'data/dj-vault.sqlite');
+  : sandboxDatabasePath;
 const dashboardOutputPath = path.resolve(rootDir, 'src/generated/catalog-dashboard.json');
+const sandboxExportReportPath = path.resolve(workspaceRoot, 'tmp/sandbox-v1/reports/sandbox-v1-export-test-report.json');
+const sandboxCandidateReportRoot = path.resolve(workspaceRoot, 'tmp/sandbox-v1/reports/playlist-candidates');
 
 type JsonBody = Record<string, unknown>;
 
@@ -49,6 +60,35 @@ function sendJson(response: import('node:http').ServerResponse, statusCode: numb
   response.end(JSON.stringify(body));
 }
 
+async function readJsonFile(filePath: string): Promise<unknown> {
+  return JSON.parse(await readFile(filePath, 'utf8')) as unknown;
+}
+
+function parseJsonFromMixedOutput(output: string): unknown {
+  const start = output.indexOf('{');
+  const end = output.lastIndexOf('}');
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error(`No JSON object found in command output:\n${output}`);
+  }
+  return JSON.parse(output.slice(start, end + 1)) as unknown;
+}
+
+async function prepareSandboxTarget(): Promise<{ databasePath: string } & Record<string, unknown>> {
+  const { stdout, stderr } = await execFileAsync('node', [
+    path.join(workspaceRoot, 'scripts/prepare-sandbox-v1-target.mjs'),
+  ], {
+    cwd: workspaceRoot,
+    maxBuffer: 24_000_000,
+  });
+  return parseJsonFromMixedOutput(`${stdout}${stderr}`) as { databasePath: string } & Record<string, unknown>;
+}
+
+function normalizeCandidateMode(value: unknown): PlaylistCandidateMode {
+  return value === 'balanced' || value === 'gig-safe' || value === 'discovery' || value === 'cleanup'
+    ? value
+    : 'balanced';
+}
+
 export default defineConfig({
   plugins: [
     react(),
@@ -66,6 +106,36 @@ export default defineConfig({
             if (request.method === 'GET' && url.pathname === '/api/dashboard') {
               const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
               sendJson(response, 200, snapshot);
+              return;
+            }
+
+            if (request.method === 'GET' && url.pathname === '/api/sandbox/export-readiness') {
+              const readiness = await readJsonFile(sandboxExportReportPath);
+              sendJson(response, 200, { ok: true, readiness });
+              return;
+            }
+
+            if (request.method === 'POST' && url.pathname === '/api/sandbox/prepare') {
+              const result = await prepareSandboxTarget();
+              if (path.resolve(result.databasePath) !== databasePath) {
+                throw new Error(`Sandbox prepare rebuilt ${result.databasePath}, but the runtime is using ${databasePath}. Start VaultBuddy with the sandbox target library.`);
+              }
+              const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
+              const readiness = await readJsonFile(sandboxExportReportPath);
+              sendJson(response, 200, { ok: true, result, snapshot, readiness });
+              return;
+            }
+
+            if (request.method === 'POST' && url.pathname === '/api/playlist-candidates') {
+              const body = await readJsonBody(request);
+              const prompt = String(body.prompt ?? '').trim() || 'warmup tools with trustworthy metadata';
+              const limit = Math.max(1, Math.min(50, Number.parseInt(String(body.limit ?? '8'), 10) || 8));
+              const mode = normalizeCandidateMode(body.mode);
+              const result = await writePlaylistCandidateReport(databasePath, prompt, sandboxCandidateReportRoot, {
+                mode,
+                limit,
+              });
+              sendJson(response, 200, { ok: true, result });
               return;
             }
 

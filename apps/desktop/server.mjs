@@ -1,15 +1,21 @@
 import { createServer } from 'node:http';
+import { execFile } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { promisify } from 'node:util';
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 const workspaceRoot = path.resolve(rootDir, '../..');
 const distDir = path.resolve(rootDir, 'dist');
+const execFileAsync = promisify(execFile);
+const sandboxDatabasePath = path.resolve(workspaceRoot, 'tmp/sandbox-v1/runtime/sandbox-v1.sqlite');
 const databasePath = process.env.DJ_VAULT_DB_PATH
   ? path.resolve(process.env.DJ_VAULT_DB_PATH)
-  : path.resolve(workspaceRoot, 'data/dj-vault.sqlite');
+  : sandboxDatabasePath;
 const dashboardOutputPath = path.resolve(rootDir, 'src/generated/catalog-dashboard.json');
+const sandboxExportReportPath = path.resolve(workspaceRoot, 'tmp/sandbox-v1/reports/sandbox-v1-export-test-report.json');
+const sandboxCandidateReportRoot = path.resolve(workspaceRoot, 'tmp/sandbox-v1/reports/playlist-candidates');
 const port = Number.parseInt(process.env.PORT ?? '4187', 10);
 
 const {
@@ -26,6 +32,9 @@ const {
   removeTrackFromPlaylist,
   updateTrackMetadata,
 } = await import('../../packages/catalog/dist/editing.js');
+const {
+  writePlaylistCandidateReport,
+} = await import('../../packages/catalog/dist/playlist-candidates.js');
 
 const mimeTypes = new Map([
   ['.html', 'text/html; charset=utf-8'],
@@ -61,10 +70,67 @@ function readJsonBody(request) {
   });
 }
 
+async function readJsonFile(filePath) {
+  return JSON.parse(await readFile(filePath, 'utf8'));
+}
+
+function parseJsonFromMixedOutput(output) {
+  const start = output.indexOf('{');
+  const end = output.lastIndexOf('}');
+  if (start === -1 || end === -1 || end < start) {
+    throw new Error(`No JSON object found in command output:\n${output}`);
+  }
+  return JSON.parse(output.slice(start, end + 1));
+}
+
+async function prepareSandboxTarget() {
+  const { stdout, stderr } = await execFileAsync('node', [
+    path.join(workspaceRoot, 'scripts/prepare-sandbox-v1-target.mjs'),
+  ], {
+    cwd: workspaceRoot,
+    maxBuffer: 24_000_000,
+  });
+  return parseJsonFromMixedOutput(`${stdout}${stderr}`);
+}
+
+function normalizeCandidateMode(mode) {
+  return ['balanced', 'gig-safe', 'discovery', 'cleanup'].includes(mode) ? mode : 'balanced';
+}
+
 async function handleApi(request, response, url) {
   if (request.method === 'GET' && url.pathname === '/api/dashboard') {
     const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
     sendJson(response, 200, snapshot);
+    return true;
+  }
+
+  if (request.method === 'GET' && url.pathname === '/api/sandbox/export-readiness') {
+    const readiness = await readJsonFile(sandboxExportReportPath);
+    sendJson(response, 200, { ok: true, readiness });
+    return true;
+  }
+
+  if (request.method === 'POST' && url.pathname === '/api/sandbox/prepare') {
+    const result = await prepareSandboxTarget();
+    if (path.resolve(result.databasePath) !== databasePath) {
+      throw new Error(`Sandbox prepare rebuilt ${result.databasePath}, but the runtime is using ${databasePath}. Start VaultBuddy with the sandbox target library.`);
+    }
+    const snapshot = await exportDashboardSnapshot(databasePath, dashboardOutputPath);
+    const readiness = await readJsonFile(sandboxExportReportPath);
+    sendJson(response, 200, { ok: true, result, snapshot, readiness });
+    return true;
+  }
+
+  if (request.method === 'POST' && url.pathname === '/api/playlist-candidates') {
+    const body = await readJsonBody(request);
+    const prompt = String(body.prompt ?? '').trim() || 'warmup tools with trustworthy metadata';
+    const limit = Math.max(1, Math.min(50, Number.parseInt(String(body.limit ?? '8'), 10) || 8));
+    const mode = normalizeCandidateMode(String(body.mode ?? 'balanced'));
+    const result = await writePlaylistCandidateReport(databasePath, prompt, sandboxCandidateReportRoot, {
+      mode,
+      limit,
+    });
+    sendJson(response, 200, { ok: true, result });
     return true;
   }
 

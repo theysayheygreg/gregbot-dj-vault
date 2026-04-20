@@ -1,5 +1,25 @@
 # DJ Vault — Changelog
 
+## 2026-04-20 — Sandbox target UI and candidate reports
+
+### Added
+
+- VaultBuddy now has a first-class Candidates view for trust-aware playlist candidate generation.
+- The desktop runtime and Vite dev server now expose API routes for sandbox target preparation, sandbox export-readiness loading, and playlist candidate report generation.
+- The Exports view now surfaces the `canonical-embedded :: Warmup Tools` sandbox readiness proof, including validation state, staged track counts, source coverage, trust attention count, and expected native gaps.
+
+### Changed
+
+- VaultBuddy now defaults its local runtime database to `tmp/sandbox-v1/runtime/sandbox-v1.sqlite`, matching the visible `Target Library: sandbox-v1` product stance unless `DJ_VAULT_DB_PATH` explicitly overrides it.
+- The sandbox prepare action now verifies that the rebuilt target database matches the active runtime database before returning a refreshed dashboard snapshot.
+
+### Verified
+
+- `npm run check`
+- `npm run build`
+- `npm run fixture:prepare-sandbox-v1`
+- local HTTP smoke for `/api/dashboard`, `/api/sandbox/export-readiness`, `/api/sandbox/prepare`, and `/api/playlist-candidates`
+
 ## 2026-04-19 — Sandbox v1 target library
 
 ### Added
