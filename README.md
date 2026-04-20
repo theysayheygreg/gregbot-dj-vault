@@ -172,6 +172,14 @@ npm run fixture:test-sandbox-v1
 
 That creates a fresh scratch catalog, ingests all three sandbox views into one managed library, imports the fixture playlists, seeds one playback session, and writes reports under `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports`.
 
+To run the first export regression against the same generated test libraries:
+
+```bash
+npm run fixture:test-sandbox-v1-export
+```
+
+That stages a traditional Rekordbox device-export folder from the resolved sandbox catalog and validates the XML, M3U, media, and manifest output while keeping native `export.pdb` and `ANLZ` gaps explicit.
+
 To inspect identity convergence and duplicate clusters in any catalog:
 
 ```bash

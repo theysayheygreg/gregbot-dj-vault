@@ -1,5 +1,21 @@
 # DJ Vault — Changelog
 
+## 2026-04-19 — Sandbox export regression
+
+### Added
+
+- `scripts/run-sandbox-v1-export-test.mjs`
+- root script `fixture:test-sandbox-v1-export`
+
+### Changed
+
+- the sandbox fixture can now validate a real traditional Rekordbox device-export staging bundle from the generated test libraries
+- export validation is now part of the fixture story alongside identity, merge, trust, recency, and playlist import
+
+### Why
+
+V1 needs a repeatable export acceptance loop before Greg's long-term music libraries are touched.
+
 ## 2026-04-19 — Trust-aware playlist retrieval
 
 ### Added

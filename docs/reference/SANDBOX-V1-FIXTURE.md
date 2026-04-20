@@ -169,6 +169,19 @@ The current report lands here:
 - `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-test-report.json`
 - `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-test-report.md`
 
+To run the first export regression against the same generated sandbox libraries:
+
+```bash
+npm run fixture:test-sandbox-v1-export
+```
+
+That command rebuilds the sandbox, ingests and merges the three generated library views, imports playlists, seeds playback history, saves a sandbox Rekordbox device target for `canonical-embedded :: Warmup Tools`, stages a device export, validates the staged folder, and writes:
+
+- `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-export-test-report.json`
+- `/Users/theysayheygreg/clawd/projects/dj-vault/tmp/sandbox-v1/reports/sandbox-v1-export-test-report.md`
+
+The export test expects the staged XML/M3U/media/manifest bundle to be structurally valid. It also expects native `export.pdb` and `ANLZ` warnings to remain present until the native writer lands.
+
 The sandbox run now also applies the current merge policy before it imports playlists and recency data. You can inspect or replay that policy directly with:
 
 ```bash
