@@ -827,8 +827,8 @@ export function VaultBuddyApp() {
     <main className="workspace-shell">
       <aside className="sidebar">
         <div className="sidebar-brand">
-          <p className="eyebrow">VaultBuddy</p>
-          <h1>Operator Desk</h1>
+          <p className="eyebrow">DJ Vault / Sandbox Rig</p>
+          <h1>Vault Buddy</h1>
           <div className="target-library-badge">
             <span>Target Library</span>
             <strong>sandbox-v1</strong>
@@ -899,7 +899,7 @@ export function VaultBuddyApp() {
 
           <div className="toolbar-actions">
             <label className="search-card">
-              <span>Search tracks, playlists, exports, topology</span>
+              <span>Search tracks, crates, exports, nodes</span>
               <input
                 value={query}
                 onChange={(event) => startTransition(() => setQuery(event.target.value))}
@@ -961,7 +961,7 @@ export function VaultBuddyApp() {
                     <p className="eyebrow">Track Browser</p>
                     <h3>{smartCollectionLabels[activeCollection]}</h3>
                   </div>
-                  <p className="panel-copy">Sortable, keyboard-driven, and dense by design. This is the start of a real library browser.</p>
+                  <p className="panel-copy">Sort, filter, inspect, and export from the sandbox rig.</p>
                 </div>
                 {visibleTracks.length > 0 ? (
                   <div className="table-shell" onKeyDown={handleTrackBrowserKeyDown} tabIndex={0}>

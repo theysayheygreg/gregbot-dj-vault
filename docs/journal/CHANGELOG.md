@@ -1,5 +1,19 @@
 # DJ Vault — Changelog
 
+## 2026-04-20 — VaultBuddy hardware-rig skin
+
+### Changed
+
+- Reworked the VaultBuddy frontend away from the beige editorial/Claude-like look into a dark DJ hardware rig surface with denser panels, neon status accents, waveform/grid atmosphere, and sharper operator copy.
+- Updated the sandbox dashboard language to frame the fixture as a live rig for library truth, recency, and USB export proof.
+
+### Verified
+
+- `npm run check`
+- `npm run fixture:prepare-sandbox-v1`
+- `npm run build --workspace @dj-vault/desktop`
+- live VaultBuddy API smoke at `http://localhost:4187/api/dashboard`
+
 ## 2026-04-20 — Export and history trust hardening
 
 ### Fixed

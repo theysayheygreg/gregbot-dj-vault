@@ -560,8 +560,8 @@ export async function exportDashboardSnapshot(databasePath: string, outputPath: 
       },
       hero: {
         title: 'VaultBuddy',
-        subtitle: 'Sandbox v1 library truth, trust-aware prep, and old-device Rekordbox export in one place.',
-        focus: 'Current target library: sandbox-v1. The fixture is the product acceptance surface until v1 passes cleanly.',
+        subtitle: 'Sandbox rig for library truth, recency, and USB export proof.',
+        focus: 'sandbox-v1 is live. Treat this fixture as the acceptance deck until v1 round-trips cleanly.',
       },
       tracks: trackCards,
       playlists: playlistCards,
