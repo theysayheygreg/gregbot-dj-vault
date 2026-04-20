@@ -1,5 +1,19 @@
 # DJ Vault — Changelog
 
+## 2026-04-20 — Two-panel VaultBuddy workspace
+
+### Changed
+
+- Collapsed the top live snapshot banner and five-card metric row into a compact right-side control deck.
+- Rebalanced VaultBuddy around two primary work surfaces: the track/browser panel and the inspector/control panel.
+- Kept the left rail as the stable product navigation spine while reducing center-panel competition.
+
+### Verified
+
+- `npm run check`
+- `npm run build --workspace @dj-vault/desktop`
+- local served asset smoke at `http://localhost:4187/`
+
 ## 2026-04-20 — VaultBuddy hardware-rig skin
 
 ### Changed

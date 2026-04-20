@@ -891,67 +891,6 @@ export function VaultBuddyApp() {
       </aside>
 
       <section className="workspace-main">
-        <header className="toolbar">
-          <div>
-            <p className="eyebrow">Live Snapshot</p>
-            <h2>{snapshot.hero.subtitle}</h2>
-          </div>
-
-          <div className="toolbar-actions">
-            <label className="search-card">
-              <span>Search tracks, crates, exports, nodes</span>
-              <input
-                value={query}
-                onChange={(event) => startTransition(() => setQuery(event.target.value))}
-                placeholder="Try hot, Warmup, tailscale, missing artist..."
-              />
-            </label>
-            <div className="toolbar-meta">
-              <span>Refreshed {formatGeneratedAt(snapshot.generatedAt)}</span>
-              <span>{resultCount} matching surfaces</span>
-              <span>{connectionMode === 'live' ? 'Live catalog connected' : 'Bundled snapshot mode'}</span>
-            </div>
-            <div className="status-strip">
-              <span className={`status-chip ${connectionMode === 'live' ? 'status-ready' : 'status-muted'}`}>
-                {isSyncing ? 'Syncing…' : connectionMode === 'live' ? 'Live' : 'Bundled'}
-              </span>
-              <p className="status-copy">{statusMessage}</p>
-              <button className="action-button" onClick={() => void refreshSnapshot('Refreshed from live catalog.')} type="button">
-                Refresh
-              </button>
-            </div>
-            {actionError ? <p className="error-banner">{actionError}</p> : null}
-          </div>
-        </header>
-
-        <section className="summary-bar">
-          <article className="summary-card">
-            <span>Tracks</span>
-            <strong>{tracks.length}</strong>
-            <small>{snapshot.summary.hotTrackCount} front-of-mind</small>
-          </article>
-          <article className="summary-card">
-            <span>Library Trust</span>
-            <strong>{snapshot.summary.libraryTrust.needsAttentionTrackCount + snapshot.summary.libraryTrust.blockedTrackCount}</strong>
-            <small>{snapshot.summary.libraryTrust.chosenTrackCount} quietly chosen by DJ Vault</small>
-          </article>
-          <article className="summary-card">
-            <span>Export Plans</span>
-            <strong>{exportPlans.filter((plan) => plan.status === 'ready').length}</strong>
-            <small>Ready to run</small>
-          </article>
-          <article className="summary-card">
-            <span>Target Ready</span>
-            <strong>{targetReadinessLabel}</strong>
-            <small>{exportReadiness ? `${exportReadiness.targetPlaylist.trackCount} tracks in ${exportReadiness.targetPlaylist.name}` : 'Run sandbox preparation'}</small>
-          </article>
-          <article className="summary-card">
-            <span>Recent Exports</span>
-            <strong>{recentExports.length}</strong>
-            <small>Audit trail preserved</small>
-          </article>
-        </section>
-
         <div className="workspace-grid">
           <section className="browser-panel">
             {activeView === 'library' ? (
@@ -1378,6 +1317,65 @@ export function VaultBuddyApp() {
           </section>
 
           <aside className="inspector-panel">
+            <section className="control-deck" aria-label="Library control deck">
+              <div className="control-heading">
+                <div>
+                  <p className="eyebrow">Live Rig</p>
+                  <h2>{snapshot.hero.subtitle}</h2>
+                </div>
+                <span className={`status-chip ${connectionMode === 'live' ? 'status-ready' : 'status-muted'}`}>
+                  {isSyncing ? 'Syncing…' : connectionMode === 'live' ? 'Live' : 'Bundled'}
+                </span>
+              </div>
+
+              <label className="search-card compact-search">
+                <span>Search tracks, crates, exports, nodes</span>
+                <input
+                  value={query}
+                  onChange={(event) => startTransition(() => setQuery(event.target.value))}
+                  placeholder="hot, Warmup, tailscale, missing artist..."
+                />
+              </label>
+
+              <div className="control-meta">
+                <span>Refreshed {formatGeneratedAt(snapshot.generatedAt)}</span>
+                <span>{resultCount} matching surfaces</span>
+                <span>{connectionMode === 'live' ? 'Live catalog connected' : 'Bundled snapshot mode'}</span>
+              </div>
+
+              <div className="control-status">
+                <p className="status-copy">{statusMessage}</p>
+                <button className="action-button" onClick={() => void refreshSnapshot('Refreshed from live catalog.')} type="button">
+                  Refresh
+                </button>
+              </div>
+
+              {actionError ? <p className="error-banner">{actionError}</p> : null}
+
+              <dl className="control-kpis">
+                <div>
+                  <dt>Tracks</dt>
+                  <dd>{tracks.length}</dd>
+                  <small>{snapshot.summary.hotTrackCount} front-of-mind</small>
+                </div>
+                <div>
+                  <dt>Trust</dt>
+                  <dd>{snapshot.summary.libraryTrust.needsAttentionTrackCount + snapshot.summary.libraryTrust.blockedTrackCount}</dd>
+                  <small>{snapshot.summary.libraryTrust.chosenTrackCount} chosen</small>
+                </div>
+                <div>
+                  <dt>Ready</dt>
+                  <dd>{targetReadinessLabel}</dd>
+                  <small>{exportReadiness ? `${exportReadiness.targetPlaylist.trackCount} track export` : 'prep target'}</small>
+                </div>
+                <div>
+                  <dt>Plans</dt>
+                  <dd>{exportPlans.filter((plan) => plan.status === 'ready').length}</dd>
+                  <small>{recentExports.length} recent export</small>
+                </div>
+              </dl>
+            </section>
+
             <div className="inspector-tabs" role="tablist" aria-label="Inspector tabs">
               {(activeView === 'library'
                 ? ([
